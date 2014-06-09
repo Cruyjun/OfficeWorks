@@ -1,0 +1,712 @@
+
+ Start         Length     Name                   Class
+ 0001:00000000 0000004DCH _TEXT                  CODE
+ 0001:000004DC 000000E29H SOCKINT_TEXT           CODE
+ 0001:00001308 0000006E1H ELWSOCK_TEXT           CODE
+ 0001:000019EC 0000005CDH GENERIC_TEXT           CODE
+ 0001:00001FBC 0000001F4H ODCACHE_TEXT           CODE
+ 0001:000021B0 000000018H ELWOPT_TEXT            CODE
+ 0001:000021C8 000005607H OPCLIENT_TEXT          CODE
+ 0001:000077D0 0000002E1H PCACHE_TEXT            CODE
+ 0001:00007AB4 000001F54H AUXDM_TEXT             CODE
+ 0001:00009A08 000006959H INTERDM_TEXT           CODE
+ 0001:00010364 0000008EBH PRD_TEXT               CODE
+ 0001:00010C50 0000002ADH FINDFIRST_TEXT         CODE
+ 0001:00000000 000000000H ELWAPI_TEXT            CODE
+ 0001:00010F00 000000280H GERAL_TEXT             CODE
+ 0001:00011180 000000509H BDT_TEXT               CODE
+ 0001:0001168C 0000045C5H IDMOPTAB_TEXT          CODE
+ 0002:00000000 000000C5CH _DATA                  DATA
+ 0002:00000C5C 000000000H _TLSCBA                TLSCBA
+ 0002:00000C5C 000000000H _INIT_                 INITDATA
+ 0002:00000C5C 000000000H _INITEND_              INITDATA
+ 0002:00000C5C 000000000H _EXIT_                 EXITDATA
+ 0002:00000C5C 000000000H _EXITEND_              EXITDATA
+ 0002:00000C5C 000000000H CONST                  CONST
+ 0002:00000C5C 0001F2368H _BSS                   BSS
+ 0002:001F2FC4 000000000H _BSSEND                BSS
+
+  Address         Publics by Name
+
+ 0001:00009C3D  Idle @aux_sort_function$qpxvt1
+ 0001:00001E98  Idle @copy_file$qpct1
+ 0001:000019EC  Idle @date_str$ql
+ 0001:00009A08  Idle @DUMMY_Avisofunc$qipc
+ 0001:000004DC  Idle @elepcBlockingHook$qv
+ 0001:000110CD       @GEN_AllocNewHandle$qp21ESGEN_HandleArrayDesc
+ 0001:00010F70       @GEN_ConvDwordu$qpcii
+ 0001:00010F1D       @GEN_ConvWord$qusii
+ 0001:0001112C       @GEN_FreeHandle$qp21ESGEN_HandleArrayDesci
+ 0001:00010FF2       @GEN_LocalCpu$qv
+ 0001:0001101A       @GEN_SplitPath$qpct1t1
+ 0001:0001109A  Idle @GEN_Strncpy$qpct1i
+ 0001:00007721  Idle @get_host_name$qpc
+ 0001:00001CB2  Idle @get_time_here$ql
+ 0001:000115FA       @ibdt_close$qp8bdt_ctrl
+ 0001:00011556       @ibdt_create$qp8bdt_ctrlpc
+ 0001:000115EA  Idle @ibdt_ini_ctrl$qp8bdt_ctrl
+ 0001:00011248       @ibdt_open$qp8bdt_ctrl
+ 0001:000114DC       @ibdt_read_nth_record$qp8bdt_ctrlusp10bdt_record
+ 0001:00011431       @ibdt_read_record$qp8bdt_ctrlp10bdt_record
+ 0001:00011365  Idle @ibdt_regist_block$qp8bdt_ctrlul
+ 0001:0001166D       @ibdt_rewind$qp8bdt_ctrl
+ 0001:00011519       @ibdt_write_nth_record$qp8bdt_ctrlusp10bdt_record
+ 0001:00011386       @ibdt_write_record$qp8bdt_ctrlp10bdt_record
+ 0001:00010EE1       @iidm_find_close_file$qv
+ 0001:00010C90       @iidm_find_first_file$qpcp5ffblki
+ 0001:00010DC5       @iidm_find_next_file$qp5ffblk
+ 0001:0000C49B  Idle @iidm_load_fileEx$qpcip10ind_versaoiusp15ESIDM_IOControl
+ 0001:0001242D  Idle @iidm_one_reg_back$qp4FILE
+ 0001:00011E70  Idle @iidm_read_v51v60_opt_reg$qp4FILEp5opt_t
+ 0001:00012407  Idle @iidm_skip_opt_reg$qp4FILE
+ 0001:000004FF  Idle @initBlockingHook$qv
+ 0001:00005CC1  Idle @iopc_add_char$qpct1
+ 0001:00005BBB  Idle @iopc_add_long$qpcl
+ 0001:00005C69  Idle @iopc_add_short$qpcs
+ 0001:00005B65  Idle @iopc_add_ulong$qpcul
+ 0001:00005C11  Idle @iopc_add_ushort$qpcus
+ 0001:00005B02  Idle @iopc_confirma$qpct1c
+ 0001:00005809  Idle @iopc_cria_comando$qpct1
+ 0001:000054E9  Idle @iopc_get_dword_s$quipl
+ 0001:0000552A  Idle @iopc_get_dword_u$quipul
+ 0001:00005479  Idle @iopc_get_short$quips
+ 0001:00005A8C  Idle @iopc_ident_comand$qpct1i
+ 0001:00005866  Idle @iopc_interp_msg$qpct1i
+ 0001:0000534B  Idle @iopc_odisk_free_list$qpipp8l_discosps
+ 0001:0000531F  Idle @iopc_od_free_list$qpipp8l_discosps
+ 0001:00004A7D  Idle @iopc_op_disk_list$qpuipp8l_discosps
+ 0001:000054BD  Idle @iopc_send_dword_s$quil
+ 0001:000054D3  Idle @iopc_send_dword_u$quiul
+ 0001:000043B5  Idle @iopc_send_file$quipcp8bdt_ctrl9ContVerStp15ESOPC_IOControl
+ 0001:00005463  Idle @iopc_send_short$quis
+ 0001:0000544D  Idle @iopc_send_ushort$quius
+ 0001:000047B5  Idle @iopc_super_accept_file$quii9ContVerStp15ESOPC_IOControl
+ 0001:00001B34  Idle @join_args$qpciiippc
+ 0001:00007AB4  Idle @KERNIO_stop_func$qul
+ 0001:00001BAC  Idle @make_args_from_line$qpcppcpi
+ 0001:00001F6F  Idle @move_file$qpct1
+ 0001:00001FBC       @ODC_DCACHE_cleanup$qv
+ 0001:000020D3       @ODC_DCACHE_flush$qp9ContVerSt
+ 0001:00001FD5       @ODC_DCACHE_init$qiui
+ 0001:00002103       @ODC_DCACHE_read$qpcuipuip9ContVerSt
+ 0001:00002038       @ODC_DCACHE_write$qpcuipuip9ContVerSt
+ 0001:00006BF6       @OPC_DumpOfile$qpcplt1t1t2t1t2pust1pp9ContVerStt8
+ 0001:000076EF       @OPC_GetHostName$qpc
+ 0001:0000556B       @OPC_Greet$qpcus
+ 0001:00005D17  Idle @OPC_Information$qv
+ 0001:00005A86       @OPC_Initialized$qv
+ 0001:000021C8       @OPC_InitOserver$qpct1sps
+ 0001:00005D1A       @OPC_LoadOfile$qpct1pususpp9ContVerStt3t1puip9ContVerSt9ContVerStp15ESOPC_IOControl
+ 0001:0000536E       @OPC_OdiskList$qpipp15o_srv_disk_info
+ 0001:00003002  Idle @OPC_OdiskSpace$qpcpl
+ 0001:000077D0  Idle @OPC_PCacheCleanup$qv
+ 0001:00007A85  Idle @OPC_PCacheFlush$qv
+ 0001:000077E9       @OPC_PCacheInit$qip8bdt_ctrlui
+ 0001:0000785D       @OPC_PCacheRead$qpcuipuipul
+ 0001:000079EA  Idle @OPC_PCacheWrite$qpcuipuip9ContVerSt
+ 0001:0000360A       @OPC_SaveOfile$qpct1p9ContVerStust1pui9ContVerStt3p15ESOPC_IOControl
+ 0001:00002F7A       @OPC_TerminateOserver$qv
+ 0001:00001AA0  Idle @option_active$qippccii
+ 0001:000001A2  Idle @set_terminate$qpqv$v
+ 0001:00000286  Idle @set_unexpected$qpqv$v
+ 0001:000010FA       @SINT_any_to_read$qui
+ 0001:000012EA       @SINT_cleanup$qv
+ 0001:000006D8       @SINT_connect_to$qpcuipui
+ 0001:000006B1       @SINT_dispatch_is$qpqul$i
+ 0001:000006BE       @SINT_dispatch_par_is$qul
+ 0001:0000091B       @SINT_down$quiii
+ 0001:00001239  Idle @SINT_fast_read$quipci
+ 0001:000011B6  Idle @SINT_fast_write$quipci
+ 0001:0000069D  Idle @SINT_intr_break$qi
+ 0001:00000CB4  Idle @SINT_listen$quipuiit2
+ 0001:00000981  Idle @SINT_live$qui
+ 0001:00000F31  Idle @SINT_mode$quii
+ 0001:00000B0D       @SINT_read$quipci
+ 0001:00001297       @SINT_startup$qv
+ 0001:000006CB       @SINT_timeout_is$qi
+ 0001:00000F61  Idle @SINT_wait_down$qui
+ 0001:00000D04  Idle @SINT_wait_for_conn$quipcipulpui
+ 0001:000009A0       @SINT_write$quipci
+ 0001:00001D3B  Idle @strs_to_time_here$qpct1
+ 0001:0000019C  Idle @terminate$qv
+ 0001:00001A3C  Idle @time_str$ql
+ 0001:00010F00  Idle @tipoMaquina$qv
+ 0001:00000511  Idle @unblockSocket$qv
+ 0001:00000280  Idle @unexpected$qv
+ 0001:0000C1BA  Idle @WriteLog$qpc
+ 0001:00001A82  Idle @__calc_level$qp4FILEiipcit4uit1
+ 0001:0000031F  Idle @__GetPolymorphicDTC$qpvui
+ 0001:0000015C       @__InitExceptBlock
+ 0001:00001746       accept
+ 0001:000111E4  Idle BDT_Close
+ 0001:000111CF  Idle BDT_Create
+ 0001:00011204  Idle BDT_IniCtrl
+ 0001:00011180  Idle BDT_Open
+ 0001:00011214  Idle BDT_ReadNthRecord
+ 0001:00011190  Idle BDT_RegistBlock
+ 0001:000111F4  Idle BDT_Rewind
+ 0001:0001122E  Idle BDT_WriteNthRecord
+ 0001:000111A5  Idle BDT_WriteRecord
+ 0001:0000175C       bind
+ 0001:00001772       closesocket
+ 0001:00001782       connect
+ 0001:000004C4       DllEntryPoint
+ 0001:000004B8       DllMain
+ 0001:0000C200  Idle GetFile
+ 0001:000018D9       gethostbyaddr
+ 0001:00001908       gethostbyname
+ 0001:00001931       gethostname
+ 0001:0000C258  Idle GetPathFiles
+ 0001:000017AE       htons
+ 0001:0001013D  Idle IDM_AcertaArqx
+ 0001:00010103  Idle IDM_AcessoDoc
+ 0001:00010188  Idle IDM_AlterarStatus
+ 0001:0000E793  Idle IDM_ApagarDoc
+ 0001:0000E7B3  Idle IDM_CopiarDoc
+ 0001:0000E71D  Idle IDM_DumpOfile
+ 0001:00009A74  Idle IDM_EndOptidoc
+ 0001:000100EB  Idle IDM_EstadoDoc
+ 0001:000102D2  Idle IDM_File2Bdt
+ 0001:0000E783       IDM_FindClose
+ 0001:0000E74D       IDM_FindFirst
+ 0001:0000E76B       IDM_FindNext
+ 0001:0000E706  Idle IDM_GetAtribFromFicha
+ 0001:00010235  Idle IDM_GetOptEntry
+ 0001:0001026E  Idle IDM_GetOptInfo
+ 0001:00010285  Idle IDM_GetOptInfoAll
+ 0001:00010307  Idle IDM_GetTmpFileName
+ 0001:0000E4E9  Idle IDM_GuardaExtDirecto
+ 0001:00009BFA  Idle IDM_GuardaExterior
+ 0001:00009AA6  Idle IDM_InitOptidoc
+ 0001:00010128       IDM_IsOptical
+ 0001:00010178  Idle IDM_IsPRD
+ 0001:00010118  Idle IDM_IsReserved
+ 0001:0000DE75  Idle IDM_LerFichaExterior
+ 0001:00009AD8  Idle IDM_ListaDiscos
+ 0001:000100DB  Idle IDM_Mkdir
+ 0001:0000F061  Idle IDM_MoverDoc
+ 0001:00010168  Idle IDM_NewPRDEntry
+ 0001:000101C0  Idle IDM_OptEstado
+ 0001:00009B4E  Idle IDM_PingOptidoc
+ 0001:00009B7C  Idle IDM_PingOptidocServer
+ 0001:0001029C  Idle IDM_PrivilApagar
+ 0001:0000E6EB  Idle IDM_ReadOptab
+ 0001:0000E5FD  Idle IDM_RecuperaExtDirecto
+ 0001:0000A7F1       IDM_RecuperaExterior
+ 0001:000102E7  Idle IDM_RemoveTree
+ 0001:000100C6  Idle IDM_Rmdir
+ 0001:00009BB5  Idle IDM_SetConfiguration
+ 0001:0000E3BF  Idle IDM_SetOptEntry
+ 0001:0000E476  Idle IDM_SetOptEntryTidm
+ 0001:00009BCF  Idle IDM_SetServer
+ 0001:000102B4  Idle IDM_ValidPrivApagar
+ 0001:000017D9       inet_addr
+ 0001:00001803       inet_ntoa
+ 0001:00001798       ioctlsocket
+ 0001:000021B0  Idle LibMain
+ 0001:0000182C       listen
+ 0001:0000C2E3  Idle OAP_RecuperaOpticoEx
+ 0001:00007730  Idle OPC_Privileges
+ 0001:000103E0  Idle PRD_Fclose
+ 0001:000103A1  Idle PRD_Fopen
+ 0001:000103BE  Idle PRD_Fseek
+ 0001:00010389  Idle PRD_GetNPages
+ 0001:00010374  Idle PRD_IsChanged
+ 0001:00010364  Idle PRD_MarkAllChanged
+ 0001:000103F0  Idle PRD_PageIsOptical
+ 0001:0000183F       recv
+ 0001:00001858       select
+ 0001:00001874       send
+ 0001:0000188D       setsockopt
+ 0001:000018A9       socket
+ 0001:000021BC  Idle WEP
+ 0001:000019C0       WSACancelBlockingCall
+ 0001:00001975       WSACleanup
+ 0001:00001997       WSAGetLastError
+ 0001:000019AD       WSAIsBlocking
+ 0001:0000195E       WSAStartup
+ 0002:000033DC  Idle _aOptabFiles
+ 0002:000031F0  Idle _aux_short
+ 0002:0000035C       _Cache
+ 0002:00000330  Idle _CALL_TOUT
+ 0002:0000322C  Idle _comando
+ 0002:00000338  Idle _CONN_TOUT
+ 0002:00000358  Idle _dim_fich
+ 0002:00000844  Idle _dir_phase
+ 0002:000005E0       _DLL_ocupada
+ 0002:0000033C  Idle _DOWN_TOUT
+ 0002:0000080C  Idle _EDBDT_SIGNATURE
+ 0002:00003228  Idle _err_time
+ 0002:00000334  Idle _GEN_TOUT
+ 0002:000011C0  Idle _global_access
+ 0001:0001168C       _iidm_acerta_arqx
+ 0001:00011766       _iidm_acerta_arqx_ogd
+ 0001:00012FEE       _iidm_acesso_doc
+ 0001:000144B3  Idle _iidm_alterar_ltime
+ 0001:000133B1       _iidm_alterar_ltime_ogd
+ 0001:00014407       _iidm_alterar_opt
+ 0001:00014938       _iidm_alterar_opt_ogd
+ 0001:000132D8       _iidm_alterar_status
+ 0001:000149C8       _iidm_alterar_status_ogd
+ 0001:00007AFA       _iidm_apagar
+ 0001:00008233  Idle _iidm_ascii_to_atrib
+ 0001:00008286  Idle _iidm_atrib_to_ascii
+ 0001:000082CD       _iidm_cab_ficha_actual
+ 0001:000147CF  Idle _iidm_caminho
+ 0001:000082E5       _iidm_conv_atrib_for_ficha
+ 0001:000132A3  Idle _iidm_conv_filename
+ 0001:000158D7  Idle _iidm_copy_file
+ 0001:00014843       _iidm_em_DO
+ 0001:00012F60       _iidm_em_DO_ogd
+ 0001:00012BF5  Idle _iidm_em_DO_validar
+ 0001:00012CB3  Idle _iidm_em_DO_validar_ogd
+ 0001:000084B1       _iidm_end_optidoc
+ 0001:00015B8D       _iidm_estado_doc
+ 0001:00013156       _iidm_fechar_opt
+ 0001:0001184D       _iidm_file_2_bdt
+ 0001:00014B3B       _iidm_file_access
+ 0001:00012B37       _iidm_file_is_in_optab
+ 0001:00014E87       _iidm_find_close
+ 0001:00012A4B  Idle _iidm_find_file_opt
+ 0001:00014E91       _iidm_find_first
+ 0001:00015365       _iidm_find_next
+ 0001:00012446  Idle _iidm_first_opt_free
+ 0001:00012D41  Idle _iidm_getdirectoria
+ 0001:00014CCC       _iidm_getpath
+ 0001:00008500       _iidm_get_atrib_from_ficha
+ 0001:00014B5B       _iidm_get_info
+ 0001:000086E9  Idle _iidm_get_PRD_page_name_list
+ 0001:00008810  Idle _iidm_init_idm
+ 0001:00008865       _iidm_init_optidoc
+ 0001:0001458B       _iidm_inserir_opt
+ 0001:00013D5A       _iidm_isreserved
+ 0001:00013CEC  Idle _iidm_is_locked
+ 0001:00013191       _iidm_is_PRD
+ 0001:0000A844       _iidm_load_file
+ 0001:00014901       _iidm_lock_regist
+ 0001:00013F10  Idle _iidm_maskcmp
+ 0001:00014E15       _iidm_mkdir
+ 0001:00013262       _iidm_new_PRD_entry
+ 0001:00014C4D       _iidm_n_atributos
+ 0001:00013462       _iidm_open_optab
+ 0001:00008D79       _iidm_ping_optidoc
+ 0001:0001583E       _iidm_prd_is_changed
+ 0001:00008D9B       _iidm_privil_apagar
+ 0001:00012D82       _iidm_read_optab
+ 0001:00014106  Idle _iidm_read_optab_ogd
+ 0001:00011A2A  Idle _iidm_read_opt_reg
+ 0001:0001226E  Idle _iidm_read_v4_opt_reg
+ 0001:000093BC       _iidm_remove_tree
+ 0001:00009672       _iidm_rmdir
+ 0001:00015755  Idle _iidm_rm_empty_dir
+ 0001:00009C77  Idle _iidm_save_file
+ 0001:00014A82       _iidm_set_prd_ogd
+ 0001:00014DF4  Idle _iidm_skip_opt_cab
+ 0001:000156EC  Idle _iidm_unlink
+ 0001:00013D23       _iidm_unlock_regist
+ 0001:000097DB       _iidm_valid_priv_apagar
+ 0001:00013BB8  Idle _iidm_write_opt_cab
+ 0001:00013C52  Idle _iidm_write_opt_cab_v60
+ 0001:000124B1  Idle _iidm_write_opt_reg
+ 0001:00010C15  Idle _iprd_fclose
+ 0001:0001063B  Idle _iprd_fopen
+ 0001:00010A43  Idle _iprd_fseek
+ 0001:0001040A  Idle _iprd_get_n_pages
+ 0001:00010580  Idle _iprd_is_changed
+ 0001:00010593  Idle _iprd_mark_all_changed
+ 0001:000109ED  Idle _iprd_page_is_optical
+ 0002:000007F8  Idle _Motorola
+ 0002:000032AC  Idle _msg_recebida
+ 0002:000031F8  Idle _nome_srv_p
+ 0002:000005F0  Idle _OptabFilesCount
+ 0002:0000332C  Idle _parametro
+ 0002:00003218  Idle _port_srv_p
+ 0002:000004A4  Idle _pstGContextsDsc
+ 0002:000033CC  Idle _PVInf_ContVerSt
+ 0002:000011C2  Idle _service_server
+ 0002:0000321C  Idle _srv_timestamp
+ 0002:00000474       _stGContextsDsc
+ 0002:000005E4       _stIDMNullIO
+ 0002:00000360  Idle _stNullIO
+ 0002:001F2DAE  Idle _szFFDirPath
+ 0002:001F2D90  Idle _szFFMask
+ 0002:00000354  Idle _testa_time
+ 0002:000031F4  Idle _timestamp
+ 0002:000011E8  Idle _Xfer_buff
+ 0001:00000000  Idle __acrtused
+ 0002:00000BD0  Idle __DebuggerHookData
+ 0002:001F2FBC       __DestructorCountPtr
+ 0001:0000033E       __ExceptInit
+ 0002:00000BCC  Idle __ExceptVarsSize
+ 0001:00000154  Idle __GetExceptDLLinfo
+ 0001:00000420       __GetExceptDLLinfoInternal
+ 0002:00000062  Idle __hInstance
+ 0001:0000045C       __matherr
+ 0001:00000488       __matherrl
+ 0002:001F2FC0       __pRawDllMain
+ 0002:0000005A  Idle __TLS_index
+ 0002:0000005E  Idle __TLS_index4
+ 0001:000019D6       __WSAFDIsSet
+ 0001:000001C7  Idle ___call_terminate
+ 0001:000002AB  Idle ___call_unexpected
+ 0002:00000AE8  Idle ___CPPexceptionList
+ 0002:00000AF8  Idle ___debuggerHookDataP
+ 0002:00000AF0  Idle ___debuggerHookFN
+ 0002:00000AF4  Idle ___debuggerWatchingP
+ 0001:00001A99  Idle ___debug_fprintf
+ 0002:00000AEC  Idle ___exceptFlags
+ 0002:00000B14  Idle ___exceptMemAllocVars
+ 0002:00000B10  Idle ___exceptStaticBuffP
+ 0002:00000B18  Idle ___ExceptStaticXbuff
+ 0002:00000058       ___isDLL
+ 0002:00000059  Idle ___isGUI
+ 0001:0000045C  Idle ___org__matherr
+ 0001:00000488  Idle ___org__matherrl
+ 0002:00000AFC  Idle ___terminatePTR
+ 0002:00000B0C  Idle ___throwExceptionName
+ 0002:00000B04  Idle ___throwFileName
+ 0002:00000B08  Idle ___throwLineNumber
+ 0002:00000B00  Idle ___unexpectdPTR
+
+  Address         Publics by Value
+
+ 0001:00000000  Idle __acrtused
+ 0001:00000154  Idle __GetExceptDLLinfo
+ 0001:0000015C       @__InitExceptBlock
+ 0001:0000019C  Idle @terminate$qv
+ 0001:000001A2  Idle @set_terminate$qpqv$v
+ 0001:000001C7  Idle ___call_terminate
+ 0001:00000280  Idle @unexpected$qv
+ 0001:00000286  Idle @set_unexpected$qpqv$v
+ 0001:000002AB  Idle ___call_unexpected
+ 0001:0000031F  Idle @__GetPolymorphicDTC$qpvui
+ 0001:0000033E       __ExceptInit
+ 0001:00000420       __GetExceptDLLinfoInternal
+ 0001:0000045C       __matherr
+ 0001:0000045C  Idle ___org__matherr
+ 0001:00000488  Idle ___org__matherrl
+ 0001:00000488       __matherrl
+ 0001:000004B8       DllMain
+ 0001:000004C4       DllEntryPoint
+ 0001:000004DC  Idle @elepcBlockingHook$qv
+ 0001:000004FF  Idle @initBlockingHook$qv
+ 0001:00000511  Idle @unblockSocket$qv
+ 0001:0000069D  Idle @SINT_intr_break$qi
+ 0001:000006B1       @SINT_dispatch_is$qpqul$i
+ 0001:000006BE       @SINT_dispatch_par_is$qul
+ 0001:000006CB       @SINT_timeout_is$qi
+ 0001:000006D8       @SINT_connect_to$qpcuipui
+ 0001:0000091B       @SINT_down$quiii
+ 0001:00000981  Idle @SINT_live$qui
+ 0001:000009A0       @SINT_write$quipci
+ 0001:00000B0D       @SINT_read$quipci
+ 0001:00000CB4  Idle @SINT_listen$quipuiit2
+ 0001:00000D04  Idle @SINT_wait_for_conn$quipcipulpui
+ 0001:00000F31  Idle @SINT_mode$quii
+ 0001:00000F61  Idle @SINT_wait_down$qui
+ 0001:000010FA       @SINT_any_to_read$qui
+ 0001:000011B6  Idle @SINT_fast_write$quipci
+ 0001:00001239  Idle @SINT_fast_read$quipci
+ 0001:00001297       @SINT_startup$qv
+ 0001:000012EA       @SINT_cleanup$qv
+ 0001:00001746       accept
+ 0001:0000175C       bind
+ 0001:00001772       closesocket
+ 0001:00001782       connect
+ 0001:00001798       ioctlsocket
+ 0001:000017AE       htons
+ 0001:000017D9       inet_addr
+ 0001:00001803       inet_ntoa
+ 0001:0000182C       listen
+ 0001:0000183F       recv
+ 0001:00001858       select
+ 0001:00001874       send
+ 0001:0000188D       setsockopt
+ 0001:000018A9       socket
+ 0001:000018D9       gethostbyaddr
+ 0001:00001908       gethostbyname
+ 0001:00001931       gethostname
+ 0001:0000195E       WSAStartup
+ 0001:00001975       WSACleanup
+ 0001:00001997       WSAGetLastError
+ 0001:000019AD       WSAIsBlocking
+ 0001:000019C0       WSACancelBlockingCall
+ 0001:000019D6       __WSAFDIsSet
+ 0001:000019EC  Idle @date_str$ql
+ 0001:00001A3C  Idle @time_str$ql
+ 0001:00001A82  Idle @__calc_level$qp4FILEiipcit4uit1
+ 0001:00001A99  Idle ___debug_fprintf
+ 0001:00001AA0  Idle @option_active$qippccii
+ 0001:00001B34  Idle @join_args$qpciiippc
+ 0001:00001BAC  Idle @make_args_from_line$qpcppcpi
+ 0001:00001CB2  Idle @get_time_here$ql
+ 0001:00001D3B  Idle @strs_to_time_here$qpct1
+ 0001:00001E98  Idle @copy_file$qpct1
+ 0001:00001F6F  Idle @move_file$qpct1
+ 0001:00001FBC       @ODC_DCACHE_cleanup$qv
+ 0001:00001FD5       @ODC_DCACHE_init$qiui
+ 0001:00002038       @ODC_DCACHE_write$qpcuipuip9ContVerSt
+ 0001:000020D3       @ODC_DCACHE_flush$qp9ContVerSt
+ 0001:00002103       @ODC_DCACHE_read$qpcuipuip9ContVerSt
+ 0001:000021B0  Idle LibMain
+ 0001:000021BC  Idle WEP
+ 0001:000021C8       @OPC_InitOserver$qpct1sps
+ 0001:00002F7A       @OPC_TerminateOserver$qv
+ 0001:00003002  Idle @OPC_OdiskSpace$qpcpl
+ 0001:0000360A       @OPC_SaveOfile$qpct1p9ContVerStust1pui9ContVerStt3p15ESOPC_IOControl
+ 0001:000043B5  Idle @iopc_send_file$quipcp8bdt_ctrl9ContVerStp15ESOPC_IOControl
+ 0001:000047B5  Idle @iopc_super_accept_file$quii9ContVerStp15ESOPC_IOControl
+ 0001:00004A7D  Idle @iopc_op_disk_list$qpuipp8l_discosps
+ 0001:0000531F  Idle @iopc_od_free_list$qpipp8l_discosps
+ 0001:0000534B  Idle @iopc_odisk_free_list$qpipp8l_discosps
+ 0001:0000536E       @OPC_OdiskList$qpipp15o_srv_disk_info
+ 0001:0000544D  Idle @iopc_send_ushort$quius
+ 0001:00005463  Idle @iopc_send_short$quis
+ 0001:00005479  Idle @iopc_get_short$quips
+ 0001:000054BD  Idle @iopc_send_dword_s$quil
+ 0001:000054D3  Idle @iopc_send_dword_u$quiul
+ 0001:000054E9  Idle @iopc_get_dword_s$quipl
+ 0001:0000552A  Idle @iopc_get_dword_u$quipul
+ 0001:0000556B       @OPC_Greet$qpcus
+ 0001:00005809  Idle @iopc_cria_comando$qpct1
+ 0001:00005866  Idle @iopc_interp_msg$qpct1i
+ 0001:00005A86       @OPC_Initialized$qv
+ 0001:00005A8C  Idle @iopc_ident_comand$qpct1i
+ 0001:00005B02  Idle @iopc_confirma$qpct1c
+ 0001:00005B65  Idle @iopc_add_ulong$qpcul
+ 0001:00005BBB  Idle @iopc_add_long$qpcl
+ 0001:00005C11  Idle @iopc_add_ushort$qpcus
+ 0001:00005C69  Idle @iopc_add_short$qpcs
+ 0001:00005CC1  Idle @iopc_add_char$qpct1
+ 0001:00005D17  Idle @OPC_Information$qv
+ 0001:00005D1A       @OPC_LoadOfile$qpct1pususpp9ContVerStt3t1puip9ContVerSt9ContVerStp15ESOPC_IOControl
+ 0001:00006BF6       @OPC_DumpOfile$qpcplt1t1t2t1t2pust1pp9ContVerStt8
+ 0001:000076EF       @OPC_GetHostName$qpc
+ 0001:00007721  Idle @get_host_name$qpc
+ 0001:00007730  Idle OPC_Privileges
+ 0001:000077D0  Idle @OPC_PCacheCleanup$qv
+ 0001:000077E9       @OPC_PCacheInit$qip8bdt_ctrlui
+ 0001:0000785D       @OPC_PCacheRead$qpcuipuipul
+ 0001:000079EA  Idle @OPC_PCacheWrite$qpcuipuip9ContVerSt
+ 0001:00007A85  Idle @OPC_PCacheFlush$qv
+ 0001:00007AB4  Idle @KERNIO_stop_func$qul
+ 0001:00007AFA       _iidm_apagar
+ 0001:00008233  Idle _iidm_ascii_to_atrib
+ 0001:00008286  Idle _iidm_atrib_to_ascii
+ 0001:000082CD       _iidm_cab_ficha_actual
+ 0001:000082E5       _iidm_conv_atrib_for_ficha
+ 0001:000084B1       _iidm_end_optidoc
+ 0001:00008500       _iidm_get_atrib_from_ficha
+ 0001:000086E9  Idle _iidm_get_PRD_page_name_list
+ 0001:00008810  Idle _iidm_init_idm
+ 0001:00008865       _iidm_init_optidoc
+ 0001:00008D79       _iidm_ping_optidoc
+ 0001:00008D9B       _iidm_privil_apagar
+ 0001:000093BC       _iidm_remove_tree
+ 0001:00009672       _iidm_rmdir
+ 0001:000097DB       _iidm_valid_priv_apagar
+ 0001:00009A08  Idle @DUMMY_Avisofunc$qipc
+ 0001:00009A74  Idle IDM_EndOptidoc
+ 0001:00009AA6  Idle IDM_InitOptidoc
+ 0001:00009AD8  Idle IDM_ListaDiscos
+ 0001:00009B4E  Idle IDM_PingOptidoc
+ 0001:00009B7C  Idle IDM_PingOptidocServer
+ 0001:00009BB5  Idle IDM_SetConfiguration
+ 0001:00009BCF  Idle IDM_SetServer
+ 0001:00009BFA  Idle IDM_GuardaExterior
+ 0001:00009C3D  Idle @aux_sort_function$qpxvt1
+ 0001:00009C77  Idle _iidm_save_file
+ 0001:0000A7F1       IDM_RecuperaExterior
+ 0001:0000A844       _iidm_load_file
+ 0001:0000C1BA  Idle @WriteLog$qpc
+ 0001:0000C200  Idle GetFile
+ 0001:0000C258  Idle GetPathFiles
+ 0001:0000C2E3  Idle OAP_RecuperaOpticoEx
+ 0001:0000C49B  Idle @iidm_load_fileEx$qpcip10ind_versaoiusp15ESIDM_IOControl
+ 0001:0000DE75  Idle IDM_LerFichaExterior
+ 0001:0000E3BF  Idle IDM_SetOptEntry
+ 0001:0000E476  Idle IDM_SetOptEntryTidm
+ 0001:0000E4E9  Idle IDM_GuardaExtDirecto
+ 0001:0000E5FD  Idle IDM_RecuperaExtDirecto
+ 0001:0000E6EB  Idle IDM_ReadOptab
+ 0001:0000E706  Idle IDM_GetAtribFromFicha
+ 0001:0000E71D  Idle IDM_DumpOfile
+ 0001:0000E74D       IDM_FindFirst
+ 0001:0000E76B       IDM_FindNext
+ 0001:0000E783       IDM_FindClose
+ 0001:0000E793  Idle IDM_ApagarDoc
+ 0001:0000E7B3  Idle IDM_CopiarDoc
+ 0001:0000F061  Idle IDM_MoverDoc
+ 0001:000100C6  Idle IDM_Rmdir
+ 0001:000100DB  Idle IDM_Mkdir
+ 0001:000100EB  Idle IDM_EstadoDoc
+ 0001:00010103  Idle IDM_AcessoDoc
+ 0001:00010118  Idle IDM_IsReserved
+ 0001:00010128       IDM_IsOptical
+ 0001:0001013D  Idle IDM_AcertaArqx
+ 0001:00010168  Idle IDM_NewPRDEntry
+ 0001:00010178  Idle IDM_IsPRD
+ 0001:00010188  Idle IDM_AlterarStatus
+ 0001:000101C0  Idle IDM_OptEstado
+ 0001:00010235  Idle IDM_GetOptEntry
+ 0001:0001026E  Idle IDM_GetOptInfo
+ 0001:00010285  Idle IDM_GetOptInfoAll
+ 0001:0001029C  Idle IDM_PrivilApagar
+ 0001:000102B4  Idle IDM_ValidPrivApagar
+ 0001:000102D2  Idle IDM_File2Bdt
+ 0001:000102E7  Idle IDM_RemoveTree
+ 0001:00010307  Idle IDM_GetTmpFileName
+ 0001:00010364  Idle PRD_MarkAllChanged
+ 0001:00010374  Idle PRD_IsChanged
+ 0001:00010389  Idle PRD_GetNPages
+ 0001:000103A1  Idle PRD_Fopen
+ 0001:000103BE  Idle PRD_Fseek
+ 0001:000103E0  Idle PRD_Fclose
+ 0001:000103F0  Idle PRD_PageIsOptical
+ 0001:0001040A  Idle _iprd_get_n_pages
+ 0001:00010580  Idle _iprd_is_changed
+ 0001:00010593  Idle _iprd_mark_all_changed
+ 0001:0001063B  Idle _iprd_fopen
+ 0001:000109ED  Idle _iprd_page_is_optical
+ 0001:00010A43  Idle _iprd_fseek
+ 0001:00010C15  Idle _iprd_fclose
+ 0001:00010C90       @iidm_find_first_file$qpcp5ffblki
+ 0001:00010DC5       @iidm_find_next_file$qp5ffblk
+ 0001:00010EE1       @iidm_find_close_file$qv
+ 0001:00010F00  Idle @tipoMaquina$qv
+ 0001:00010F1D       @GEN_ConvWord$qusii
+ 0001:00010F70       @GEN_ConvDwordu$qpcii
+ 0001:00010FF2       @GEN_LocalCpu$qv
+ 0001:0001101A       @GEN_SplitPath$qpct1t1
+ 0001:0001109A  Idle @GEN_Strncpy$qpct1i
+ 0001:000110CD       @GEN_AllocNewHandle$qp21ESGEN_HandleArrayDesc
+ 0001:0001112C       @GEN_FreeHandle$qp21ESGEN_HandleArrayDesci
+ 0001:00011180  Idle BDT_Open
+ 0001:00011190  Idle BDT_RegistBlock
+ 0001:000111A5  Idle BDT_WriteRecord
+ 0001:000111CF  Idle BDT_Create
+ 0001:000111E4  Idle BDT_Close
+ 0001:000111F4  Idle BDT_Rewind
+ 0001:00011204  Idle BDT_IniCtrl
+ 0001:00011214  Idle BDT_ReadNthRecord
+ 0001:0001122E  Idle BDT_WriteNthRecord
+ 0001:00011248       @ibdt_open$qp8bdt_ctrl
+ 0001:00011365  Idle @ibdt_regist_block$qp8bdt_ctrlul
+ 0001:00011386       @ibdt_write_record$qp8bdt_ctrlp10bdt_record
+ 0001:00011431       @ibdt_read_record$qp8bdt_ctrlp10bdt_record
+ 0001:000114DC       @ibdt_read_nth_record$qp8bdt_ctrlusp10bdt_record
+ 0001:00011519       @ibdt_write_nth_record$qp8bdt_ctrlusp10bdt_record
+ 0001:00011556       @ibdt_create$qp8bdt_ctrlpc
+ 0001:000115EA  Idle @ibdt_ini_ctrl$qp8bdt_ctrl
+ 0001:000115FA       @ibdt_close$qp8bdt_ctrl
+ 0001:0001166D       @ibdt_rewind$qp8bdt_ctrl
+ 0001:0001168C       _iidm_acerta_arqx
+ 0001:00011766       _iidm_acerta_arqx_ogd
+ 0001:0001184D       _iidm_file_2_bdt
+ 0001:00011A2A  Idle _iidm_read_opt_reg
+ 0001:00011E70  Idle @iidm_read_v51v60_opt_reg$qp4FILEp5opt_t
+ 0001:0001226E  Idle _iidm_read_v4_opt_reg
+ 0001:00012407  Idle @iidm_skip_opt_reg$qp4FILE
+ 0001:0001242D  Idle @iidm_one_reg_back$qp4FILE
+ 0001:00012446  Idle _iidm_first_opt_free
+ 0001:000124B1  Idle _iidm_write_opt_reg
+ 0001:00012A4B  Idle _iidm_find_file_opt
+ 0001:00012B37       _iidm_file_is_in_optab
+ 0001:00012BF5  Idle _iidm_em_DO_validar
+ 0001:00012CB3  Idle _iidm_em_DO_validar_ogd
+ 0001:00012D41  Idle _iidm_getdirectoria
+ 0001:00012D82       _iidm_read_optab
+ 0001:00012F60       _iidm_em_DO_ogd
+ 0001:00012FEE       _iidm_acesso_doc
+ 0001:00013156       _iidm_fechar_opt
+ 0001:00013191       _iidm_is_PRD
+ 0001:00013262       _iidm_new_PRD_entry
+ 0001:000132A3  Idle _iidm_conv_filename
+ 0001:000132D8       _iidm_alterar_status
+ 0001:000133B1       _iidm_alterar_ltime_ogd
+ 0001:00013462       _iidm_open_optab
+ 0001:00013BB8  Idle _iidm_write_opt_cab
+ 0001:00013C52  Idle _iidm_write_opt_cab_v60
+ 0001:00013CEC  Idle _iidm_is_locked
+ 0001:00013D23       _iidm_unlock_regist
+ 0001:00013D5A       _iidm_isreserved
+ 0001:00013F10  Idle _iidm_maskcmp
+ 0001:00014106  Idle _iidm_read_optab_ogd
+ 0001:00014407       _iidm_alterar_opt
+ 0001:000144B3  Idle _iidm_alterar_ltime
+ 0001:0001458B       _iidm_inserir_opt
+ 0001:000147CF  Idle _iidm_caminho
+ 0001:00014843       _iidm_em_DO
+ 0001:00014901       _iidm_lock_regist
+ 0001:00014938       _iidm_alterar_opt_ogd
+ 0001:000149C8       _iidm_alterar_status_ogd
+ 0001:00014A82       _iidm_set_prd_ogd
+ 0001:00014B3B       _iidm_file_access
+ 0001:00014B5B       _iidm_get_info
+ 0001:00014C4D       _iidm_n_atributos
+ 0001:00014CCC       _iidm_getpath
+ 0001:00014DF4  Idle _iidm_skip_opt_cab
+ 0001:00014E15       _iidm_mkdir
+ 0001:00014E87       _iidm_find_close
+ 0001:00014E91       _iidm_find_first
+ 0001:00015365       _iidm_find_next
+ 0001:000156EC  Idle _iidm_unlink
+ 0001:00015755  Idle _iidm_rm_empty_dir
+ 0001:0001583E       _iidm_prd_is_changed
+ 0001:000158D7  Idle _iidm_copy_file
+ 0001:00015B8D       _iidm_estado_doc
+ 0002:00000058       ___isDLL
+ 0002:00000059  Idle ___isGUI
+ 0002:0000005A  Idle __TLS_index
+ 0002:0000005E  Idle __TLS_index4
+ 0002:00000062  Idle __hInstance
+ 0002:00000330  Idle _CALL_TOUT
+ 0002:00000334  Idle _GEN_TOUT
+ 0002:00000338  Idle _CONN_TOUT
+ 0002:0000033C  Idle _DOWN_TOUT
+ 0002:00000354  Idle _testa_time
+ 0002:00000358  Idle _dim_fich
+ 0002:0000035C       _Cache
+ 0002:00000360  Idle _stNullIO
+ 0002:00000474       _stGContextsDsc
+ 0002:000004A4  Idle _pstGContextsDsc
+ 0002:000005E0       _DLL_ocupada
+ 0002:000005E4       _stIDMNullIO
+ 0002:000005F0  Idle _OptabFilesCount
+ 0002:000007F8  Idle _Motorola
+ 0002:0000080C  Idle _EDBDT_SIGNATURE
+ 0002:00000844  Idle _dir_phase
+ 0002:00000AE8  Idle ___CPPexceptionList
+ 0002:00000AEC  Idle ___exceptFlags
+ 0002:00000AF0  Idle ___debuggerHookFN
+ 0002:00000AF4  Idle ___debuggerWatchingP
+ 0002:00000AF8  Idle ___debuggerHookDataP
+ 0002:00000AFC  Idle ___terminatePTR
+ 0002:00000B00  Idle ___unexpectdPTR
+ 0002:00000B04  Idle ___throwFileName
+ 0002:00000B08  Idle ___throwLineNumber
+ 0002:00000B0C  Idle ___throwExceptionName
+ 0002:00000B10  Idle ___exceptStaticBuffP
+ 0002:00000B14  Idle ___exceptMemAllocVars
+ 0002:00000B18  Idle ___ExceptStaticXbuff
+ 0002:00000BCC  Idle __ExceptVarsSize
+ 0002:00000BD0  Idle __DebuggerHookData
+ 0002:000011C0  Idle _global_access
+ 0002:000011C2  Idle _service_server
+ 0002:000011E8  Idle _Xfer_buff
+ 0002:000031F0  Idle _aux_short
+ 0002:000031F4  Idle _timestamp
+ 0002:000031F8  Idle _nome_srv_p
+ 0002:00003218  Idle _port_srv_p
+ 0002:0000321C  Idle _srv_timestamp
+ 0002:00003228  Idle _err_time
+ 0002:0000322C  Idle _comando
+ 0002:000032AC  Idle _msg_recebida
+ 0002:0000332C  Idle _parametro
+ 0002:000033CC  Idle _PVInf_ContVerSt
+ 0002:000033DC  Idle _aOptabFiles
+ 0002:001F2D90  Idle _szFFMask
+ 0002:001F2DAE  Idle _szFFDirPath
+ 0002:001F2FBC       __DestructorCountPtr
+ 0002:001F2FC0       __pRawDllMain
+Warning: Non-existent segment 'FIXEDSEG' in SEGMENTS/SECTION section of .DEF file

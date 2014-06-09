@@ -1,0 +1,144 @@
+/////////////////////////////////////////////////////////////////////////////
+//                                                                            
+//  File Name:    Setup.rul                                                   
+//                                                                            
+//  Description:  InstallShield script                                          
+//                                                                            
+//  Comments:     This minimal project is intended for advanced users. 
+//                To create a robust project with step-by-step 
+//				  instructions, use the Project Wizard. 
+//                                                                                                               
+/////////////////////////////////////////////////////////////////////////////
+
+// Include header files /////////////////////////////////////////////////////
+#include "ifx.h"
+
+////////////////////// string defines ////////////////////////////
+
+//////////////////// installation declarations ///////////////////
+
+// ----- DLL function prototypes -----
+
+
+    // your DLL function prototypes
+
+
+// ---- script function prototypes -----
+
+
+    // your script function prototypes
+
+    // your global variables
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           
+//  FUNCTION:   OnFirstUIBefore                                            
+//                                                                           
+//  EVENT:      FirstUIBefore event is sent when installation is run for the first
+//              time on given machine. In the handler installation usually displays
+//              UI allowing end user to specify installation parameters. After this
+//              function returns, ComponentTransferData is called to perform file
+//              transfer.
+//                                                                           
+///////////////////////////////////////////////////////////////////////////////
+function OnFirstUIBefore()
+    NUMBER nResult, nSetupType, nvSize, nUser;
+    STRING szTitle, szMsg, szQuestion, svName, svCompany, szFile;
+    STRING szLicenseFile;
+    LIST list, listStartCopy;
+    BOOL bCustom;
+begin	
+    // TO DO: if you want to enable background, window title, and caption bar title                                                                   
+    // SetTitle( @PRODUCT_NAME, 24, WHITE );                                        
+    // SetTitle( @PRODUCT_NAME, 0, BACKGROUNDCAPTION ); 	                  
+    // Enable( FULLWINDOWMODE );						   
+    // Enable( BACKGROUND );							  
+    // SetColor(BACKGROUND,RGB (0, 128, 128));					   
+
+    SHELL_OBJECT_FOLDER = @PRODUCT_NAME;	   
+    
+    nSetupType = TYPICAL;	
+
+Dlg_SdWelcome:
+    szTitle = "";
+    szMsg   = "";
+    nResult = SdWelcome(szTitle, szMsg);
+    if (nResult = BACK) goto Dlg_SdWelcome;
+	
+    szTitle   = "";
+    svName    = "";
+    svCompany = "";
+
+Dlg_SdAskDestPath:    	
+    nResult = SdAskDestPath(szTitle, szMsg, INSTALLDIR, 0);
+    if (nResult = BACK) goto Dlg_SdWelcome;
+
+
+    // setup default status
+    Enable(STATUSEX);
+ 
+    return 0;
+end;
+
+///////////////////////////////////////////////////////////////////////////////
+//
+//  FUNCTION:   OnFirstUIAfter
+//
+//  EVENT:      FirstUIAfter event is sent after file transfer, when installation 
+//              is run for the first time on given machine. In this event handler 
+//              installation usually displays UI that will inform end user that
+//              installation has been completed successfully.
+//
+///////////////////////////////////////////////////////////////////////////////
+function OnFirstUIAfter()
+    STRING szTitle, szMsg1, szMsg2, szOption1, szOption2;
+    NUMBER bOpt1, bOpt2;
+begin
+
+    Disable(STATUSEX);
+
+    bOpt1  = FALSE;
+    bOpt2  = FALSE;
+    szMsg1 = SdLoadString(IFX_SDFINISH_MSG1);
+    SdFinishEx(szTitle, szMsg1, szMsg2, szOption1, szOption2, bOpt1, bOpt2);
+end;
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+//  FUNCTION:   OnMaintUIBefore
+//
+//  EVENT:      MaintUIBefore event is sent when end user runs installation that
+//              has already been installed on the machine. Usually this happens 
+//              through Add/Remove Programs applet. In the handler, installation 
+//              usually displays UI allowing end user to modify existing installation
+//              or uninstall application. After this function returns, 
+//              FeatureTransferData is called to perform file transfer.
+//
+///////////////////////////////////////////////////////////////////////////////
+function OnMaintUIBefore()
+    NUMBER nResult, nType;
+    STRING szTitle, szMsg, svDir, svResult, szCaption;
+begin
+    // TO DO: if you want to enable background, window title, and caption bar title   								
+    // SetTitle( @PRODUCT_NAME, 24, WHITE );					
+    // SetTitle( @PRODUCT_NAME, 0, BACKGROUNDCAPTION );  			
+    // SetColor(BACKGROUND,RGB (0, 128, 128));					
+    // Enable( FULLWINDOWMODE );						
+    // Enable( BACKGROUND );							
+	
+    svResult = SdLoadString(IFX_MAINTUI_MSG);
+    szCaption = SdLoadString(IFX_ONMAINTUI_CAPTION);
+    nResult = SprintfBox(MB_OKCANCEL,szCaption,"%s",svResult);
+    if (nResult = IDOK) then
+    	ComponentRemoveAll();
+    endif; 
+    
+    Enable(STATUSEX);
+end;
+
+// --- include script file section ---
+
+

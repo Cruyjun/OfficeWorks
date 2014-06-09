@@ -1,0 +1,51 @@
+rem Imaging for Windows XP installation
+rem (As XP does not comes with Imaging for Windows we can use Windows 2000 files to make it work in XP)
+
+rem We have 2 ways of doing this:
+rem 1) Use this .txt file as a .bat file (just rename it). In this case you will need Windows 2000 CD inserted into Drive D:
+rem - OR -
+rem 2) Copy each file named below into its referred target directory.
+
+d:
+cd \i386
+
+pause
+
+expand IMGADMIN.OC_ c:\Windows\System32\IMGADMIN.OCX
+expand IMGCMN.DL_ c:\Windows\System32\IMGCMN.DLL
+expand IMGEDIT.OC_ c:\Windows\System32\IMGEDIT.OCX
+expand IMGSCAN.OC_ c:\Windows\System32\IMGSCAN.OCX
+expand IMGSHL.DL_ c:\Windows\System32\IMGSHL.DLL
+expand IMGTHUMB.OC_ c:\Windows\System32\IMGTHUMB.OCX
+expand JPEG1X32.DL_ c:\Windows\System32\JPEG1X32.DLL
+expand JPEG2X32.DL_ c:\Windows\System32\JPEG2X32.DLL
+expand OIENG400.DL_ c:\Windows\System32\OIENG400.DLL
+expand OIPRT400.DL_ c:\Windows\System32\OIPRT400.DLL
+expand OISLB400.DL_ c:\Windows\System32\OISLB400.DLL
+expand OISSQ400.DL_ c:\Windows\System32\OISSQ400.DLL
+expand OITWA400.DL_ c:\Windows\System32\OITWA400.DLL
+expand OIUI400.DL_ c:\Windows\System32\OIUI400.DLL
+expand TIFFLT.DL_ c:\Windows\System32\TIFFLT.DLL
+expand XIFFR3_0.DL_ c:\Windows\System32\XIFFR3_0.DLL
+
+
+expand IMGHELP.HL_ c:\Windows\Help\IMGHELP.HLP
+expand IMGMGT.CH_ c:\Windows\Help\IMGMGT.CHM
+expand IMGMGT.HL_ c:\Windows\Help\IMGMGT.HLP
+expand IMGTASKS.CH_ c:\Windows\Help\IMGTASKS.CHM
+expand IMGVIEW.CH_ c:\Windows\Help\IMGVIEW.CHM
+
+expand KODAKIMG.EX_ c:\Windows\KODAKIMG.EXE
+expand KODAKPRV.EX_ c:\Windows\KODAKPRV.EXE
+
+c:
+cd \Windows\System32
+
+rem After copying the files it is also necessary to register the following
+rem (If you are running this as a batch file this also will be done automatically)
+
+regsvr32 IMGADMIN.OCX
+regsvr32 IMGEDIT.OCX
+regsvr32 IMGSCAN.OCX
+regsvr32 IMGTHUMB.OCX
+

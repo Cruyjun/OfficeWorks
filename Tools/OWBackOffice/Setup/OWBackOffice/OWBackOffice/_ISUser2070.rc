@@ -1,0 +1,87 @@
+#include <windows.h>
+#include <commctrl.h>
+
+
+12006 DIALOGEX 0,0,332,218
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "InstallShield Wizard" 
+
+FONT 8,"MS Sans Serif",0,0,0x1
+BEGIN
+	DEFPUSHBUTTON	"&Seguinte >",1,215,196,50,14,WS_GROUP
+	PUSHBUTTON	"Cancelar",9,272,196,50,14
+	PUSHBUTTON	"< &Anterior",12,166,196,50,14,WS_DISABLED
+	LTEXT		"O InstallShield( Wizard vai instalar %P no computador.  Para continuar, faça clique sobre Seguinte. ",710,127,49,184,40,ES_AUTOHSCROLL | SS_NOPREFIX,WS_EX_TRANSPARENT
+	CONTROL		"",1300,"Static",SS_BLACKFRAME | WS_GROUP,0,186,332,1
+	CONTROL		10001,551,"Static",SS_BITMAP | SS_CENTERIMAGE | SS_REALSIZEIMAGE | WS_DISABLED,0,0,110,185
+	LTEXT		"",52,111,0,221,185
+	LTEXT		"Bem-vindo ao InstallShield Wizard de %P ",50,127,19,184,16,0,WS_EX_TRANSPARENT
+	PUSHBUTTON	"C",2,164,225,50,14,NOT WS_TABSTOP | NOT WS_VISIBLE
+END
+
+
+10205 DIALOGEX 0,0,332,218
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "InstallShield Wizard" 
+
+FONT 8,"MS Sans Serif",0,0,0x1
+BEGIN
+	LTEXT		"O InstallShield( Wizard vai instalar %P no computador.  Para continuar, faça clique sobre Seguinte. ",202,127,49,184,40,ES_AUTOHSCROLL | SS_NOPREFIX,WS_EX_TRANSPARENT
+	DEFPUSHBUTTON	"&Seguinte >",1,215,196,50,14,WS_GROUP
+	PUSHBUTTON	"Cancelar",9,272,196,50,14
+	PUSHBUTTON	"< &Anterior",12,166,196,50,14
+	CONTROL		"",1300,"Static",SS_BLACKFRAME | WS_GROUP,0,186,332,1
+	CONTROL		10001,551,"Static",SS_BITMAP | SS_CENTERIMAGE | SS_REALSIZEIMAGE | WS_DISABLED,0,0,110,185
+	LTEXT		"",52,110,0,221,185
+	LTEXT		"Bem-vindo ao programa de configuração %P ",50,127,19,184,16,0,WS_EX_TRANSPARENT
+	PUSHBUTTON	"C",2,164,225,50,14,NOT WS_TABSTOP | NOT WS_VISIBLE | WS_GROUP
+END
+
+
+12032 DIALOGEX 0,0,332,218
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "InstallShield Wizard" 
+
+FONT 8,"MS Sans Serif",0,0,0x1
+BEGIN
+	LTEXT		"",52,110,0,221,185
+	CONTROL		"Sim, pretendo visualizar o ficheiro Leiame.",501,"Button",BS_AUTOCHECKBOX | WS_GROUP,117,76,198,12
+	CONTROL		"Sim, pretendo iniciar %p agora.",502,"Button",BS_AUTOCHECKBOX,117,91,198,16
+	LTEXT		"",712,117,113,198,59,ES_AUTOHSCROLL | SS_NOPREFIX
+	PUSHBUTTON	"< &Anterior",12,166,196,50,14,WS_GROUP
+	DEFPUSHBUTTON	"Concluir",1,215,196,50,14
+	PUSHBUTTON	"Cancelar",9,272,196,50,14,WS_DISABLED
+	LTEXT		"InstallShield Wizard concluído.",711,117,34,198,40,ES_AUTOHSCROLL | SS_NOPREFIX
+	LTEXT		"InstallShield Wizard concluído",50,117,10,108,8,0,WS_EX_TRANSPARENT
+	CONTROL		"",1300,"Static",SS_BLACKFRAME | WS_GROUP,0,186,332,1
+	CONTROL		10001,551,"Static",SS_BITMAP | SS_CENTERIMAGE | SS_REALSIZEIMAGE | WS_DISABLED,0,0,110,185
+END
+
+
+12031 DIALOGEX 0,0,332,218
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "InstallShield Wizard" 
+
+FONT 8,"MS Sans Serif",0,0,0x1
+BEGIN
+	LTEXT		"",52,110,0,221,185
+	CONTROL		"Sim, pretendo reiniciar o computador agora.",502,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP | WS_GROUP,117,83,198,12
+	CONTROL		"Não, pretendo reiniciar o computador mais tarde.",503,"Button",BS_AUTORADIOBUTTON,117,105,198,12
+	PUSHBUTTON	"< &Anterior",12,166,196,50,14,WS_GROUP
+	DEFPUSHBUTTON	"Concluir",1,215,196,50,14
+	PUSHBUTTON	"Cancelar",9,272,196,50,14,WS_DISABLED
+	LTEXT		"O InstallShield Wizard instalou com êxito %P. Antes de utilizar o programa, deve reiniciar o computador.",711,117,38,198,40,ES_AUTOHSCROLL | SS_NOPREFIX
+	LTEXT		"Remova todos os discos das respectivas unidades e, em seguida, faça clique sobre Concluir para terminar o programa de configuração.",712,117,129,197,48,ES_AUTOHSCROLL | SS_NOPREFIX
+	LTEXT		"InstallShield Wizard concluído",50,117,17,108,8,0,WS_EX_TRANSPARENT
+	CONTROL		"",1300,"Static",SS_BLACKFRAME | WS_GROUP,0,186,332,1
+	CONTROL		10001,551,"Static",SS_BITMAP | SS_CENTERIMAGE | SS_REALSIZEIMAGE | WS_DISABLED,0,0,110,185
+END
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmaps
+//
+10001		BITMAP	"X:\\Tools\\OWBackOffice\\dialog.bmp"

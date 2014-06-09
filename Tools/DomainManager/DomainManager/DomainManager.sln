@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainManager", "DomainManager.csproj", "{7924ABC6-3727-4B76-89C6-870CA8E562BB}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccLocalPath0 = .
+		CanCheckoutShared = false
+		SolutionUniqueID = {CC06CDEA-8CEC-4D94-9575-56F08F37631E}
+		SccProjectUniqueName1 = DomainManager.csproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{7924ABC6-3727-4B76-89C6-870CA8E562BB}.Debug.ActiveCfg = Debug|.NET
+		{7924ABC6-3727-4B76-89C6-870CA8E562BB}.Debug.Build.0 = Debug|.NET
+		{7924ABC6-3727-4B76-89C6-870CA8E562BB}.Release.ActiveCfg = Release|.NET
+		{7924ABC6-3727-4B76-89C6-870CA8E562BB}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
