@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OWFlow">
+		<param name="Local" value="home_flow.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Nomenclatura">
+			<param name="Local" value="owflow\owflow_nomenclatura.htm">
+			<param name="ImageNumber" value="2">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Conte&uacute;dos de Nomenclatura">
+				<param name="Local" value="owflow\owflow_nomenclatura_conteudo.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Fluxos">
+			<param name="Local" value="owflow\owflow_fluxos.htm">
+			<param name="ImageNumber" value="2">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Dados de um Fluxo">
+				<param name="Local" value="owflow\owflow_fluxos_dados.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Opera&ccedil;&otilde;es">
+				<param name="Local" value="owflow\owflow_fluxos_operações.htm">
+				<param name="ImageNumber" value="2">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Listar Fluxos">
+					<param name="Local" value="owflow\owflow_fluxos_operações_listar.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Inserir Fluxos">
+					<param name="Local" value="owflow\owflow_fluxos_operações_inserir.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Modificar Fluxo">
+					<param name="Local" value="owflow\owflow_fluxos_operações_modificar.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Apagar Fluxo">
+					<param name="Local" value="owflow\owflow_fluxos_operações_apagar.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Alarmes do Fluxo">
+					<param name="Local" value="owflow\owflow_fluxos_operações_alarmes.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+			</UL>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Processos">
+			<param name="Local" value="owflow\owflow_processos.htm">
+			<param name="ImageNumber" value="2">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Dados de um Processo">
+				<param name="Local" value="owflow\owflow_processos_dados.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Opera&ccedil;&otilde;es">
+				<param name="Local" value="owflow\owflow_processos_operações.htm">
+				<param name="ImageNumber" value="2">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Iniciar Processo">
+					<param name="Local" value="owflow\owflow_processos_operações_iniciar.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Visualizar / Despachar">
+					<param name="Local" value="owflow\owflow_processos_operações_visualizar.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+			</UL>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Centro de Controlo">
+			<param name="Local" value="owflow\owflow_ccontrolo.htm">
+			<param name="ImageNumber" value="2">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Centro de Controlo - Conte&uacute;do">
+				<param name="Local" value="owflow\owflow_ccontrolo_conteúdo.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Pesquisa Avan&ccedil;ada">
+			<param name="Local" value="owflow\owflow_pesquisa.htm">
+			<param name="ImageNumber" value="2">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Pesquisa Avan&ccedil;ada - Conte&uacute;do">
+				<param name="Local" value="owflow\owflow_pesquisa_conteúdo.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Acessos">
+			<param name="Local" value="owflow\owflow_acessos.htm">
+			<param name="ImageNumber" value="2">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Fluxos">
+				<param name="Local" value="owflow\owflow_acessos_fluxos.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Processos">
+				<param name="Local" value="owflow\owflow_acessos_processos.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+		</UL>
+	</UL>
+</UL>
+</BODY></HTML>

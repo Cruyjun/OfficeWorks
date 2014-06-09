@@ -1,0 +1,624 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Home Page">
+		<param name="Local" value="home.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Novas Funcionalidades">
+		<param name="Local" value="whatsnew.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OfficeWorks">
+		<param name="Local" value="home.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Instala&ccedil;&atilde;o">
+			<param name="Local" value="OfficeWorks\OfficeWorks_instalacao.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Instala&ccedil;&atilde;o">
+				<param name="Local" value="OfficeWorks\OfficeWorks_instalacao.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Requisitos de Hardware e Software">
+				<param name="Local" value="OfficeWorks/OfficeWorks_instalacao_requisitos.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Servidor de Ficheiros">
+				<param name="Local" value="OfficeWorks\OfficeWorks_instalacao_fileserver.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Data dos Servidores">
+				<param name="Local" value="OfficeWorks\OfficeWorks_instalacao_serverdate.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Dom&iacute;nio em Windows 98">
+				<param name="Local" value="OfficeWorks\OfficeWorks_instalacao_98.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Chaves do Registo">
+				<param name="Local" value="OfficeWorks\OfficeWorks_instalacao_chaves.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Configura&ccedil;&atilde;o">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Internet Explorer">
+				<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_ie.htm">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Configura&ccedil;&atilde;o do Internet Explorer">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_ie.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Utilizadores">
+				<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_utilizadores.htm">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Configura&ccedil;&atilde;o">
+					<param name="Local" value="OfficeWorks/OfficeWorks_configuracao_utilizadores.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Acessos ">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_utilizadores_acessos.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Criar um Utilizador">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_utilizadores_novo.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Modificar um Utilizador">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_utilizadores_modificar.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Remover um Utilizador">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_utilizadores_apagar.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Activar/Desactivar Utilizador">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_utilizadores_activar.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Imprimir Utilizadores">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_utilizadores_imprimir.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Livros">
+				<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_livros.htm">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Configura&ccedil;&atilde;o">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_livros.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Criar um novo Livro de registos">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_livros_novo.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Acesso Hier&aacute;rquico">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_livros_acesso_hierarquico.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Modificar um Livro de Registos">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_livros_modificar.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Remover um Livro de Registos">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_livros_apagar.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Acessos">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_livros_acessos.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Palavras Chave">
+				<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_palavraschave.htm">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Configura&ccedil;&atilde;o">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_palavraschave.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Criar uma nova Palavras Chave">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_palavraschave_nova.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Modificar uma Palavra Chave">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_palavraschave_modificar.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Remover uma Palavra Chave">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_palavraschave_apagar.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Associar a um Livro">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_palavraschave_acessos.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Tipos de Documento">
+				<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_tipodocumento.htm">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Configura&ccedil;&atilde;o">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_tipodocumento.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Criar um Tipo de Documento">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_tipodocumento_novo.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Modificar um Tipo de Documento">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_tipodocumento_modificar.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Remover um Tipo de Documento">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_tipodocumento_apagar.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Associar a um Livro">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_tipodocumento_acessos.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Classifica&ccedil;&otilde;es">
+				<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_classificacao.htm">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Configura&ccedil;&atilde;o">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_classificacao_configuracao.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Permiss&otilde;es das Classifica&ccedil;&otilde;es">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_classificacao_permissoes.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Imprimir Classifica&ccedil;&otilde;es">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_classificacao_imprimir.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Perfis de Impress&atilde;o/Exporta&ccedil;&atilde;o">
+				<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_perfis.htm">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Configura&ccedil;&atilde;o">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_perfis_configuracao.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Associar Campos ao Perfil">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_perfis_associar.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Campos">
+				<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_campos.htm">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Configura&ccedil;&atilde;o">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_campos_configuracao.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Associar Campos">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_campos_associar.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Posicionar Campos">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_campos_posicionar.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Campos do Tipo Lista">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_campos_lista.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Associar Lista">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_campos_lista_associar.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Despachos">
+				<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_despachos.htm">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Configura&ccedil;&atilde;o">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_despachos_configuracao.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Associar Despachos">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_despachos_associar.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Distribui&ccedil;&otilde;es">
+				<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_distribuicao.htm">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Configura&ccedil;&atilde;o">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_distribuicao_configuracao.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Livros">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_distribuicao_livros.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Classifica&ccedil;&atilde;o">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_distribuicao_classificacao.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Tipo de Documento">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_distribuicao_tipodocumento.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Assinatura">
+				<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_assinatura.htm">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Configura&ccedil;&atilde;o da Assinatura">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_assinatura.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Palete de Cores">
+				<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_palete.htm">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Configura&ccedil;&atilde;o">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_palete_configuracao.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Grupos">
+				<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_grupos.htm">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Configura&ccedil;&atilde;o de Grupos">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_grupos_configuracao.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Associar Utilizadores">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_grupos_associar.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Grupo Prim&aacute;rio">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_grupos_grupoprimario.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Entidades">
+				<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_entidades_configuracao.htm">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Configura&ccedil;&atilde;o de Entidades">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_entidades_configuracao.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Campos">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_entidades_campos.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Listas">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_entidades_listas.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="C&oacute;digos Postais">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_entidades_codigospostais.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Perfis de Exporta&ccedil;&atilde;o">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_entidades_perfis.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Grupos">
+					<param name="Local" value="OfficeWorks\OfficeWorks_configuracao_entidades_grupos.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+			</UL>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Correio Circular">
+			<param name="Local" value="OfficeWorks\OfficeWorks_utilizador_wokflow.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Envio de uma mensagem">
+				<param name="Local" value="OfficeWorks\OfficeWorks_utilizador_workflow_enviar.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Leitura de uma Mensagem">
+				<param name="Local" value="OfficeWorks\OfficeWorks_utilizador_workflow_ler.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Despachar, Indeferir, Delegar e Suspender">
+				<param name="Local" value="OfficeWorks\OfficeWorks_utilizador_workflow_despachar.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Registo">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Inserir Registo">
+				<param name="Local" value="OfficeWorks\OfficeWorks_utilizador_registo.htm">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Inser&ccedil;&atilde;o de Fichas de Registo">
+					<param name="Local" value="OfficeWorks\OfficeWorks_utilizador_registo_inserir.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Associar Livro">
+					<param name="Local" value="OfficeWorks\OfficeWorks_utilizador_registo_livro.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Tipo de Documento">
+					<param name="Local" value="OfficeWorks\OfficeWorks_utilizador_registo_tipodocumento.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Associar Entidade">
+					<param name="Local" value="OfficeWorks\OfficeWorks_utilizador_registo_entidade.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Classifica&ccedil;&atilde;o">
+					<param name="Local" value="OfficeWorks\OfficeWorks_utilizador_registo_classificacao.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Palavras Chave">
+					<param name="Local" value="OfficeWorks\OfficeWorks_utilizador_registo_palavraschave.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Associar Documentos">
+					<param name="Local" value="OfficeWorks\OfficeWorks_utilizador_registo_documentos.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Distribui&ccedil;&atilde;o">
+					<param name="Local" value="OfficeWorks\OfficeWorks_utilizador_registo_distribuicao.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Acesso &agrave; Ficha de registo">
+					<param name="Local" value="OfficeWorks\OfficeWorks_utilizador_registo_acessos.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Associar mais Entidades">
+					<param name="Local" value="OfficeWorks\OfficeWorks_utilizador_registo_maisentidades.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Antecedentes">
+					<param name="Local" value="OfficeWorks\OfficeWorks_utilizador_registo_antecedentes.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Pesquisar Ficha de Registo">
+				<param name="Local" value="OfficeWorks\OfficeWorks_utilizador_pesquisa.htm">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Visualizar Registos">
+					<param name="Local" value="OfficeWorks\OfficeWorks_utilizador_pesquisa_visualizar.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Antecedentes / Subsequentes">
+					<param name="Local" value="OfficeWorks\OfficeWorks_utilizador_pesquisa_antecedentes.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Modificar Registos">
+					<param name="Local" value="OfficeWorks\OfficeWorks_utilizador_pesquisa_modificar.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Perfis de Impress&atilde;o / Exporta&ccedil;&atilde;o">
+					<param name="Local" value="OfficeWorks\OfficeWorks_utilizador_pesquisa_perfis.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Hist&oacute;rico">
+					<param name="Local" value="OfficeWorks\OfficeWorks_utilizador_pesquisa_historico.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+			</UL>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Entidades">
+			<param name="Local" value="OfficeWorks\OfficeWorks_utilizador_entidades.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Inserir Entidade">
+				<param name="Local" value="OfficeWorks\OfficeWorks_utilizador_entidades_inserir.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Pesquisar Entidade">
+				<param name="Local" value="OfficeWorks\OfficeWorks_utilizador_entidades_pesquisar.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="OWScan">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Instala&ccedil;&atilde;o">
+				<param name="Local" value="owscan\owscan_instalacao.htm">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Requisitos de Software">
+					<param name="Local" value="owscan\owscan_instalacao_requisitos.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Correr o Setup">
+					<param name="Local" value="owscan\owscan_instalacao_setup.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="CheckList de Instala&ccedil;&atilde;o">
+					<param name="Local" value="owscan\owscan_instalacao_checklist.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Resolu&ccedil;&atilde;o de Problemas">
+					<param name="Local" value="owscan\owscan_instalacao_troubleshooting.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Utiliza&ccedil;&atilde;o">
+				<param name="Local" value="owscan\owscan_utilizacao.htm">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="O Ecran Inicial">
+					<param name="Local" value="owscan\owscan_utilizacao_ecraninicial.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Configura&ccedil;&atilde;o">
+					<param name="Local" value="owscan\owscan_utilizacao_configuracao.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+			</UL>
+		</UL>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Troubleshooting">
+		<param name="Local" value="troubleshooting\troubleshooting.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="OfficeWorks">
+			<param name="Local" value="troubleshooting\troubleshooting_OfficeWorks.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="CDO">
+			<param name="Local" value="troubleshooting\troubleshooting_cdo.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Correio Circular">
+			<param name="Local" value="troubleshooting\troubleshooting_correiocircular.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="OWSearch">
+			<param name="Local" value="troubleshooting\troubleshooting_owsearch.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Activar Autocomplete">
+			<param name="Local" value="troubleshooting\troubleshooting_autocomplete.htm">
+			</OBJECT>
+		<OBJECT type="text/sitemap">
+			<param name="Merge" value="troubleshooting\ASP.NET Does Not Work with the Default ASPNET Account on a Domain Controller.htm">
+
+			</OBJECT>
+		<OBJECT type="text/sitemap">
+			<param name="Merge" value="troubleshooting\Access Is Denied Error Message When You Try to Access Indexing Service from ASP.NET with Impersonation Enabled.htm">
+
+			</OBJECT>
+		<OBJECT type="text/sitemap">
+			<param name="Merge" value="troubleshooting\Permissions to Connect to a Remote Access Database from ASP.NET.htm">
+
+			</OBJECT>
+	</UL>
+</UL>
+</BODY></HTML>

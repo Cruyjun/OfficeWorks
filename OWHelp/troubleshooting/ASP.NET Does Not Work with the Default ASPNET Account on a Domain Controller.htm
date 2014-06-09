@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>ASP.NET Does Not Work with the Default ASPNET Account on a Domain Controller</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+<DIV class=KBPUBV2 name="KBPUBV2">
+  <!-- - - - - - - - - - - PAGE TEXT BEGINS HERE : KBPUBV2 - - - - - - - - - - -->
+  <DIV class=kbContainer>
+    <h1>FIX: ASP.NET Does Not Work with the Default ASPNET Account on a Domain Controller </h1>
+    <a href="#appliesto">Aplica-se a </a>This article was previously published under Q315158
+    <h2>SYMPTOMS </h2>
+    After you install Microsoft Visual Studio .NET or the Microsoft .NET Framework on a domain controller or on a backup domain controller, if you try to run an ASP.NET application, the browser displays the following error message: <br>
+Server Application Unavailable <br>
+<br>
+The web application you are attempting to access on this web server is currently unavailable. <br>
+<br>
+Please hit the "Refresh" button in your web browser to retry your request. Furthermore, the following event is logged in the system application event log: <br>
+aspnet_wp.exe could not be launched because the username and/or password supplied in the processModel section of the config file are invalid. <br>
+aspnet_wp.exe could not be started. <br>
+HRESULT for the failure: 80004005 This applies to Internet Information Services (IIS) version 5.0 or later.
+<h2>CAUSE </h2>
+By default, ASP.NET runs its worker process (Aspnet_wp.exe) with a weak account (the local machine account, which is named ASPNET) to provide a more secure environment. On a domain controller or on a backup domain controller, all user accounts are domain accounts and are not local machine accounts. Therefore, Aspnet_wp.exe fails to start because it cannot find a local account named "localmachinename\ASPNET". To provide a valid user account on the domain controller, you must specify an explicit account in the &lt;processModel&gt; section of the Machine.config file, or you must use the SYSTEM account. <br>
+<br>
+Note If you try to debug (click the Start button) before you try to browse to the page you can experience the exact same problem.
+<h2>RESOLUTION </h2>
+To work around this problem, use one of the following methods:
+<ul>
+  <li>Create a weak account that has the correct permissions, and then configure the &lt;processModel&gt; section of the Machine.config file to use that account.
+    <li>Set the userName attribute to SYSTEM in the &lt;processModel&gt; section of the Machine.config file.
+    <li>Configure the &lt;processModel&gt; section of the Machine.config file to use an administrator account. </li>
+</ul>
+Note With ASP.NET 1.1, the identity of the ASPNET process is IWAM_MachineName, and this problem does not apply. <br>
+<br>
+Note Allowing ASP.NET applications to run as SYSTEM or an administrator account has serious security implications. If you use either of these workarounds, code that is run in the Aspnet_wp.exe process will have access to the domain controller and the domain settings. Executable files that are started from the Aspnet_wp.exe process run in the same context and also have access to the domain controller. <br>
+<br>
+Therefore, Microsoft recommends that you use the first workaround. To use the first workaround, follow these steps:
+<ol>
+  <li>Create a user account on the computer named ASPUSER, and then add this account to the Users group. <br>
+      <br>
+    Note You can also use the ASPNET account that the .NET Framework created if you change the password on this account. You must know the password on this account because you add the password to the &lt;processModel&gt; section later in these steps.
+    <li>Grant the ASPUSER or the ASPNET account the Log on as a batch job user right. Make sure that this change appears in the Local Security Policy settings. <br>
+        <br>
+    Note To grant the Log on as a batch job user right on this account, you may have to grant this user right in each of the following security policies (From the Control Panel/Administrative Tools): <br>
+    <br>
+    <ul>
+      <li>Domain Controller Security Policy
+          <li>Domain Security Policy
+          <li>Local Security Policy </li>
+    </ul>
+    <br>
+    Note You may have to reboot the server for these changes to take effect.
+    <li>Make sure that the ASPUSER or the ASPNET account has permission to access all of the necessary directories and files to start the Aspnet_wp.exe process and to serve the ASP.NET pages. For additional information about what permissions you must grant to this account, click the following article number to view the article in the Microsoft Knowledge Base:
+        <p><a href="http://support.microsoft.com/default.aspx?kbid=317012">317012 </a> INFO: Process and Request Identity in ASP.NET </p>
+    <li>Open the Machine.config file. The path to the file is: %Systemroot%\Microsoft.NET\Framework\v1.0.3705\CONFIG.
+    <li>In the &lt;processModel&gt; section of the Machine.config file, change the userName and the password attributes to the name and the password of the account that you created in step 1. For example: userName="DomainName\ASPUSER" password="ASPUSERpassword"
+    <li>Save the changes to the Machine.config file. </li>
+</ol>
+<h2>STATUS </h2>
+Microsoft has confirmed that this is a bug in the Microsoft products that are listed at the beginning of this article. This bug was corrected in ASP.NET (included with the .NET Framework) 1.1.
+<h2>REFERENCES </h2>
+For additional information about ASP.NET security, click the following article number to view the article in the Microsoft Knowledge Base:
+<p><a href="http://support.microsoft.com/default.aspx?kbid=306590">306590 </a> INFO: ASP.NET Security Overview </p>
+For additional information, click the following article number to view the article in the Microsoft Knowledge Base:
+<p><a href="http://support.microsoft.com/default.aspx?kbid=316989">316989 </a> PRB: "Login Failed" Error Message When You Create a Trusted Data Connection from ASP.NET to SQL Server </p>
+  </DIV>
+</DIV>
+</body>
+</html>

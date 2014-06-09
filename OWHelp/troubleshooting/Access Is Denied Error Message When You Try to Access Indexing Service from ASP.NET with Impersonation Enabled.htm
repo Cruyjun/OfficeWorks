@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Access Is Denied Error Message When You Try to Access Indexing Service from ASP.NET with Impersonation Enabled</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+<h1>FIX: "Access Is Denied" Error Message When You Try to Access Indexing Service from ASP.NET with Impersonation Enabled </h1>
+<a href="#appliesto">Aplica-se a </a>This article was previously published under Q323293
+<h2>SYMPTOMS </h2>
+When you search against Index Server through an ASP.NET page, you may receive the following error message: <br>
+Access is denied. Description: An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code. <br>
+<br>
+Exception Details: System.Data.OleDb.OleDbException: Access is denied. This behavior is observed only if you enable impersonation for the ASP.NET Web application and if the security context under which the ASP.NET worker process (Aspnet_wp.exe) runs is the ASPNET account.
+<h2>RESOLUTION </h2>
+<h3>Service Pack Information </h3>
+To resolve this problem, obtain the latest service pack for Microsoft Windows 2000. For additional information, click the following article number to view the article in the Microsoft Knowledge Base:
+<p><a href="http://support.microsoft.com/default.aspx?scid=kb;EN-US;260910">260910 </a> How to Obtain the Latest Windows 2000 Service Pack </p>
+<h3>Hotfix Information </h3>
+Use one of the following methods to work around this problem:
+<ul>
+  <li>Disable impersonation for the whole ASP.NET Web application. This is the default setting.
+  <li>Disable impersonation only for the particular .aspx page that does the Index Server search. To do this, add a &lt;location&gt; tag to the Web.config file as follows: &lt;location path="filename.aspx"&gt; &lt;system.web&gt; &lt;identity impersonate="false" /&gt; &lt;/system.web&gt; &lt;/location&gt; </li>
+</ul>
+If these workarounds are not acceptable to you, you may change the security context under which the ASP.NET worker process runs to the SYSTEM account. However, Microsoft does not recommend that you set the security context of the ASP.NET worker process to the SYSTEM account because the SYSTEM account is a highly privileged Administrator account on the Web server computer. Use this workaround only if none of the other workarounds are acceptable to you. <br>
+<br>
+To change the security context under which the ASP.NET worker process runs, set the userName attribute to SYSTEM , and then set the Password attribute to autogenerate in the &lt;processModel&gt; section of the Machine.config file. The Machine.config file is located in the C:\ Windows Directory \Microsoft.Net\Framework\v1.0.3705\Config folder.
+<h2>STATUS </h2>
+Microsoft has confirmed that this is a bug in the Microsoft products that are listed at the beginning of this article. This bug was corrected in ASP.NET (included with the .NET Framework) 1.1. Microsoft has confirmed that this is a problem in Microsoft Windows 2000. This problem was first corrected in Microsoft Windows 2000 Service Pack 4.
+<h2>MORE INFORMATION </h2>
+<h3>Steps to Reproduce the Behavior </h3>
+<ol>
+  <li>Start Microsoft Visual Studio .NET.
+  <li>Create an ASP.NET Web application.
+  <li>Add the following code in the HTML of an .aspx page: &lt;%@ Page language="c#" %&gt; &lt;% System.Data.OleDb.OleDbConnection conn = new System.Data.OleDb.OleDbConnection("provider=msidxs;"); conn.Open(); string Sql = "Select DocTitle, vpath, characterization, rank from Scope(' DEEP TRAVERSAL OF \"C:\\\" ') where FREETEXT(' \"ticket\" ') order by rank desc"; System.Data.OleDb.OleDbDataAdapter da = new System.Data.OleDb.OleDbDataAdapter(Sql, conn); System.Data.DataSet ds = new System.Data.DataSet(); da.Fill(ds, "SearchResults"); Response.Write("Search Results: &lt;br&gt;"); for (int i = 0; i &lt; ds.Tables[0].Rows.Count; i++) { Response.Write("&lt;br&gt;" + ds.Tables[0].Rows[i]["vpath"].ToString()); } %&gt;
+                                  <li>Modify the Web.config file to enable impersonation as follows: &lt;identity impersonate="true" /&gt;
+                                  <li>Make sure that the security context under which the Aspnet_wp.exe worker process runs is the ASPNET account. To do this, set the userName attribute to machine , and then set the Password attribute to autogenerate in the &lt;processModel&gt; section of the Machine.config file. <br>
+                                      <br>
+    Note By default, the ASP.NET worker process is set to run under the security context of the restricted ASPNET account.
+  <li>Start the Indexing Service on your computer.
+  <li>Build the application, and then open the .aspx page in your browser. Notice that you receive the error message that is listed in the "Symptoms" section. </li>
+</ol>
+<h2>REFERENCES </h2>
+For additional information about impersonation in ASP.NET, click the article number below to view the article in the Microsoft Knowledge Base:
+<p><a href="http://support.microsoft.com/default.aspx?scid=kb;EN-US;306158">306158 </a> INFO: Implementing Impersonation in an ASP.NET Application </p>
+For additional information about the ASP.NET worker process identity, click the article number below to view the article in the Microsoft Knowledge Base:
+<p><a href="http://support.microsoft.com/default.aspx?scid=kb;EN-US;317012">317012 </a> INFO: Process and Request Identity in ASP.NET </p>
+<h3>The information in this article applies to: </h3>
+<ul>
+  <li>Microsoft ASP.NET (included with the .NET Framework) 1.0
+  <li>Microsoft Index Server 3.0
+  <li>Microsoft OLE DB Provider for Index Server 3.0 </li>
+</ul>
+</body>
+</html>

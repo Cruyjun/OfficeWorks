@@ -1,0 +1,18 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=OfficeWorks.chm
+Contents file=OfficeWorks_toc.hhc
+Default Window=Favorites
+Default topic=home.htm
+Display compile progress=No
+Full-text search=Yes
+Index file=Index.hhk
+Language=0x816 Portuguese (Portugal)
+Title=OfficeWorks Help
+
+[WINDOWS]
+Favorites="OfficeWorks","OfficeWorks_toc.hhc","Index.hhk","home.htm",,,,,,0x43520,,0x300e,[0,0,400,400],,,,,,,0
+
+
+[INFOTYPES]
+

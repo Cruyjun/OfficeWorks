@@ -1,0 +1,20 @@
+td 
+	{
+		font-family:verdana;
+		font-size:12px;
+		color: #333333; 
+	}
+h3 
+	{
+		font-family:verdana; 
+		font-size:14px; 
+		color:#222222
+	}
+table
+	{
+		line-height:18px;
+	}
+.header
+	{
+		filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',gradientType='1',startColorstr='white', endColorstr='#cccccc');
+	}	

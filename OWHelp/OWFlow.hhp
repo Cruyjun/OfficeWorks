@@ -1,0 +1,18 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=OWFlow.chm
+Contents file=OWFlow_toc.hhc
+Default Window=Favorites
+Default topic=home_flow.htm
+Display compile progress=No
+Full-text search=Yes
+Index file=Index.hhk
+Language=0x816 Portuguese (Portugal)
+Title=OWFlow Help
+
+[WINDOWS]
+Favorites="OfficeWorks","OWFlow_toc.hhc","Index.hhk","home_flow.htm",,,,,,0x43520,,0x300e,[0,0,400,400],,,,,,,0
+
+
+[INFOTYPES]
+

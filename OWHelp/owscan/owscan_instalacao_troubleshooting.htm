@@ -1,0 +1,67 @@
+<html>
+<head><link href="../css/help.css" type="text/css" rel="stylesheet"></head>
+	<body style="FONT-SIZE:12px; FONT-FAMILY:tahoma" leftmargin="0" topmargin="0">
+		<table border="0" height="30" cellpadding="0" cellspacing="0" ID="Table1">
+			<tr>
+				<td width="400px" height="50px"  align=right>
+                <img src="images/logo_v410.gif" halign=right  height="58"></td>
+				<td width="100%" height="1"></td>
+			</tr>
+		</table>
+		<table cellpadding="10">
+			<tr>
+				<td>
+					<h3>Resolução de Problemas</h3>
+					
+					<b>1. Method '~'of Object '~' Failed</b>
+					<br><br>					
+					Ao correr o OWScan.exe, se der o Erro
+					<br><br>
+					<img src=images/owscan_p6.gif width="178" height="115">	 
+					<br><br>					
+					 Verificar se o webservice está bem configurado no registry<br>
+					 (chave HKEY_LOCAL_MACHINE/Software/OW/WebService)
+					<br><br>
+					<br><br>
+					<strong>2. Erro ao digitalizar o documento</strong>
+					<br><br>
+					Em alguns scanners foi reportado que, ao fazer a primeira 
+                    digitalização, já com o OWScan a funcionar, aparece um erro. Tentar novamente. Se o problema 
+                    persistir, contactar os serviços de suporte a clientes da 
+                    Magnetik.
+					<br><br>
+					<strong>3. Erro: “To help protect your security, Internet Explorer has restricted …”</strong>
+					<br><br>
+					Ao iniciar o registo, o OwScan vai tentar abrir uma página no Browser. Se ao abrir essa página aparecer uma barra amarela com o seguinte texto: ”To help protect your security, Internet Explorer has restricted this file from showing active content that could access this computer. Click here for options...” , estamos perante uma medida de segurança implementada com o Service Pack 2 do Windows XP. 
+					<br><br>
+					<img src=images/owscan_p7.gif width="357" height="182">	
+					<br><br>
+					Para contornar esta medida de segurança, tentar o método abaixo indicado
+					<br><br>
+					1) clicar na Mensagem a amarelo e seleccionar “Allow Blockec Content”. Aparecerá a seguinte mensagem:
+					<br><br>
+					<img src=images/owscan_p8.gif width="397" height="142">	
+					<br><br>
+					2) seleccionar “Yes”. 
+					Isto resolverá o problema no momento. Para resolver de vez sem mais avisos deverá alterar os Security Settings do Internet Explorer da seguinte maneira:
+					<br><br>
+					1.	Abrir menu Tools » Internet Options » Advanced Tab<br>
+					2.	Scroll até Security Section<br>
+					3.	Ligar a opção “Allow active content from CDs to run on my computer”<br>
+					4.	Ligar a opção “Allow active content to run in files on My computer”<br>
+					<br><br>
+					<img src=images/owscan_p9.gif width="409" height="462">	
+					<br><br>
+
+					<hr>
+					<a style="color:darkblue; font-weight:bold;">Outros Tópicos relacionados: </a><br>
+					<a style="color:green;" href='owscan_instalacao_requisitos.htm'> Requisitos de Software</a>,
+					<a style="color:green;" href='owscan_instalacao_setup.htm'> Correr o Setup</a>,					
+					<a style="color:green;" href='owscan_instalacao_checklist.htm'> Checklist de Instalação</a>,
+					<br><br>
+					<p align="center"><a href="http://www.Magnetik.com">@Magnetik. Todos os direitos reservados</a></p>
+
+			</tr>
+		</table>
+	</body>
+</html>
