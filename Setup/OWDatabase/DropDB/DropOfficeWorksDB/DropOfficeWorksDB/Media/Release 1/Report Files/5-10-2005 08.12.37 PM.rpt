@@ -1,0 +1,298 @@
+//////////////////////////////////////////////////////////////////////
+/////////////////////////////// Summary //////////////////////////////
+//////////////////////////////////////////////////////////////////////
+
+		Features:  			        14
+		Components:			        17
+		Number of Files:		        28
+		Size of Files:   		       1632806
+		Size in Library:		        768921
+
+
+		<Support>
+			Engine
+				Log
+				Kernel
+			Main Installation
+				Script
+				Setup
+				StrTbl
+				RunTime
+				Resource
+				<SQLRT>SQL Server Runtime Support files
+		<Data>
+			Disk<1>
+			DropDatabase
+
+
+//////////////////////////////////////////////////////////////////////
+///////////////////////////// Features ///////////////////////////////
+//////////////////////////////////////////////////////////////////////
+
+*<Support>*
+
+		Component
+		------------------------------------------------------
+
+*<Support>\Engine*
+
+		Component
+		------------------------------------------------------
+
+*<Support>\Engine\Log*
+
+		Component
+		------------------------------------------------------
+
+*<Support>\Engine\Kernel*
+
+		Component
+		------------------------------------------------------
+		"<Engine>Kernel Placeholder"
+		"<Engine>EngineCommonPlaceHolder"
+
+*<Support>\Main Installation*
+
+		Component
+		------------------------------------------------------
+
+*<Support>\Main Installation\Script*
+
+		Component
+		------------------------------------------------------
+		"<Support>Script"
+
+*<Support>\Main Installation\Setup*
+
+		Component
+		------------------------------------------------------
+		"<Support>Language Independent OS Independent Files"
+		"<Support>Portuguese (Standard) OS Independent Files"
+		"<Support>Misc Support Files"
+		"<Support>Build Generated Support Files"
+
+*<Support>\Main Installation\StrTbl*
+
+		Component
+		------------------------------------------------------
+		"<Support>Portuguese (Standard) String Tables"
+
+*<Support>\Main Installation\RunTime*
+
+		Component
+		------------------------------------------------------
+		"<Support>Non-SelfRegistering"
+
+*<Support>\Main Installation\Resource*
+
+		Component
+		------------------------------------------------------
+		"<Support>Portuguese (Standard) Files"
+
+*<Support>\Main Installation\<SQLRT>SQL Server Runtime Support files*
+
+		Component
+		------------------------------------------------------
+		"<Support>SQLRT_DLL"
+		"<Support>SQL Configuration File"
+		"<Support>SQL Scripts"
+
+*<Data>*
+
+		Component
+		------------------------------------------------------
+
+*<Data>\Disk<1>*
+
+		Component
+		------------------------------------------------------
+		"<Disk1>Disk1 Files(1)"
+		"<Disk1>Disk1 Files(2)"
+		"<Disk1>Disk1 Files(4)"
+
+*<Data>\DropDatabase*
+
+		Component
+		------------------------------------------------------
+		"DropOWNetDatabase_SQLComponent"
+
+
+//////////////////////////////////////////////////////////////////////
+///////////////////////////// Components ////////////////////////////
+//////////////////////////////////////////////////////////////////////
+
+><Engine>Kernel Placeholder<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"ikernel.dll"                                           26-04-2002     19:48:38            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\ikernel.dll"
+		"setup.dll"                                             25-03-2002     17:11:12            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\setup.dll"
+		"dotnetinstaller.exe"                                   25-03-2002     17:11:28            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\dotnetinstaller.exe"
+		"iscript.dll"                                           09-04-2002     22:24:12            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\iscript.dll"
+		"ctor.dll"                                              09-04-2002     22:24:40            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\ctor.dll"
+		"iuser.dll"                                             09-04-2002     22:24:54            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\iuser.dll"
+		"igdi.dll"                                              25-04-2002     21:21:50            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\igdi.dll"
+
+><Engine>EngineCommonPlaceHolder<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"isprobe.tlb"                                           26-11-2001     10:13:10            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\isprobe.tlb"
+		"objectps.dll"                                          12-07-1999     13:45:30            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\objectps.dll"
+
+><Support>Script<
+
+		Size of Files:   		        216953
+		Size in Library:		        154129
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"setup.inx"                                             10-05-2005     20:12:36       216953  ""                 "A"           "d814fb45-5b8c-81a9-e8cf-9a5665223826"  "d:\work\ownet\versão 5.0.0\sources\setup\owdatabase\dropdb\dropownetdb\script files\setup.inx"
+
+><Support>Language Independent OS Independent Files<
+
+		Size of Files:   		         14108
+		Size in Library:		          4208
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"licenca_utilizacao_ownet.rtf"                          05-05-2005     15:58:16        14108  ""                 "RA"          "9da81ff5-3dbf-62be-1d1a-d8769ce1a3a5"  "z:\setup\licenses\licenca_utilizacao_ownet.rtf"
+
+><Support>Portuguese (Standard) OS Independent Files<
+
+		Size of Files:   		         61440
+		Size in Library:		          4763
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"_isuser.dll"                                           10-05-2005     20:12:38        61440  ""                 "A"           "15ab29eb-ad8b-f9ba-3d43-f85ab2d8c135"  "d:\work\ownet\versão 5.0.0\sources\setup\owdatabase\dropdb\dropownetdb\_isuser\2070\_isuser.dll"
+
+><Support>Misc Support Files<
+
+		Size of Files:   		         65503
+		Size in Library:		         12414
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"corecomp.ini"                                          15-04-2002     17:04:36        65503  ""                 "A"           "ec8cd309-a0a6-f412-ce5b-54f03db9b21a"  "c:\program files\installshield 10.5\redist\compressed files\language independent\os independent\corecomp.ini"
+
+><Support>Build Generated Support Files<
+
+		Size of Files:   		            40
+		Size in Library:		            44
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"fontdata.ini"                                          10-05-2005     20:12:38           40  ""                 "A"           "3727ed57-b92f-ddc3-52a8-e90b1c6727b0"  "c:\docume~1\nma~1.par\locals~1\temp\fontdata.ini"
+
+><Support>Portuguese (Standard) String Tables<
+
+		Size of Files:   		          5676
+		Size in Library:		          1465
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"stringtable-0816-portuguese (standard).ips"            10-05-2005     20:12:36         5676  ""                 "A"           "41d63c33-b48c-dc5a-aec5-e0488ddeb8f0"  "d:\work\ownet\versão 5.0.0\sources\setup\owdatabase\dropdb\dropownetdb\string tables\stringtable-0816-portuguese (standard).ips"
+
+><Support>Non-SelfRegistering<
+
+		Size of Files:   		        414864
+		Size in Library:		        206850
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"isrt.dll"                                              22-10-2004     02:18:38       413696  "10.50.0.125"      "A"           "9ce63a98-bbe1-3b1c-4b95-fe4a3d36f7be"  "c:\program files\installshield 10.5\redist\compressed files\language independent\intel 32\isrt.dll"
+		"default.pal"                                           16-09-1999     10:24:10         1168  ""                 "A"           "3ffeba0a-d069-4953-4405-061de2629c82"  "c:\program files\installshield 10.5\redist\compressed files\language independent\intel 32\default.pal"
+
+><Support>Portuguese (Standard) Files<
+
+		Size of Files:   		        397312
+		Size in Library:		         93678
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"_isres.dll"                                            22-10-2004     03:53:16       397312  "10.50.0.125"      "A"           "cda9303f-6dff-a353-7be0-a2d91425a3ac"  "c:\program files\installshield 10.5\redist\0816\i386\skins\_isres.dll"
+
+><Disk1>Disk1 Files(1)<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"layout.bin"                                            28-06-1999     18:30:10            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\layout.bin"
+		"data1.hdr"                                             28-06-1999     18:30:10            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\data1.hdr"
+		"data1.cab"                                             28-06-1999     18:30:10            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\data1.cab"
+
+><Disk1>Disk1 Files(2)<
+
+		Size of Files:   		        163957
+		Size in Library:		        163957
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"setup.exe"                                             24-03-2005     11:02:00       119016  "10.50.0.132"      "A"           "efde1976-2fc8-ddc6-4fc3-7f1a31fac22e"  "d:\work\ownet\versão 5.0.0\sources\setup\owdatabase\dropdb\dropownetdb\media\release 1\disk images\disk1\setup.exe"
+		"setup.isn"                                             22-10-2004     04:17:22        44941  ""                 "A"           "bea6b413-33b3-b653-3de3-1e771072cb6b"  "d:\work\ownet\versão 5.0.0\sources\setup\owdatabase\dropdb\dropownetdb\media\release 1\disk images\disk1\setup.isn"
+
+><Disk1>Disk1 Files(4)<
+
+		Size of Files:   		           444
+		Size in Library:		           444
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"setup.ini"                                             10-05-2005     20:12:38          444  ""                 "A"           "9bab5dea-7b25-1e63-3505-e52dec5c03d3"  "d:\work\ownet\versão 5.0.0\sources\setup\owdatabase\dropdb\dropownetdb\media\release 1\disk images\disk1\setup.ini"
+
+><Support>SQLRT_DLL<
+
+		Size of Files:   		        290816
+		Size in Library:		        126093
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"sqlrt.dll"                                             21-04-2005     11:54:54       290816  ""                 "A"           "93bbcefd-c2f4-fb5b-9a64-3bb281650809"  "c:\program files\installshield 10.5\redist\compressed files\language independent\intel 32\sqlrt.dll"
+
+><Support>SQL Configuration File<
+
+		Size of Files:   		          1561
+		Size in Library:		           741
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"sqlrt.ini"                                             10-05-2005     20:12:38         1561  ""                 "A"           "d42d817a-0a93-ddef-86cf-f8b3e7aee8e8"  "c:\docume~1\nma~1.par\locals~1\temp\sqlrt.ini"
+
+><Support>SQL Scripts<
+
+		Size of Files:   		           132
+		Size in Library:		           135
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"dropownetdatabase_sqlcomponent\dropownetdatabase.sql"  12-04-2005     16:05:32          132  ""                 "A"           "4961a6d0-a2f5-2b31-b4cb-4eefb46b9721"  "c:\docume~1\nma~1.par\locals~1\temp\dropownetdatabase_sqlcomponent\dropownetdatabase.sql"
+
+>DropOWNetDatabase_SQLComponent<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------

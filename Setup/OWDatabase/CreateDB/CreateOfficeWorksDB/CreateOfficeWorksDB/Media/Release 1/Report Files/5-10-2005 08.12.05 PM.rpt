@@ -1,0 +1,314 @@
+//////////////////////////////////////////////////////////////////////
+/////////////////////////////// Summary //////////////////////////////
+//////////////////////////////////////////////////////////////////////
+
+		Features:  			        15
+		Components:			        18
+		Number of Files:		        30
+		Size of Files:   		       2104112
+		Size in Library:		        975416
+
+
+		<Support>
+			Engine
+				Log
+				Kernel
+			Main Installation
+				Script
+				Setup
+				StrTbl
+				RunTime
+				Resource
+				<SQLRT>SQL Server Runtime Support files
+		<Data>
+			Disk<1>
+			CreateDatabase
+			CreateDBObjects
+
+
+//////////////////////////////////////////////////////////////////////
+///////////////////////////// Features ///////////////////////////////
+//////////////////////////////////////////////////////////////////////
+
+*<Support>*
+
+		Component
+		------------------------------------------------------
+
+*<Support>\Engine*
+
+		Component
+		------------------------------------------------------
+
+*<Support>\Engine\Log*
+
+		Component
+		------------------------------------------------------
+
+*<Support>\Engine\Kernel*
+
+		Component
+		------------------------------------------------------
+		"<Engine>Kernel Placeholder"
+		"<Engine>EngineCommonPlaceHolder"
+
+*<Support>\Main Installation*
+
+		Component
+		------------------------------------------------------
+
+*<Support>\Main Installation\Script*
+
+		Component
+		------------------------------------------------------
+		"<Support>Script"
+
+*<Support>\Main Installation\Setup*
+
+		Component
+		------------------------------------------------------
+		"<Support>Language Independent OS Independent Files"
+		"<Support>Portuguese (Standard) OS Independent Files"
+		"<Support>Misc Support Files"
+		"<Support>Build Generated Support Files"
+
+*<Support>\Main Installation\StrTbl*
+
+		Component
+		------------------------------------------------------
+		"<Support>Portuguese (Standard) String Tables"
+
+*<Support>\Main Installation\RunTime*
+
+		Component
+		------------------------------------------------------
+		"<Support>Non-SelfRegistering"
+
+*<Support>\Main Installation\Resource*
+
+		Component
+		------------------------------------------------------
+		"<Support>Portuguese (Standard) Files"
+
+*<Support>\Main Installation\<SQLRT>SQL Server Runtime Support files*
+
+		Component
+		------------------------------------------------------
+		"<Support>SQLRT_DLL"
+		"<Support>SQL Configuration File"
+		"<Support>SQL Scripts"
+
+*<Data>*
+
+		Component
+		------------------------------------------------------
+
+*<Data>\Disk<1>*
+
+		Component
+		------------------------------------------------------
+		"<Disk1>Disk1 Files(1)"
+		"<Disk1>Disk1 Files(2)"
+		"<Disk1>Disk1 Files(4)"
+
+*<Data>\CreateDatabase*
+
+		Component
+		------------------------------------------------------
+		"CreateDatabase_SQLComponent"
+
+*<Data>\CreateDBObjects*
+
+		Component
+		------------------------------------------------------
+		"CreateDBObjects_SQLComponent"
+
+
+//////////////////////////////////////////////////////////////////////
+///////////////////////////// Components ////////////////////////////
+//////////////////////////////////////////////////////////////////////
+
+><Engine>Kernel Placeholder<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"ikernel.dll"                                           26-04-2002     19:48:38            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\ikernel.dll"
+		"setup.dll"                                             25-03-2002     17:11:12            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\setup.dll"
+		"dotnetinstaller.exe"                                   25-03-2002     17:11:28            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\dotnetinstaller.exe"
+		"iscript.dll"                                           09-04-2002     22:24:12            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\iscript.dll"
+		"ctor.dll"                                              09-04-2002     22:24:40            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\ctor.dll"
+		"iuser.dll"                                             09-04-2002     22:24:54            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\iuser.dll"
+		"igdi.dll"                                              25-04-2002     21:21:50            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\igdi.dll"
+
+><Engine>EngineCommonPlaceHolder<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"isprobe.tlb"                                           26-11-2001     10:13:10            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\isprobe.tlb"
+		"objectps.dll"                                          12-07-1999     13:45:30            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\objectps.dll"
+
+><Support>Script<
+
+		Size of Files:   		        218685
+		Size in Library:		        155379
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"setup.inx"                                             10-05-2005     20:12:04       218685  ""                 "A"           "fdff16d1-2d2b-9aff-4f94-e619e9e2e252"  "d:\work\ownet\versão 5.0.0\sources\setup\owdatabase\createdb\createownetdb\script files\setup.inx"
+
+><Support>Language Independent OS Independent Files<
+
+		Size of Files:   		         14108
+		Size in Library:		          4208
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"licenca_utilizacao_ownet.rtf"                          05-05-2005     15:58:16        14108  ""                 "RA"          "9da81ff5-3dbf-62be-1d1a-d8769ce1a3a5"  "z:\setup\licenses\licenca_utilizacao_ownet.rtf"
+
+><Support>Portuguese (Standard) OS Independent Files<
+
+		Size of Files:   		         61440
+		Size in Library:		          5000
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"_isuser.dll"                                           10-05-2005     20:12:06        61440  ""                 "A"           "29a9082c-c2f2-ed42-4fb4-a3f4cc5dc906"  "d:\work\ownet\versão 5.0.0\sources\setup\owdatabase\createdb\createownetdb\_isuser\2070\_isuser.dll"
+
+><Support>Misc Support Files<
+
+		Size of Files:   		         65503
+		Size in Library:		         12414
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"corecomp.ini"                                          15-04-2002     17:04:36        65503  ""                 "A"           "ec8cd309-a0a6-f412-ce5b-54f03db9b21a"  "c:\program files\installshield 10.5\redist\compressed files\language independent\os independent\corecomp.ini"
+
+><Support>Build Generated Support Files<
+
+		Size of Files:   		            40
+		Size in Library:		            44
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"fontdata.ini"                                          10-05-2005     20:12:06           40  ""                 "A"           "3727ed57-b92f-ddc3-52a8-e90b1c6727b0"  "c:\docume~1\nma~1.par\locals~1\temp\fontdata.ini"
+
+><Support>Portuguese (Standard) String Tables<
+
+		Size of Files:   		          7327
+		Size in Library:		          1717
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"stringtable-0816-portuguese (standard).ips"            10-05-2005     20:12:04         7327  ""                 "A"           "c3eab52b-ba1e-0c49-1a3c-2b7f7dba383c"  "d:\work\ownet\versão 5.0.0\sources\setup\owdatabase\createdb\createownetdb\string tables\stringtable-0816-portuguese (standard).ips"
+
+><Support>Non-SelfRegistering<
+
+		Size of Files:   		        414864
+		Size in Library:		        206850
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"isrt.dll"                                              22-10-2004     02:18:38       413696  "10.50.0.125"      "A"           "9ce63a98-bbe1-3b1c-4b95-fe4a3d36f7be"  "c:\program files\installshield 10.5\redist\compressed files\language independent\intel 32\isrt.dll"
+		"default.pal"                                           16-09-1999     10:24:10         1168  ""                 "A"           "3ffeba0a-d069-4953-4405-061de2629c82"  "c:\program files\installshield 10.5\redist\compressed files\language independent\intel 32\default.pal"
+
+><Support>Portuguese (Standard) Files<
+
+		Size of Files:   		        397312
+		Size in Library:		         93678
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"_isres.dll"                                            22-10-2004     03:53:16       397312  "10.50.0.125"      "A"           "cda9303f-6dff-a353-7be0-a2d91425a3ac"  "c:\program files\installshield 10.5\redist\0816\i386\skins\_isres.dll"
+
+><Disk1>Disk1 Files(1)<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"layout.bin"                                            28-06-1999     18:30:10            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\layout.bin"
+		"data1.hdr"                                             28-06-1999     18:30:10            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\data1.hdr"
+		"data1.cab"                                             28-06-1999     18:30:10            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\data1.cab"
+
+><Disk1>Disk1 Files(2)<
+
+		Size of Files:   		        163957
+		Size in Library:		        163957
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"setup.exe"                                             24-03-2005     11:02:00       119016  "10.50.0.132"      "A"           "efde1976-2fc8-ddc6-4fc3-7f1a31fac22e"  "d:\work\ownet\versão 5.0.0\sources\setup\owdatabase\createdb\createownetdb\media\release 1\disk images\disk1\setup.exe"
+		"setup.isn"                                             22-10-2004     04:17:22        44941  ""                 "A"           "bea6b413-33b3-b653-3de3-1e771072cb6b"  "d:\work\ownet\versão 5.0.0\sources\setup\owdatabase\createdb\createownetdb\media\release 1\disk images\disk1\setup.isn"
+
+><Disk1>Disk1 Files(4)<
+
+		Size of Files:   		           444
+		Size in Library:		           444
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"setup.ini"                                             10-05-2005     20:12:06          444  ""                 "A"           "0ecf0e20-26e2-ebcf-9d3e-e857e88be030"  "d:\work\ownet\versão 5.0.0\sources\setup\owdatabase\createdb\createownetdb\media\release 1\disk images\disk1\setup.ini"
+
+><Support>SQLRT_DLL<
+
+		Size of Files:   		        290816
+		Size in Library:		        126093
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"sqlrt.dll"                                             21-04-2005     11:54:54       290816  ""                 "A"           "93bbcefd-c2f4-fb5b-9a64-3bb281650809"  "c:\program files\installshield 10.5\redist\compressed files\language independent\intel 32\sqlrt.dll"
+
+><Support>SQL Configuration File<
+
+		Size of Files:   		          2168
+		Size in Library:		           807
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"sqlrt.ini"                                             10-05-2005     20:12:06         2168  ""                 "A"           "6ffdfd1b-fd49-84f2-561d-17a2d635d21d"  "c:\docume~1\nma~1.par\locals~1\temp\sqlrt.ini"
+
+><Support>SQL Scripts<
+
+		Size of Files:   		        467448
+		Size in Library:		        204825
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"createdbobjects_sqlcomponent\createdbobjects.sql"      12-04-2005     16:06:28       467005  ""                 "A"           "3d0f6003-2dae-7f8f-bef7-3cb74a932b22"  "c:\docume~1\nma~1.par\locals~1\temp\createdbobjects_sqlcomponent\createdbobjects.sql"
+		"createdatabase_sqlcomponent\createdatabase.sql"        26-04-2005     14:44:58          443  ""                 "A"           "e4abd5ba-b84a-db36-4c18-885362dd0e4a"  "c:\docume~1\nma~1.par\locals~1\temp\createdatabase_sqlcomponent\createdatabase.sql"
+
+>CreateDatabase_SQLComponent<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+
+>CreateDBObjects_SQLComponent<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------

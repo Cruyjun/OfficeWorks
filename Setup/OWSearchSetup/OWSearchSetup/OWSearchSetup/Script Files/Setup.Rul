@@ -1,0 +1,331 @@
+//===========================================================================
+//
+//  File Name:    Setup.rul
+//
+//  Description:  Blank setup main script file
+//
+//  Comments:     Blank setup is an empty setup project. If you want to
+//				  create a new project via. step-by step instructions use the
+//				  Project Assistant.
+//
+//===========================================================================
+
+// Included header files ----------------------------------------------------
+#include "ifx.h"
+
+//User Functions
+prototype InitializeRegKeyNameArray();
+prototype GetValuesFromRegKeyArray();
+prototype SetValuesToRegKeyArray();
+prototype GetRegistryKeyValues(STRING,NUMBER);
+prototype BOOL SetRegistryKeyValues(STRING,NUMBER);
+prototype SetRegKeyValue(NUMBER,STRING,STRING,STRING,NUMBER);
+prototype ShowFinishDialog(STRING,BOOL);
+
+//Global Variables
+STRING svCatalog,svIndexServer;
+STRING svRegKeyName(),svRegKeyValue();
+
+// Global Constants
+// OfficeWorks Registry Key
+#define kMASTER_REG_KEY					"\\SOFTWARE\\OW"
+// Registry Keys Names
+#define kCATALOG_KEY					"Catalog"
+#define kKEY_IDX_00						0
+#define kINDEX_SERVER_KEY				"IndexServer"
+#define kKEY_IDX_01						1
+// Total of Registry Keys
+#define kTOTAL_REGISTRY_KEYS			2
+// Default values
+#define kCATALOG_NAME					"OfficeWorks"
+// Product name
+#define kPRODUCT_NAME					"OWSearch"
+// Product Description
+#define kPRODUCT_DESCRIPTION			"OWSearch - Módulo de Pesquisa de Documentos do OfficeWorks"
+// OfficeWorks License file
+#define kLICENSE_FILE_NAME				"Licenca_Utilizacao_OWSearch.rtf"
+
+
+//---------------------------------------------------------------------------                                                                        
+// OnFirstUIBefore
+//
+// First Install UI Sequence - Before Move Data
+// The OnFirstUIBefore event is called by OnShowUI when the setup is
+// running in first install mode. By default this event displays UI allowing
+// the end user to specify installation parameters.
+//
+// Note: This event will not be called automatically in a
+// program...endprogram style setup.
+//---------------------------------------------------------------------------
+function OnFirstUIBefore()
+    number  nResult;
+    string  szTitle,szMsg;
+    string  szField1,szField2,szField3;
+    string  szLicenseFile,szOpt1,szOpt2,szComputerName;
+    BOOL	bLicenseAccepted;
+begin
+	// Set setup title
+	IFX_SETUP_TITLE = "Instalação do " + kPRODUCT_NAME + " - InstallShield Wizard";
+	// Beginning of UI Sequence
+	Dlg_Start:
+	    nResult = 0;
+	    // Get computer name
+	    GetEnvVar("COMPUTERNAME",szComputerName);	    
+	    //Initialize arrays of keys
+	    Resize(svRegKeyName,kTOTAL_REGISTRY_KEYS);
+		Resize(svRegKeyValue,kTOTAL_REGISTRY_KEYS);
+		InitializeRegKeyNameArray();
+		//Get Registry keys values
+		GetRegistryKeyValues(kMASTER_REG_KEY,WARNING);
+		// Initialize variables
+   		if(svCatalog = "") then
+   			svCatalog = kCATALOG_NAME;
+   		endif;
+   		if(svIndexServer = "") then
+   			svIndexServer = szComputerName;
+   		endif;
+   		bLicenseAccepted = FALSE;
+		szLicenseFile = SUPPORTDIR ^ kLICENSE_FILE_NAME;
+
+    // Welcome screen
+	Dlg_SdWelcome:
+	    szTitle = "Bem-vindo ao assistente de instalação do " + kPRODUCT_NAME + ".";
+	    szMsg = "O InstallShield Wizard vai instalar o " + kPRODUCT_DESCRIPTION + ".\n\nPara continuar faça clique sobre Seguinte.";
+	    nResult = SdWelcome(szTitle,szMsg);
+	    if (nResult = BACK) goto Dlg_Start;
+	
+	// License Dialog
+	Dlg_SdLicense:
+	    szTitle = " ";
+	    nResult = SdLicense2Rtf(szTitle,szOpt1,szOpt2,szLicenseFile,bLicenseAccepted);
+	    if (nResult = BACK) goto Dlg_SdWelcome;
+	
+ 	// Get info to regkeys
+	Dlg_RegKeysInfo:
+	    szTitle = " ";
+	    szMsg = "Indique o nome do Catálogo e o nome do Servidor de Indexação para o OfficeWorks."; 
+     	szField1 = "Catálogo:";
+     	szField2 = "Servidor:";
+     	nResult = SdShowDlgEdit2(szTitle,szMsg,szField1,szField2,svCatalog,svIndexServer);
+		if(nResult = BACK) goto Dlg_SdLicense;
+
+	// Validate if catalog is filled
+	if(svCatalog = "") then
+		MessageBox("Não é possível continuar sem indicar o nome do Catálogo!",WARNING);
+		goto Dlg_RegKeysInfo;        
+	endif;      
+	// Validate if index server name is filled
+	if(svIndexServer = "") then
+		MessageBox("Não é possível continuar sem indicar o nome do Servidor!",WARNING);
+		goto Dlg_RegKeysInfo;        
+	endif;      
+	
+	// Screen to review install options
+	Dlg_SdStartCopy2:
+	    szTitle = " ";
+	    szMsg = "Clique em Instalar para iniciar a instalação do " + kPRODUCT_NAME + ".\n\n"; 
+	    szMsg = szMsg + "Se pretende rever ou alterar alguma definição, clique em Anterior.\n\nClique em Cancelar para sair do assistente.";
+	    nResult = SdStartCopy2(szTitle,szMsg);	
+	    if (nResult = BACK) goto Dlg_RegKeysInfo;
+
+    return 0;
+end;
+
+
+//---------------------------------------------------------------------------
+// OnFirstUIAfter
+//
+// First Install UI Sequence - After Move Data
+//
+// The OnFirstUIAfter event called by OnShowUI after the file transfer
+// of the setup when the setup is running in first install mode. By default
+// this event displays UI that informs the end user that the setup has been
+// completed successfully.
+//
+// Note: This event will not be called automatically in a
+// program...endprogram style setup.
+//---------------------------------------------------------------------------
+function OnFirstUIAfter()
+	BOOL 	bResult;
+    STRING  szMsgDialog,szKeyMaster;
+begin
+  	szMsgDialog = "A instalação do " + kPRODUCT_NAME + " foi concluida.\n\n";
+    //Set registry keys
+    SdShowMsg("A escrever as chaves do " + kPRODUCT_NAME + " no Registry. Aguarde ...",TRUE);
+    szKeyMaster = kMASTER_REG_KEY;
+    bResult = SetRegistryKeyValues(szKeyMaster,WARNING);
+    if(!bResult) then
+    	szMsgDialog = szMsgDialog + "Verifique as chaves no registry para o " + kPRODUCT_NAME + ".\n"; 
+    endif;
+  	SdShowMsg("",FALSE);
+	// Show finish dialog    
+    ShowFinishDialog(szMsgDialog,FALSE);
+end;
+
+
+//---------------------------------------------------------------------------
+// OnCanceling
+//
+// The OnCanceling event is sent when the installation is cancelled, 
+// usually as result of end user clicking Cancel button of a dialog or
+// pressing Esc key. Calling Do(EXIT) will also trigger this event.
+//---------------------------------------------------------------------------
+function OnCanceling()
+    STRING szMsgDialog;
+begin
+    if(IDYES = SprintfBox(MB_YESNO|MB_ICONEXCLAMATION|MB_DEFBUTTON2,SdLoadString(SD_STR_ONCANCELING_TITLE),SdLoadString(SD_STR_ONCANCELING_CONFIRM_MSG))) then
+        szMsgDialog = "A instalação do " + kPRODUCT_NAME + " foi cancelada pelo utilizador.\n\n\n";
+        szMsgDialog = szMsgDialog + "O Sistema não foi modificado.\n\n";
+        szMsgDialog = szMsgDialog + "Para instalar o " + kPRODUCT_NAME + " mais tarde, execute novamente o assistente.";
+        ShowFinishDialog(szMsgDialog,TRUE);
+    endif;
+end;
+
+
+//---------------------------------------------------------------------------
+// InitializeRegKeyNameArray
+//
+// This function will fill array of keys name
+//---------------------------------------------------------------------------
+function InitializeRegKeyNameArray()
+begin
+    //Catalog
+    svRegKeyName(kKEY_IDX_00) = kCATALOG_KEY;
+	//Index Server    
+    svRegKeyName(kKEY_IDX_01) = kINDEX_SERVER_KEY;
+end;
+
+
+//---------------------------------------------------------------------------
+// GetValuesFromRegKeyArray
+//
+// This function will get values from registry key value array
+//---------------------------------------------------------------------------
+function GetValuesFromRegKeyArray()
+begin
+    //Catalog
+    svCatalog = svRegKeyValue(kKEY_IDX_00);
+    //Index Server
+    svIndexServer = svRegKeyValue(kKEY_IDX_01);
+end;
+
+
+//---------------------------------------------------------------------------
+// SetValuesToRegKeyArray
+//
+// This function will set values to registry key value array
+//---------------------------------------------------------------------------
+function SetValuesToRegKeyArray()
+begin
+    //Catalog
+    svRegKeyValue(kKEY_IDX_00) = svCatalog;
+    //Index Server
+    svRegKeyValue(kKEY_IDX_01) = svIndexServer;
+end;
+
+
+//---------------------------------------------------------------------------
+// GetRegistryKeyValues
+//
+// This function will get registry key values
+//---------------------------------------------------------------------------
+function GetRegistryKeyValues(szKeyMaster,nMsgType) 
+	NUMBER	nResult,nRootKey;                                         
+    STRING  szKeyName,szKeyValue;
+    NUMBER  n_Type,n_Size;
+    INT  	iCount;
+begin
+    nRootKey = HKEY_LOCAL_MACHINE;
+    RegDBSetDefaultRoot(nRootKey);
+    //Verify if key exists
+	if(RegDBKeyExist(szKeyMaster) < 0) then
+		return -1;
+	endif;
+	n_Type = REGDB_STRING;
+   	n_Size = -1;
+	// Get keys from registry
+	for iCount = 0 to kTOTAL_REGISTRY_KEYS - 1
+		szKeyValue = "";    
+    	nResult = RegDBGetKeyValueEx(szKeyMaster,svRegKeyName(iCount),n_Type,szKeyValue,n_Size);
+    	svRegKeyValue(iCount) = szKeyValue;
+	endfor;    
+	// Get values from reg key array
+	GetValuesFromRegKeyArray();
+end;
+
+
+//---------------------------------------------------------------------------
+// SetRegistryKeyValues
+//
+// This function will set registry keys
+//---------------------------------------------------------------------------
+function BOOL SetRegistryKeyValues(szKeyMaster,nMsgType)
+	NUMBER	nResult,nRootKey;                                         
+    STRING  szKeyName,szKeyValue;
+    BOOL 	bSetKeysOK;
+    INT  	iCount;
+begin
+    bSetKeysOK = TRUE;
+    nRootKey = HKEY_LOCAL_MACHINE;
+	// Set values to array for write on registry
+    SetValuesToRegKeyArray();
+	// Write keys on registry
+	for iCount = 0 to kTOTAL_REGISTRY_KEYS - 1    
+    	nResult = SetRegKeyValue(nRootKey,szKeyMaster,svRegKeyName(iCount),svRegKeyValue(iCount),nMsgType);
+    	if(nResult < 0) then
+    		bSetKeysOK = FALSE;
+    	endif;
+    endfor;
+    return bSetKeysOK; 
+end;
+
+
+//---------------------------------------------------------------------------
+// SetRegKeyValue
+//
+// This function will write keys on Registry
+//---------------------------------------------------------------------------
+function SetRegKeyValue(nRootKey,szKeyMaster,szKeyName,szKeyValue,nMsgType)
+	NUMBER n_Type,n_Size;
+begin
+	RegDBSetDefaultRoot(nRootKey);
+	n_Type = REGDB_STRING;
+   	n_Size = -1;
+    //Write Key
+	if(RegDBSetKeyValueEx(szKeyMaster,szKeyName,n_Type,szKeyValue,n_Size) < 0) then
+		MessageBox("Não foi possível criar a chave '" + szKeyMaster + "\\" + szKeyName + "' no Registry",nMsgType);
+		return -1;
+	endif;
+	return 0;
+end;
+
+
+//---------------------------------------------------------------------------
+// ShowFinishDialog
+//
+// This function will Show Finish Screen and end setup
+// --------------------------------------------------------------------------
+function ShowFinishDialog(szMsgDialog,bAbort)
+	string szMessage,szTitle,szMsg1,szMsg2,szOpt1,szOpt2;
+	BOOL   bvOpt1,bvOpt2;
+begin
+    // Close the current dialog.
+    EndCurrentDialog();
+    szTitle = "Instalação do " + kPRODUCT_DESCRIPTION;
+    szMsg1 = szMsgDialog;    
+    if(szMsg1 = "") then
+    	szMsg1 = SdLoadString(SD_STR_ONCANCELING_FINISH_MSG1);
+    endif;
+   	szMsg2 = "Clique em Concluir para terminar o assistente.";    
+    szOpt1 = "";
+    szOpt2 = "";
+    bvOpt1   = FALSE;
+    bvOpt2   = FALSE;
+    // Display Finish dialog.
+    SdFinish(szTitle,szMsg1,szMsg2,szOpt1,szOpt2,bvOpt1,bvOpt2);                       
+    if(bAbort) then
+    	abort;
+    endif;
+    exit;
+end;
+

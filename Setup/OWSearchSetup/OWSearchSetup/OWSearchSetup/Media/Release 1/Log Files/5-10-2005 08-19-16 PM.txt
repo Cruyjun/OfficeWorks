@@ -1,0 +1,69 @@
+================= Logging started at 5/10/2005 08:19:16 PM ==================
+Calculating size of cabinet files...
+Copying uncompressed setup files...
+Preprocessing data for data1.hdr...
+Feature: <Support>
+Feature: <Support>\Engine
+Feature: <Support>\Engine\Log
+Feature: <Support>\Engine\Kernel
+   Component: <Engine>Kernel Placeholder
+   Component: <Engine>EngineCommonPlaceHolder
+Feature: <Support>\Main Installation
+Feature: <Data>
+Feature: Script
+   Component: <Support>Script
+Feature: Setup
+   Component: <Support>Language Independent OS Independent Files
+   Component: <Support>Portuguese (Standard) OS Independent Files
+   Component: <Support>Misc Support Files
+   Component: <Support>Build Generated Support Files
+Feature: StrTbl
+   Component: <Support>Portuguese (Standard) String Tables
+Feature: RunTime
+   Component: <Support>Non-SelfRegistering
+Feature: Resource
+   Component: <Support>Portuguese (Standard) Files
+Feature: Disk<1>
+   Component: <Disk1>Disk1 Files(1)
+   Component: <Disk1>Disk1 Files(2)
+   Component: <Disk1>Disk1 Files(4)
+Feature: OWSearchFeature
+Processing registries...
+Building cabinet file data1.hdr...
+Building cabinet file data1.cab...
+Feature: <Support>
+Feature: <Support>\Engine
+Feature: <Support>\Engine\Log
+Feature: <Support>\Engine\Kernel
+   Component: <Engine>Kernel Placeholder
+   Component: <Engine>EngineCommonPlaceHolder
+Feature: <Support>\Main Installation
+Feature: <Support>\Main Installation\Script
+   Component: <Support>Script
+Feature: <Support>\Main Installation\Setup
+   Component: <Support>Language Independent OS Independent Files
+   Component: <Support>Portuguese (Standard) OS Independent Files
+   Component: <Support>Misc Support Files
+   Component: <Support>Build Generated Support Files
+Feature: <Support>\Main Installation\StrTbl
+   Component: <Support>Portuguese (Standard) String Tables
+Feature: <Support>\Main Installation\RunTime
+   Component: <Support>Non-SelfRegistering
+Feature: <Support>\Main Installation\Resource
+   Component: <Support>Portuguese (Standard) Files
+Feature: <Data>
+Building cabinet file data2.cab...
+Feature: <Data>\Disk<1>
+   Component: <Disk1>Disk1 Files(1)
+   Component: <Disk1>Disk1 Files(2)
+   Component: <Disk1>Disk1 Files(4)
+Feature: <Data>\OWSearchFeature
+Creating disk layout file 'layout.bin'...
+Creating self-extracting exe...
+Build finished at 05/10/05 20:19:17.
+Automatic update notification disabled
+Release 1 - 0 error(s), 0 warning(s)
+================= Logging stopped at 5/10/2005 08:19:17 PM ==================
+Log file has been created: <file:D:\Work\OfficeWorks\Versão 5.0.0\Sources\setup\OWSearchSetup\OWSearchSetup\Media\Release 1\Log Files\5-10-2005 08-19-16 PM.txt>
+
+

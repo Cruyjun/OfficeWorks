@@ -1,0 +1,378 @@
+//////////////////////////////////////////////////////////////////////
+/////////////////////////////// Summary //////////////////////////////
+//////////////////////////////////////////////////////////////////////
+
+		Features:  			        20
+		Components:			        19
+		Number of Files:		        50
+		Size of Files:   		      13976776
+		Size in Library:		      10602783
+
+
+		<Support>
+			Engine
+				Log
+				Kernel
+			Main Installation
+				Script
+				Setup
+				StrTbl
+				RunTime
+				Resource
+			277d2559-71f1-4cce-99d4-88ba15155893
+		<Data>
+			Disk<1>
+			OWScanFeature
+				New Merge Module Holder Object 1
+					Msi12A
+					Msi12W
+					Msi20A
+					Msi20W
+					MsiComponent
+
+
+//////////////////////////////////////////////////////////////////////
+///////////////////////////// Features ///////////////////////////////
+//////////////////////////////////////////////////////////////////////
+
+*<Support>*
+
+		Component
+		------------------------------------------------------
+
+*<Support>\Engine*
+
+		Component
+		------------------------------------------------------
+
+*<Support>\Engine\Log*
+
+		Component
+		------------------------------------------------------
+
+*<Support>\Engine\Kernel*
+
+		Component
+		------------------------------------------------------
+		"<Engine>Kernel Placeholder"
+		"<Engine>EngineCommonPlaceHolder"
+
+*<Support>\Main Installation*
+
+		Component
+		------------------------------------------------------
+
+*<Support>\Main Installation\Script*
+
+		Component
+		------------------------------------------------------
+		"<Support>Script"
+
+*<Support>\Main Installation\Setup*
+
+		Component
+		------------------------------------------------------
+		"<Support>Language Independent OS Independent Files"
+		"<Support>Portuguese (Standard) OS Independent Files"
+		"<Support>Misc Support Files"
+		"<Support>Build Generated Support Files"
+
+*<Support>\Main Installation\StrTbl*
+
+		Component
+		------------------------------------------------------
+		"<Support>Portuguese (Standard) String Tables"
+
+*<Support>\Main Installation\RunTime*
+
+		Component
+		------------------------------------------------------
+		"<Support>Non-SelfRegistering"
+
+*<Support>\Main Installation\Resource*
+
+		Component
+		------------------------------------------------------
+		"<Support>Portuguese (Standard) Files"
+
+*<Support>\277d2559-71f1-4cce-99d4-88ba15155893*
+
+		Component
+		------------------------------------------------------
+		"[New Merge Module Holder Object 1]NS_NSR_NPL_1___1"
+
+*<Data>*
+
+		Component
+		------------------------------------------------------
+
+*<Data>\Disk<1>*
+
+		Component
+		------------------------------------------------------
+		"<Disk1>Disk1 Files(1)"
+		"<Disk1>Disk1 Files(2)"
+		"<Disk1>Disk1 Files(4)"
+
+*<Data>\OWScanFeature*
+
+		Component
+		------------------------------------------------------
+		"Application"
+		"ApplicationFilesSelfReg"
+		"ApplicationFilesSelfRegNo"
+		"SOAPTOOLKIT30"
+
+*<Data>\OWScanFeature\New Merge Module Holder Object 1*
+
+		Component
+		------------------------------------------------------
+
+*<Data>\OWScanFeature\New Merge Module Holder Object 1\Msi12A*
+
+		Component
+		------------------------------------------------------
+
+*<Data>\OWScanFeature\New Merge Module Holder Object 1\Msi12W*
+
+		Component
+		------------------------------------------------------
+
+*<Data>\OWScanFeature\New Merge Module Holder Object 1\Msi20A*
+
+		Component
+		------------------------------------------------------
+
+*<Data>\OWScanFeature\New Merge Module Holder Object 1\Msi20W*
+
+		Component
+		------------------------------------------------------
+
+*<Data>\OWScanFeature\New Merge Module Holder Object 1\MsiComponent*
+
+		Component
+		------------------------------------------------------
+		"[New Merge Module Holder Object 1]NS_NSR_NPL_1___<MSISTUBPATH>_1"
+
+
+//////////////////////////////////////////////////////////////////////
+///////////////////////////// Components ////////////////////////////
+//////////////////////////////////////////////////////////////////////
+
+><Engine>Kernel Placeholder<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"ikernel.dll"                                           26-04-2002     19:48:38            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\ikernel.dll"
+		"setup.dll"                                             25-03-2002     17:11:12            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\setup.dll"
+		"dotnetinstaller.exe"                                   25-03-2002     17:11:28            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\dotnetinstaller.exe"
+		"iscript.dll"                                           09-04-2002     22:24:12            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\iscript.dll"
+		"ctor.dll"                                              09-04-2002     22:24:40            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\ctor.dll"
+		"iuser.dll"                                             09-04-2002     22:24:54            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\iuser.dll"
+		"igdi.dll"                                              25-04-2002     21:21:50            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\igdi.dll"
+
+><Engine>EngineCommonPlaceHolder<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"isprobe.tlb"                                           26-11-2001     10:13:10            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\isprobe.tlb"
+		"objectps.dll"                                          12-07-1999     13:45:30            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\objectps.dll"
+
+><Support>Script<
+
+		Size of Files:   		        212090
+		Size in Library:		        150877
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"setup.inx"                                             10-05-2005     17:53:00       212090  ""                 "A"           "b732e4ad-953f-456c-4c3c-f1b110809614"  "d:\work\ownet\versão 5.0.0\sources\setup\owscansetup\owscansetup\script files\setup.inx"
+
+><Support>Language Independent OS Independent Files<
+
+		Size of Files:   		       4074150
+		Size in Library:		       3739724
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"licenca_utilizacao_owscan.rtf"                         09-05-2005     15:04:24        14502  ""                 "RA"          "b70ba203-ac18-ac58-9d69-71c0a9568335"  "z:\setup\licenses\licenca_utilizacao_owscan.rtf"
+		"soapsdk.msi"                                           28-02-2003     11:28:14      4059648  ""                 "RA"          "0fa59cb3-9c9a-bb12-5028-ada49c8ae6f5"  "z:\setup\common\soap\soapsdk.msi"
+
+><Support>Portuguese (Standard) OS Independent Files<
+
+		Size of Files:   		         61440
+		Size in Library:		          4561
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"_isuser.dll"                                           10-05-2005     17:53:02        61440  ""                 "A"           "93b817dd-446b-2dd2-4242-27bbf965d8c1"  "d:\work\ownet\versão 5.0.0\sources\setup\owscansetup\owscansetup\_isuser\2070\_isuser.dll"
+
+><Support>Misc Support Files<
+
+		Size of Files:   		         65503
+		Size in Library:		         12414
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"corecomp.ini"                                          15-04-2002     17:04:36        65503  ""                 "A"           "ec8cd309-a0a6-f412-ce5b-54f03db9b21a"  "c:\program files\installshield 10.5\redist\compressed files\language independent\os independent\corecomp.ini"
+
+><Support>Build Generated Support Files<
+
+		Size of Files:   		            40
+		Size in Library:		            44
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"fontdata.ini"                                          10-05-2005     17:53:02           40  ""                 "A"           "3727ed57-b92f-ddc3-52a8-e90b1c6727b0"  "c:\docume~1\nma~1.par\locals~1\temp\fontdata.ini"
+
+><Support>Portuguese (Standard) String Tables<
+
+		Size of Files:   		          4837
+		Size in Library:		          1258
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"stringtable-0816-portuguese (standard).ips"            10-05-2005     17:53:00         4837  ""                 "A"           "2c4d640c-e861-e8ba-d5c8-87c3f1417472"  "d:\work\ownet\versão 5.0.0\sources\setup\owscansetup\owscansetup\string tables\stringtable-0816-portuguese (standard).ips"
+
+><Support>Non-SelfRegistering<
+
+		Size of Files:   		        414864
+		Size in Library:		        206850
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"isrt.dll"                                              22-10-2004     02:18:38       413696  "10.50.0.125"      "A"           "9ce63a98-bbe1-3b1c-4b95-fe4a3d36f7be"  "c:\program files\installshield 10.5\redist\compressed files\language independent\intel 32\isrt.dll"
+		"default.pal"                                           16-09-1999     10:24:10         1168  ""                 "A"           "3ffeba0a-d069-4953-4405-061de2629c82"  "c:\program files\installshield 10.5\redist\compressed files\language independent\intel 32\default.pal"
+
+><Support>Portuguese (Standard) Files<
+
+		Size of Files:   		        397312
+		Size in Library:		         93678
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"_isres.dll"                                            22-10-2004     03:53:16       397312  "10.50.0.125"      "A"           "cda9303f-6dff-a353-7be0-a2d91425a3ac"  "c:\program files\installshield 10.5\redist\0816\i386\skins\_isres.dll"
+
+><Disk1>Disk1 Files(1)<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"layout.bin"                                            28-06-1999     18:30:10            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\layout.bin"
+		"data1.hdr"                                             28-06-1999     18:30:10            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\data1.hdr"
+		"data1.cab"                                             28-06-1999     18:30:10            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\data1.cab"
+
+><Disk1>Disk1 Files(2)<
+
+		Size of Files:   		        163957
+		Size in Library:		        163957
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"setup.exe"                                             24-03-2005     11:02:00       119016  "10.50.0.132"      "A"           "efde1976-2fc8-ddc6-4fc3-7f1a31fac22e"  "d:\work\ownet\versão 5.0.0\sources\setup\owscansetup\owscansetup\media\release 1\disk images\disk1\setup.exe"
+		"setup.isn"                                             22-10-2004     04:17:22        44941  ""                 "A"           "bea6b413-33b3-b653-3de3-1e771072cb6b"  "d:\work\ownet\versão 5.0.0\sources\setup\owscansetup\owscansetup\media\release 1\disk images\disk1\setup.isn"
+
+><Disk1>Disk1 Files(4)<
+
+		Size of Files:   		           437
+		Size in Library:		           437
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"setup.ini"                                             10-05-2005     17:53:02          437  ""                 "A"           "5bd7819e-6f9f-d919-cc52-7b074fb9938c"  "d:\work\ownet\versão 5.0.0\sources\setup\owscansetup\owscansetup\media\release 1\disk images\disk1\setup.ini"
+
+>Application<
+
+		Size of Files:   		        106551
+		Size in Library:		         50419
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"owscan.exe"                                            28-04-2005     12:40:26       106551  "1.0.0.18"         "RA"          "bd63a384-fab1-52b8-1239-94c37ddad5e9"  "z:\tools\owscan\owscan.exe"
+
+>ApplicationFilesSelfReg<
+
+		Size of Files:   		        634432
+		Size in Library:		        271775
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"imgadmin.ocx"                                          28-04-2005     12:43:54       102672  "5.0.2134.1"       "RA"          "ae9a7a30-62fe-6e65-4252-39b7248fddbd"  "z:\tools\common\dlls imaging\com\imgadmin.ocx"
+		"imgedit.ocx"                                           28-04-2005     12:43:54       306448  "5.0.2195.6601"    "RA"          "531b06f8-5d5a-4141-17fe-076e03b03cb2"  "z:\tools\common\dlls imaging\com\imgedit.ocx"
+		"imgscan.ocx"                                           28-04-2005     12:43:54       117520  "5.0.2134.1"       "RA"          "fa1acf55-19c5-a7ea-3ba7-7069ab36e776"  "z:\tools\common\dlls imaging\com\imgscan.ocx"
+		"imgthumb.ocx"                                          28-04-2005     12:43:54       107792  "5.0.2134.1"       "RA"          "a532dcc3-f6d0-b2e5-0472-7dbad5134258"  "z:\tools\common\dlls imaging\com\imgthumb.ocx"
+
+>ApplicationFilesSelfRegNo<
+
+		Size of Files:   		       1395392
+		Size in Library:		        586471
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"imgcmn.dll"                                            28-04-2005     12:43:54        60688  "5.0.2134.1"       "RA"          "86b42073-0c1b-7f0e-42e4-0d3916380cff"  "z:\tools\common\dlls imaging\com\imgcmn.dll"
+		"imgshl.dll"                                            28-04-2005     12:43:54        13584  "5.0.2134.1"       "RA"          "1feafe58-dc8c-f73e-60f6-4cca684491ad"  "z:\tools\common\dlls imaging\com\imgshl.dll"
+		"jpeg1x32.dll"                                          28-04-2005     12:43:54        27920  "5.0.2134.1"       "RA"          "456762e0-1615-bf42-990f-633a2c2296ed"  "z:\tools\common\dlls imaging\com\jpeg1x32.dll"
+		"jpeg2x32.dll"                                          28-04-2005     12:43:54        38160  "5.0.2134.1"       "RA"          "b6ba8ced-cbea-5fc8-7bf0-08357fe2feb6"  "z:\tools\common\dlls imaging\com\jpeg2x32.dll"
+		"oieng400.dll"                                          28-04-2005     12:43:54       444176  "5.0.2195.6601"    "RA"          "d33bc07f-cc3a-d00c-7fb2-a89a10dc7b00"  "z:\tools\common\dlls imaging\com\oieng400.dll"
+		"oiprt400.dll"                                          28-04-2005     12:43:54        13072  "5.0.2134.1"       "RA"          "3a2b38fe-9423-f738-74dd-7dfeb6b1355d"  "z:\tools\common\dlls imaging\com\oiprt400.dll"
+		"oislb400.dll"                                          28-04-2005     12:43:54        21776  "5.0.2134.1"       "RA"          "71a2c6c3-afd3-9c13-8fb9-69a980a37b55"  "z:\tools\common\dlls imaging\com\oislb400.dll"
+		"oissq400.dll"                                          28-04-2005     12:43:54        13072  "5.0.2134.1"       "RA"          "297906a6-ba91-a57f-9d2a-42077200e635"  "z:\tools\common\dlls imaging\com\oissq400.dll"
+		"oitwa400.dll"                                          28-04-2005     12:43:54        25872  "5.0.2134.1"       "RA"          "f9df679e-284e-a6d3-a9a4-572bf9bd3752"  "z:\tools\common\dlls imaging\com\oitwa400.dll"
+		"oiui400.dll"                                           28-04-2005     12:43:54        61712  "5.0.2195.6601"    "RA"          "abac17d0-c30d-440c-7634-f10a6e850932"  "z:\tools\common\dlls imaging\com\oiui400.dll"
+		"tifflt.dll"                                            28-04-2005     12:43:54        33552  "5.0.2920.0"       "RA"          "c4ed9584-17d1-eb26-38da-bbfc00895574"  "z:\tools\common\dlls imaging\com\tifflt.dll"
+		"xiffr3_0.dll"                                          28-04-2005     12:43:54       641808  "3.0.0.18"         "RA"          "b21237c9-f208-a7c9-e747-a17f98120ed9"  "z:\tools\common\dlls imaging\com\xiffr3_0.dll"
+
+>SOAPTOOLKIT30<
+
+		Size of Files:   		       3768192
+		Size in Library:		       3729333
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"soapsdk.exe"                                           11-11-2003     17:00:06      3768192  "5.0.2920.0"       "RA"          "8dc65ec6-0263-b880-c570-48a4d83bb5ff"  "z:\setup\common\soap\soapsdk.exe"
+
+>[New Merge Module Holder Object 1]NS_NSR_NPL_1___<MSISTUBPATH>_1<
+
+		Size of Files:   		       1502720
+		Size in Library:		       1340477
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"owscan.msi"                                            10-05-2005     17:53:04      1502720  ""                 "A"           "4c675398-823f-0bfe-b6b2-aca36519ec87"  "d:\work\ownet\versão 5.0.0\sources\setup\owscansetup\owscansetup\media\release 1\disk images\msistub\{c05caef3-2fa5-46d5-8d89-ff2ea2bb595a}\owscan.msi"
+
+>[New Merge Module Holder Object 1]NS_NSR_NPL_1___1<
+
+		Size of Files:   		       1174859
+		Size in Library:		        250508
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"setup.inx"                                             22-10-2004     04:34:30       164311  ""                 "A"           "d6690c43-114a-4b54-fdd1-d2956f9dd3ec"  "c:\program files\installshield 10.5\objectspro\merge module object\setup.inx"
+		"isrt.dll"                                              22-10-2004     02:18:38       413696  "10.50.0.125"      "A"           "9ce63a98-bbe1-3b1c-4b95-fe4a3d36f7be"  "c:\program files\installshield 10.5\objectspro\merge module object\isrt.dll"
+		"default.pal"                                           16-09-1999     10:24:10         1168  ""                 "A"           "3ffeba0a-d069-4953-4405-061de2629c82"  "c:\program files\installshield 10.5\objectspro\merge module object\default.pal"
+		"_isres.dll"                                            22-10-2004     03:48:16       548964  "10.50.0.125"      "A"           "e8ce64c1-c72d-553d-f9d9-a85f7c79e386"  "c:\program files\installshield 10.5\objectspro\merge module object\_isres.dll"
+		"stringtable-0009-english.ips"                          22-10-2004     04:34:30         1664  ""                 "A"           "6537c903-aac7-6214-9b2d-475dbf4f4c6a"  "c:\program files\installshield 10.5\objectspro\merge module object\stringtable-0009-english.ips"
+		"mmobjhelper.dll"                                       22-10-2004     04:00:06        45056  ""                 "A"           "37b3e70b-b0d5-42b2-e000-d5228a0e1f21"  "c:\program files\installshield 10.5\objectspro\merge module object\mmobjhelper.dll"

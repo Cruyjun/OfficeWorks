@@ -1,0 +1,400 @@
+//////////////////////////////////////////////////////////////////////
+/////////////////////////////// Summary //////////////////////////////
+//////////////////////////////////////////////////////////////////////
+
+		Features:  			        16
+		Components:			        26
+		Number of Files:		        46
+		Size of Files:   		       1652587
+		Size in Library:		        777551
+
+
+		<Support>
+			Engine
+				Log
+				Kernel
+			Main Installation
+				Script
+				Setup
+				StrTbl
+				RunTime
+				Resource
+				<SQLRT>SQL Server Runtime Support files
+		<Data>
+			Disk<1>
+			BackupDatabase
+			UpgradeDatabase
+			RestoreDatabase
+
+
+//////////////////////////////////////////////////////////////////////
+///////////////////////////// Features ///////////////////////////////
+//////////////////////////////////////////////////////////////////////
+
+*<Support>*
+
+		Component
+		------------------------------------------------------
+
+*<Support>\Engine*
+
+		Component
+		------------------------------------------------------
+
+*<Support>\Engine\Log*
+
+		Component
+		------------------------------------------------------
+
+*<Support>\Engine\Kernel*
+
+		Component
+		------------------------------------------------------
+		"<Engine>Kernel Placeholder"
+		"<Engine>EngineCommonPlaceHolder"
+
+*<Support>\Main Installation*
+
+		Component
+		------------------------------------------------------
+
+*<Support>\Main Installation\Script*
+
+		Component
+		------------------------------------------------------
+		"<Support>Script"
+
+*<Support>\Main Installation\Setup*
+
+		Component
+		------------------------------------------------------
+		"<Support>Language Independent OS Independent Files"
+		"<Support>Portuguese (Standard) OS Independent Files"
+		"<Support>Misc Support Files"
+		"<Support>Build Generated Support Files"
+
+*<Support>\Main Installation\StrTbl*
+
+		Component
+		------------------------------------------------------
+		"<Support>Portuguese (Standard) String Tables"
+
+*<Support>\Main Installation\RunTime*
+
+		Component
+		------------------------------------------------------
+		"<Support>Non-SelfRegistering"
+
+*<Support>\Main Installation\Resource*
+
+		Component
+		------------------------------------------------------
+		"<Support>Portuguese (Standard) Files"
+
+*<Support>\Main Installation\<SQLRT>SQL Server Runtime Support files*
+
+		Component
+		------------------------------------------------------
+		"<Support>SQLRT_DLL"
+		"<Support>SQL Configuration File"
+		"<Support>SQL Scripts"
+
+*<Data>*
+
+		Component
+		------------------------------------------------------
+
+*<Data>\Disk<1>*
+
+		Component
+		------------------------------------------------------
+		"<Disk1>Disk1 Files(1)"
+		"<Disk1>Disk1 Files(2)"
+		"<Disk1>Disk1 Files(4)"
+
+*<Data>\BackupDatabase*
+
+		Component
+		------------------------------------------------------
+		"BackUpOWNetDatabase_SQLComponent"
+
+*<Data>\UpgradeDatabase*
+
+		Component
+		------------------------------------------------------
+		"UpgradeDB_v400_to_v410_SQLComponent"
+		"UpgradeDB_v410_to_v411_SQLComponent"
+		"UpgradeDB_v411_to_v412_SQLComponent"
+		"UpgradeDB_v412_to_v413_SQLComponent"
+		"UpgradeDB_v413_to_v414_SQLComponent"
+		"UpgradeDB_v414_to_v415_SQLComponent"
+		"UpgradeDB_v415_to_v416_SQLComponent"
+		"UpgradeDB_v416_to_v500_SQLComponent"
+
+*<Data>\RestoreDatabase*
+
+		Component
+		------------------------------------------------------
+		"RestoreOWNetDatabase_SQLComponent"
+
+
+//////////////////////////////////////////////////////////////////////
+///////////////////////////// Components ////////////////////////////
+//////////////////////////////////////////////////////////////////////
+
+><Engine>Kernel Placeholder<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"ikernel.dll"                                           26-04-2002     19:48:38            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\ikernel.dll"
+		"setup.dll"                                             25-03-2002     17:11:12            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\setup.dll"
+		"dotnetinstaller.exe"                                   25-03-2002     17:11:28            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\dotnetinstaller.exe"
+		"iscript.dll"                                           09-04-2002     22:24:12            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\iscript.dll"
+		"ctor.dll"                                              09-04-2002     22:24:40            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\ctor.dll"
+		"iuser.dll"                                             09-04-2002     22:24:54            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\iuser.dll"
+		"igdi.dll"                                              25-04-2002     21:21:50            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\igdi.dll"
+
+><Engine>EngineCommonPlaceHolder<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"isprobe.tlb"                                           26-11-2001     10:13:10            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\isprobe.tlb"
+		"objectps.dll"                                          12-07-1999     13:45:30            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\objectps.dll"
+
+><Support>Script<
+
+		Size of Files:   		        222376
+		Size in Library:		        157659
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"setup.inx"                                             09-05-2005     18:23:04       222376  ""                 "A"           "9235a5b2-2837-d8f7-eb2d-fd0d206a3f0d"  "d:\work\ownet\versão 5.0.0\sources\setup\owdatabase\upgradedb\upgradeownetdb\script files\setup.inx"
+
+><Support>Language Independent OS Independent Files<
+
+		Size of Files:   		         14108
+		Size in Library:		          4208
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"licenca_utilizacao_ownet.rtf"                          05-05-2005     15:58:16        14108  ""                 "RA"          "9da81ff5-3dbf-62be-1d1a-d8769ce1a3a5"  "z:\setup\licenses\licenca_utilizacao_ownet.rtf"
+
+><Support>Portuguese (Standard) OS Independent Files<
+
+		Size of Files:   		         65536
+		Size in Library:		          5240
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"_isuser.dll"                                           09-05-2005     18:23:04        65536  ""                 "A"           "b2946820-8f19-4a7b-ab17-61f46d8690bd"  "d:\work\ownet\versão 5.0.0\sources\setup\owdatabase\upgradedb\upgradeownetdb\_isuser\2070\_isuser.dll"
+
+><Support>Misc Support Files<
+
+		Size of Files:   		         65503
+		Size in Library:		         12414
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"corecomp.ini"                                          15-04-2002     17:04:36        65503  ""                 "A"           "ec8cd309-a0a6-f412-ce5b-54f03db9b21a"  "c:\program files\installshield 10.5\redist\compressed files\language independent\os independent\corecomp.ini"
+
+><Support>Build Generated Support Files<
+
+		Size of Files:   		            40
+		Size in Library:		            44
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"fontdata.ini"                                          09-05-2005     18:23:06           40  ""                 "A"           "3727ed57-b92f-ddc3-52a8-e90b1c6727b0"  "c:\docume~1\nma~1.par\locals~1\temp\fontdata.ini"
+
+><Support>Portuguese (Standard) String Tables<
+
+		Size of Files:   		          6849
+		Size in Library:		          1720
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"stringtable-0816-portuguese (standard).ips"            09-05-2005     18:23:04         6849  ""                 "A"           "0d989f5e-65f8-9bbf-df22-eff834ebf320"  "d:\work\ownet\versão 5.0.0\sources\setup\owdatabase\upgradedb\upgradeownetdb\string tables\stringtable-0816-portuguese (standard).ips"
+
+><Support>Non-SelfRegistering<
+
+		Size of Files:   		        414864
+		Size in Library:		        206850
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"isrt.dll"                                              22-10-2004     02:18:38       413696  "10.50.0.125"      "A"           "9ce63a98-bbe1-3b1c-4b95-fe4a3d36f7be"  "c:\program files\installshield 10.5\redist\compressed files\language independent\intel 32\isrt.dll"
+		"default.pal"                                           16-09-1999     10:24:10         1168  ""                 "A"           "3ffeba0a-d069-4953-4405-061de2629c82"  "c:\program files\installshield 10.5\redist\compressed files\language independent\intel 32\default.pal"
+
+><Support>Portuguese (Standard) Files<
+
+		Size of Files:   		        397312
+		Size in Library:		         93678
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"_isres.dll"                                            22-10-2004     03:53:16       397312  "10.50.0.125"      "A"           "cda9303f-6dff-a353-7be0-a2d91425a3ac"  "c:\program files\installshield 10.5\redist\0816\i386\skins\_isres.dll"
+
+><Disk1>Disk1 Files(1)<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"layout.bin"                                            28-06-1999     18:30:10            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\layout.bin"
+		"data1.hdr"                                             28-06-1999     18:30:10            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\data1.hdr"
+		"data1.cab"                                             28-06-1999     18:30:10            0  ""                 "A"           "d98c1dd4-008f-04b2-e980-0998ecf8427e"  "c:\program files\installshield 10.5\support\build\data1.cab"
+
+><Disk1>Disk1 Files(2)<
+
+		Size of Files:   		        163957
+		Size in Library:		        163957
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"setup.exe"                                             24-03-2005     11:02:00       119016  "10.50.0.132"      "A"           "efde1976-2fc8-ddc6-4fc3-7f1a31fac22e"  "d:\work\ownet\versão 5.0.0\sources\setup\owdatabase\upgradedb\upgradeownetdb\media\release 1\disk images\disk1\setup.exe"
+		"setup.isn"                                             22-10-2004     04:17:22        44941  ""                 "A"           "bea6b413-33b3-b653-3de3-1e771072cb6b"  "d:\work\ownet\versão 5.0.0\sources\setup\owdatabase\upgradedb\upgradeownetdb\media\release 1\disk images\disk1\setup.isn"
+
+><Disk1>Disk1 Files(4)<
+
+		Size of Files:   		           444
+		Size in Library:		           444
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"setup.ini"                                             09-05-2005     18:23:06          444  ""                 "A"           "916ab761-4ee4-8665-9467-8466d18aa590"  "d:\work\ownet\versão 5.0.0\sources\setup\owdatabase\upgradedb\upgradeownetdb\media\release 1\disk images\disk1\setup.ini"
+
+><Support>SQLRT_DLL<
+
+		Size of Files:   		        290816
+		Size in Library:		        126093
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"sqlrt.dll"                                             21-04-2005     11:54:54       290816  ""                 "A"           "93bbcefd-c2f4-fb5b-9a64-3bb281650809"  "c:\program files\installshield 10.5\redist\compressed files\language independent\intel 32\sqlrt.dll"
+
+><Support>SQL Configuration File<
+
+		Size of Files:   		          6656
+		Size in Library:		          1134
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"sqlrt.ini"                                             09-05-2005     18:23:04         6656  ""                 "A"           "f51a8eb4-cd63-894e-06c4-71ad13bc365b"  "c:\docume~1\nma~1.par\locals~1\temp\sqlrt.ini"
+
+><Support>SQL Scripts<
+
+		Size of Files:   		          4126
+		Size in Library:		          4110
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"backupownetdatabase_sqlcomponent\backupownetdatabase.sql"12-04-2005     16:04:36          571  ""                 "A"           "d722e3fc-ec49-c4a6-b8f3-a75426d05d84"  "c:\docume~1\nma~1.par\locals~1\temp\backupownetdatabase_sqlcomponent\backupownetdatabase.sql"
+		"restoreownetdatabase_sqlcomponent\restoreownetdatabase.sql"12-04-2005     16:04:54          755  ""                 "A"           "78995c93-070b-4284-0228-47bc41e37086"  "c:\docume~1\nma~1.par\locals~1\temp\restoreownetdatabase_sqlcomponent\restoreownetdatabase.sql"
+		"upgradedb_v400_to_v410_sqlcomponent\upgradedb_v400_to_v410.sql"27-04-2005     17:02:26          350  ""                 "A"           "aba16c48-6f85-094c-3c49-491140cba77f"  "c:\docume~1\nma~1.par\locals~1\temp\upgradedb_v400_to_v410_sqlcomponent\upgradedb_v400_to_v410.sql"
+		"upgradedb_v410_to_v411_sqlcomponent\upgradedb_v410_to_v411.sql"27-04-2005     17:02:26          350  ""                 "A"           "86e3e990-d524-de0f-663f-98e3b11eb373"  "c:\docume~1\nma~1.par\locals~1\temp\upgradedb_v410_to_v411_sqlcomponent\upgradedb_v410_to_v411.sql"
+		"upgradedb_v411_to_v412_sqlcomponent\upgradedb_v411_to_v412.sql"27-04-2005     17:03:58          350  ""                 "A"           "4a44d382-f0b8-6344-948e-62aff48b4b4c"  "c:\docume~1\nma~1.par\locals~1\temp\upgradedb_v411_to_v412_sqlcomponent\upgradedb_v411_to_v412.sql"
+		"upgradedb_v412_to_v413_sqlcomponent\upgradedb_v412_to_v413.sql"27-04-2005     17:03:58          350  ""                 "A"           "2bf91819-1867-7304-c8c4-9fd9330f61ca"  "c:\docume~1\nma~1.par\locals~1\temp\upgradedb_v412_to_v413_sqlcomponent\upgradedb_v412_to_v413.sql"
+		"upgradedb_v413_to_v414_sqlcomponent\upgradedb_v413_to_v414.sql"27-04-2005     17:03:58          350  ""                 "A"           "1ab6eb4c-990b-2ae7-aad4-1b6a89b3cde0"  "c:\docume~1\nma~1.par\locals~1\temp\upgradedb_v413_to_v414_sqlcomponent\upgradedb_v413_to_v414.sql"
+		"upgradedb_v414_to_v415_sqlcomponent\upgradedb_v414_to_v415.sql"27-04-2005     17:03:58          350  ""                 "A"           "c3a762f3-a595-5d02-7646-31afae91431f"  "c:\docume~1\nma~1.par\locals~1\temp\upgradedb_v414_to_v415_sqlcomponent\upgradedb_v414_to_v415.sql"
+		"upgradedb_v415_to_v416_sqlcomponent\upgradedb_v415_to_v416.sql"27-04-2005     17:03:58          350  ""                 "A"           "3ef98f37-4209-c2e8-7c87-dca57c779472"  "c:\docume~1\nma~1.par\locals~1\temp\upgradedb_v415_to_v416_sqlcomponent\upgradedb_v415_to_v416.sql"
+		"upgradedb_v416_to_v500_sqlcomponent\upgradedb_v416_to_v500.sql"27-04-2005     17:03:58          350  ""                 "A"           "2c80d521-958d-23f6-3b09-c57a394dc555"  "c:\docume~1\nma~1.par\locals~1\temp\upgradedb_v416_to_v500_sqlcomponent\upgradedb_v416_to_v500.sql"
+
+>BackUpOWNetDatabase_SQLComponent<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+
+>UpgradeDB_v400_to_v410_SQLComponent<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+
+>UpgradeDB_v410_to_v411_SQLComponent<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+
+>UpgradeDB_v411_to_v412_SQLComponent<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+
+>UpgradeDB_v412_to_v413_SQLComponent<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+
+>UpgradeDB_v413_to_v414_SQLComponent<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+
+>UpgradeDB_v414_to_v415_SQLComponent<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+
+>UpgradeDB_v415_to_v416_SQLComponent<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+
+>UpgradeDB_v416_to_v500_SQLComponent<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+
+>RestoreOWNetDatabase_SQLComponent<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------

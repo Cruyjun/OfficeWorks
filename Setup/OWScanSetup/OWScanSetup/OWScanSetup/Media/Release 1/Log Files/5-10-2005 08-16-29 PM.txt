@@ -1,0 +1,102 @@
+================= Logging started at 5/10/2005 08:16:30 PM ==================
+Calculating size of cabinet files...
+Copying uncompressed setup files...
+Preprocessing data for data1.hdr...
+Feature: <Support>
+Feature: <Support>\Engine
+Feature: <Support>\Engine\Log
+Feature: <Support>\Engine\Kernel
+   Component: <Engine>Kernel Placeholder
+   Component: <Engine>EngineCommonPlaceHolder
+Feature: <Support>\Main Installation
+Feature: <Data>
+Feature: Script
+   Component: <Support>Script
+Feature: Setup
+   Component: <Support>Language Independent OS Independent Files
+   Component: <Support>Portuguese (Standard) OS Independent Files
+   Component: <Support>Misc Support Files
+   Component: <Support>Build Generated Support Files
+Feature: StrTbl
+   Component: <Support>Portuguese (Standard) String Tables
+Feature: RunTime
+   Component: <Support>Non-SelfRegistering
+Feature: Resource
+   Component: <Support>Portuguese (Standard) Files
+Feature: Disk<1>
+   Component: <Disk1>Disk1 Files(1)
+   Component: <Disk1>Disk1 Files(2)
+   Component: <Disk1>Disk1 Files(4)
+Feature: OWScanFeature
+   Component: Application
+   Component: ApplicationFilesSelfReg
+   Component: ApplicationFilesSelfRegNo
+   Component: SOAPTOOLKIT30
+Adding Object: OWScanFeature\New Merge Module Holder Object 1.
+Merging Microsoft Component Category Manager Library: C:\Program Files\Common Files\Merge Modules\COMCAT.MSM
+Merging MSFlexGrid: C:\Program Files\Common Files\Merge Modules\MSFLXGRD.MSM
+Merging Visual Basic Virtual Machine: C:\Program Files\Common Files\Merge Modules\MSVBVM60.MSM
+Merging Microsoft OLE 2.40  for Windows NT(TM) and Windows 95(TM) Operating Systems: C:\Program Files\Common Files\Merge Modules\OLEAUT32.MSM
+Merging : Object Guid - {C05CAEF3-2FA5-46D5-8D89-FF2EA2BB595A}
+
+Description - The operation completed successfully.
+
+
+   Feature: OWScanFeature\New Merge Module Holder Object 1.
+   Feature: Msi12A.
+   Feature: Msi12W.
+   Feature: Msi20A.
+   Feature: Msi20W.
+   Feature: MsiComponent.
+Processing registries...
+Building cabinet file data1.hdr...
+Building cabinet file data1.cab...
+Feature: <Support>
+Feature: <Support>\Engine
+Feature: <Support>\Engine\Log
+Feature: <Support>\Engine\Kernel
+   Component: <Engine>Kernel Placeholder
+   Component: <Engine>EngineCommonPlaceHolder
+Feature: <Support>\Main Installation
+Feature: <Support>\Main Installation\Script
+   Component: <Support>Script
+Feature: <Support>\Main Installation\Setup
+   Component: <Support>Language Independent OS Independent Files
+   Component: <Support>Portuguese (Standard) OS Independent Files
+   Component: <Support>Misc Support Files
+   Component: <Support>Build Generated Support Files
+Feature: <Support>\Main Installation\StrTbl
+   Component: <Support>Portuguese (Standard) String Tables
+Feature: <Support>\Main Installation\RunTime
+   Component: <Support>Non-SelfRegistering
+Feature: <Support>\Main Installation\Resource
+   Component: <Support>Portuguese (Standard) Files
+Feature: <Support>\bb02cb42-d38e-43a5-97ee-b4fff81f7903
+   Component: [New Merge Module Holder Object 1]NS_NSR_NPL_1___1
+Feature: <Data>
+Building cabinet file data2.cab...
+Feature: <Data>\Disk<1>
+   Component: <Disk1>Disk1 Files(1)
+   Component: <Disk1>Disk1 Files(2)
+   Component: <Disk1>Disk1 Files(4)
+Feature: <Data>\OWScanFeature
+   Component: Application
+   Component: ApplicationFilesSelfReg
+   Component: ApplicationFilesSelfRegNo
+   Component: SOAPTOOLKIT30
+Feature: <Data>\OWScanFeature\New Merge Module Holder Object 1
+Feature: <Data>\OWScanFeature\New Merge Module Holder Object 1\Msi12A
+Feature: <Data>\OWScanFeature\New Merge Module Holder Object 1\Msi12W
+Feature: <Data>\OWScanFeature\New Merge Module Holder Object 1\Msi20A
+Feature: <Data>\OWScanFeature\New Merge Module Holder Object 1\Msi20W
+Feature: <Data>\OWScanFeature\New Merge Module Holder Object 1\MsiComponent
+   Component: [New Merge Module Holder Object 1]NS_NSR_NPL_1___<MSISTUBPATH>_1
+Creating disk layout file 'layout.bin'...
+Creating self-extracting exe...
+Build finished at 05/10/05 20:16:35.
+Automatic update notification disabled
+Release 1 - 0 error(s), 0 warning(s)
+================= Logging stopped at 5/10/2005 08:16:35 PM ==================
+Log file has been created: <file:D:\Work\OfficeWorks\Versão 5.0.0\Sources\setup\OWScanSetup\OWScanSetup\Media\Release 1\Log Files\5-10-2005 08-16-29 PM.txt>
+
+

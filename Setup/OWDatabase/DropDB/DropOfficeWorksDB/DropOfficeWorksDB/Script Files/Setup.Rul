@@ -1,0 +1,216 @@
+//===========================================================================
+//
+//  File Name:    Setup.rul
+//
+//  Description:  Blank setup main script file
+//
+//  Comments:     Blank setup is an empty setup project. If you want to
+//				  create a new project via. step-by step instructions use the
+//				  Project Assistant.
+//
+//===========================================================================
+
+// Included header files ----------------------------------------------------
+#include "ifx.h"
+
+// User Functions
+prototype ShowSQLErrorMessage(STRING);
+prototype ShowFinishDialog(STRING);
+
+// Global Constants
+#define kDATABASE_NAME					"OW"
+#define kDATABASE_VERSION				"v5.0.0"
+// OfficeWorks License file
+#define kLICENSE_FILE_NAME				"Licenca_Utilizacao_OfficeWorks.rtf"
+
+
+//---------------------------------------------------------------------------                                                                        
+// OnFirstUIBefore
+//
+// First Install UI Sequence - Before Move Data
+//
+// The OnFirstUIBefore event is called by OnShowUI when the setup is
+// running in first install mode. By default this event displays UI allowing
+// the end user to specify installation parameters.
+//
+// Note: This event will not be called automatically in a
+// program...endprogram style setup.
+//---------------------------------------------------------------------------
+function OnFirstUIBefore()
+    number  nResult;
+    string  szTitle,szMsg,szMsgDialog;
+    string  szField1,svDatabaseName;
+    string  szLicenseFile,szOpt1,szOpt2;
+    BOOL	bLicenseAccepted;
+begin	
+	// Set setup title
+	IFX_SETUP_TITLE = "Eliminação da Base de Dados do OfficeWorks - InstallShield Wizard";
+	// Beginning of UI Sequence
+	Dlg_Start:
+	    nResult = 0;
+	    // Initialize variables
+	    svDatabaseName = kDATABASE_NAME;
+		bLicenseAccepted = FALSE;
+		szLicenseFile = SUPPORTDIR ^ kLICENSE_FILE_NAME;
+	
+	// Welcome screen
+	Dlg_SdWelcome:
+	    szTitle = "Bem-vindo ao assistente de eliminação da Base de Dados do OfficeWorks.";
+	    szMsg = "O InstallShield Wizard vai eliminar a Base de Dados do OfficeWorks.\n\nPara continuar faça clique sobre Seguinte.";
+	    nResult = SdWelcome(szTitle, szMsg);
+	    if(nResult = BACK) goto Dlg_Start;
+	
+	// License Dialog
+	Dlg_SdLicense:
+	    szTitle = " ";
+	    nResult = SdLicense2Rtf(szTitle,szOpt1,szOpt2,szLicenseFile,bLicenseAccepted);
+	    if (nResult = BACK) goto Dlg_SdWelcome;
+	
+	// Connect to sql server
+	Dlg_SQLServer:
+	    nResult = OnSQLServerInitialize(nResult);
+	    if(nResult = BACK) goto Dlg_SdLicense;
+	   
+	 // Get OfficeWorks database name
+	Dlg_SQLDatabaseName:
+	    szTitle = " ";
+    	szMsg = "Indique o nome da Base de Dados do OfficeWorks\n\n";
+		szField1 = "Nome:";
+		nResult = SdShowDlgEdit1(szTitle,szMsg,szField1,svDatabaseName);
+		if(nResult = BACK) goto Dlg_SQLServer;
+
+	// Validate if database name is filled
+	if(svDatabaseName = "") then
+		MessageBox("Não é possível continuar sem indicar o nome da Base de Dados!",WARNING);
+		goto Dlg_SQLDatabaseName;        
+	endif;      
+	
+	// Screen to review install options
+	Dlg_SdStartCopy2:
+	    szTitle = " ";
+	    szMsg = "Clique em Instalar para iniciar a eliminação da Base de Dados do OfficeWorks.\n\n"; 
+	    szMsg = szMsg + "Se pretende rever ou alterar alguma definição, clique em Anterior.\n\nClique em Cancelar para sair do assistente.";
+	    nResult = SdStartCopy2(szTitle, szMsg);	
+	    if(nResult = BACK) goto Dlg_SQLDatabaseName;
+    
+	// Confirm to user if drop database
+	if (AskYesNo("Atenção! Vai eliminar a Base de Dados do OfficeWorks.\n\nEsta operação não é reversível. Deseja mesmo continuar?", YES) = NO) then
+        szMsgDialog = "A eliminação da Base de Dados do OfficeWorks foi cancelada pelo utilizador.\n\n\n";
+        szMsgDialog = szMsgDialog + "O Sistema não foi modificado.\n\n";
+        szMsgDialog = szMsgDialog + "Para eliminar a Base de Dados do OfficeWorks mais tarde, execute novamente o assistente.";
+        ShowFinishDialog(szMsgDialog);
+    endif;
+    
+    // Set values for runtime replacements
+    IFX_PRODUCT_URL = svDatabaseName;
+    return 0;
+end;
+
+
+//---------------------------------------------------------------------------
+// OnSQLComponentInstalled
+//
+// The SQLComponentInstalled event is called after each component is 
+// installed so any SQL scripts attached to that component can be run.
+//
+// szComponent will have the name of the component that has been installed.
+//---------------------------------------------------------------------------
+function OnSQLComponentInstalled(szComponent)
+	string szError,szMsgDialog;
+	number nResult,nErrorType,nLine;
+begin
+    if(SQLRTGetBatchMode()) then
+        // Queue up the component to run later
+        ISSQLServerAddToBatchInstall(szComponent);
+    else
+        // Control components instalation
+        Disable(BACKBUTTON);
+        switch(szComponent)
+	        // SQL Script to drop OfficeWorks Database
+	        case "DropOfficeWorksDatabase_SQLComponent":
+		        nResult = SQLRTComponentInstall(szComponent);
+		        if(nResult = SQL_ERROR_ABORT) then
+		            // Get error message
+    				SQLRTGetComponentScriptError(szComponent,szError,nErrorType,nLine);
+		            ShowSQLErrorMessage(szError);
+		            szMsgDialog = "A eliminação da Base de Dados do OfficeWorks não foi concluido com sucesso!";
+		            ShowFinishDialog(szMsgDialog);
+				else
+					szMsgDialog = "A eliminação da Base de Dados do OfficeWorks foi concluido com sucesso!";
+					ShowFinishDialog(szMsgDialog);
+				endif;
+	        // Ohter SQL Components
+	        default:
+		        nResult = SQLRTComponentInstall(szComponent);
+		        if(nResult = SQL_ERROR_ABORT) then
+		            // Get error message
+    				SQLRTGetComponentScriptError(szComponent,szError,nErrorType,nLine);
+                    ShowSQLErrorMessage(szError);
+		            szMsgDialog = "A eliminação da Base de Dados do OfficeWorks não foi concluido com sucesso!";
+		            ShowFinishDialog(szMsgDialog);
+				endif;
+		endswitch;
+	endif;
+end;
+
+
+//---------------------------------------------------------------------------
+// OnCanceling
+//
+// The OnCanceling event is sent when the installation is cancelled, 
+// usually as result of end user clicking Cancel button of a dialog or
+// pressing Esc key. Calling Do(EXIT) will also trigger this event.
+//---------------------------------------------------------------------------
+function OnCanceling()
+    STRING szMsgDialog;
+begin
+    if(IDYES = SprintfBox(MB_YESNO|MB_ICONEXCLAMATION|MB_DEFBUTTON2,SdLoadString(SD_STR_ONCANCELING_TITLE),SdLoadString(SD_STR_ONCANCELING_CONFIRM_MSG))) then
+        szMsgDialog = "A eliminação da Base de Dados do OfficeWorks foi cancelada pelo utilizador.\n\n\n";
+        szMsgDialog = szMsgDialog + "O Sistema não foi modificado.\n\n";
+        szMsgDialog = szMsgDialog + "Para eliminar a Base de Dados do OfficeWorks mais tarde, execute novamente o assistente.";
+        ShowFinishDialog(szMsgDialog);
+    endif;
+end;
+
+
+//---------------------------------------------------------------------------
+// ShowSQLErrorMessage
+//
+// This function will Show error message to user
+// --------------------------------------------------------------------------
+function ShowSQLErrorMessage(szErrorMsg)
+	string szMessage;
+begin
+    // Load error string
+    szMessage = SdLoadString(IDS_IFX_SQL_ERROR_RUN_FAILED) + "\n\n" + szErrorMsg;
+    // Display error
+    MessageBox(szMessage, SEVERE);
+end;
+
+
+//---------------------------------------------------------------------------
+// ShowFinishDialog
+//
+// This function will Show Finish Screen
+// --------------------------------------------------------------------------
+function ShowFinishDialog(szMsgDialog)
+	string szTitle,szMsg1,szMsg2,szOpt1,szOpt2;
+	BOOL   bvOpt1,bvOpt2;
+begin
+    // Close the current dialog.
+    EndCurrentDialog();
+    szTitle = "Eliminação da Base de Dados do OfficeWorks";
+    szMsg1 = szMsgDialog;    
+    if(szMsg1 = "") then
+    	szMsg1 = SdLoadString(SD_STR_ONCANCELING_FINISH_MSG1);
+    endif;
+   	szMsg2 = "Clique em Concluir para terminar o assistente.";    
+    szOpt1 = "";
+    szOpt2 = "";
+    bvOpt1 = FALSE;
+    bvOpt2 = FALSE;
+    // Display Finish dialog.
+    SdFinish(szTitle,szMsg1,szMsg2,szOpt1,szOpt2,bvOpt1,bvOpt2);
+    exit;
+end;
+

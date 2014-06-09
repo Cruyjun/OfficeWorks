@@ -1,0 +1,101 @@
+================= Logging started at 5/9/2005 06:23:03 PM ==================
+Calculating size of cabinet files...
+Copying uncompressed setup files...
+Preprocessing data for data1.hdr...
+Feature: <Support>
+Feature: <Support>\Engine
+Feature: <Support>\Engine\Log
+Feature: <Support>\Engine\Kernel
+   Component: <Engine>Kernel Placeholder
+   Component: <Engine>EngineCommonPlaceHolder
+Feature: <Support>\Main Installation
+Feature: <Data>
+Feature: Script
+   Component: <Support>Script
+Feature: Setup
+   Component: <Support>Language Independent OS Independent Files
+   Component: <Support>Portuguese (Standard) OS Independent Files
+   Component: <Support>Misc Support Files
+   Component: <Support>Build Generated Support Files
+Feature: StrTbl
+   Component: <Support>Portuguese (Standard) String Tables
+Feature: RunTime
+   Component: <Support>Non-SelfRegistering
+Feature: Resource
+   Component: <Support>Portuguese (Standard) Files
+Feature: Disk<1>
+   Component: <Disk1>Disk1 Files(1)
+   Component: <Disk1>Disk1 Files(2)
+   Component: <Disk1>Disk1 Files(4)
+Feature: <SQLRT>SQL Server Runtime Support files
+   Component: <Support>SQLRT_DLL
+   Component: <Support>SQL Configuration File
+   Component: <Support>SQL Scripts
+Feature: BackupDatabase
+   Component: BackUpOfficeWorksDatabase_SQLComponent
+Feature: UpgradeDatabase
+   Component: UpgradeDB_v400_to_v410_SQLComponent
+   Component: UpgradeDB_v410_to_v411_SQLComponent
+   Component: UpgradeDB_v411_to_v412_SQLComponent
+   Component: UpgradeDB_v412_to_v413_SQLComponent
+   Component: UpgradeDB_v413_to_v414_SQLComponent
+   Component: UpgradeDB_v414_to_v415_SQLComponent
+   Component: UpgradeDB_v415_to_v416_SQLComponent
+   Component: UpgradeDB_v416_to_v500_SQLComponent
+Feature: RestoreDatabase
+   Component: RestoreOfficeWorksDatabase_SQLComponent
+Processing registries...
+Building cabinet file data1.hdr...
+Building cabinet file data1.cab...
+Feature: <Support>
+Feature: <Support>\Engine
+Feature: <Support>\Engine\Log
+Feature: <Support>\Engine\Kernel
+   Component: <Engine>Kernel Placeholder
+   Component: <Engine>EngineCommonPlaceHolder
+Feature: <Support>\Main Installation
+Feature: <Support>\Main Installation\Script
+   Component: <Support>Script
+Feature: <Support>\Main Installation\Setup
+   Component: <Support>Language Independent OS Independent Files
+   Component: <Support>Portuguese (Standard) OS Independent Files
+   Component: <Support>Misc Support Files
+   Component: <Support>Build Generated Support Files
+Feature: <Support>\Main Installation\StrTbl
+   Component: <Support>Portuguese (Standard) String Tables
+Feature: <Support>\Main Installation\RunTime
+   Component: <Support>Non-SelfRegistering
+Feature: <Support>\Main Installation\Resource
+   Component: <Support>Portuguese (Standard) Files
+Feature: <Support>\Main Installation\<SQLRT>SQL Server Runtime Support files
+   Component: <Support>SQLRT_DLL
+   Component: <Support>SQL Configuration File
+   Component: <Support>SQL Scripts
+Feature: <Data>
+Building cabinet file data2.cab...
+Feature: <Data>\Disk<1>
+   Component: <Disk1>Disk1 Files(1)
+   Component: <Disk1>Disk1 Files(2)
+   Component: <Disk1>Disk1 Files(4)
+Feature: <Data>\BackupDatabase
+   Component: BackUpOfficeWorksDatabase_SQLComponent
+Feature: <Data>\UpgradeDatabase
+   Component: UpgradeDB_v400_to_v410_SQLComponent
+   Component: UpgradeDB_v410_to_v411_SQLComponent
+   Component: UpgradeDB_v411_to_v412_SQLComponent
+   Component: UpgradeDB_v412_to_v413_SQLComponent
+   Component: UpgradeDB_v413_to_v414_SQLComponent
+   Component: UpgradeDB_v414_to_v415_SQLComponent
+   Component: UpgradeDB_v415_to_v416_SQLComponent
+   Component: UpgradeDB_v416_to_v500_SQLComponent
+Feature: <Data>\RestoreDatabase
+   Component: RestoreOfficeWorksDatabase_SQLComponent
+Creating disk layout file 'layout.bin'...
+Creating self-extracting exe...
+Build finished at 05/09/05 18:23:05.
+Automatic update notification disabled
+Release 1 - 0 error(s), 0 warning(s)
+================= Logging stopped at 5/9/2005 06:23:05 PM ==================
+Log file has been created: <file:D:\Work\OfficeWorks\Versão 5.0.0\Sources\setup\OWDatabase\UpgradeDB\UpgradeOfficeWorksDB\Media\Release 1\Log Files\5-9-2005 06-23-03 PM.txt>
+
+
