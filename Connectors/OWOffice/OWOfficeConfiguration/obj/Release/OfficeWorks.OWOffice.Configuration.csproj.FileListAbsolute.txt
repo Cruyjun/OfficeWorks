@@ -1,0 +1,3 @@
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OWOfficeConfiguration\bin\Release\OfficeWorks.OWOffice.Configuration.dll
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OWOfficeConfiguration\bin\Release\OfficeWorks.OWOffice.Configuration.tlb
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OWOfficeConfiguration\obj\Release\OfficeWorks.OWOffice.Configuration.dll

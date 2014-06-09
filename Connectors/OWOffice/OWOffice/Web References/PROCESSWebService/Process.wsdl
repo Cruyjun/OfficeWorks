@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetVersion">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVersionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StartProcessAndSave">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessSubject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Files" type="tns:ArrayOfStFile" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfStFile">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="stFile" type="tns:stFile" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="stFile">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="FileID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FilePath" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FileArray" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="UseDimeAccess" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="StartProcessAndSaveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="StartProcessAndSaveResult" type="tns:ProcessSummary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ProcessSummary">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProcessNumber" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddProcessFiles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProcessID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Files" type="tns:ArrayOfStFile" />
+            <s:element minOccurs="1" maxOccurs="1" name="newProcessEvent" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddProcessFilesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddProcessFilesResult" type="tns:ProcessSummary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProcessStageCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ProcessID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProcessStageCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProcessStageCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserSignaturesAccesses">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetUserSignaturesAccessesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserSignaturesAccessesResult" type="tns:ArrayOfStUser" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfStUser">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="stUser" type="tns:stUser" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="stUser">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLogin" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMail" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PrimaryGroupID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserRoles" type="s:base64Binary" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetUserSignature">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserSignatureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserSignatureResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVersion" />
+  </wsdl:message>
+  <wsdl:message name="GetVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="StartProcessAndSaveSoapIn">
+    <wsdl:part name="parameters" element="tns:StartProcessAndSave" />
+  </wsdl:message>
+  <wsdl:message name="StartProcessAndSaveSoapOut">
+    <wsdl:part name="parameters" element="tns:StartProcessAndSaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddProcessFilesSoapIn">
+    <wsdl:part name="parameters" element="tns:AddProcessFiles" />
+  </wsdl:message>
+  <wsdl:message name="AddProcessFilesSoapOut">
+    <wsdl:part name="parameters" element="tns:AddProcessFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProcessStageCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProcessStageCode" />
+  </wsdl:message>
+  <wsdl:message name="GetProcessStageCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProcessStageCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserSignaturesAccessesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserSignaturesAccesses" />
+  </wsdl:message>
+  <wsdl:message name="GetUserSignaturesAccessesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserSignaturesAccessesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserSignatureSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserSignature" />
+  </wsdl:message>
+  <wsdl:message name="GetUserSignatureSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserSignatureResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ProcessSoap">
+    <wsdl:operation name="GetVersion">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Get WebService Version</documentation>
+      <wsdl:input message="tns:GetVersionSoapIn" />
+      <wsdl:output message="tns:GetVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StartProcessAndSave">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Start Process and Save</documentation>
+      <wsdl:input message="tns:StartProcessAndSaveSoapIn" />
+      <wsdl:output message="tns:StartProcessAndSaveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddProcessFiles">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Add Process Files</documentation>
+      <wsdl:input message="tns:AddProcessFilesSoapIn" />
+      <wsdl:output message="tns:AddProcessFilesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProcessStageCode">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Get current process stage code tag to associate with document bookmark signature.</documentation>
+      <wsdl:input message="tns:GetProcessStageCodeSoapIn" />
+      <wsdl:output message="tns:GetProcessStageCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserSignaturesAccesses">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Get signatures that user have access</documentation>
+      <wsdl:input message="tns:GetUserSignaturesAccessesSoapIn" />
+      <wsdl:output message="tns:GetUserSignaturesAccessesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserSignature">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Get signature of a User. Who ask for signature must have access to that signature.</documentation>
+      <wsdl:input message="tns:GetUserSignatureSoapIn" />
+      <wsdl:output message="tns:GetUserSignatureSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ProcessSoap" type="tns:ProcessSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="GetVersion">
+      <soap:operation soapAction="http://tempuri.org/GetVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartProcessAndSave">
+      <soap:operation soapAction="http://tempuri.org/StartProcessAndSave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddProcessFiles">
+      <soap:operation soapAction="http://tempuri.org/AddProcessFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProcessStageCode">
+      <soap:operation soapAction="http://tempuri.org/GetProcessStageCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserSignaturesAccesses">
+      <soap:operation soapAction="http://tempuri.org/GetUserSignaturesAccesses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserSignature">
+      <soap:operation soapAction="http://tempuri.org/GetUserSignature" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Process">
+    <wsdl:port name="ProcessSoap" binding="tns:ProcessSoap">
+      <soap:address location="http://localhost/OfficeWorks/WebServices/OWProcess/Process.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

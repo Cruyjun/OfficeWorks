@@ -1,0 +1,94 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OWMail", "OWMail\OWMail.csproj", "{515856B2-A472-4ED3-8457-B48C8C64F0E2}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OWMailConfigurationSettings", "OWMailConfigurationSettings\OWMailConfigurationSettings.csproj", "{455597D9-2E44-408F-B4AC-D702E353E1BF}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OWMailConfigurator", "OWMailConfigurator\OWMailConfigurator.csproj", "{D55AF078-B19F-45D7-AB4C-4A0A4AED9EBD}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{E729F059-12D4-455F-A2A4-FDA8DD25E08A}") = "OWMailSetup", "OWMailSetup\OWMailSetup.ism", "{DDF723F6-A676-4F1A-A535-0D488B885C04}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{D55AF078-B19F-45D7-AB4C-4A0A4AED9EBD} = {D55AF078-B19F-45D7-AB4C-4A0A4AED9EBD}
+		{D55AF078-B19F-45D7-AB4C-4A0A4AED9EBD} = {D55AF078-B19F-45D7-AB4C-4A0A4AED9EBD}
+		{D3E9FA84-13EA-4785-85BE-35697EF110C6} = {D3E9FA84-13EA-4785-85BE-35697EF110C6}
+		{515856B2-A472-4ED3-8457-B48C8C64F0E2} = {515856B2-A472-4ED3-8457-B48C8C64F0E2}
+		{515856B2-A472-4ED3-8457-B48C8C64F0E2} = {515856B2-A472-4ED3-8457-B48C8C64F0E2}
+		{455597D9-2E44-408F-B4AC-D702E353E1BF} = {455597D9-2E44-408F-B4AC-D702E353E1BF}
+		{E384E9F8-6B97-4F55-803E-481E6CF3C375} = {E384E9F8-6B97-4F55-803E-481E6CF3C375}
+		{EC0F09FB-A849-4F09-BD5F-EEA63775E4AD} = {EC0F09FB-A849-4F09-BD5F-EEA63775E4AD}
+	EndProjectSection
+EndProject
+Project("{E729F059-12D4-455F-A2A4-FDA8DD25E08A}") = "OWMailGACSetup", "OWMailGACSetup\OWMailGACSetup.ism", "{3F92CB3B-1A33-404A-98A8-31BE611ADF93}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ACCESS", "..\..\OW\Access\ACCESS.vbproj", "{EC0F09FB-A849-4F09-BD5F-EEA63775E4AD}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OWCommonModule", "..\..\OW\OWCommonModule\OWCommonModule.csproj", "{D3E9FA84-13EA-4785-85BE-35697EF110C6}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProjectUniqueName0 = ..\\..\\OW\\Access\\ACCESS.vbproj
+		SccProjectName0 = \u0022$/OfficeWorks/Versão\u00205.0.0/Sources/Access\u0022,\u0020SWBAAAAA
+		SccLocalPath0 = ..\\..\\OW\\Access
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = ..\\..\\OW\\OWCommonModule\\OWCommonModule.csproj
+		SccProjectName1 = \u0022$/OfficeWorks/Versão\u00205.0.0/Sources/OWCommonModule\u0022,\u0020WPCAAAAA
+		SccLocalPath1 = ..\\..\\OW\\OWCommonModule
+		SccProvider1 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{515856B2-A472-4ED3-8457-B48C8C64F0E2}.Debug.ActiveCfg = Debug|.NET
+		{515856B2-A472-4ED3-8457-B48C8C64F0E2}.Debug.Build.0 = Debug|.NET
+		{515856B2-A472-4ED3-8457-B48C8C64F0E2}.Release.ActiveCfg = Release|.NET
+		{515856B2-A472-4ED3-8457-B48C8C64F0E2}.Release.Build.0 = Release|.NET
+		{455597D9-2E44-408F-B4AC-D702E353E1BF}.Debug.ActiveCfg = Debug|.NET
+		{455597D9-2E44-408F-B4AC-D702E353E1BF}.Debug.Build.0 = Debug|.NET
+		{455597D9-2E44-408F-B4AC-D702E353E1BF}.Release.ActiveCfg = Release|.NET
+		{455597D9-2E44-408F-B4AC-D702E353E1BF}.Release.Build.0 = Release|.NET
+		{D55AF078-B19F-45D7-AB4C-4A0A4AED9EBD}.Debug.ActiveCfg = Debug|.NET
+		{D55AF078-B19F-45D7-AB4C-4A0A4AED9EBD}.Debug.Build.0 = Debug|.NET
+		{D55AF078-B19F-45D7-AB4C-4A0A4AED9EBD}.Release.ActiveCfg = Release|.NET
+		{D55AF078-B19F-45D7-AB4C-4A0A4AED9EBD}.Release.Build.0 = Release|.NET
+		{DDF723F6-A676-4F1A-A535-0D488B885C04}.Debug.ActiveCfg = Debug
+		{DDF723F6-A676-4F1A-A535-0D488B885C04}.Release.ActiveCfg = Release
+		{DDF723F6-A676-4F1A-A535-0D488B885C04}.Release.Build.0 = Release
+		{3F92CB3B-1A33-404A-98A8-31BE611ADF93}.Debug.ActiveCfg = Debug
+		{3F92CB3B-1A33-404A-98A8-31BE611ADF93}.Release.ActiveCfg = Release
+		{3F92CB3B-1A33-404A-98A8-31BE611ADF93}.Release.Build.0 = Release
+		{EC0F09FB-A849-4F09-BD5F-EEA63775E4AD}.Debug.ActiveCfg = Debug|.NET
+		{EC0F09FB-A849-4F09-BD5F-EEA63775E4AD}.Debug.Build.0 = Debug|.NET
+		{EC0F09FB-A849-4F09-BD5F-EEA63775E4AD}.Release.ActiveCfg = Release|.NET
+		{EC0F09FB-A849-4F09-BD5F-EEA63775E4AD}.Release.Build.0 = Release|.NET
+		{D3E9FA84-13EA-4785-85BE-35697EF110C6}.Debug.ActiveCfg = Debug|.NET
+		{D3E9FA84-13EA-4785-85BE-35697EF110C6}.Debug.Build.0 = Debug|.NET
+		{D3E9FA84-13EA-4785-85BE-35697EF110C6}.Release.ActiveCfg = Release|.NET
+		{D3E9FA84-13EA-4785-85BE-35697EF110C6}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

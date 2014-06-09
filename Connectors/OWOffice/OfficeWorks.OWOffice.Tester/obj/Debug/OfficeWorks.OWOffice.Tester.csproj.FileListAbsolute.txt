@@ -1,0 +1,10 @@
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OfficeWorks.OWOffice.Tester\bin\Debug\OfficeWorks.OWOffice.Tester.exe.config
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OfficeWorks.OWOffice.Tester\bin\Debug\OfficeWorks.OWOffice.Tester.exe
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OfficeWorks.OWOffice.Tester\bin\Debug\OfficeWorks.OWOffice.Tester.pdb
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OfficeWorks.OWOffice.Tester\bin\Debug\OfficeWorks.OWOffice.dll
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OfficeWorks.OWOffice.Tester\bin\Debug\OfficeWorks.OWOffice.Configuration.dll
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OfficeWorks.OWOffice.Tester\bin\Debug\OfficeWorks.OWOffice.pdb
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OfficeWorks.OWOffice.Tester\bin\Debug\OfficeWorks.OWOffice.Configuration.pdb
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OfficeWorks.OWOffice.Tester\obj\Debug\OfficeWorks.OWOffice.Tester.csprojResolveAssemblyReference.cache
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OfficeWorks.OWOffice.Tester\obj\Debug\OfficeWorks.OWOffice.Tester.exe
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OfficeWorks.OWOffice.Tester\obj\Debug\OfficeWorks.OWOffice.Tester.pdb

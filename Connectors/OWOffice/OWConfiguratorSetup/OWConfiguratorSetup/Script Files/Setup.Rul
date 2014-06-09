@@ -1,0 +1,147 @@
+//===========================================================================
+//
+//  File Name:    Setup.rul
+//
+//  Description:  Blank setup main script file
+//
+//  Comments:     Blank setup is an empty setup project. If you want to
+//				  create a new project via. step-by step instructions use the
+//				  Project Assistant.
+//
+//===========================================================================
+
+// Included header files ----------------------------------------------------
+#include "ifx.h"
+
+//User Functions
+prototype ShowFinishDialog(STRING,BOOL);
+
+//Global Variables
+STRING  svInstallDirPath;
+
+// Global Constants
+// Default values
+#define kPRODUCT_NAME					"OWConfigurator"
+// Product Description
+#define kPRODUCT_DESCRIPTION			"OWConfigurator - Configurador dos Templates Word do OfficeWorks"
+// OfficeWorks License file
+#define kLICENSE_FILE_NAME				"Licenca_Utilizacao_OWConfigurator.rtf"
+
+
+//---------------------------------------------------------------------------                                                                        
+// OnFirstUIBefore
+//
+// First Install UI Sequence - Before Move Data
+// The OnFirstUIBefore event is called by OnShowUI when the setup is
+// running in first install mode. By default this event displays UI allowing
+// the end user to specify installation parameters.
+//
+// Note: This event will not be called automatically in a
+// program...endprogram style setup.
+//---------------------------------------------------------------------------
+function OnFirstUIBefore()
+    number  nResult;
+    string  szTitle,szMsg,szDir;
+    string  szField1,szField2,szField3;
+    string  szLicenseFile,szOpt1,szOpt2;
+    BOOL	bLicenseAccepted;
+begin
+	// Set setup title
+	IFX_SETUP_TITLE = "Instalação do " + kPRODUCT_NAME + " - InstallShield Wizard";
+	// Beginning of UI Sequence
+	Dlg_Start:
+	    nResult = 0;
+		svInstallDirPath = FOLDER_APPLICATIONS ^ IFX_COMPANY_NAME ^ kPRODUCT_NAME;
+   		bLicenseAccepted = FALSE;
+		szLicenseFile = SUPPORTDIR ^ kLICENSE_FILE_NAME;
+
+    // Welcome screen
+	Dlg_SdWelcome:
+	    szTitle = "Bem-vindo ao assistente de instalação do " + kPRODUCT_NAME + ".";
+	    szMsg = "O InstallShield Wizard vai instalar o " + kPRODUCT_DESCRIPTION + ".\n\nPara continuar faça clique sobre Seguinte.";
+	    nResult = SdWelcome(szTitle,szMsg);
+	    if (nResult = BACK) goto Dlg_Start;
+	
+	// License Dialog
+	Dlg_SdLicense:
+	    szTitle = " ";
+	    nResult = SdLicense2Rtf(szTitle,szOpt1,szOpt2,szLicenseFile,bLicenseAccepted);
+	    if (nResult = BACK) goto Dlg_SdWelcome;
+	
+ 	// Get install dir info
+	Dlg_InstallDir_Info:
+		szTitle = " ";
+	    szMsg = "Seleccione a pasta para a instalação do " + kPRODUCT_NAME + "."; 
+	    szDir = svInstallDirPath;
+     	nResult = AskDestPath(szTitle,szMsg,szDir,0);
+     	svInstallDirPath = szDir;
+		if(nResult = BACK) goto Dlg_SdLicense;
+
+	// Validate if install dir is filled
+	if(svInstallDirPath = "") then
+		MessageBox("Não é possível continuar sem indicar a Directoria de Instalação!",WARNING);
+		goto Dlg_InstallDir_Info;        
+	endif;       	
+
+	// Screen to review install options
+	Dlg_SdStartCopy2:
+	    szTitle = " ";
+	    szMsg = "Clique em Instalar para iniciar a instalação do " + kPRODUCT_NAME + ".\n\n"; 
+	    szMsg = szMsg + "Se pretende rever ou alterar alguma definição, clique em Anterior.\n\nClique em Cancelar para sair do assistente.";
+	    nResult = SdStartCopy2(szTitle,szMsg);	
+	    if (nResult = BACK) goto Dlg_InstallDir_Info;
+    
+   	//Set values to instalation
+   	TARGETDIR = svInstallDirPath;
+    return 0;
+end;
+
+
+// --------------------------------------------------------------------------
+// OnCanceling
+//
+// The OnCanceling event is sent when the installation is cancelled, 
+// usually as result of end user clicking Cancel button of a dialog or
+// pressing Esc key. Calling Do(EXIT) will also trigger this event.
+// --------------------------------------------------------------------------
+function OnCanceling()
+    STRING szMsgDialog;
+begin
+    if(IDYES = SprintfBox(MB_YESNO|MB_ICONEXCLAMATION|MB_DEFBUTTON2,SdLoadString(SD_STR_ONCANCELING_TITLE),SdLoadString(SD_STR_ONCANCELING_CONFIRM_MSG))) then
+        szMsgDialog = "A instalação do " + kPRODUCT_NAME + " foi cancelada pelo utilizador.\n\n\n";
+        szMsgDialog = szMsgDialog + "O Sistema não foi modificado.\n\n";
+        szMsgDialog = szMsgDialog + "Para instalar o " + kPRODUCT_NAME + " mais tarde, execute novamente o assistente.";
+        ShowFinishDialog(szMsgDialog,TRUE);
+    endif;
+end;
+
+
+//---------------------------------------------------------------------------
+// ShowFinishDialog
+//
+// This function will Show Finish Screen and end setup
+// --------------------------------------------------------------------------
+function ShowFinishDialog(szMsgDialog,bAbort)
+	string szMessage,szTitle,szMsg1,szMsg2,szOpt1,szOpt2;
+	BOOL   bvOpt1,bvOpt2;
+begin
+    // Close the current dialog.
+    EndCurrentDialog();
+    szTitle = "Instalação do " + kPRODUCT_DESCRIPTION;
+    szMsg1 = szMsgDialog;    
+    if(szMsg1 = "") then
+    	szMsg1 = SdLoadString(SD_STR_ONCANCELING_FINISH_MSG1);
+    endif;
+   	szMsg2 = "Clique em Concluir para terminar o assistente.";    
+    szOpt1 = "";
+    szOpt2 = "";
+    bvOpt1   = FALSE;
+    bvOpt2   = FALSE;
+    // Display Finish dialog.
+    SdFinish(szTitle,szMsg1,szMsg2,szOpt1,szOpt2,bvOpt1,bvOpt2);                       
+    if(bAbort) then
+    	abort;
+    endif;
+    exit;
+end;
+

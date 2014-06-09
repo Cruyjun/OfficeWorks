@@ -1,0 +1,45 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeWorks.OWOffice.Configuration", "OWOfficeConfiguration\OfficeWorks.OWOffice.Configuration.csproj", "{3C418450-C0EF-4610-9438-016D77D06687}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeWorks.OWOffice", "OWOffice\OfficeWorks.OWOffice.csproj", "{3063F50E-1371-406D-AF3D-057DD7ED8ED2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeWorks.OWOffice.Configurator", "OWOfficeConfigurator\OfficeWorks.OWOffice.Configurator.csproj", "{E1E8E8B1-9521-464E-A3EE-7CB11C5CEA50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeWorks.OWOffice.Tester", "OfficeWorks.OWOffice.Tester\OfficeWorks.OWOffice.Tester.csproj", "{2255F293-AF11-4536-B71E-8CD6D8A364AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		UNIT_TESTS|Any CPU = UNIT_TESTS|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C418450-C0EF-4610-9438-016D77D06687}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C418450-C0EF-4610-9438-016D77D06687}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C418450-C0EF-4610-9438-016D77D06687}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C418450-C0EF-4610-9438-016D77D06687}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C418450-C0EF-4610-9438-016D77D06687}.UNIT_TESTS|Any CPU.ActiveCfg = Release|Any CPU
+		{3C418450-C0EF-4610-9438-016D77D06687}.UNIT_TESTS|Any CPU.Build.0 = Release|Any CPU
+		{3063F50E-1371-406D-AF3D-057DD7ED8ED2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3063F50E-1371-406D-AF3D-057DD7ED8ED2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3063F50E-1371-406D-AF3D-057DD7ED8ED2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3063F50E-1371-406D-AF3D-057DD7ED8ED2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3063F50E-1371-406D-AF3D-057DD7ED8ED2}.UNIT_TESTS|Any CPU.ActiveCfg = Release|Any CPU
+		{3063F50E-1371-406D-AF3D-057DD7ED8ED2}.UNIT_TESTS|Any CPU.Build.0 = Release|Any CPU
+		{E1E8E8B1-9521-464E-A3EE-7CB11C5CEA50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1E8E8B1-9521-464E-A3EE-7CB11C5CEA50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1E8E8B1-9521-464E-A3EE-7CB11C5CEA50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1E8E8B1-9521-464E-A3EE-7CB11C5CEA50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1E8E8B1-9521-464E-A3EE-7CB11C5CEA50}.UNIT_TESTS|Any CPU.ActiveCfg = Release|Any CPU
+		{E1E8E8B1-9521-464E-A3EE-7CB11C5CEA50}.UNIT_TESTS|Any CPU.Build.0 = Release|Any CPU
+		{2255F293-AF11-4536-B71E-8CD6D8A364AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2255F293-AF11-4536-B71E-8CD6D8A364AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2255F293-AF11-4536-B71E-8CD6D8A364AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2255F293-AF11-4536-B71E-8CD6D8A364AB}.UNIT_TESTS|Any CPU.ActiveCfg = Release|Any CPU
+		{2255F293-AF11-4536-B71E-8CD6D8A364AB}.UNIT_TESTS|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

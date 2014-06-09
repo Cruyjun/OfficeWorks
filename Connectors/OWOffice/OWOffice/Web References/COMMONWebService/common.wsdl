@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://tempuri.org/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetOrganizationalUnits">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filter" type="s0:OrganizationalUnitFilter" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="OrganizationalUnitFilter">
+        <s:complexContent mixed="false">
+          <s:extension base="s0:FilterBaseClass">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="OrganizationalUnitType" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Active" type="s0:DBBool" />
+              <s:element minOccurs="1" maxOccurs="1" name="OnlyFavorites" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="FilterBaseClass">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PageNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PageSize" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SortField" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SortDirection" type="s0:SortDirectionEnum" />
+          <s:element minOccurs="1" maxOccurs="1" name="Filtered" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="SortDirectionEnum">
+        <s:restriction base="s:string">
+          <s:enumeration value="Ascending" />
+          <s:enumeration value="Descending" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="DBBool" />
+      <s:element name="GetOrganizationalUnitsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOrganizationalUnitsResult" type="s0:ArrayOfBasicOrganizationalUnit" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfBasicOrganizationalUnit">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BasicOrganizationalUnit" nillable="true" type="s0:BasicOrganizationalUnit" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BasicOrganizationalUnit">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Type" type="s0:OrganizationalUnitTypeEnum" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="OrganizationalUnitTypeEnum">
+        <s:restriction base="s:string">
+          <s:enumeration value="All" />
+          <s:enumeration value="User" />
+          <s:enumeration value="Group" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetBasicOrganizationalUnitsByRegistryBook">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="bookID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBasicOrganizationalUnitsByRegistryBookResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBasicOrganizationalUnitsByRegistryBookResult" type="s0:ArrayOfBasicOrganizationalUnit" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </types>
+  <message name="GetOrganizationalUnitsSoapIn">
+    <part name="parameters" element="s0:GetOrganizationalUnits" />
+  </message>
+  <message name="GetOrganizationalUnitsSoapOut">
+    <part name="parameters" element="s0:GetOrganizationalUnitsResponse" />
+  </message>
+  <message name="GetBasicOrganizationalUnitsByRegistryBookSoapIn">
+    <part name="parameters" element="s0:GetBasicOrganizationalUnitsByRegistryBook" />
+  </message>
+  <message name="GetBasicOrganizationalUnitsByRegistryBookSoapOut">
+    <part name="parameters" element="s0:GetBasicOrganizationalUnitsByRegistryBookResponse" />
+  </message>
+  <portType name="CommonSoap">
+    <operation name="GetOrganizationalUnits">
+      <documentation>Get Basic Organizational Units</documentation>
+      <input message="s0:GetOrganizationalUnitsSoapIn" />
+      <output message="s0:GetOrganizationalUnitsSoapOut" />
+    </operation>
+    <operation name="GetBasicOrganizationalUnitsByRegistryBook">
+      <documentation>Get Basic Organizational Units By Registry BookID</documentation>
+      <input message="s0:GetBasicOrganizationalUnitsByRegistryBookSoapIn" />
+      <output message="s0:GetBasicOrganizationalUnitsByRegistryBookSoapOut" />
+    </operation>
+  </portType>
+  <binding name="CommonSoap" type="s0:CommonSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="GetOrganizationalUnits">
+      <soap:operation soapAction="http://tempuri.org/GetOrganizationalUnits" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetBasicOrganizationalUnitsByRegistryBook">
+      <soap:operation soapAction="http://tempuri.org/GetBasicOrganizationalUnitsByRegistryBook" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Common">
+    <port name="CommonSoap" binding="s0:CommonSoap">
+      <soap:address location="http://localhost/OfficeWorks/WebServices/OWprocess/common.asmx" />
+    </port>
+  </service>
+</definitions>

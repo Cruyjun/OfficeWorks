@@ -1,0 +1,1 @@
+cscript RegEvent.vbs Add OnSyncSave OWNet.OWMail http://ownet-srv/exchange/acruz/inbox/OWMail

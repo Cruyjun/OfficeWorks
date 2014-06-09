@@ -1,0 +1,8 @@
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OWOffice\bin\Debug\OfficeWorks.OWOffice.dll
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OWOffice\bin\Debug\OfficeWorks.OWOffice.pdb
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OWOffice\bin\Debug\OfficeWorks.OWOffice.tlb
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OWOffice\bin\Debug\OfficeWorks.OWOffice.Configuration.dll
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OWOffice\bin\Debug\OfficeWorks.OWOffice.Configuration.pdb
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OWOffice\obj\Debug\OfficeWorks.OWOffice.csprojResolveAssemblyReference.cache
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OWOffice\obj\Debug\OfficeWorks.OWOffice.dll
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OWOffice\obj\Debug\OfficeWorks.OWOffice.pdb

@@ -1,0 +1,5 @@
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OWOfficeConfiguration\bin\Debug\OfficeWorks.OWOffice.Configuration.dll
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OWOfficeConfiguration\bin\Debug\OfficeWorks.OWOffice.Configuration.pdb
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OWOfficeConfiguration\bin\Debug\OfficeWorks.OWOffice.Configuration.tlb
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OWOfficeConfiguration\obj\Debug\OfficeWorks.OWOffice.Configuration.dll
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OWOfficeConfiguration\obj\Debug\OfficeWorks.OWOffice.Configuration.pdb

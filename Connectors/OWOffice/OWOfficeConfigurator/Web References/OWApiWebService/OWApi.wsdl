@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetVersion">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVersionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetHierarchicalAccess">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegistryIdentifier" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="Login" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="objectType" type="tns:enumAccessObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="enumAccessObject">
+        <s:restriction base="s:string">
+          <s:enumeration value="User" />
+          <s:enumeration value="Group" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="SetHierarchicalAccessResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="role" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListResult" type="tns:ArrayOfStList" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfStList">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="stList" type="tns:stList" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="stList">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ListId" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListDescription" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetContact">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FieldsColl" type="tns:ArrayOfStFieldsStruct" />
+            <s:element minOccurs="1" maxOccurs="1" name="Full" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="Login" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Role" type="tns:enumAddressesRoles" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageNumber" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageSize" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="NumReg" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfStFieldsStruct">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="stFieldsStruct" type="tns:stFieldsStruct" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="stFieldsStruct">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="FieldID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="FieldType" type="tns:enumAddressesFieldType" />
+          <s:element minOccurs="0" maxOccurs="1" name="FieldValue" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="enumAddressesFieldType">
+        <s:restriction base="s:string">
+          <s:enumeration value="FieldTypeString" />
+          <s:enumeration value="FieldTypeNumeric" />
+          <s:enumeration value="FieldTypeFloat" />
+          <s:enumeration value="FieldTypeDate" />
+          <s:enumeration value="FieldTypeDateTime" />
+          <s:enumeration value="FieldTypeText" />
+          <s:enumeration value="FieldTypeSet" />
+          <s:enumeration value="FieldTypeBoolean" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="enumAddressesRoles">
+        <s:restriction base="s:string">
+          <s:enumeration value="Search" />
+          <s:enumeration value="Modify" />
+          <s:enumeration value="Manage" />
+          <s:enumeration value="Count" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetContactResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetContactResult" type="tns:ArrayOfStContact" />
+            <s:element minOccurs="1" maxOccurs="1" name="NumReg" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfStContact">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="stContact" nillable="true" type="tns:stContact" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="stContact">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ContactID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="FieldID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="FieldOrder" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="FieldValue" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetEntitiesGroups">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEntitiesGroupsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEntitiesGroupsResult" type="tns:ArrayOfStGroup" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfStGroup">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="stGroup" type="tns:stGroup" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="stGroup">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="GroupID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetGroupsEntities">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Identifier" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGroupsEntitiesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGroupsEntitiesResult" type="tns:ArrayOfStGroup" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBook">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="role" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBookResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBookResult" type="tns:ArrayOfStBook" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfStBook">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="stBook" type="tns:stBook" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="stBook">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="BookID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="BookAbreviation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BookDescription" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAllBooks">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllBooksResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllBooksResult" type="tns:ArrayOfStBook" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBookFields">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BookIdentifier" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBookFieldsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBookFieldsResult" type="tns:ArrayOfStDynamicField" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfStDynamicField">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="stDynamicField" type="tns:stDynamicField" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="stDynamicField">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="DynamicFieldID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DynamicFieldType" type="tns:enumFieldType" />
+          <s:element minOccurs="0" maxOccurs="1" name="DynamicFieldName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DynamicFieldValue" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="enumFieldType">
+        <s:restriction base="s:string">
+          <s:enumeration value="FieldTypeText" />
+          <s:enumeration value="FieldTypeNumeric" />
+          <s:enumeration value="FieldTypeFloat" />
+          <s:enumeration value="FieldTypeDate" />
+          <s:enumeration value="FieldTypeDateTime" />
+          <s:enumeration value="FieldTypeStatic" />
+          <s:enumeration value="FieldTypeList" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="UploadFile">
+        <s:complexType />
+      </s:element>
+      <s:element name="UploadFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadFileResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsersByProduct">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Product" type="tns:enumObjectType" />
+            <s:element minOccurs="1" maxOccurs="1" name="Active" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="enumObjectType">
+        <s:restriction base="s:string">
+          <s:enumeration value="OBJ_TABLE_BOOKS" />
+          <s:enumeration value="OBJ_TABLE_REGISTRY" />
+          <s:enumeration value="OBJ_PRODUCT_REGISTRY" />
+          <s:enumeration value="OBJ_PRODUCT_WKF_DISTRIB" />
+          <s:enumeration value="OBJ_APPLICATION" />
+          <s:enumeration value="OBJ_PRODUCT_OWFLOW" />
+          <s:enumeration value="OBJ_PRODUCT_OWARCHIVE" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetUsersByProductResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUsersByProductResult" type="tns:ArrayOfStUser" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfStUser">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="stUser" type="tns:stUser" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="stUser">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLogin" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMail" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PrimaryGroupID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserRoles" type="s:base64Binary" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDocumentTypesByBook">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BookIdentifier" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocumentTypesByBookResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDocumentTypesByBookResult" type="tns:ArrayOfStDocumentType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfStDocumentType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="stDocumentType" type="tns:stDocumentType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="stDocumentType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="DocumentTypeID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentTypeAbreviation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentTypeDescription" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetRegistryListValues">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegistryListValuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRegistryListValuesResult" type="tns:ArrayOfStItem" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfStItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="stItem" type="tns:stItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="stItem">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Identifier" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Other" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AttachFiles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Registry" type="tns:stRegistry" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="stRegistry">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="RegistryID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="Book" type="tns:stBook" />
+          <s:element minOccurs="1" maxOccurs="1" name="Year" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="Number" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="RegistryDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Subject" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Observations" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reference" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DocumentType" type="tns:stDocumentType" />
+          <s:element minOccurs="1" maxOccurs="1" name="DocumentDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Classification" type="tns:stClassification" />
+          <s:element minOccurs="1" maxOccurs="1" name="Entity" type="tns:stEntity" />
+          <s:element minOccurs="0" maxOccurs="1" name="MoreEntities" type="tns:ArrayOfStEntity" />
+          <s:element minOccurs="0" maxOccurs="1" name="SearchTempGUID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Keywords" type="tns:ArrayOfStKeyword" />
+          <s:element minOccurs="0" maxOccurs="1" name="DynamicFields" type="tns:ArrayOfStDynamicField" />
+          <s:element minOccurs="0" maxOccurs="1" name="Distributions" type="tns:ArrayOfStDistribution" />
+          <s:element minOccurs="0" maxOccurs="1" name="Files" type="tns:ArrayOfStFile" />
+          <s:element minOccurs="1" maxOccurs="1" name="PreviousRegistry" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="Value" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Coin" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Quote" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Process" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Block" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="User" type="tns:stUser" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModifyingUser" type="tns:stUser" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModifyingDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="stClassification">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ClassificationID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Level1Abreviation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Level1Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Level2Abreviation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Level2Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Level3Abreviation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Level3Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Level4Abreviation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Level4Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Level5Abreviation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Level5Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="stEntity">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="EntityID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="EntityName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EntityExchangeID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EntityType" type="tns:enumEntityType" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="enumEntityType">
+        <s:restriction base="s:string">
+          <s:enumeration value="EntityTypeDestiny" />
+          <s:enumeration value="EntityTypeOrigin" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfStEntity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="stEntity" type="tns:stEntity" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfStKeyword">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="stKeyword" type="tns:stKeyword" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="stKeyword">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="KeywordID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="KeywordDescription" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Global" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfStDistribution">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="stDistribution" type="tns:stDistribution" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="stDistribution">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="DistributionID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DistributionType" type="tns:enumDistributionType" />
+          <s:element minOccurs="1" maxOccurs="1" name="DistributionState" type="tns:enumDistributionState" />
+          <s:element minOccurs="1" maxOccurs="1" name="DistributionDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="OtherWays" type="tns:stOtherWays" />
+          <s:element minOccurs="1" maxOccurs="1" name="SAP" type="tns:stSAP" />
+          <s:element minOccurs="1" maxOccurs="1" name="Ultimus" type="tns:stUltimus" />
+          <s:element minOccurs="0" maxOccurs="1" name="Observations" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="enumDistributionType">
+        <s:restriction base="s:string">
+          <s:enumeration value="DistributionTypeMail" />
+          <s:enumeration value="DistributionTypeOtherWays" />
+          <s:enumeration value="DistributionTypeSAP" />
+          <s:enumeration value="DistributionTypeUltimus" />
+          <s:enumeration value="DistributionTypeWorkflow" />
+          <s:enumeration value="DistributionTypeOWFLow" />
+          <s:enumeration value="DistributionTypeSGP" />
+          <s:enumeration value="DistributionTypeEProcess" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="enumDistributionState">
+        <s:restriction base="s:string">
+          <s:enumeration value="DistributionStateStarted" />
+          <s:enumeration value="DistributionStateEnded" />
+          <s:enumeration value="DistributionStateError" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="stOtherWays">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="OtherWay" type="tns:stWay" />
+          <s:element minOccurs="0" maxOccurs="1" name="Entities" type="tns:ArrayOfStEntity" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="stWay">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="WayID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="WayAbreviation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WayDescription" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="stSAP">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SAPID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="SAPAbreviation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SAPDescription" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="stUltimus">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="UltimusID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="UltimusAbreviation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UltimusDescription" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfStFile">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="stFile" type="tns:stFile" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="stFile">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="FileID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FilePath" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FileArray" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="UseDimeAccess" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AttachFilesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Registry" type="tns:stRegistry" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertRegistry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strDomainAndUsername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Registry" type="tns:stRegistry" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertRegistryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertRegistryResult" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="Registry" type="tns:stRegistry" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyRegistry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strDomainAndUsername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Registry" type="tns:stRegistry" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyRegistryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModifyRegistryResult" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="Registry" type="tns:stRegistry" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVersion" />
+  </wsdl:message>
+  <wsdl:message name="GetVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetHierarchicalAccessSoapIn">
+    <wsdl:part name="parameters" element="tns:SetHierarchicalAccess" />
+  </wsdl:message>
+  <wsdl:message name="SetHierarchicalAccessSoapOut">
+    <wsdl:part name="parameters" element="tns:SetHierarchicalAccessResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetList" />
+  </wsdl:message>
+  <wsdl:message name="GetListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetContactSoapIn">
+    <wsdl:part name="parameters" element="tns:GetContact" />
+  </wsdl:message>
+  <wsdl:message name="GetContactSoapOut">
+    <wsdl:part name="parameters" element="tns:GetContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEntitiesGroupsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEntitiesGroups" />
+  </wsdl:message>
+  <wsdl:message name="GetEntitiesGroupsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEntitiesGroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupsEntitiesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGroupsEntities" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupsEntitiesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGroupsEntitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBookSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBook" />
+  </wsdl:message>
+  <wsdl:message name="GetBookSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllBooksSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllBooks" />
+  </wsdl:message>
+  <wsdl:message name="GetAllBooksSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllBooksResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBookFieldsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBookFields" />
+  </wsdl:message>
+  <wsdl:message name="GetBookFieldsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBookFieldsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadFile" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersByProductSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUsersByProduct" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersByProductSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUsersByProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentTypesByBookSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDocumentTypesByBook" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentTypesByBookSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDocumentTypesByBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRegistryListValuesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRegistryListValues" />
+  </wsdl:message>
+  <wsdl:message name="GetRegistryListValuesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRegistryListValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttachFilesSoapIn">
+    <wsdl:part name="parameters" element="tns:AttachFiles" />
+  </wsdl:message>
+  <wsdl:message name="AttachFilesSoapOut">
+    <wsdl:part name="parameters" element="tns:AttachFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertRegistrySoapIn">
+    <wsdl:part name="parameters" element="tns:InsertRegistry" />
+  </wsdl:message>
+  <wsdl:message name="InsertRegistrySoapOut">
+    <wsdl:part name="parameters" element="tns:InsertRegistryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModifyRegistrySoapIn">
+    <wsdl:part name="parameters" element="tns:ModifyRegistry" />
+  </wsdl:message>
+  <wsdl:message name="ModifyRegistrySoapOut">
+    <wsdl:part name="parameters" element="tns:ModifyRegistryResponse" />
+  </wsdl:message>
+  <wsdl:portType name="OWApiSoap">
+    <wsdl:operation name="GetVersion">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Get WebService Version</documentation>
+      <wsdl:input message="tns:GetVersionSoapIn" />
+      <wsdl:output message="tns:GetVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetHierarchicalAccess">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Get books</documentation>
+      <wsdl:input message="tns:SetHierarchicalAccessSoapIn" />
+      <wsdl:output message="tns:SetHierarchicalAccessSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetList">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Get Lists</documentation>
+      <wsdl:input message="tns:GetListSoapIn" />
+      <wsdl:output message="tns:GetListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContact">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Get Contact</documentation>
+      <wsdl:input message="tns:GetContactSoapIn" />
+      <wsdl:output message="tns:GetContactSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntitiesGroups">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Get Contact Groups</documentation>
+      <wsdl:input message="tns:GetEntitiesGroupsSoapIn" />
+      <wsdl:output message="tns:GetEntitiesGroupsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupsEntities">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Get Group element</documentation>
+      <wsdl:input message="tns:GetGroupsEntitiesSoapIn" />
+      <wsdl:output message="tns:GetGroupsEntitiesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBook">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Get books</documentation>
+      <wsdl:input message="tns:GetBookSoapIn" />
+      <wsdl:output message="tns:GetBookSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBooks">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Get All Books</documentation>
+      <wsdl:input message="tns:GetAllBooksSoapIn" />
+      <wsdl:output message="tns:GetAllBooksSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBookFields">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Get book fields</documentation>
+      <wsdl:input message="tns:GetBookFieldsSoapIn" />
+      <wsdl:output message="tns:GetBookFieldsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Upload a file</documentation>
+      <wsdl:input message="tns:UploadFileSoapIn" />
+      <wsdl:output message="tns:UploadFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByProduct">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Get All Users</documentation>
+      <wsdl:input message="tns:GetUsersByProductSoapIn" />
+      <wsdl:output message="tns:GetUsersByProductSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentTypesByBook">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Get All Document Types</documentation>
+      <wsdl:input message="tns:GetDocumentTypesByBookSoapIn" />
+      <wsdl:output message="tns:GetDocumentTypesByBookSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegistryListValues">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Get Registry List Values</documentation>
+      <wsdl:input message="tns:GetRegistryListValuesSoapIn" />
+      <wsdl:output message="tns:GetRegistryListValuesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AttachFiles">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Add Files to Register.</documentation>
+      <wsdl:input message="tns:AttachFilesSoapIn" />
+      <wsdl:output message="tns:AttachFilesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRegistry">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Add Register to OfficeWorks.</documentation>
+      <wsdl:input message="tns:InsertRegistrySoapIn" />
+      <wsdl:output message="tns:InsertRegistrySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyRegistry">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Modify Register in OfficeWorks.</documentation>
+      <wsdl:input message="tns:ModifyRegistrySoapIn" />
+      <wsdl:output message="tns:ModifyRegistrySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OWApiSoap" type="tns:OWApiSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="GetVersion">
+      <soap:operation soapAction="http://tempuri.org/GetVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetHierarchicalAccess">
+      <soap:operation soapAction="http://tempuri.org/SetHierarchicalAccess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetList">
+      <soap:operation soapAction="http://tempuri.org/GetList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContact">
+      <soap:operation soapAction="http://tempuri.org/GetContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntitiesGroups">
+      <soap:operation soapAction="http://tempuri.org/GetEntitiesGroups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupsEntities">
+      <soap:operation soapAction="http://tempuri.org/GetGroupsEntities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBook">
+      <soap:operation soapAction="http://tempuri.org/GetBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBooks">
+      <soap:operation soapAction="http://tempuri.org/GetAllBooks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBookFields">
+      <soap:operation soapAction="http://tempuri.org/GetBookFields" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <soap:operation soapAction="http://tempuri.org/UploadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByProduct">
+      <soap:operation soapAction="http://tempuri.org/GetUsersByProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentTypesByBook">
+      <soap:operation soapAction="http://tempuri.org/GetDocumentTypesByBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegistryListValues">
+      <soap:operation soapAction="http://tempuri.org/GetRegistryListValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AttachFiles">
+      <soap:operation soapAction="http://tempuri.org/AttachFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRegistry">
+      <soap:operation soapAction="http://tempuri.org/InsertRegistry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyRegistry">
+      <soap:operation soapAction="http://tempuri.org/ModifyRegistry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OWApi">
+    <wsdl:port name="OWApiSoap" binding="tns:OWApiSoap">
+      <soap:address location="http://localhost/OfficeWorks/Webservices/OWApi/OWApi.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

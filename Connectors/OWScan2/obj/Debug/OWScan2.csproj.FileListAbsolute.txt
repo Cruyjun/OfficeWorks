@@ -1,0 +1,7 @@
+C:\Desenvolvimento\OfficeWorks\Connectors\OWScan2\obj\Debug\Interop.SHDocVw.dll
+C:\Desenvolvimento\OfficeWorks\Connectors\OWScan2\obj\Debug\AxInterop.SHDocVw.dll
+C:\Desenvolvimento\OfficeWorks\Connectors\OWScan2\obj\Debug\OWScan2.csproj.ResolveComReference.cache
+C:\Desenvolvimento\OfficeWorks\Connectors\OWScan2\obj\Debug\OWScan.frmFiles.resources
+C:\Desenvolvimento\OfficeWorks\Connectors\OWScan2\obj\Debug\OWScan.frmOptions.resources
+C:\Desenvolvimento\OfficeWorks\Connectors\OWScan2\obj\Debug\OWScan.frmPreview.resources
+C:\Desenvolvimento\OfficeWorks\Connectors\OWScan2\obj\Debug\OWScan2.csproj.GenerateResource.Cache

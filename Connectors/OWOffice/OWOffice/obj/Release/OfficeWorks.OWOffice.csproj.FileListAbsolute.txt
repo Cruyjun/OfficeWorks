@@ -1,0 +1,7 @@
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OWOffice\bin\Release\OfficeWorks.OWOffice.dll
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OWOffice\bin\Release\OfficeWorks.OWOffice.XmlSerializers.dll
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OWOffice\bin\Release\OfficeWorks.OWOffice.tlb
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OWOffice\bin\Release\OfficeWorks.OWOffice.Configuration.dll
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OWOffice\obj\Release\OfficeWorks.OWOffice.csprojResolveAssemblyReference.cache
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OWOffice\obj\Release\OfficeWorks.OWOffice.dll
+C:\Desenvolvimento\OfficeWorks\Connectors\OWOffice\OWOffice\obj\Release\OfficeWorks.OWOffice.XmlSerializers.dll
