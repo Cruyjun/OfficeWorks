@@ -1,0 +1,956 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Security.Cryptography</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CryptographySettings">
+            <summary>
+            <para>Configuration settings for cryptography.</para>
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CryptographySettings.SectionName">
+            <summary>
+            Configuration section name for cryptography settings.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CryptographySettings.ConfigurationNamespace">
+            <summary>
+            <para>Gets the Xml namespace for this root node.</para>
+            </summary>
+            <value>
+            <para>The Xml namespace for this root node.</para>
+            </value>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CryptographySettings.#ctor">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CryptographySettings"/> class.</para>
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CryptographySettings.HashProviders">
+            <summary>
+            <para>Gets and sets the hash providers.</para>
+            </summary>
+            <value>
+            <para>The hash providers.</para>
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CryptographySettings.SymmetricCryptoProviders">
+            <summary>
+            <para>Gets the symmetric cryptography providers.</para>
+            </summary>
+            <value>
+            <para>The symmetric cryptography providers.</para>
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CustomHashProviderData">
+            <summary>
+            Configuration settings for a generic hash provider.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashProviderData">
+            <summary>
+            <para>Represents the common configuration data for all hash providers.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashProviderData.#ctor">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashProviderData"/> class.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashProviderData.#ctor(System.String)">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashProviderData"/> class with a name.</para>
+            </summary>
+            <param name="name"><para>The name of the provider.</para></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CustomHashProviderData.#ctor">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CustomHashProviderData"/> class.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CustomHashProviderData.#ctor(System.String,System.String)">
+            <summary>
+            <para>Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CustomHashProviderData"/> class with the specified name and type name.</para>
+            </summary>
+            <param name="name"><para>The name of the provider.</para></param>
+            <param name="typeName"><para>The type name of a class that implements <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.IHashProvider"/></para></param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CustomHashProviderData.Extensions">
+            <summary>
+            <para>Gets the <seealso cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CustomHashProviderData.Extensions"/> defined as a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.NameValueItemCollection"/>.</para>
+            </summary>
+            <value>
+            <para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.NameValueItemCollection"/>.</para>
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CustomHashProviderData.TypeName">
+            <summary>
+            <para>Gets or sets the <see cref="T:System.Type"/> name of the provider.</para>
+            </summary>
+            <value>
+            <para>The type name of the provider. The default is an empty string.</para>
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CustomSymmetricCryptoProviderData">
+            <summary>
+            <para>Configuration settings for a custom symmetric provider.</para>
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricCryptoProviderData">
+            <summary>
+            <para>Represents the common configuration data for all symmetric crypto providers.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricCryptoProviderData.#ctor">
+            <summary>
+            <para>Initializes a new instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricCryptoProviderData"/> class.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricCryptoProviderData.#ctor(System.String)">
+            <summary>
+            <para>Initializes a new instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricCryptoProviderData"/> class with a name.</para>
+            </summary>
+            <param name="name"><para>The name of the provider.</para></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CustomSymmetricCryptoProviderData.#ctor">
+            <summary>
+            <para>Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CustomSymmetricCryptoProviderData"/> class.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CustomSymmetricCryptoProviderData.#ctor(System.String,System.String)">
+            <summary>
+            <para>Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CustomSymmetricCryptoProviderData"/> class with the specified name and type name.</para>
+            </summary>
+            <param name="name"><para>The name of the provider.</para></param>
+            <param name="typeName"><para>The type name of a class that implements <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.ISymmetricCryptoProvider"/>.</para></param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CustomSymmetricCryptoProviderData.Extensions">
+            <summary>
+            <para>Gets the <seealso cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CustomSymmetricCryptoProviderData.Extensions"/> defined as a 
+            <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.NameValueItemCollection"/>.</para>
+            </summary>
+            <value>
+            <para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.NameValueItemCollection"/>.</para>
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CustomSymmetricCryptoProviderData.TypeName">
+            <summary>
+            <para>Gets or sets the <see cref="T:System.Type"/> name of the provider.</para>
+            </summary>
+            <value>
+            <para>The type name of the provider. The default is an empty string.</para>
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.DpapiSymmetricCryptoProviderData">
+            <summary>
+            <para>Configuration settings for a DPAPI Symmetric Cryptography Provider.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.DpapiSymmetricCryptoProviderData.#ctor">
+            <summary>
+            <para>Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.DpapiSymmetricCryptoProviderData"/> class.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.DpapiSymmetricCryptoProviderData.#ctor(System.String)">
+            <summary>
+            <para>Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.DpapiSymmetricCryptoProviderData"/> class with a name.</para>
+            </summary>
+            <param name="name">The name for the provider.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.DpapiSymmetricCryptoProviderData.#ctor(System.String,Microsoft.Practices.EnterpriseLibrary.Configuration.DpapiSettingsData)">
+            <summary>
+            <para>Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.DpapiSymmetricCryptoProviderData"/> class with a name.</para>
+            </summary>
+            <param name="name">The name for the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.DpapiSymmetricCryptoProviderData"/>.</param>
+            <param name="data">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.DpapiSettingsData"/> for the provider.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.DpapiSymmetricCryptoProviderData.DataProtectionMode">
+            <summary>
+            <para>Gets or sets the DPAPI settings.</para>
+            </summary>
+            <value>
+            <para>The DPAPI settings.</para>
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.DpapiSymmetricCryptoProviderData.TypeName">
+            <summary>
+            Gets the assembly qualified name for this provider.
+            </summary>
+            <value>
+            <para>Alwasy return the <see cref="P:System.Type.AssemblyQualifiedName"/> of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.DpapiSymmetricCryptoProvider"/>.</para>
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashAlgorithmProviderData">
+            <summary>
+            Configuration settings for the <c>HashAlgorithm</c> hash provider.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashAlgorithmProviderData.#ctor">
+            <summary>
+            Initializes with default configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashAlgorithmProviderData.#ctor(System.String)">
+            <summary>
+            Initialized a new HashAlgorithmProviderData with the given name
+            </summary>
+            <param name="name">The name for this object</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashAlgorithmProviderData.#ctor(System.String,System.String,System.Boolean)">
+            <summary>
+            Initialized a new HashAlgorithmProviderData with the given name
+            </summary>
+            <param name="name">The name for this object</param>
+            <param name="algorithmType">The hash algorithm to use</param>
+            <param name="saltEnabled">Should a salt be used?</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashAlgorithmProviderData.AlgorithmType">
+            <summary>
+            Gets or sets the type of <see cref="T:System.Security.Cryptography.HashAlgorithm"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashAlgorithmProviderData.SaltEnabled">
+            <summary>
+            Gets or sets the salt enabled flag.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashAlgorithmProviderData.TypeName">
+            <summary>
+            Gets the assembly qualified name of this provider.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashProviderDataCollection">
+            <summary>
+            <para>A collection of hash providers.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashProviderDataCollection.Add(Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashProviderData)">
+            <summary>
+            <para>Adds an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashProviderData"/> into the collection.</para>
+            </summary>
+            <param name="providerData">
+            <para>The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashProviderData"/> to add. The value can not be a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </param>
+            <remarks>
+            <para>If a reference already exists in the collection by <seealso cref="P:Microsoft.Practices.EnterpriseLibrary.Configuration.ProviderData.Name"/>, it will be replaced with the new reference.</para>
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="providerData"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            <para>- or -</para>
+            <para><seealso cref="P:Microsoft.Practices.EnterpriseLibrary.Configuration.ProviderData.Name"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </exception>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashProviderDataCollection.Item(System.Int32)">
+            <summary>
+            <para>Gets or sets a hash provider at a given index.</para>
+            </summary>
+            <param name="index">
+            <para>The index of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashProviderData"/> to get or set.</para>
+            </param>
+            <value>
+            <para name="index">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashProviderData"/> at the given index.</para>
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashProviderDataCollection.Item(System.String)">
+            <summary>
+            <para>Gets or sets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashProviderData"/> associated with the specified <paramref name="name"/>.</para>
+            </summary>
+            <param name="name">
+            <para>The name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashProviderData"/> to get or set.</para>
+            </param>
+            <value>
+            <para>The value associated with the specified <paramref name="name"/>. If the specified <paramref name="name"/> is not found, attempting to get it returns a <see langword="null"/> reference (Nothing in Visual Basic), and attempting to set it creates a new entry using the specified <paramref name="name"/>.</para>
+            </value>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="name"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </exception>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.KeyedHashAlgorithmProviderData">
+            <summary>
+            <para>Configuration settings for the <c>KeyedHashAlgorithm</c> hash provider.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.KeyedHashAlgorithmProviderData.#ctor">
+            <summary>
+            <para>Initializes a new instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.KeyedHashAlgorithmProviderData"/> class.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.KeyedHashAlgorithmProviderData.#ctor(System.String)">
+            <summary>
+            <para>Initializes a new instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.KeyedHashAlgorithmProviderData"/> class with a name.</para>
+            </summary>
+            <param name="name"><para>The name for the provider.</para></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.KeyedHashAlgorithmProviderData.#ctor(System.String,System.String,System.Boolean)">
+            <summary>
+            <para>Initializes a new instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.KeyedHashAlgorithmProviderData"/> class with a name, algorithm type, and if salt should be added.</para>
+            </summary>
+            <param name="name"><para>The name for the provider.</para></param>
+            <param name="algorithmType"><para>The type name of the hash algorithm.</para></param>
+            <param name="saltEnabled"><para>Determines if salt should be used during encryption.</para></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.KeyedHashAlgorithmProviderData.#ctor(System.String,System.String,System.Boolean,System.Byte[])">
+            <summary>
+            <para>Initializes a new instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.KeyedHashAlgorithmProviderData"/> class with a name, algorithm type, if salt should be added, and the key.</para>
+            </summary>
+            <param name="name"><para>The name for the provider.</para></param>
+            <param name="algorithmType"><para>The type name of the hash algorithm.</para></param>
+            <param name="saltEnabled"><para>Determines if salt should be used during encryption.</para></param>
+            <param name="key"><para>The key to use for the hash provider.</para></param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.KeyedHashAlgorithmProviderData.Key">
+            <summary>
+            <para>Gets or sets the key for the hash algorithm.</para>
+            </summary>
+            <value>
+            <para>The key for the hash algorithm.</para>
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.KeyedHashAlgorithmProviderData.TypeName">
+            <summary>
+            <para>Gets the assembly qualified name for a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.KeyedHashAlgorithmProvider"/>.</para>
+            </summary>
+            <value>
+            <para>Alwasy returns the <see cref="P:System.Type.AssemblyQualifiedName"/> of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.KeyedHashAlgorithmProvider"/>.</para>
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricAlgorithmProviderData">
+            <summary>
+            <para>Configuration data for the <c>SymmetricAlgorithm</c> provider.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricAlgorithmProviderData.#ctor">
+            <summary>
+            <para>Initializes a new instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricAlgorithmProviderData"/> class.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricAlgorithmProviderData.#ctor(System.String)">
+            <summary>
+            <para>Initializes a new instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricAlgorithmProviderData"/> class with a name.</para>
+            </summary>
+            <param name="name"><para>The name to use for the provider.</para></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricAlgorithmProviderData.#ctor(System.String,System.String,System.Byte[])">
+            <summary>
+            <para>Initializes a new instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricAlgorithmProviderData"/> class with a name.</para>
+            </summary>
+            <param name="name"><para>The name to use for the provider.</para></param>
+            <param name="algorithmType"><para>The hash algorithm to use.</para></param>
+            <param name="key"><para>The key to use with the given encryption provider.</para></param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricAlgorithmProviderData.AlgorithmType">
+            <summary>
+            <para>Gets or sets the type of <see cref="T:System.Security.Cryptography.SymmetricAlgorithm"/>.</para>
+            </summary>
+            <value>
+            <para>The type of <see cref="T:System.Security.Cryptography.SymmetricAlgorithm"/>.</para>
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricAlgorithmProviderData.TypeName">
+            <summary>
+            <para>Gets the assembly qualified name of this provider.</para>
+            </summary>
+            <value>
+            <para>The <see cref="P:System.Type.AssemblyQualifiedName"/> for the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.SymmetricAlgorithmProvider"/>.</para>
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricAlgorithmProviderData.Key">
+            <summary>
+            <para>Gets or sets the key for this provider.</para>
+            </summary>
+            <value>
+            <para>The key for this provider.</para>
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricCryptoProviderDataCollection">
+            <summary>
+            <para>Represents a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricCryptoProviderData"/> objects.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricCryptoProviderDataCollection.Add(Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricCryptoProviderData)">
+            <summary>
+            <para>Adds an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricCryptoProviderData"/> into the collection.</para>
+            </summary>
+            <param name="providerData">
+            <para>The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricCryptoProviderData"/> to add. The value can not be a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </param>
+            <remarks>
+            <para>If a reference already exists in the collection by <seealso cref="P:Microsoft.Practices.EnterpriseLibrary.Configuration.ProviderData.Name"/>, it will be replaced with the new reference.</para>
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="providerData"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            <para>- or -</para>
+            <para><seealso cref="P:Microsoft.Practices.EnterpriseLibrary.Configuration.ProviderData.Name"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </exception>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricCryptoProviderDataCollection.Item(System.Int32)">
+            <summary>
+            <para>Gets or sets a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricCryptoProviderData"/> object based on its index.</para>
+            </summary>
+            <param name="index">
+            <para>The index of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricCryptoProviderData"/> to get or set.</para>
+            </param>
+            <value>
+            <para name="index">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricCryptoProviderData"/> object based on its index.</para>
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricCryptoProviderDataCollection.Item(System.String)">
+            <summary>
+            <para>Gets or sets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricCryptoProviderData"/> associated with the specified <paramref name="name"/>.</para>
+            </summary>
+            <param name="name">
+            <para>The name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricCryptoProviderData"/> to get or set.</para>
+            </param>
+            <value>
+            <para>The value associated with the specified <paramref name="name"/>. If the specified <paramref name="name"/> is not found, attempting to get it returns a <see langword="null"/> reference (Nothing in Visual Basic), and attempting to set it creates a new entry using the specified <paramref name="name"/>.</para>
+            </value>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="name"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </exception>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Instrumentation.ProjectInstaller">
+            <summary>
+            <para>
+            This type supports the Instrumentation infrastructure and is not intended to be used directly from your code.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Instrumentation.ProjectInstaller.#ctor">
+            <summary/>
+            <exclude/>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Instrumentation.SecurityCryptoHashCheckEvent">
+            <summary>
+            <para>
+            This type supports the Instrumentation infrastructure and is not intended to be used directly from your code.
+            </para>
+            </summary>  
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Instrumentation.SecurityCryptoServiceEvent">
+            <summary>
+            <para>
+            This type supports the Instrumentation infrastructure and is not intended to be used directly from your code.
+            </para>
+            </summary>    
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Instrumentation.SecurityCryptoServiceEvent.internalEvent">
+            <summary/>
+            <exclude/>
+            <devdoc>
+            The internal event object responsible for the Performance Counters and
+            the EventLog.  And, it constructed with a BaseEvent object, it also
+            ties the WMI event when fired.
+            </devdoc>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Instrumentation.SecurityCryptoServiceEvent.eventMessage">
+            <summary/>
+            <exclude/>
+            <devdoc>
+            The message for the event.
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Instrumentation.SecurityCryptoServiceEvent.#ctor">
+            <summary/>
+            <exclude/>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Instrumentation.SecurityCryptoServiceEvent.#ctor(System.String[],Microsoft.Practices.EnterpriseLibrary.Common.Instrumentation.EventLogIdentifier[])">
+            <summary/>
+            <param name="counterNames"/>
+            <param name="eventLogIDs"/>
+            <exclude/>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Instrumentation.SecurityCryptoServiceEvent.#ctor(System.String[])">
+            <summary/>
+            <param name="counterNames"/>
+            <exclude/>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Instrumentation.SecurityCryptoServiceEvent.FireAuxEvent(System.String)">
+            <summary/>
+            <param name="message"/>
+            <exclude/>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Instrumentation.SecurityCryptoServiceEvent.Message">
+            <summary/>
+            <exclude/>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Instrumentation.SecurityCryptoServiceEvent.CounterId">
+            <devdoc>
+            Index to the Counters array.
+            </devdoc>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Instrumentation.SecurityCryptoServiceEvent.Log">
+            <summary>
+            Event Log Event IDs
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Instrumentation.SecurityCryptoHashCheckEvent.Fire(System.String)">
+            <summary/>
+            <param name="message"/>
+            <exclude/>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Instrumentation.SecurityCryptoHashCheckEvent.FireEvent(System.String)">
+            <summary/>
+            <param name="message"/>
+            <exclude/>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Instrumentation.SecurityCryptoHashCheckFailureEvent">
+            <summary>
+            <para>
+            This type supports the Instrumentation infrastructure and is not intended to be used directly from your code.
+            </para>
+            </summary>    
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Instrumentation.SecurityCryptoHashCheckFailureEvent.Fire(System.String)">
+            <summary/>
+            <param name="message"/>
+            <exclude/>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Instrumentation.SecurityCryptoHashCheckFailureEvent.FireEvent(System.String)">
+            <summary/>
+            <param name="message"/>
+            <exclude/>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Instrumentation.SecurityCryptoHashCreateEvent">
+            <summary>
+            <para>
+            This type supports the Instrumentation infrastructure and is not intended to be used directly from your code.
+            </para>
+            </summary>    
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Instrumentation.SecurityCryptoHashCreateEvent.Fire(System.String)">
+            <summary/>
+            <param name="message"/>
+            <exclude/>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Instrumentation.SecurityCryptoHashCreateEvent.FireEvent(System.String)">
+            <summary/>
+            <param name="message"/>
+            <exclude/>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Instrumentation.SecurityCryptoSymmetricDecryptionEvent">
+            <summary>
+            <para>
+            This type supports the Instrumentation infrastructure and is not intended to be used directly from your code.
+            </para>
+            </summary>    
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Instrumentation.SecurityCryptoSymmetricDecryptionEvent.#cctor">
+            <summary />
+            <exclude/>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Instrumentation.SecurityCryptoSymmetricDecryptionEvent.Fire(System.String)">
+            <summary/>
+            <param name="message"/>
+            <exclude/>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Instrumentation.SecurityCryptoSymmetricDecryptionEvent.FireEvent(System.String)">
+            <summary/>
+            <param name="message"/>
+            <exclude/>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Instrumentation.SecurityCryptoSymmetricEncryptionEvent">
+            <summary>
+            <para>
+            This type supports the Instrumentation infrastructure and is not intended to be used directly from your code.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Instrumentation.SecurityCryptoSymmetricEncryptionEvent.Fire(System.String)">
+            <summary/>
+            <param name="message"/>
+            <exclude/>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Instrumentation.SecurityCryptoSymmetricEncryptionEvent.FireEvent(System.String)">
+            <summary/>
+            <param name="message"/>
+            <exclude/>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Cryptographer">
+            <summary>
+            Facade which exposes common cryptography uses.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Cryptographer.CreateHash(System.String,System.Byte[])">
+            <summary>
+            Computes the hash value of plain text.
+            </summary>
+            <param name="hashInstance">A hash instance from configuration.</param>
+            <param name="plaintext">The input for which to compute the hash.</param>
+            <returns>The computed hash code.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Cryptographer.CreateHash(System.String,System.String)">
+            <summary>
+            Computes the hash value of plain text.
+            </summary>
+            <param name="hashInstance">A hash instance from configuration.</param>
+            <param name="plaintext">The input for which to compute the hash represented as a base64 encoded string.</param>
+            <returns>The computed hash code as a base64 encoded string.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Cryptographer.CompareHash(System.String,System.Byte[],System.Byte[])">
+            <summary>
+            Compares plain text input with a computed hash.
+            </summary>
+            <remarks>
+            Use this method to compare hash values. Since hashes may contain a random "salt" value, two seperately generated
+            hashes of the same plain text may result in different values. 
+            </remarks>
+            <param name="hashInstance">A hash instance from configuration.</param>
+            <param name="plaintext">The input for which you want to compare the hash to.</param>
+            <param name="hashedText">The hash value for which you want to compare the input to.</param>
+            <returns><c>true</c> if plainText hashed is equal to the hashedText. Otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Cryptographer.CompareHash(System.String,System.String,System.String)">
+            <summary>
+            Compares plain text input with a computed hash.
+            </summary>
+            <remarks>
+            Use this method to compare hash values. Since hashes contain a random "salt" value, two seperately generated
+            hashes of the same plain text will result in different values. 
+            </remarks>
+            <param name="hashInstance">A hash instance from configuration.</param>
+            <param name="plaintext">The input as a string for which you want to compare the hash to.</param>
+            <param name="hashedText">The hash as a string for which you want to compare the input to.</param>
+            <returns><c>true</c> if plainText hashed is equal to the hashedText. Otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Cryptographer.EncryptSymmetric(System.String,System.Byte[])">
+            <summary>
+            Encrypts a secret using a specified symmetric cryptography provider.
+            </summary>
+            <param name="symmetricInstance">A symmetric instance from configuration.</param>
+            <param name="plaintext">The input for which you want to encrypt.</param>
+            <returns>The resulting cipher text.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Cryptographer.EncryptSymmetric(System.String,System.String)">
+            <summary>
+            Encrypts a secret using a specified symmetric cryptography provider.
+            </summary>
+            <param name="symmetricInstance">A symmetric instance from configuration.</param>
+            <param name="plaintext">The input as a base64 encoded string for which you want to encrypt.</param>
+            <returns>The resulting cipher text as a base64 encoded string.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Cryptographer.DecryptSymmetric(System.String,System.Byte[])">
+            <summary>
+            Decrypts a cipher text using a specified symmetric cryptography provider.
+            </summary>
+            <param name="symmetricInstance">A symmetric instance from configuration.</param>
+            <param name="ciphertext">The cipher text for which you want to decrypt.</param>
+            <returns>The resulting plain text.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Cryptographer.DecryptSymmetric(System.String,System.String)">
+            <summary>
+            Decrypts a cipher text using a specified symmetric cryptography provider.
+            </summary>
+            <param name="symmetricInstance">A symmetric instance from configuration.</param>
+            <param name="ciphertextBase64">The cipher text as a base64 encoded string for which you want to decrypt.</param>
+            <returns>The resulting plain text as a string.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.CryptographyConfigurationView">
+            <summary>
+            <para>Represents a view to navigate the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CryptographySettings"/> configuration data.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.CryptographyConfigurationView.#ctor(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext)">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.CryptographyConfigurationView"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext"/> object.</para>
+            </summary>
+            <param name="configurationContext">
+            <para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext"/> object.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.CryptographyConfigurationView.GetHashProviderData(System.String)">
+            <summary>
+            <para>Gets the named <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashProviderData"/> from the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CryptographySettings"/>.</para>
+            </summary>
+            <param name="hashProviderName">
+            <para>The name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashProviderData"/>.</para>
+            </param>
+            <returns>
+            <para>The named <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashProviderData"/> from the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CryptographySettings"/>.</para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.CryptographyConfigurationView.GetCryptographySettings">
+            <summary>
+            <para>Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CryptographySettings"/>.</para>
+            </summary>
+            <returns>
+            <para>The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CryptographySettings"/>.</para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.CryptographyConfigurationView.GetSymmetricCryptoProviderData(System.String)">
+            <summary>
+            <para>Gets the named <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricCryptoProviderData"/> from the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CryptographySettings"/>.</para>
+            </summary>
+            <param name="symmetricProviderName">
+            <para>The name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricCryptoProviderData"/>.</para>
+            </param>
+            <returns>
+            <para>The named <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricCryptoProviderData"/> from the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CryptographySettings"/>.</para>
+            </returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.DpapiSymmetricCryptoProvider">
+            <summary>
+            <para>A symmetric provider for the Data Protection API (DPAPI).</para>
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.ISymmetricCryptoProvider">
+            <summary>
+            <para>A contract for any provider for configurable symmetric crpyographic implementations.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.ISymmetricCryptoProvider.Encrypt(System.Byte[])">
+            <summary>
+            <para>Encrypts a secret using a specified symmetric cryptography provider.</para>
+            </summary>
+            <param name="plaintext"><para>The input for which you want to encrypt.</para></param>
+            <returns><para>The resulting cipher text.</para></returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.ISymmetricCryptoProvider.Decrypt(System.Byte[])">
+            <summary>
+            <para>Decrypts a cipher text using a specified symmetric cryptography provider.</para>
+            </summary>
+            <param name="cipherText"><para>The cipher text for which you want to decrypt.</para></param>
+            <returns><para>The resulting plain text.</para></returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.DpapiSymmetricCryptoProvider.#ctor">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.DpapiSymmetricCryptoProvider"/></para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.DpapiSymmetricCryptoProvider.Initialize(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationView)">
+            <summary>
+            <para>Initializes the provider with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.CryptographyConfigurationView"/>.</para>
+            </summary>
+            <param name="configurationView">
+            <para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.CryptographyConfigurationView"/> object.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.DpapiSymmetricCryptoProvider.Encrypt(System.Byte[])">
+            <summary>
+            <para>Encrypts a secret using DPAPI.</para>
+            </summary>
+            <param name="plaintext"><para>The input for which you want to encrypt.</para></param>
+            <returns><para>The resulting cipher text.</para></returns>
+            <seealso cref="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.ISymmetricCryptoProvider.Encrypt(System.Byte[])"/>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.DpapiSymmetricCryptoProvider.Decrypt(System.Byte[])">
+            <summary>
+            <para>Decrypts cipher text using DPAPI.</para>
+            </summary>
+            <param name="cipherText"><para>The cipher text for which you want to decrypt.</para></param>
+            <returns><para>The resulting plain text.</para></returns>
+            <seealso cref="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.ISymmetricCryptoProvider.Decrypt(System.Byte[])"/>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.HashAlgorithmProvider">
+            <summary>
+            A hash provider for any hash algorithm which derives from <see cref="T:System.Security.Cryptography.HashAlgorithm"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.IHashProvider">
+            <summary>
+            A contract for any provider for configurable hash implementations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.IHashProvider.CreateHash(System.Byte[])">
+            <summary>
+            Computes the hash value of plain text.
+            </summary>
+            <param name="plaintext">The input for which to compute the hash.</param>
+            <returns>The computed hash code.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.IHashProvider.CompareHash(System.Byte[],System.Byte[])">
+            <summary>
+            Compares plain text input with a computed hash.
+            </summary>
+            <param name="plaintext">The input for which you want to compare the hash to.</param>
+            <param name="hashedtext">The hash value for which you want to compare the input to.</param>
+            <returns><c>true</c> if plainText hashed is equal to the hashedText. Otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.HashAlgorithmProvider.SaltLength">
+            <summary>
+            Returns the salt length used by the provider.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.HashAlgorithmProvider.cryptoConfigurationView">
+            <summary>
+            Contains the configuration settings for this instance.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.HashAlgorithmProvider.Initialize(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationView)">
+            <summary>
+            <para>Initializes the provider with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.CryptographyConfigurationView"/>.</para>
+            </summary>
+            <param name="configurationView">
+            <para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.CryptographyConfigurationView"/> object.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.HashAlgorithmProvider.CreateHash(System.Byte[])">
+            <summary>
+            Computes the hash value of plain text.
+            </summary>
+            <param name="plaintext">The input for which to compute the hash.</param>
+            <returns>The computed hash code.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.HashAlgorithmProvider.CompareHash(System.Byte[],System.Byte[])">
+            <summary>
+            Compares plain text input with a computed hash.
+            </summary>
+            <param name="plaintext">The input for which you want to compare the hash to.</param>
+            <param name="hashedtext">The hash value for which you want to compare the input to.</param>
+            <returns><c>true</c> if plainText hashed is equal to the hashedText. Otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.HashAlgorithmProvider.CreateHashWithSalt(System.Byte[],System.Byte[])">
+            <summary>
+            Creates a hash with a specified salt.
+            </summary>
+            <param name="plaintext">The plaintext to hash.</param>
+            <param name="salt">The hash salt.</param>
+            <returns>The computed hash.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.HashAlgorithmProvider.ExtractSalt(System.Byte[])">
+            <summary>
+            Extracts the salt from the hashedText.
+            </summary>
+            <param name="hashedtext">The hash in which to extract the salt.</param>
+            <returns>The extracted salt.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.HashAlgorithmProvider.GetHashCryptographer">
+            <summary>
+            Gets the cryptographer used for hashing.
+            </summary>
+            <returns>
+            A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Cryptography.HashCryptographer"/> object.
+            </returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.HashAlgorithmProvider.CryptoConfigurationView">
+            <summary>
+            Gets and sets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.CryptographyConfigurationView"></see> in a derived class
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.HashProviderFactory">
+            <summary>
+            Represents a factory for creating instances of a class which implements <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.IHashProvider"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.HashProviderFactory.#ctor">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.HashProviderFactory"/> class.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.HashProviderFactory.#ctor(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext)">
+            <summary>
+            Initializes the factory with a specified configuration context.
+            </summary>
+            <param name="context">The configuration context.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.HashProviderFactory.CreateHashProvider(System.String)">
+            <summary>
+            Returns a configured <c>IHashProvider</c> instance.
+            </summary>
+            <param name="hashProviderName">Name of hash provider from configuration</param>
+            <returns>The configured <c>IHashProvider</c> object.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.HashProviderFactory.CreateConfigurationView">
+            <summary>
+            <para>Creates the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.CryptographyConfigurationView"/> for the factory.</para>
+            </summary>
+            <returns>
+            <para>The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.CryptographyConfigurationView"/> for the factory.</para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.HashProviderFactory.GetConfigurationType(System.String)">
+            <summary>
+            <para>Gets the <see cref="T:System.Type"/> of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.IHashProvider"/> to create based on the name.</para>
+            </summary>
+            <param name="hashProviderName">
+            <para>The name of the configuration object to create.</para>
+            </param>
+            <returns>
+            <para>The <see cref="T:System.Type"/> of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.IHashProvider"/> to create.</para>
+            </returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.KeyedHashAlgorithmProvider">
+            <summary>
+            A hash provider for any hash algorithm which derives from <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.KeyedHashAlgorithmProvider.GetHashCryptographer">
+            <summary>
+            Gets the cryptographer used for hashing.
+            </summary>
+            <returns>The cryptographer initialized with the configured key.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.SymmetricAlgorithmProvider">
+            <summary>
+            <para>A symmetric provider for any symmetric algorithm which derives from <see cref="T:System.Security.Cryptography.SymmetricAlgorithm"/>.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.SymmetricAlgorithmProvider.Initialize(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationView)">
+            <summary>
+            <para>Initializes the provider with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.CryptographyConfigurationView"/>.</para>
+            </summary>
+            <param name="configurationView">
+            <para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.CryptographyConfigurationView"/> object.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.SymmetricAlgorithmProvider.Encrypt(System.Byte[])">
+            <summary>
+            <para>Encrypts a secret using the configured <c>SymmetricAlgorithm</c>.</para>
+            </summary>
+            <param name="plaintext"><para>The input for which you want to encrypt.</para></param>
+            <returns><para>The resulting cipher text.</para></returns>
+            <seealso cref="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.ISymmetricCryptoProvider.Encrypt(System.Byte[])"/>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.SymmetricAlgorithmProvider.Decrypt(System.Byte[])">
+            <summary>
+            Decrypts a secret using the configured <c>SymmetricAlgorithm</c>.
+            <seealso cref="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.ISymmetricCryptoProvider.Decrypt(System.Byte[])"/>
+            </summary>
+            <param name="ciphertext"><para>The cipher text for which you want to decrypt.</para></param>
+            <returns><para>The resulting plain text.</para></returns>
+            <seealso cref="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.ISymmetricCryptoProvider.Decrypt(System.Byte[])"/>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.SymmetricCryptoProviderFactory">
+            <summary>
+            Represents a factory for creating instances of a class which implements <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.ISymmetricCryptoProvider"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.SymmetricCryptoProviderFactory.#ctor">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.SymmetricCryptoProviderFactory"/> class.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.SymmetricCryptoProviderFactory.#ctor(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext)">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.SymmetricCryptoProviderFactory"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext"/> object.</para>
+            </summary>
+            <param name="context">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext"/> object.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.SymmetricCryptoProviderFactory.CreateSymmetricCryptoProvider(System.String)">
+            <summary>
+            Returns a configured <c>ISymmetricCryptoProvider</c> instance.
+            </summary>
+            <param name="cryptoProviderName">Name of crypto provider from configuration</param>
+            <returns>The configured <c>ISymmetricCryptoProvider</c> object.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.SymmetricCryptoProviderFactory.CreateConfigurationView">
+            <summary>
+            <para>Creates the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.CryptographyConfigurationView"/> for the factory.</para>
+            </summary>
+            <returns>
+            <para>The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.CryptographyConfigurationView"/> for the factory.</para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.SymmetricCryptoProviderFactory.GetConfigurationType(System.String)">
+            <summary>
+            <para>Gets the <see cref="T:System.Type"/> of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.ISymmetricCryptoProvider"/> to create based on the name.</para>
+            </summary>
+            <param name="cryptoProviderName">
+            <para>The name of the configuration object to create.</para>
+            </param>
+            <returns>
+            <para>The <see cref="T:System.Type"/> of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.ISymmetricCryptoProvider"/> to create.</para>
+            </returns>
+        </member>
+    </members>
+</doc>

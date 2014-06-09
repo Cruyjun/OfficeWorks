@@ -1,0 +1,52 @@
+// ricardo da Gerreiro em 2003-07-29
+// O código seguinte permite efectuar a implementação do comportamento 
+// das dropdownlists e listboxes para que seleccionar registos à medida 
+// que se vai digitando. Actualmente só funciona com um caracter.
+// NOTA: O Tiago Silva é que implementou esta função no GED
+// Esta função bem como as variáveis auxiliares deverão ficar no 
+// BaseScript.js
+
+
+//Variaveis globais necessárias para guardar o valor da ultima data, 
+//data auxiliar e string pesquisada
+var sString = "";
+var myDateI = new Date();
+var iDate = myDateI.getTime().toString();
+
+
+/////////////////////////////////////////////////////////
+//
+// Procura uma String numa DropDownList
+//
+// IN: Objecto DropDownList
+// IN: Tempo (em milisegundos) que é usado para iniciar 
+//	a pesquisa do inicio
+//
+/////////////////////////////////////////////////////////
+function findString(objDropDownList, millisecondsExpires)
+{
+	var str = "";
+	var myDateF = new Date();
+	var fDate = myDateF.getTime().toString();
+	//Se a finish date - initial date > que o tempo para expirar... é pq expirou
+	if ((fDate - iDate) > millisecondsExpires) {
+		sString = "";
+	}
+	iDate = fDate;
+	sString += String.fromCharCode(event.keyCode).toUpperCase();
+	//Vamos procurar a string na DropDownList
+	for(var i = 0; i < objDropDownList.length; i++) {
+		//str = objDropDownList[i].value; --> Devolvia o codigo do item seleccionado
+		str = objDropDownList[i].text;
+		str = str.substring(0, sString.length).toUpperCase();
+		if (str == sString) {
+			objDropDownList.selectedIndex = i;
+			return;
+		}
+	}
+}
+
+
+Modo de Uso:
+
+DropDownList1.Attributes.Add("onkeyup", "findString(DropDownList1,1500)")

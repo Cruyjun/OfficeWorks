@@ -1,0 +1,1030 @@
+<VisualStudioProject>
+    <CSHARP
+        ProjectType = "Local"
+        ProductVersion = "7.10.6030"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{BD35FAA5-3643-4AC0-8671-333905DFA100}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = ""
+                AssemblyKeyContainerName = ""
+                AssemblyName = "OW.Web.UI.WebControls"
+                AssemblyOriginatorKeyFile = ""
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "Library"
+                PreBuildEvent = ""
+                PostBuildEvent = ""
+                RootNamespace = "OW.Web.UI.WebControls"
+                RunPostBuildEvent = "OnBuildSuccess"
+                StartupObject = ""
+            >
+                <Config
+                    Name = "Debug"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "DEBUG;TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "true"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "true"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "false"
+                    OutputPath = "bin\Debug\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+                <Config
+                    Name = "Release"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "false"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "true"
+                    OutputPath = "bin\Release\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                    HintPath = "..\..\..\..\WINNT\Microsoft.NET\Framework\v1.0.3705\System.dll"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                    HintPath = "..\..\..\..\WINNT\Microsoft.NET\Framework\v1.0.3705\System.Data.dll"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                    HintPath = "..\..\..\..\WINNT\Microsoft.NET\Framework\v1.0.3705\System.XML.dll"
+                />
+                <Reference
+                    Name = "System.Web"
+                    AssemblyName = "System.Web"
+                    HintPath = "..\..\..\..\WINNT\Microsoft.NET\Framework\v1.0.3705\System.Web.dll"
+                />
+                <Reference
+                    Name = "System.Drawing"
+                    AssemblyName = "System.Drawing"
+                    HintPath = "..\WINNT\Microsoft.NET\Framework\v1.1.4322\System.Drawing.dll"
+                />
+                <Reference
+                    Name = "System.Windows.Forms"
+                    AssemblyName = "System.Windows.Forms"
+                    HintPath = "..\WINNT\Microsoft.NET\Framework\v1.1.4322\System.Windows.Forms.dll"
+                />
+                <Reference
+                    Name = "Infragistics.WebUI.WebDataInput.v5.2"
+                    AssemblyName = "Infragistics.WebUI.WebDataInput.v5.2"
+                    HintPath = "C:\Program Files\Infragistics\NetAdvantage 2005 Volume 2\ASP.NET\Bin\Infragistics.WebUI.WebDataInput.v5.2.dll"
+                    AssemblyFolderKey = "hklm\infragistics.webassemblies.20052"
+                />
+                <Reference
+                    Name = "Infragistics.WebUI.WebDateChooser.v5.2"
+                    AssemblyName = "Infragistics.WebUI.WebDateChooser.v5.2"
+                    HintPath = "C:\Program Files\Infragistics\NetAdvantage 2005 Volume 2\ASP.NET\Bin\Infragistics.WebUI.WebDateChooser.v5.2.dll"
+                    AssemblyFolderKey = "hklm\infragistics.webassemblies.20052"
+                />
+                <Reference
+                    Name = "Infragistics.WebUI.Shared.v5.2"
+                    AssemblyName = "Infragistics.WebUI.Shared.v5.2"
+                    HintPath = "C:\Program Files\Infragistics\NetAdvantage 2005 Volume 2\ASP.NET\Bin\Infragistics.WebUI.Shared.v5.2.dll"
+                    AssemblyFolderKey = "hklm\infragistics.webassemblies.20052"
+                />
+                <Reference
+                    Name = "Infragistics.WebUI.Misc.v5.2"
+                    AssemblyName = "Infragistics.WebUI.Misc.v5.2"
+                    HintPath = "C:\Program Files\Infragistics\NetAdvantage 2005 Volume 2\ASP.NET\Bin\Infragistics.WebUI.Misc.v5.2.dll"
+                    AssemblyFolderKey = "hklm\infragistics.webassemblies.20052"
+                />
+                <Reference
+                    Name = "Infragistics.WebUI.UltraWebTab.v5.2"
+                    AssemblyName = "Infragistics.WebUI.UltraWebTab.v5.2"
+                    HintPath = "C:\Program Files\Infragistics\NetAdvantage 2005 Volume 2\ASP.NET\Bin\Infragistics.WebUI.UltraWebTab.v5.2.dll"
+                    AssemblyFolderKey = "hklm\infragistics.webassemblies.20052"
+                />
+                <Reference
+                    Name = "Infragistics.WebUI.UltraWebNavigator.v5.2"
+                    AssemblyName = "Infragistics.WebUI.UltraWebNavigator.v5.2"
+                    HintPath = "C:\Program Files\Infragistics\NetAdvantage 2005 Volume 2\ASP.NET\Bin\Infragistics.WebUI.UltraWebNavigator.v5.2.dll"
+                    AssemblyFolderKey = "hklm\infragistics.webassemblies.20052"
+                />
+            </References>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "AssemblyInfo.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BaseScript.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "OWCalendar.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWCheckBox.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWCheckBoxList.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWCompareValidator.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWCustomValidator.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWDataGrid.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWDataList.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWDropDownList.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWHtmlEditor.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWHyperLink.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWImageButton.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWLabel.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWLinkButton.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWListBox.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWPanel.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWRadioButton.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWRadioButtonList.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWRangeValidator.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWRegularExpressionValidator.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWRequiredFieldValidator.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWRequiredFieldValidatorForCheckBoxLists.cs"
+                    SubType = "Code"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "OWStaticText.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWStatusBar.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWTabStrip.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWTextBox.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWUltraWebMenu.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWUltraWebTab.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWValidationSummary.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWWebCurrencyEdit.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWWebDateChooser.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWWebDateTimeEdit.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWWebMaskEdit.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWWebNumericEdit.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWWebPanel.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWWebPercentEdit.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWWebTextEdit.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OWXml.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "IEPWebControl.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Common\Configuration.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Common\ResourceManager.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "HtmlArea\ChangeLog"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "HtmlArea\dialog.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\htmlarea.css"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\htmlarea.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\index.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\license.txt"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\popupdiv.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\popupwin.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\reference.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\release-notes.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\examples\2-areas.cgi"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "HtmlArea\examples\2-areas.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\examples\context-menu.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\examples\core.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\examples\css.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\examples\custom.css"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\examples\full-page.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\examples\fully-loaded.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\examples\index.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\examples\spell-checker.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\examples\table-operations.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\examples\test.cgi"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_about.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_align_center.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_align_justify.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_align_left.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_align_right.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_blank.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_charmap.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_color_bg.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_color_fg.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_copy.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_custom.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_cut.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_delete.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_format_bold.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_format_italic.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_format_strike.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_format_sub.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_format_sup.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_format_underline.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_help.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_hr.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_html.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_image.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_indent_less.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_indent_more.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_left_to_right.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_link.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_list_bullet.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_list_num.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_paste.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_redo.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_right_to_left.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_save.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_show_border.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_splitcel.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\ed_undo.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\fullscreen_maximize.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\fullscreen_minimize.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\images\insert_table.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\lang\b5.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\lang\cz.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\lang\da.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\lang\de.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\lang\ee.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\lang\el.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\lang\en.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\lang\es.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\lang\fi.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\lang\fr.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\lang\gb.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\lang\he.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\lang\hu.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\lang\it.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\lang\ja-euc.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\lang\ja-jis.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\lang\ja-sjis.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\lang\ja-utf8.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\lang\lt.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\lang\lv.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\lang\nb.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\lang\nl.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\lang\no.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\lang\pl.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\lang\pt_br.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\lang\ro.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\lang\ru.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\lang\se.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\lang\si.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\lang\vn.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\ContextMenu\context-menu.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\ContextMenu\menu.css"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\ContextMenu\lang\de.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\ContextMenu\lang\el.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\ContextMenu\lang\en.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\ContextMenu\lang\nl.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\CSS\css.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\CSS\lang\en.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\FullPage\full-page.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\FullPage\test.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\FullPage\img\docprop.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\FullPage\lang\en.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\FullPage\lang\ro.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\FullPage\popups\docprop.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\SpellChecker\readme-tech.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\SpellChecker\spell-checker.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\SpellChecker\spell-check-logic.cgi"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\SpellChecker\spell-check-style.css"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\SpellChecker\spell-check-ui.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\SpellChecker\spell-check-ui.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\SpellChecker\img\spell-check.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\SpellChecker\lang\cz.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\SpellChecker\lang\da.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\SpellChecker\lang\de.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\SpellChecker\lang\en.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\SpellChecker\lang\hu.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\SpellChecker\lang\it.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\SpellChecker\lang\ro.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\TableOperations\table-operations.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\TableOperations\img\cell-delete.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\TableOperations\img\cell-insert-after.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\TableOperations\img\cell-insert-before.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\TableOperations\img\cell-merge.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\TableOperations\img\cell-prop.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\TableOperations\img\cell-split.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\TableOperations\img\col-delete.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\TableOperations\img\col-insert-after.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\TableOperations\img\col-insert-before.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\TableOperations\img\col-split.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\TableOperations\img\row-delete.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\TableOperations\img\row-insert-above.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\TableOperations\img\row-insert-under.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\TableOperations\img\row-prop.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\TableOperations\img\row-split.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\TableOperations\img\table-prop.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\TableOperations\lang\cz.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\TableOperations\lang\da.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\TableOperations\lang\de.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\TableOperations\lang\el.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\TableOperations\lang\en.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\TableOperations\lang\fi.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\TableOperations\lang\hu.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\TableOperations\lang\it.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\TableOperations\lang\nl.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\TableOperations\lang\no.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\plugins\TableOperations\lang\ro.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\popups\about.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\popups\blank.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\popups\custom2.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\popups\editor_help.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\popups\fullscreen.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\popups\insert_image.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\popups\insert_table.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\popups\link.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\popups\old_insert_image.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\popups\old-fullscreen.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\popups\popup.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "HtmlArea\popups\select_color.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Install\Install.bat"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Install\PSKILL.EXE"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Install\README.TXT"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Keys\EP.snk"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "ModelSupport\default.txaPackage"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Resources\en-US.resx"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Resources\pt-PT.resx"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Resources\Resource.resx"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "WishList\findString.txt"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "WishList\InternalDataTable.txt"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "WishList\SineDropDownListTT.txt"
+                    BuildAction = "Content"
+                />
+            </Include>
+        </Files>
+    </CSHARP>
+</VisualStudioProject>
+

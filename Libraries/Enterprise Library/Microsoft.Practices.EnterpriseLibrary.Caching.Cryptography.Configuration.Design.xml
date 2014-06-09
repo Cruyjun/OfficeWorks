@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.CachingCryptographyConfigurationDesignManager">
+            <summary>
+            Manages registration of custom cache data nodes to their respective cache nodes.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.CachingCryptographyConfigurationDesignManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.CachingCryptographyConfigurationDesignManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.CachingCryptographyConfigurationDesignManager.Register(System.IServiceProvider)">
+            <summary>
+            <para>Registers the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.SymmetricStorageEncryptionNode"/> in the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.CachingCryptographyConfigurationDesignManager.Open(System.IServiceProvider)">
+            <summary>
+            <para>Opens the configuration settings and registers them with the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.CachingCryptographyConfigurationDesignManager.Save(System.IServiceProvider)">
+            <summary>
+            <para>Saves the configuration settings created for the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.CachingCryptographyConfigurationDesignManager.BuildContext(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationDictionary)">
+            <summary>
+            <para>Adds to the dictionary configuration data for 
+            the enterpriselibrary.configurationSettings configuration section.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+            <param name="configurationDictionary">
+            <para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationDictionary"/> to add 
+            configuration data to.</para></param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.SRCategoryAttribute">
+            <devdoc>
+            Represents a localized vertion of a CategoryAttribute. It uses the local string resources for localization.
+            This class cannot be inherited from
+            </devdoc>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.SRDescriptionAttribute">
+            <devdoc>
+            Represents a localized vertion of a DescriptionAttribute. It uses the local strings resouce to get its description.
+            This class cannot be inherited from 
+            </devdoc>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.SymmetricStorageEncryptionNode">
+            <summary>
+            Node that represents a CacheSymmetricEncryptionProviderData
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.SymmetricStorageEncryptionNode.#ctor">
+            <summary>
+            Creates node with initial data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.SymmetricStorageEncryptionNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.SymmetricStorageEncryptionProviderData)">
+            <summary>
+            Creates node with sepecifed configuration data.
+            </summary>
+            <param name="data">The configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.SymmetricStorageEncryptionNode.ResolveNodeReferences">
+            <summary>
+            Resolves the symmetric crypto node reference.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.SymmetricStorageEncryptionNode.AddDefaultChildNodes">
+            <summary>
+            Initializes the cryptography configuration section in the configuration tree
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.SymmetricStorageEncryptionNode.SymmetricProvider">
+            <summary>
+            Gets or sets the symmetric crypto instance that will be used to encrypt and decrypt storage data.
+            </summary>
+            <value>An <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricCryptoProviderNode"/> object.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.SymmetricStorageEncryptionNode.StorageEncryptionProviderData">
+            <summary>
+            Gets the storage encryption data based on the Name on the user interface
+            </summary>
+            <returns>Storage encryption provider data read from user input</returns>
+        </member>
+    </members>
+</doc>

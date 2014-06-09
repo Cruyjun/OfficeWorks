@@ -1,0 +1,1518 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.ExceptionHandling</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.CustomHandlerData">
+            <summary>
+            Represents the custom configuration information provided for an <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandler"></see>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionHandlerData">
+            <summary>
+            Represents the configuration for an <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.IExceptionHandler"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionHandlerData.#ctor">
+            <summary>
+            Creates a new instance of ExceptionHandlerData.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionHandlerData.#ctor(System.String)">
+            <summary>
+            <para>Intializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionHandlerData"/> class with a name and a <see cref="T:System.Type"/> name.</para>
+            </summary>
+            <param name="name"><para>The name of the provider.</para></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.CustomHandlerData.#ctor">
+            <summary>
+            Initializes with default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.CustomHandlerData.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.CustomHandlerData"/> class.
+            </summary>
+            <param name="name">
+            The name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.CustomHandlerData"/>.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.CustomHandlerData.#ctor(System.String,System.String)">
+            <summary>
+            Initialize a new instance of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.CustomHandlerData"/> class.
+            </summary>
+            <param name="name">
+            The name of the custom handler.
+            </param>
+            <param name="typeName">
+            The type of the custom handler.
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.CustomHandlerData.TypeName">
+            <summary>
+            <para>Gets or sets the <see cref="T:System.Type"/> name of the provider.</para>
+            </summary>
+            <remarks>
+            <value>
+            <para>The type name of the provider. The default is an empty string.</para>
+            </value>
+            </remarks>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.CustomHandlerData.Attributes">
+            <summary>
+            Gets or sets custom configuration attributes.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionHandlerDataCollection">
+            <summary>
+            Represents a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionHandlerData"/>s.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionHandlerDataCollection.Add(Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionHandlerData)">
+            <summary>
+            Adds an <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionHandlerData"/> to the collection.
+            </summary>
+            <param name="exceptionHandlerData">The instance to add to the collection.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionHandlerDataCollection.Item(System.Int32)">
+            <summary>
+            Gets an <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionHandlerData"/> at the defined index.
+            </summary>
+            <param name="index">Index for given element in the collection</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionHandlerDataCollection.Item(System.String)">
+            <summary>
+            <para>Gets or sets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionHandlerData"/> associated with the specified <paramref name="name"/>.</para>
+            </summary>
+            <param name="name">
+            <para>The name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionHandlerData"/> to get or set.</para>
+            </param>
+            <value>
+            <para>The value associated with the specified <paramref name="name"/>. If the specified <paramref name="name"/> is not found, attempting to get it returns a <see langword="null"/> reference (Nothing in Visual Basic), and attempting to set it creates a new entry using the specified <paramref name="name"/>.</para>
+            </value>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="name"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </exception>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionHandlingSettings">
+            <summary>
+            Represents the root node for Exception Handling Settings
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionHandlingSettings.SectionName">
+            <summary>
+            Configuration section name for exception handling settings.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionHandlingSettings.ConfigurationNamespace">
+            <summary>
+            <para>Gets the Xml namespace for this root node.</para>
+            </summary>
+            <value>
+            <para>The Xml namespace for this root node.</para>
+            </value>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionHandlingSettings.#ctor">
+            <summary>
+            Creates a new instance of ExceptionHandlingSettings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionHandlingSettings.ExceptionPolicies">
+            <summary>
+            Gets or sets the configured Exception Policies. 
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionPolicyData">
+            <summary>
+            Represents the configuration for an <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionPolicyData.#ctor">
+            <summary>
+            Creates a new instance of ExceptionPolicyData.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionPolicyData.#ctor(System.String)">
+            <summary>
+            Initialzie a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionPolicyData"/> class with a name.
+            </summary>
+            <param name="name">
+            The name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionPolicyData"/>.
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionPolicyData.TypeName">
+            <summary>
+            Overriden so that the XmlSerializer will ignore this property. Get a fixed value which is the type name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionPolicyData.ExceptionTypes">
+            <summary>
+            Gets or sets the Exception Types associated with this Policy.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionPolicyDataCollection">
+            <summary>
+            Represents a strongly-typed collection of 
+            <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionPolicyData"/> objects.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionPolicyDataCollection.Add(Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionPolicyData)">
+            <summary>
+            <para>Adds an <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionPolicyData"/> into the collection.</para>
+            </summary>
+            <param name="providerData">
+            <para>The <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionPolicyData"/> to add. The value can not be a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </param>
+            <remarks>
+            <para>If a reference already exists in the collection by <seealso cref="P:Microsoft.Practices.EnterpriseLibrary.Configuration.ProviderData.Name"/>, it will be replaced with the new reference.</para>
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="providerData"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            <para>- or -</para>
+            <para><seealso cref="P:Microsoft.Practices.EnterpriseLibrary.Configuration.ProviderData.Name"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </exception>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionPolicyDataCollection.Item(System.Int32)">
+            <summary>
+            Gets or sets an <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionPolicyData"/> by its index.
+            </summary>
+            <param name="index">The index of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionPolicyData"></see> to get or set</param>/&gt;
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionPolicyDataCollection.Item(System.String)">
+            <summary>
+            <para>Gets or sets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionPolicyData"/> associated with the specified <paramref name="name"/>.</para>
+            </summary>
+            <param name="name">
+            <para>The name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionPolicyData"/> to get or set.</para>
+            </param>
+            <value>
+            <para>The value associated with the specified <paramref name="name"/>. If the specified <paramref name="name"/> is not found, attempting to get it returns a <see langword="null"/> reference (Nothing in Visual Basic), and attempting to set it creates a new entry using the specified <paramref name="name"/>.</para>
+            </value>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="name"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </exception>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeData">
+            <summary>
+            Represents the configuration for an <see cref="T:System.Exception"/>
+            that will be handled by an exception policy.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeData.#ctor">
+            <summary>
+            Creates a new instance of ExceptionTypeData.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeData.#ctor(System.String,System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeData"/> class.
+            </summary>
+            <param name="name">The configured name.</param>
+            <param name="type">The full type name of any <see cref="T:System.Exception"/>.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeData.#ctor(System.String,System.String,Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.PostHandlingAction)">
+            <summary>
+            Initialize a new instance with a specified <see cref="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeData.PostHandlingAction"/>.
+            </summary>
+            <param name="name">The configured name.</param>
+            <param name="type">The full type name of any <see cref="T:System.Exception"/>.</param>
+            <param name="postHandlingAction">One of the <see cref="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeData.PostHandlingAction"/> values.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeData.Name">
+            <summary>
+            Gets or sets the name of the Exception Type.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeData.TypeName">
+            <summary>
+            Gets or sets the fully qualified assembly name of the type.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeData.PostHandlingAction">
+            <summary>
+            Gets or sets the mode in which to conduct a rethrow.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeData.ExceptionHandlers">
+            <summary>
+            Gets or sets the handler chain that will get executed when an exception of this type is thrown.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeDataCollection">
+            <summary>
+            Represents a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeData"/>s.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeDataCollection.Add(Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeData)">
+            <summary>
+            <para>Adds an <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeData"/> into the collection.</para>
+            </summary>
+            <param name="exceptionTypeData">
+            <para>The <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeData"/> to add. The value can not be a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </param>
+            <remarks>
+            <para>If a reference already exists in the collection by <seealso cref="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeData.Name"/>, it will be replaced with the new reference.</para>
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="exceptionTypeData"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            <para><seealso cref="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeData.Name"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </exception>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeDataCollection.Add(System.Object)">
+            <summary>
+            <para>Adds a value into the collection.</para>
+            </summary>
+            <param name="parameter">
+            <para>The value to add. The value can not be a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </param>
+            <remarks>
+            <para>This method exists to support Xml Serialization.</para>
+            </remarks>
+            <exception cref="T:System.InvalidCastException">
+            <para><paramref name="parameter"/> must be of type <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeData"/>.</para>
+            </exception>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeDataCollection.Item(System.Int32)">
+            <summary>
+            <para>Gets or sets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeData"/> at the specified <paramref name="index"/>.</para>
+            </summary>
+            <param name="index">
+            <para>The index of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeData"/> to get or set.</para>
+            </param>
+            <value>
+            <para>The value associated with the specified <paramref name="index"/>. If the specified <paramref name="index"/> is not found, attempting to get it returns a <see langword="null"/> reference (Nothing in Visual Basic), and attempting to set it creates a new entry using the specified <paramref name="index"/>.</para>
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeDataCollection.Item(System.String)">
+            <summary>
+            <para>Gets or sets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeData"/> associated with the specified <paramref name="name"/>.</para>
+            </summary>
+            <param name="name">
+            <para>The name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeData"/> to get or set.</para>
+            </param>
+            <value>
+            <para>The value associated with the specified <paramref name="name"/>. If the specified <paramref name="name"/> is not found, attempting to get it returns a <see langword="null"/> reference (Nothing in Visual Basic), and attempting to set it creates a new entry using the specified <paramref name="name"/>.</para>
+            </value>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="name"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </exception>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ReplaceHandlerData">
+            <summary>
+            Represents the configuration data for a <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ReplaceHandler"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ReplaceHandlerData.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ReplaceHandlerData"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ReplaceHandlerData.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ReplaceHandlerData"/> class with a name.
+            </summary>
+            <param name="name">
+            The name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ReplaceHandlerData"/>.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ReplaceHandlerData.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ReplaceHandlerData"/> class with a name, exception message, and replace exception type name.
+            </summary>
+            <param name="name">
+            The name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ReplaceHandlerData"/>.
+            </param>
+            <param name="exceptionMessage">
+            The exception message replacement.
+            </param>
+            <param name="replaceExceptionTypeName">
+            The fully qualified assembly name the type of the replacing exception.
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ReplaceHandlerData.ExceptionMessage">
+            <summary>
+            Gets or sets the optional for exception message replacement.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ReplaceHandlerData.ReplaceExceptionTypeName">
+            <summary>
+            Gets or sets the fully qualified assembly name the type of the replacing exception.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ReplaceHandlerData.TypeName">
+            <summary>
+            Returns the fully qualified assembly name for a <c>ReplaceHandler</c>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.WrapHandlerData">
+            <summary>
+            Represents the configuration data for a <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WrapHandler"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.WrapHandlerData.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.WrapHandlerData"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.WrapHandlerData.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.WrapHandlerData"/> class with a name.
+            </summary>
+            <param name="name">
+            The name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.WrapHandlerData"/>.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.WrapHandlerData.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.WrapHandlerData"/> class with a name, an exception message, the fully qualified assembly name of type of the wrapping exception.
+            </summary>
+            <param name="name">
+            The name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.WrapHandlerData"/>.
+            </param>
+            <param name="exceptionMessage">
+            The exception message replacement.
+            </param>
+            <param name="wrapExceptionTypeName">
+            The fully qualified assembly name of type of the wrapping exception
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.WrapHandlerData.ExceptionMessage">
+            <summary>
+            Gets or sets optional for exception message replacement.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.WrapHandlerData.WrapExceptionTypeName">
+            <summary>
+            Gets or sets the fully qualified assembly name of type of the wrapping exception.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.WrapHandlerData.TypeName">
+            <summary>
+            Returns the fully qualified assembly name for a <c>WrapHandler</c>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Instrumentation.ExceptionHandledEvent">
+            <summary>
+            <para>
+            This type supports the Instrumentation infrastructure and is not intended to be used directly from your code.
+            </para>
+            </summary>
+            <devdoc>
+            For performance reason, this class does not inherit from ApplicationEvent because
+            the event does not need to fire a WMI event.
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Instrumentation.ExceptionHandledEvent.Fire">
+            <summary/>
+            <exclude/>
+            <devdoc>
+            Increment the # of TLEs Handled/Sec performance counter.
+            </devdoc>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Instrumentation.ExceptionHandlingConfigFailureEvent">
+            <summary>
+            <para>
+            This type supports the Instrumentation infrastructure and is not intended to be used directly from your code.
+            </para>
+            </summary>
+            <devdoc>
+            Represents a configuration failure in the Exception Handling framework.
+            </devdoc>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Instrumentation.ExceptionHandlingFailureEvent">
+            <summary>
+            <para>
+            This type supports the Instrumentation infrastructure and is not intended to be used directly from your code.
+            </para>
+            </summary>
+            <devdoc>
+            The event that get's fired if the handling of an Exception fails.
+            </devdoc>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Instrumentation.ExceptionHandlingEvent">
+            <summary>
+            <para>
+            This type supports the Instrumentation infrastructure and is not intended to be used directly from your code.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Instrumentation.ExceptionHandlingEvent.#ctor">
+            <devdoc>
+            Create's a new ExceptionHandlingEvent object with a null Internal Event.
+            </devdoc>
+            <summary/>
+            <exclude/>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Instrumentation.ExceptionHandlingEvent.#ctor(System.String[],Microsoft.Practices.EnterpriseLibrary.Common.Instrumentation.EventLogIdentifier[])">
+            <devdoc>
+            Creates a new ExceptionHandlingEvent object and instantiates an internal event
+            with the specified counter names and event log ID's.
+            </devdoc>
+            <summary/>
+            <param name="counterNames"/>
+            <param name="eventLogIDs"/>
+            <exclude/>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Instrumentation.ExceptionHandlingEvent.#ctor(System.String[])">
+            <devdoc>
+            Creates a new ExceptionHandlingEvent object and instantiates an internal event
+            with the specified counter names.
+            </devdoc>
+            <summary/>
+            <param name="counterNames"/>
+            <exclude/>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Instrumentation.ExceptionHandlingEvent.FireAuxEvent(System.String)">
+            <devdoc>
+            Fires the internal event if specified.
+            </devdoc>
+            <summary/>
+            <param name="message"/>
+            <exclude/>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Instrumentation.ExceptionHandlingEvent.InternalEvent">
+            <devdoc>
+            The internal event object responsible for the Performance Counters and
+            the EventLog.  And, it constructed with a BaseEvent object, it also
+            ties the WMI event when fired.
+            </devdoc>
+            <summary/>
+            <exclude/>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Instrumentation.ExceptionHandlingEvent.CounterID">
+            <devdoc>
+            Index to the Counters array.
+            </devdoc>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Instrumentation.ExceptionHandlingEvent.Log">
+            <devdoc>
+            Event Log Event IDs
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Instrumentation.ExceptionHandlingFailureEvent.#ctor(Microsoft.Practices.EnterpriseLibrary.Common.Instrumentation.EventLogIdentifier[])">
+            <summary/>
+            <param name="eventLogIDs"/>
+            <exclude/>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Instrumentation.ExceptionHandlingFailureEvent.SetMessage(System.String)">
+            <devdoc>
+            Sets the failure message.
+            </devdoc>
+            <summary/>
+            <param name="message"/>
+            <exclude/>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Instrumentation.ExceptionHandlingFailureEvent.SetException(System.Exception)">
+            <summary/>
+            <param name="exception"/>
+            <exclude/>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Instrumentation.ExceptionHandlingFailureEvent.SetExceptionMessage(System.String)">
+            <summary/>
+            <param name="exceptionMessage"/>
+            <exclude/>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Instrumentation.ExceptionHandlingFailureEvent.Message">
+            <summary/>
+            <exclude/>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Instrumentation.ExceptionHandlingFailureEvent.ExceptionStackTrace">
+            <devdoc>
+            The stack trace at the time of the failure.
+            </devdoc>
+            <summary/>
+            <exclude/>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Instrumentation.ExceptionHandlingFailureEvent.ExceptionMessage">
+            <devdoc>
+            The message of the exception that caused the failure.
+            </devdoc>
+            <summary/>
+            <exclude/>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Instrumentation.ExceptionHandlingConfigFailureEvent.Fire(System.String,System.Exception)">
+            <summary/>
+            <param name="message"/>
+            <param name="ex"/>
+            <exclude/>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Instrumentation.ExceptionHandlingConfigFailureEvent.Fire(System.String)">
+            <summary/>
+            <param name="message"/>
+            <exclude/>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Instrumentation.ExceptionNotHandledEvent">
+            <summary>
+            <para>
+            This type supports the Instrumentation infrastructure and is not intended to be used directly from your code.
+            </para>
+            </summary>
+            <devdoc>
+            For performance reason, this class does not inherit from ApplicationEvent because
+            the event does not need to fire a WMI event.
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Instrumentation.ExceptionNotHandledEvent.Fire">
+            <devdoc>
+            Increment the # of TLEs Handled/Sec performance counter.
+            </devdoc>
+            <summary/>
+            <exclude/>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Instrumentation.ProjectInstaller">
+            <summary>
+            <para>
+            This type supports the Instrumentation infrastructure and is not intended to be used directly from your code.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Instrumentation.ProjectInstaller.#ctor">
+            <summary/>
+            <exclude/>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Instrumentation.ProjectInstaller.Install(System.Collections.IDictionary)">
+            <summary/>
+            <param name="stateSaver"/>
+            <exclude/>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Instrumentation.ProjectInstaller.Uninstall(System.Collections.IDictionary)">
+            <summary/>
+            <param name="savedState"/>
+            <exclude/>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter">
+            <summary>
+            Provides functionality for formatting <see cref="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.Exception"/> objects.
+            </summary>	
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.#ctor(System.Exception)">
+            <summary>
+            Defines the base arguments for constructors
+            on derived classes.
+            </summary>
+            <param name="exception">The exception for formatting.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.Format">
+            <summary>
+            Controls the formatting of the exception into the underlying stream.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteException(System.Exception,System.Exception)">
+            <summary>
+            Formats the exception and all nested inner exceptions.
+            </summary>
+            <param name="e">The exception to format.</param>
+            <param name="outerException">The outer exception. This 
+            value will be null when writing the outer-most exception.</param>
+            <remarks>
+            <para>This method calls itself recursively until it reaches
+            an exception that does not have an inner exception.</para>
+            <para>
+            This is a template method which calls the following
+            methods in order
+            <list type="number">
+            <item>
+            <description><see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteExceptionType(System.Type)"/></description>
+            </item>
+            <item>
+            <description><see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteMessage(System.String)"/></description>
+            </item>
+            <item>
+            <description><see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteSource(System.String)"/></description>
+            </item>
+            <item>
+            <description><see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteHelpLink(System.String)"/></description>
+            </item>
+            <item>
+            <description><see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteReflectionInfo(System.Exception)"/></description>
+            </item>
+            <item>
+            <description><see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteStackTrace(System.String)"/></description>
+            </item>
+            <item>
+            <description>If the specified exception has an inner exception
+            then it makes a recursive call. <see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteException(System.Exception,System.Exception)"/></description>
+            </item>
+            </list>
+            </para>
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteReflectionInfo(System.Exception)">
+            <summary>
+            Formats an exception using reflection.
+            </summary>
+            <param name="e">
+            The exception to be formatted.
+            </param>
+            <remarks>
+            <para>This method reflects over the public, instance properties 
+            and public, instance fields
+            of the specified exception and prints them to the formatter.  
+            Certain property names are ignored
+            because they are handled explicitly in other places.</para>
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteDescription">
+            <summary>
+            Writes a description of the caught exception.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteDateTime(System.DateTime)">
+            <summary>
+            Writes the current time.
+            </summary>
+            <param name="utcNow">The current time.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteExceptionType(System.Type)">
+            <summary>
+            Writes the <see cref="T:System.Type"/> of the current exception.
+            </summary>
+            <param name="exceptionType">The <see cref="T:System.Type"/> of the exception.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteMessage(System.String)">
+            <summary>
+            Writes the value of the <see cref="P:System.Exception.Message"/> property.
+            </summary>
+            <param name="message">The message to write.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteSource(System.String)">
+            <summary>
+            Writes the value of the <see cref="P:System.Exception.Source"/> property.
+            </summary>
+            <param name="source">The source of the exception.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteHelpLink(System.String)">
+            <summary>
+            Writes the value of the <see cref="P:System.Exception.HelpLink"/> property.
+            </summary>
+            <param name="helpLink">The help link for the exception.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteStackTrace(System.String)">
+            <summary>
+            Writes the value of the <see cref="P:System.Exception.StackTrace"/> property.
+            </summary>
+            <param name="stackTrace">The stack trace of the exception.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WritePropertyInfo(System.Reflection.PropertyInfo,System.Object)">
+            <summary>
+            Writes the value of a <see cref="T:System.Reflection.PropertyInfo"/> object.
+            </summary>
+            <param name="propertyInfo">The reflected PropertyInfo object.</param>
+            <param name="value">The value of the Property.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteFieldInfo(System.Reflection.FieldInfo,System.Object)">
+            <summary>
+            Writes the value of a <see cref="T:System.Reflection.FieldInfo"/> object.
+            </summary>
+            <param name="field">The reflected FieldInfo object.</param>
+            <param name="value">The value of the Field.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteAdditionalInfo(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Writes additional properties if available.
+            </summary>
+            <param name="additionalInfo">additional information to be included with the exception report</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.Exception">
+            <summary>
+            Gets the Exception object containing the exception that is being formatted.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.AdditionalInfo">
+            <summary>
+            Gets additional information related to the <see cref="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.Exception"/> but not
+            stored in the exception (eg: the time in which the <see cref="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.Exception"/> was 
+            thrown).
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandler">
+            <summary>
+            <para>Represents a handler for exceptions.</para>
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.IExceptionHandler">
+            <summary>
+            Defines the contract for an ExceptionHandler.  An ExceptionHandler contains specific handling
+            logic (i.e. logging the exception, replacing the excepiton, etc.) that is executed in a chain of multiple
+            ExceptionHandlers.  A chain of one or more ExceptionHandlers is executed based on the exception type being 
+            handled, as well as the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy"/>.  <seealso cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy.HandleException(System.Exception,System.String)"/>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.IExceptionHandler.HandleException(System.Exception,System.String,System.Guid)">
+            <summary>
+            <para>When implemented by a class, handles an <see cref="T:System.Exception"/>.</para>
+            </summary>
+            <param name="exception"><para>The exception to handle.</para></param>
+            <param name="policyName"><para>The name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy"/>.</para></param>
+            <param name="handlingInstanceId">
+            <para>The unique ID attached to the handling chain for this handling instance.</para>
+            </param>
+            <returns><para>Modified exception to pass to the next handler in the chain.</para></returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.IExceptionHandler.CurrentPolicyName">
+            <summary>
+            <para>When implemented by a class, gets or sets the current name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy"/> using this handler.</para>
+            </summary>
+            <value>
+            <para>The current name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy"/> using this handler.</para>
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.IExceptionHandler.CurrentExceptionTypeName">
+            <summary>
+            <para>When implemented by a class, gets or sets the current <see cref="T:System.Exception"/> <see cref="P:System.Type.AssemblyQualifiedName"/> that will be handled.</para>
+            </summary>
+            <value>
+            <para>The current <see cref="T:System.Exception"/> <see cref="P:System.Type.AssemblyQualifiedName"/> that will be handled.</para>
+            </value>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandler.#ctor">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandler"/> class.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandler.HandleException(System.Exception,System.String,System.Guid)">
+            <summary>
+            <para>When overriden by a class, handles an <see cref="T:System.Exception"/>.</para>
+            </summary>
+            <param name="exception"><para>The exception to handle.</para></param>
+            <param name="policyName"><para>The name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy"/>.</para></param>
+            <param name="handlingInstanceId">
+            <para>The unique ID attached to the handling chain for this handling instance.</para>
+            </param>
+            <returns><para>Modified exception to pass to the next handler in the chain.</para></returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandler.CurrentPolicyName">
+            <summary>
+            <para>Gets or sets the current name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy"/> using this handler.</para>
+            </summary>
+            <value>
+            <para>The current name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy"/> using this handler.</para>
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandler.CurrentExceptionTypeName">
+            <summary>
+            <para>Gets or sets the current <see cref="T:System.Exception"/> <see cref="P:System.Type.AssemblyQualifiedName"/> that will be handled.</para>
+            </summary>
+            <value>
+            <para>The current <see cref="T:System.Exception"/> <see cref="P:System.Type.AssemblyQualifiedName"/> that will be handled.</para>
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandlerFactory">
+            <summary>
+            Represents a factory for creating instances of classes which implement <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.IExceptionHandler"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandlerFactory.#ctor">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandlerFactory"/> class.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandlerFactory.#ctor(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext)">
+            <summary>
+            <para>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandlerFactory"/> class with the specified <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext"/>.
+            </para>
+            </summary>
+            <param name="configurationContext">
+            <para>Configuration context to use when creating factory</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandlerFactory.CreateExceptionHandlers(System.String,System.String)">
+            <summary>
+            Creates all configured <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.IExceptionHandler"/> objects.
+            </summary>
+            <param name="policyName"><para>The policy name to create the handler.</para></param>
+            <param name="exceptionTypeName"><para>The type of exception requested to be handled.</para></param>
+            <returns>An array of <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.IExceptionHandler"/> objects.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandlerFactory.CreateExceptionHandler(System.String,System.String,System.String)">
+            <summary>
+            <para>Create an <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.IExceptionHandler"/> for a policy and specific exception type.</para>
+            </summary>
+            <param name="policyName"><para>The policy name to create the handler.</para></param>
+            <param name="exceptionTypeName"><para>The type of exception requested to be handled.</para></param>
+            <param name="handlerName"><para>The name of the handler to create.</para></param>
+            <returns>An <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.IExceptionHandler"/> object.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandlerFactory.PublishFailureEvent(System.String,System.Exception)">
+            <summary>
+            <para>Publish an instrumentation event that indicates there was an error while attempting to create a provider.</para>
+            </summary>
+            <param name="configurationName"><para>The name of the configuration object.</para></param>
+            <param name="e"><para>The <see cref="T:System.Exception"/> to publish.</para></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandlerFactory.CreateConfigurationView">
+            <summary>
+            <para>Creates the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandlingConfigurationView"/> object to navigate the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionHandlingSettings"/>.</para>
+            </summary>
+            <returns>
+            <para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandlingConfigurationView"/> object.</para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandlerFactory.GetConfigurationType(System.String)">
+            <summary>
+            <para>Gets the <see cref="T:System.Type"/> of <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.IExceptionHandler"/> to create based on the name in configuration.</para>
+            </summary>
+            <param name="handlerName">
+            <para>The name in configuraiton of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.IExceptionHandler"/> to get the <see cref="T:System.Type"/>.</para>
+            </param>
+            <returns>
+            <para>The <see cref="T:System.Type"/> of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.IExceptionHandler"/> to create.</para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandlerFactory.InitializeConfigurationProvider(System.String,Microsoft.Practices.EnterpriseLibrary.Configuration.IConfigurationProvider)">
+            <summary>
+            <para>Initialize the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.IConfigurationProvider"/> by invoking the <see cref="M:Microsoft.Practices.EnterpriseLibrary.Configuration.IConfigurationProvider.Initialize(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationView)"/> method.</para>
+            </summary>
+            <param name="providerName">
+            <para>The name of the provider.</para>
+            </param>
+            <param name="provider">
+            <para>The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.IConfigurationProvider"/> to initialize.</para>
+            </param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandlingConfigurationView">
+            <summary>
+            <para>Represents a view for navigating the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionHandlingSettings"/> configuration data.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandlingConfigurationView.#ctor(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext)">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandlingConfigurationView"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext"/> object.</para>
+            </summary>
+            <param name="configurationContext">
+            <para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext"/> object.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandlingConfigurationView.GetExceptionHandlingSettings">
+            <summary>
+            <para>Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionHandlingSettings"/> configuration data.</para>
+            </summary>
+            <returns>
+            <para>The <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionHandlingSettings"/> configuration data.</para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandlingConfigurationView.GetExceptionPolicyData(System.String)">
+            <summary>
+            <para>Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionPolicyData"/> from configuration by name.</para>
+            </summary>
+            <param name="policyName">
+            <para>The name of the policy in configuration.</para>
+            </param>
+            <returns>
+            <para>An <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionPolicyData"/> object.</para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandlingConfigurationView.GetExceptionHandlerData(System.String,System.String,System.String)">
+            <summary>
+            <para>Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionHandlerData"/> from configuration for the policy and specific exception type.</para>
+            </summary>
+            <param name="policyName">
+            <para>The name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy"/> for the data.</para>
+            </param>
+            <param name="exceptionTypeName">
+            <para>The <see cref="T:System.Exception"/> type that will be handled.</para>
+            </param>
+            <param name="handlerName"><para>The name of the handler to retrieve from configuration.</para></param>
+            <returns>
+            <para>An <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionHandlerData"/> object.</para>
+            </returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandlingConfigurationView.GetExceptionHandlerDataCollection(System.String,System.String)">
+            <summary>
+            <para>Gets the collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionHandlerData"/> objects for a policy based on an excetion type.</para>
+            </summary>
+            <param name="policyName">
+            <para>The name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy"/> for the data.</para>
+            </param>
+            <param name="exceptionTypeName">
+            <para>The <see cref="T:System.Exception"/> type that will be handled.</para>
+            </param>
+            <returns><para>An <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionHandlerDataCollection"/> object.</para></returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandlingException">
+            <summary>
+            An exception that occured during the Exception Handling process.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandlingException.#ctor">
+            <summary>
+            Initializes with defaults.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandlingException.#ctor(System.String)">
+            <summary>
+            Initializes with a specified error message.
+            </summary>
+            <param name="message">A message that describes the error.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandlingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes with a specified error 
+            message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.
+            </param>
+            <param name="innerException">
+            <para>The exception that is the cause of the current exception. If the innerException parameter is not a null reference, the current exception is raised in a catch block that handles the inner exception.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandlingException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes with serialized data.
+            </summary>
+            <param name="info">The object that holds the serialized object data.</param>
+            <param name="context">The contextual information about the source or destination.
+            </param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy">
+            <summary>
+            Represents a policy with exception types and
+            exception handlers. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy.#ctor">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy"/> class. This class
+            cannot be inherited from.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy.HandleException(System.Exception,System.String)">
+            <summary>
+            The main entry point into the Exception Handling
+            framework. Handles the specified <see cref="T:System.Exception"/>
+            object according the current configuration.
+            </summary>
+            <param name="ex">An <see cref="T:System.Exception"/> object.</param>
+            <param name="policyName">The name of the policy to handle.</param>
+            <returns>
+            Whether or not a rethrow is recommended.
+            </returns>
+            <example>
+            The following code shows the usage of the 
+            exception handling framework.
+            <code>
+            try
+            {
+            	Foo();
+            }
+            catch (Exception e)
+            {
+            	if (ExceptionPolicy.HandleException(e, policyName)) throw;
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy.HandleException(System.Exception,System.String,Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext)">
+            <summary>
+            The main entry point into the Exception Handling
+            framework. Handles the specified <see cref="T:System.Exception"/>
+            object according the given <paramref name="configurationContext"></paramref>.
+            </summary>
+            <param name="ex">An <see cref="T:System.Exception"/> object.</param>
+            <param name="policyName">The name of the policy to handle.</param>
+            <param name="configurationContext">The configuration to be used in handling this exception</param>
+            <returns>
+            Whether or not a rethrow is recommended.
+            </returns>
+            <example>
+            The following code shows the usage of the 
+            exception handling framework.
+            <code>
+            try
+            {
+            	Foo();
+            }
+            catch (Exception e)
+            {
+            	if (ExceptionPolicy.HandleException(e, policyName)) throw;
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy.HandleException(System.Exception)">
+            <summary>
+            Checks if there is a policy entry that matches
+            the type of the exception object specified by the
+            <see cref="T:System.Exception"/> parameter
+            and if so, invokes the handlers associated with that entry.
+            </summary>
+            <param name="ex">The <c>Exception</c> to handle.</param>
+            <returns>Whether or not a rethrow is recommended.</returns>
+            <remarks>
+            The algorithm for matching the exception object to a 
+            set of handlers mimics that of a standard .NET exception policy.
+            The specified exception object will be matched to a single 
+            exception policy entry by traversing its inheritance hierarchy. 
+            This means that if a <c>FileNotFoundException</c>, for example, is 
+            caught, but the only exception type that the exception policy 
+            knows how to handle is System.Exception, the event handlers 
+            for <c>System.Exception</c> will be invoked because 
+            <c>FileNotFoundException</c> ultimately derives from <c>System.Exception</c>.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy.GetPolicyEntry(System.Type)">
+            <devDoc>
+            Gets the policy entry associated with the specified key.
+            </devDoc>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy.FindExceptionPolicyEntry(System.Type)">
+            <devDoc>
+            Traverses the specified type's inheritance hiearchy
+            </devDoc>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicyEntry">
+            <summary>
+            Represents an entry in an <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy"/> containing
+            an exception type as the key and a list of 
+            <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.IExceptionHandler"/> objects as the value.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicyEntry.#ctor(System.String,Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeData,Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext)">
+            <summary>
+            Instantiates a new instance of the 
+            <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicyEntry"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicyEntry.Handle(System.Exception)">
+            <summary>
+            Handles all exceptions in the chain.
+            </summary>
+            <param name="ex">The <c>Exception</c> to handle.</param>
+            <returns>Whether or not a rethrow is recommended.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicyEntry.IntentionalRethrow(System.Exception,System.Exception)">
+            <devdoc>
+            Rethrows the given exception.  Placed in a seperate method for
+            easier viewing in the stack trace.
+            </devdoc>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicyFactory">
+            <summary>
+            Represents a factory for creating instances of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicyFactory.#ctor(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicyFactory"/>
+            class from the specified <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext"/> class.
+            </summary>
+            <param name="context">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext"/>.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicyFactory.CreateExceptionPolicy(System.String,System.Exception)">
+            <summary>
+            Creates an <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy"/> object from the configuration data associated with the specified name.
+            </summary>
+            <param name="policyName">
+            <para>The name of the policy to create.</para>
+            </param>
+            <param name="exception">
+            <para>The <see cref="T:System.Exception"/> used when creating the policy. It will be wrapped in a ? if the policy is not found.</para>
+            </param>
+            <returns>An <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicyFactory.PublishFailureEvent(System.String,System.Exception)">
+            <summary>
+            Fires an instrumentation event.
+            </summary>
+            <param name="name">The name of the exception policy.</param>
+            <param name="e">The caught exception.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionUtility">
+            <summary>
+            Provides common functions for Exception Handling. This class cannot be inherited from.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionUtility.FormatExceptionMessage(System.String,System.Guid)">
+            <summary>
+            Formats a message by replacing the token "{handlingInstanceID}" with the handlingInstanceID.
+            </summary>
+            <param name="message">The original message.</param>
+            <param name="handlingInstanceId">The handlingInststanceID passed into the handler.</param>
+            <returns>The formatted message.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionUtility.LogHandlingException(System.String,System.Exception,System.Exception,System.Exception)">
+            <devDoc>
+            Logs a handling exception to the eventLog
+            </devDoc>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.PostHandlingAction">
+            <summary>
+            Determines what action should occur after an exception is handled by the configured exception handling chain. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.PostHandlingAction.None">
+            <summary>
+            Indicates that no rethrow should occur.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.PostHandlingAction.NotifyRethrow">
+            <summary>
+            Notify the caller that a Rethrow is recommended.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.PostHandlingAction.ThrowNewException">
+            <summary>
+            Throws the exception after the exception has been handled by all handlers in the chain.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ReplaceHandler">
+            <summary>
+            Replaces the exception in the chain of handlers with a cleansed exception.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ReplaceHandler.#ctor">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ReplaceHandler"/> class.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ReplaceHandler.Initialize(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationView)">
+            <summary>
+            <para>Initializes the provider with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandlingConfigurationView"/>.</para>
+            </summary>
+            <param name="configurationView">
+            <para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandlingConfigurationView"/> object.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ReplaceHandler.HandleException(System.Exception,System.String,System.Guid)">
+            <summary>
+            Replaces the exception with the configured type for the specified policy.
+            </summary>
+            <param name="exception">The original exception.</param>
+            <param name="policyName">The name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy"/>.</param>
+            <param name="handlingInstanceID">The unique ID attached to the handling chain for this handling instance.</param>
+            <returns>Modified exception to pass to the next handler in the chain.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ReplaceHandler.ReplaceException(System.Exception,System.Type,System.String)">
+            <summary>
+            Replaces an exception with a new exception of a specified type.
+            </summary>
+            <param name="originalException">The original exception.</param>
+            <param name="replaceExceptionType">The type of exception to replace.</param>
+            <param name="replaceExceptionMessage">The message for the new exception.</param>
+            <returns>The replaced or "cleansed" exception.  Returns null if unable to replace the exception.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ReplaceHandler.ReplaceExceptionType">
+            <summary>
+            The type of exception to replace.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ReplaceHandler.ExceptionMessage">
+            <summary>
+            Gets the message for the new exception.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.TextExceptionFormatter">
+            <summary>
+            Represents an exception formatter that formats exception
+            objects as text.
+            </summary>	
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.TextExceptionFormatter.#ctor(System.IO.TextWriter,System.Exception)">
+            <summary>
+            Initializes a new instance of the 
+            <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.TextExceptionFormatter"/> using the specified
+            <see cref="T:System.IO.TextWriter"/> and <see cref="T:System.Exception"/>
+            objects.
+            </summary>
+            <param name="writer">The stream to write formatting information to.</param>
+            <param name="exception">The exception to format.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.TextExceptionFormatter.WriteDescription">
+            <summary>
+            Writes a generic description to the underlying
+            text stream.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.TextExceptionFormatter.WriteException(System.Exception,System.Exception)">
+            <summary>
+            Controls the formatting of the specified exception and 
+            its inner exception if there is one.
+            </summary>
+            <param name="e">See <see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteException(System.Exception,System.Exception)"/></param>
+            <param name="outerException">See <see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteException(System.Exception,System.Exception)"/></param>
+            <remarks>For more information, see the documentation
+            for the base implementation - 
+            <see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteException(System.Exception,System.Exception)"/></remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.TextExceptionFormatter.WriteDateTime(System.DateTime)">
+            <summary>
+            Writes the current date and time to the
+            underlying text stream.
+            </summary>
+            <param name="utcNow">See <see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteDateTime(System.DateTime)"/></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.TextExceptionFormatter.WriteExceptionType(System.Type)">
+            <summary>
+            Writes the value of the <see cref="P:System.Type.AssemblyQualifiedName"/>
+            property for the specified exception type to the underlying
+            text stream.
+            </summary>
+            <param name="exceptionType">See <see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteExceptionType(System.Type)"/></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.TextExceptionFormatter.WriteMessage(System.String)">
+            <summary>
+            Writes the value of the <see cref="P:System.Exception.Message"/>
+            property to the underyling text stream.
+            </summary>
+            <param name="message">See <see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteMessage(System.String)"/></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.TextExceptionFormatter.WriteSource(System.String)">
+            <summary>
+            Writes the value of the specified source taken
+            from the value of the <see cref="P:System.Exception.Source"/>
+            property.
+            </summary>
+            <param name="source">See <see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteSource(System.String)"/></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.TextExceptionFormatter.WriteHelpLink(System.String)">
+            <summary>
+            Writes the value of the specified help link taken
+            from the value of the <see cref="P:System.Exception.HelpLink"/>
+            property.
+            </summary>
+            <param name="helpLink">The exception's help link.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.TextExceptionFormatter.WritePropertyInfo(System.Reflection.PropertyInfo,System.Object)">
+            <summary>
+            Writes the name and value of the specified property
+            to the underlying text stream.
+            </summary>
+            <param name="propertyInfo">See <see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WritePropertyInfo(System.Reflection.PropertyInfo,System.Object)"/></param>
+            <param name="propertyValue">See <see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WritePropertyInfo(System.Reflection.PropertyInfo,System.Object)"/></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.TextExceptionFormatter.WriteFieldInfo(System.Reflection.FieldInfo,System.Object)">
+            <summary>
+            Writes the name and value of the specified
+            field to the underlying text stream.
+            </summary>
+            <param name="field">See <see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteFieldInfo(System.Reflection.FieldInfo,System.Object)"/></param>
+            <param name="fieldValue">See <see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteFieldInfo(System.Reflection.FieldInfo,System.Object)"/></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.TextExceptionFormatter.WriteStackTrace(System.String)">
+            <summary>
+            Formats the stack trace.
+            </summary>
+            <param name="stackTrace">See <see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteStackTrace(System.String)"/></param>
+            <remarks>
+            If there is no stack trace available, an appropriate message
+            will be displayed.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.TextExceptionFormatter.WriteAdditionalInfo(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Writes the additional properties to the underlying stream.
+            </summary>
+            <param name="additionalInfo">See <see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteAdditionalInfo(System.Collections.Specialized.NameValueCollection)"/></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.TextExceptionFormatter.Indent">
+            <summary>
+            Indents the underlying text writer 
+            based on the value of the 
+            <see cref="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.TextExceptionFormatter.InnerDepth"/> property.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.TextExceptionFormatter.Writer">
+            <summary>
+            Gets the underlying <see cref="T:System.IO.TextWriter"/>
+            that the current formatter is writing to.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.TextExceptionFormatter.InnerDepth">
+            <summary>
+            Gets a value that indicates the depth 
+            of the exception currently being written.
+            </summary>
+            <remarks>The initial value is 0 and is 
+            incremented with each inner exception.</remarks>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WrapHandler">
+            <summary>
+            Wraps the current exception in the handling chain with a new exception of a specified type.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WrapHandler.#ctor">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WrapHandler"/> object.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WrapHandler.Initialize(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationView)">
+            <summary>
+            <para>Initializes the provider with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandlingConfigurationView"/>.</para>
+            </summary>
+            <param name="configurationView">
+            <para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionHandlingConfigurationView"/> object.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WrapHandler.HandleException(System.Exception,System.String,System.Guid)">
+            <summary>
+            <para>Wraps the <see cref="T:System.Exception"/> with the configuration exception type.</para>
+            </summary>
+            <param name="exception"><para>The exception to handle.</para></param>
+            <param name="policyName"><para>The name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy"/>.</para></param>
+            <param name="handlingInstanceId">
+            <para>The unique ID attached to the handling chain for this handling instance.</para>
+            </param>
+            <returns><para>Modified exception to pass to the next handler in the chain.</para></returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WrapHandler.WrapException(System.Exception,System.Type,System.String)">
+            <summary>
+            Wraps an exception with a new exception of a specified type.
+            </summary>
+            <param name="originalException">The original exception.</param>
+            <param name="wrapExceptionType">The type of exception to wrap the original exception with.</param>
+            <param name="wrapExceptionMessage">The message for the new exception.</param>
+            <returns>An exception with the innerException set to the original exception.  Returns null if unable to wrap the exception.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WrapHandler.WrapExceptionType">
+            <summary>
+            <para>Gets the <see cref="T:System.Type"/> of exception to wrap the original exception with.</para>
+            </summary>
+            <value>
+            <para>The <see cref="T:System.Type"/> of exception to wrap the original exception with.</para>
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WrapHandler.WrapExceptionMessage">
+            <summary>
+            <para>Gets the message of the wrapped exception.</para>
+            </summary>
+            <value>
+            <para>The message of the wrapped exception.</para>
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.XmlExceptionFormatter">
+            <summary>
+            Represents an exception formatter that formats exception
+            objects as XML.
+            </summary>	
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.XmlExceptionFormatter.#ctor(System.Xml.XmlWriter,System.Exception)">
+            <summary>
+            Initializes a new instance of the 
+            <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.XmlExceptionFormatter"/> class using
+            the specified <see cref="T:System.Xml.XmlWriter"/> and
+            <see cref="T:System.Exception"/> objects.
+            </summary>
+            <param name="xmlWriter">The underlying stream in which to write the XML.</param>
+            <param name="exception">The <see cref="T:System.Exception"/> to format.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.XmlExceptionFormatter.#ctor(System.IO.TextWriter,System.Exception)">
+            <summary>
+            Initializes a new instance of the 
+            <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.XmlExceptionFormatter"/> class
+            using the specified <see cref="T:System.IO.TextWriter"/>
+            and <see cref="T:System.Exception"/> objects.
+            </summary>
+            <param name="writer">The underlying stream in which to write the XML.</param>
+            <param name="exception">The <see cref="T:System.Exception"/> to format.</param>
+            <remarks>
+            An <see cref="T:System.Xml.XmlTextWriter"/> with indented formatting
+            is created from the 
+            specified <see cref="T:System.IO.TextWriter"/>.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.XmlExceptionFormatter.Format">
+            <summary>
+            Controls the formatting of the exception
+            into the underlying XML stream.
+            </summary>
+            <remarks>For more information, see the documentation
+            for the base implementation - 
+            <see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.Format"/></remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.XmlExceptionFormatter.WriteDateTime(System.DateTime)">
+            <summary>
+            Writes the current date and time to the
+            underlying XML stream.
+            </summary>
+            <param name="utcNow">See <see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteDateTime(System.DateTime)"/></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.XmlExceptionFormatter.WriteMessage(System.String)">
+            <summary>
+            Writes the value of the <see cref="P:System.Exception.Message"/>
+            property to the underyling XML stream.
+            </summary>
+            <param name="message">See <see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteMessage(System.String)"/></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.XmlExceptionFormatter.WriteDescription">
+            <summary>
+            Writes a generic description to the underlying
+            XML stream.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.XmlExceptionFormatter.WriteHelpLink(System.String)">
+            <summary>
+            Writes the value of the specified help link taken
+            from the value of the <see cref="P:System.Exception.HelpLink"/>
+            property.
+            </summary>
+            <param name="helpLink">See <see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteHelpLink(System.String)"/></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.XmlExceptionFormatter.WriteStackTrace(System.String)">
+            <summary>
+            Writes the value of the specified stack trace taken
+            from the value of the <see cref="P:System.Exception.StackTrace"/>
+            property.
+            </summary>
+            <param name="stackTrace">See <see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteStackTrace(System.String)"/></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.XmlExceptionFormatter.WriteSource(System.String)">
+            <summary>
+            Writes the value of the specified source taken
+            from the value of the <see cref="P:System.Exception.Source"/>
+            property.
+            </summary>
+            <param name="source">See <see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteSource(System.String)"/></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.XmlExceptionFormatter.WriteExceptionType(System.Type)">
+            <summary>
+            Writes the value of the <see cref="P:System.Type.AssemblyQualifiedName"/>
+            property for the specified exception type to the underlying
+            XML stream.
+            </summary>
+            <param name="exceptionType">See <see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteExceptionType(System.Type)"/></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.XmlExceptionFormatter.WriteException(System.Exception,System.Exception)">
+            <summary>
+            Controls the formatting of the specified exception and 
+            its inner exception.
+            </summary>
+            <param name="e">See <see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteException(System.Exception,System.Exception)"/></param>
+            <param name="outerException">See <see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteException(System.Exception,System.Exception)"/></param>
+            <remarks>For more information, see the documentation
+            for the base implementation - 
+            <see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteException(System.Exception,System.Exception)"/></remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.XmlExceptionFormatter.WritePropertyInfo(System.Reflection.PropertyInfo,System.Object)">
+            <summary>
+            Writes the name and value of the specified property
+            to the underlying XML stream.
+            </summary>
+            <param name="propertyInfo">See <see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WritePropertyInfo(System.Reflection.PropertyInfo,System.Object)"/></param>
+            <param name="propertyValue">See <see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WritePropertyInfo(System.Reflection.PropertyInfo,System.Object)"/></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.XmlExceptionFormatter.WriteFieldInfo(System.Reflection.FieldInfo,System.Object)">
+            <summary>
+            Writes the name and value of the specified
+            field to the underlying XML stream.
+            </summary>
+            <param name="field">See <see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteFieldInfo(System.Reflection.FieldInfo,System.Object)"/></param>
+            <param name="fieldValue">See <see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteFieldInfo(System.Reflection.FieldInfo,System.Object)"/></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.XmlExceptionFormatter.WriteAdditionalInfo(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Writes additional information to the underlying XML stream.
+            </summary>
+            <param name="additionalInfo">See <see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionFormatter.WriteAdditionalInfo(System.Collections.Specialized.NameValueCollection)"/></param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.XmlExceptionFormatter.Writer">
+            <summary>
+            Gets the underlying <see cref="T:System.Xml.XmlWriter"/> that
+            the formatted exception is written to.
+            </summary>
+        </member>
+    </members>
+</doc>

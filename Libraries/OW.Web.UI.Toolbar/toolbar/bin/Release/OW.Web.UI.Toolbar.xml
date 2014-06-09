@@ -1,0 +1,951 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OW.Web.UI.Toolbar</name>
+    </assembly>
+    <members>
+        <member name="T:OW.Web.UI.Toolbar.Design.ItemCollectionEditor">
+            <summary>
+            Provides designer support for the toolbar's items.
+            </summary>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.Design.ItemCollectionEditor.#ctor(System.Type)">
+            <summary>
+            Empty default constructor.
+            </summary>
+            <param name="type"></param>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.Design.ItemCollectionEditor.CreateNewItemTypes">
+            <summary>
+            Provides a list of available item types.
+            </summary>
+            <returns>List of <see cref="T:OW.Web.UI.Toolbar.ToolbarItem"/> objects.</returns>
+        </member>
+        <member name="T:OW.Web.UI.Toolbar.Design.ToolbarDesigner">
+            <summary>
+            Zusammenfassung für ToolbarDesigner.
+            </summary>
+        </member>
+        <member name="T:OW.Web.UI.Toolbar.ToolbarItemState">
+            <summary>
+            State flags for <see cref="T:OW.Web.UI.Toolbar.ToolbarItem"/> objects.
+            </summary>
+        </member>
+        <member name="F:OW.Web.UI.Toolbar.ToolbarItemState.Normal">
+            <summary>
+            Standard behaviour.
+            </summary>
+        </member>
+        <member name="F:OW.Web.UI.Toolbar.ToolbarItemState.Disabled">
+            <summary>
+            Renders the item as disabled.
+            </summary>
+        </member>
+        <member name="T:OW.Web.UI.Toolbar.ToolbarOrientation">
+            <summary>
+            Orientation of the rendered toolbar.
+            </summary>
+        </member>
+        <member name="F:OW.Web.UI.Toolbar.ToolbarOrientation.Horizontal">
+            <summary>
+            Renders a horizontal toolbar.
+            </summary>
+        </member>
+        <member name="F:OW.Web.UI.Toolbar.ToolbarOrientation.Vertical">
+            <summary>
+            Renders a vertical toolbar.
+            </summary>
+        </member>
+        <member name="T:OW.Web.UI.Toolbar.ControlContainerItem">
+            <summary>
+            Provides a container item for arbitrary controls
+            which can be added programmatically.
+            </summary>
+        </member>
+        <member name="T:OW.Web.UI.Toolbar.ToolbarItem">
+            <summary>
+            Abstract base class for all items of the toolbar.
+            A toolbar item can be provided with different images
+            to reflect its <see cref="T:OW.Web.UI.Toolbar.ToolbarItemState"/> and
+            supports hover images.
+            </summary>
+        </member>
+        <member name="F:OW.Web.UI.Toolbar.ToolbarItem.m_itemId">
+            <summary>
+            The unique ID of the item. Can be used
+            to determine the selected item on postback
+            events.
+            </summary>
+        </member>
+        <member name="F:OW.Web.UI.Toolbar.ToolbarItem.m_itemCellMouseOver">
+            <summary>
+            Used for add mouseover event to item cell
+            </summary>	
+        </member>
+        <member name="F:OW.Web.UI.Toolbar.ToolbarItem.m_itemCellMouseOut">
+            <summary>
+            Used for add mouseout event to item cell
+            </summary>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarItem.#ctor">
+            <summary>
+            Empty default constructor.
+            </summary>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarItem.#ctor(System.Web.UI.HtmlTextWriterTag)">
+            <summary>
+            Constructs an item which is renderd as a specific
+            HTML tag.
+            </summary>
+            <param name="tag">Html tag of the item control.</param>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.ToolbarItem.ItemId">
+            <summary>
+            The unique ID of the item. Can be used
+            to determine the selected item on postback
+            events.
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.ToolbarItem.ItemCellMouseOver">
+            <summary>
+            The default mouseover event of all toolbar item cells.
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.ToolbarItem.ItemCellMouseOut">
+            <summary>
+            The default mouseout event of all toolbar item cells.
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.ToolbarItem.RenderDisabled">
+            <summary>
+            Whether the item shall be rendered disabled or not. If this
+            property is <c>true</c>, the disabled image is rendered
+            rather than the standard one and no further functionality
+            is available (tooltips, rollovers etc.).
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.ToolbarItem.ItemCellDistance">
+            <summary>
+            The width (horizontal toolbar) or height (vertical toolbar)
+            of a cell that contains a <see cref="T:OW.Web.UI.Toolbar.ToolbarItem"/>.
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.ToolbarItem.HorizontalAlign">
+            <summary>
+            Horizontal alignment of the item within its cell
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.ToolbarItem.VerticalAlign">
+            <summary>
+            Vertical alignment of the item within its cell
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.ToolbarItem.IsDesignMode">
+            <summary>
+            Determines whether the control is in design mode or not.
+            </summary>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ControlContainerItem.#ctor">
+            <summary>
+            Empty default constructor.
+            </summary>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ControlContainerItem.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Prevents rendering of the control itself.
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ControlContainerItem.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Prevents rendering of the control itself.
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ControlContainerItem.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders a simple placeholder in design mode.
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="T:OW.Web.UI.Toolbar.IImageItem">
+            <summary>
+            Common interface of all items that provide
+            an image and optional rollovers.
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.IImageItem.ImageUrl">
+            <summary>
+            The image to be rendered by the item.
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.IImageItem.DisabledImageUrl">
+            <summary>
+            An optional image which is displayed if
+            the item's state is set to
+            <see cref="F:OW.Web.UI.Toolbar.ToolbarItemState.Disabled"/>.
+            If not set, the standard image is being used.
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.IImageItem.RollOverImageUrl">
+            <summary>
+            An optional image which is displayed if
+            the user moves the mouse over the item.
+            If not set, the standard image is being used.
+            </summary>
+        </member>
+        <member name="T:OW.Web.UI.Toolbar.IPostBackToolbarItem">
+            <summary>
+            Common interface of all toolbar items that
+            provide postback capabilities.
+            </summary>
+        </member>
+        <member name="E:OW.Web.UI.Toolbar.IPostBackToolbarItem.ItemSubmitted">
+            <summary>
+            Event which fires if the item is being
+            submitted.
+            </summary>
+        </member>
+        <member name="T:OW.Web.UI.Toolbar.IToolbarItem">
+            <summary>
+            Common interface of all items that can be plugged into
+            the <see cref="T:OW.Web.UI.Toolbar.Toolbar"/> component.
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.IToolbarItem.ItemId">
+            <summary>
+            The unique ID of the item.
+            </summary>
+        </member>
+        <member name="T:OW.Web.UI.Toolbar.LabeledToolbarItem">
+            <summary>
+            Extends the default item by an additional label.
+            </summary>
+        </member>
+        <member name="F:OW.Web.UI.Toolbar.LabeledToolbarItem.clientScript">
+            <summary>
+            Script cliente associado ao botão
+            </summary>
+        </member>
+        <member name="F:OW.Web.UI.Toolbar.LabeledToolbarItem.causeValidation">
+            <summary>
+            Indica se o botão provoca a validação da página
+            </summary>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.LabeledToolbarItem.RenderLabel(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the label within HTML <c>span</c> tags and optional
+            CSS class settings.
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.LabeledToolbarItem.RaisePostDataChangedEvent">
+            <summary>
+            Raises the control's event.
+            </summary>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.LabeledToolbarItem.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Checks whether the button was clicked or not.
+            </summary>
+            <param name="postDataKey"></param>
+            <param name="postCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="E:OW.Web.UI.Toolbar.LabeledToolbarItem.ItemSubmitted">
+            <summary>
+            Raised if the item is being clicked.
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.LabeledToolbarItem.uid">
+            <summary>
+            Script cliente associado ao botão
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.LabeledToolbarItem.ClientScript">
+            <summary>
+            Script cliente associado ao botão
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.LabeledToolbarItem.CauseValidation">
+            <summary>
+            Indica se o botão provoca a validação da página
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.LabeledToolbarItem.LabelText">
+            <summary>
+            Text of an additional label.
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.LabeledToolbarItem.LabelTextAlign">
+            <summary>
+            Whether the label shall be aligned on the right or left
+            hand side of the item's main object (e.g. an image).
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.LabeledToolbarItem.LabelTextVerticalAlign">
+            <summary>
+            Whether the label shall be aligned on the right or left
+            hand side of the item's main object (e.g. an image).
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.LabeledToolbarItem.LabelCssClass">
+            <summary>
+            A CSS style to assign to the label.
+            </summary>
+        </member>
+        <member name="T:OW.Web.UI.Toolbar.ToolbarButton">
+            <summary>
+            Renders an image button which posts back to its parent form.
+            </summary>
+        </member>
+        <member name="T:OW.Web.UI.Toolbar.ToolbarImage">
+            <summary>
+            Renders a plain image with optional rollovers and
+            disabling state but no further functionality.
+            </summary>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarImage.#ctor">
+            <summary>
+            Inits the control.
+            </summary>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarImage.OnPreRender(System.EventArgs)">
+            <summary>
+            Handles JavaScript registration.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarImage.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the item.
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarImage.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the begin tag of the image and (optionally) the
+            surrounding rollover function calls.
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarImage.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the attribute of the image.
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.ToolbarImage.RenderDeprecatedTags">
+            <summary>
+            Whether the item shall render HTML tags that have been marked
+            as deprecated in XHTML strict. This applies to <c>align</c> or
+            <c>border</c> attributes that should be set via CSS.
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.ToolbarImage.ImageUrl">
+            <summary>
+            The image to be rendered by the item.
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.ToolbarImage.DisabledImageUrl">
+            <summary>
+            An optional image which is displayed if
+            the item's state is set to
+            <see cref="F:OW.Web.UI.Toolbar.ToolbarItemState.Disabled"/>.
+            If not set, the standard image is being used.
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.ToolbarImage.RollOverImageUrl">
+            <summary>
+            An optional image which is displayed if
+            the user moves the mouse over the item.
+            If not set, the standard image is being used.
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.ToolbarImage.RenderRollOverScripts">
+            <summary>
+            Determines whether rollover support scripts
+            are needed or not.
+            </summary>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarButton.#ctor">
+            <summary>
+            Empty default constructor.
+            </summary>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarButton.OnPreRender(System.EventArgs)">
+            <summary>
+            Registers a postback handler.
+            </summary>
+            <param name="e"></param>
+            <remarks>
+            PostBack is being submitted with coordinates so the
+            submitted key doesn't match the control's ID
+            -> explicit postback notification needed.
+            </remarks>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarButton.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the begin tag of an image button, if the item
+            is enabled.
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarButton.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Adds image button specific attributes to the output.
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="T:OW.Web.UI.Toolbar.ToolbarItemCollection">
+            <summary>
+            Maintains a collection of <see cref="T:OW.Web.UI.Toolbar.ToolbarItem"/>
+            objects.
+            </summary>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarItemCollection.Add(OW.Web.UI.Toolbar.ToolbarItem)">
+            <summary>
+            Adds an item to the list.
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarItemCollection.Insert(System.Int32,OW.Web.UI.Toolbar.ToolbarItem)">
+            <summary>
+            Adds an item at a given position.
+            </summary>
+            <param name="index">Zero-based index of the item.</param>
+            <param name="item">Item to be added.</param>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarItemCollection.IndexOf(OW.Web.UI.Toolbar.ToolbarItem)">
+            <summary>
+            Gets the index of a toolbar item.
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarItemCollection.RemoveItem(System.String)">
+            <summary>
+            Removes an item from the toolbar.
+            </summary>
+            <param name="itemId">The unique
+            <see cref="P:OW.Web.UI.Toolbar.ToolbarItem.ItemId"/> of the
+            item.</param>
+        </member>
+        <member name="E:OW.Web.UI.Toolbar.ToolbarItemCollection.ItemAdded">
+            <summary>
+            Raised if an item is was added.
+            </summary>
+        </member>
+        <member name="E:OW.Web.UI.Toolbar.ToolbarItemCollection.ItemRemoved">
+            <summary>
+            Raised if an item was removed.
+            </summary>
+        </member>
+        <member name="E:OW.Web.UI.Toolbar.ToolbarItemCollection.ItemsCleared">
+            <summary>
+            Raised if the controls were removed.
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.ToolbarItemCollection.Item(System.String)">
+            <summary>
+            Gets a toolbar item by its unique
+            item ID.
+            </summary>
+        </member>
+        <member name="T:OW.Web.UI.Toolbar.ToolbarLabel">
+            <summary>
+            Renders a simple label.
+            </summary>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarLabel.#ctor">
+            <summary>
+            Empty default constructor.
+            </summary>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarLabel.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the item's <see cref="P:OW.Web.UI.Toolbar.ToolbarLabel.Text"/> to the client.
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="T:OW.Web.UI.Toolbar.ToolbarLink">
+            <summary>
+            Renders a link with a simple image.
+            </summary>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarLink.#ctor">
+            <summary>
+            Inits the control.
+            </summary>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarLink.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the link item.
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarLink.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the link's begin tag and its attributes.
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarLink.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Adds the links attributes to the link tag.
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarLink.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the link's end tag.
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarLink.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the the inner image and text.
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.ToolbarLink.LinkTarget">
+            <summary>
+            Target of the hyperlink.
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.ToolbarLink.NavigateUrl">
+            <summary>
+            URL which is opended by the link.
+            </summary>
+        </member>
+        <member name="T:OW.Web.UI.Toolbar.ToolbarSeparator">
+            <summary>
+            Dummy class which is used by the <see cref="T:OW.Web.UI.Toolbar.Toolbar"/>
+            class to maintain spacers.
+            </summary>
+        </member>
+        <member name="T:OW.Web.UI.Toolbar.ToolbarTextBox">
+            <summary>
+            Composite control that renders a simple textbox.
+            </summary>
+        </member>
+        <member name="F:OW.Web.UI.Toolbar.ToolbarTextBox.textBox">
+            <summary>
+            Contained textbox control which is rendered to the client.
+            </summary>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarTextBox.#ctor">
+            <summary>
+            Inits the control.
+            </summary>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarTextBox.OnInit(System.EventArgs)">
+            <summary>
+            Adds the internal TextBox control to the item's
+            <c>Controls</c> collection.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarTextBox.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Prevents rendering of the control itself.
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarTextBox.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Prevents rendering of the control itself.
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarTextBox.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the contained textbox control.
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarTextBox.textBox_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            Bubbles a text change event of the contained textbox.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="E:OW.Web.UI.Toolbar.ToolbarTextBox.ItemSubmitted">
+            <summary>
+            Raised if the item's text was changed.
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.ToolbarTextBox.AutoPostBack">
+            <summary>
+            Whether the control posts back to the
+            server after being changed.
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.ToolbarTextBox.RenderDisabled">
+            <summary>
+            Enables / disables the item's textbox.
+            </summary>
+        </member>
+        <member name="T:OW.Web.UI.Toolbar.ResX">
+            <summary>
+            Classe estática para suporte multilingue.
+            </summary>
+        </member>
+        <member name="F:OW.Web.UI.Toolbar.ResX._instance">
+            <summary>
+            Safe lock singleton class.
+            </summary>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ResX.GetResourceString(System.String)">
+            <summary>
+            Get Resource String
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ResX.GetResourceString(System.String,System.Object[])">
+            <summary>
+            Returns the value of the specified <see cref="T:System.String"></see> resource.
+            </summary>
+            <param name="name">The name of the resource to get.</param>
+            <param name="args">An <see cref="T:System.Object"></see> array containing zero or more objects to format. </param>
+            <returns></returns>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ResX.GetString(System.String)">
+            <summary>
+            Get a resource string from its key
+            </summary>
+            <param name="Key">Key in resource file</param>
+            <returns>String associated to the key</returns>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ResX.GetString(System.String,System.Object[])">
+            <summary>
+            Get a resource string from its key
+            </summary>
+            <param name="Key">Key in resource file</param>
+            <param name="args">An <see cref="T:System.Object"></see> array containing zero or more objects to format. </param>
+            <returns>String associated to the key</returns>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ResX.OpenResources">
+            <summary>
+            Open the resource file for the default culture
+            </summary>
+            <returns>Returns a ResourceManager instance</returns>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ResX.OpenResources(System.String)">
+            <summary>
+            Open the resource file for the specified culture
+            </summary>
+            <param name="selectedCulture"> The language to select</param>
+            <returns>Returns a ResourceManager instance</returns>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ResX.openResources(System.String)">
+            <summary>
+            Open the resource file for the specified culture
+            </summary>
+            <param name="selectedCulture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ResX.CloseResources(System.Resources.ResourceManager)">
+            <summary>
+            Close the resource file
+            </summary>
+            <param name="resourceManager"></param>
+        </member>
+        <member name="T:OW.Web.UI.Toolbar.RollOverHandler">
+            <summary>
+            Handles JavaScripts for items that provide rollover images.
+            </summary>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.RollOverHandler.RenderRollOverBeginTag(System.Web.UI.HtmlTextWriter,System.Web.UI.Control,System.String)">
+            <summary>
+            Renders the beginning tag of an element that encloses an image
+            that support JavaScript rollovers.
+            </summary>
+            <param name="writer">Streams output to the client.</param>
+            <param name="imageControl">The control that hosts an image which
+            will be replaced on rollover.</param>
+            <param name="rollOverImageUrl">URL of the rollover image.</param>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.RollOverHandler.RenderRollOverEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the end tag of the surrounding Rollover handler. Assumes
+            <see cref="M:OW.Web.UI.Toolbar.RollOverHandler.RenderRollOverBeginTag(System.Web.UI.HtmlTextWriter,System.Web.UI.Control,System.String)"/> has been called before.
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.RollOverHandler.RegisterRollOverScript(System.Web.UI.Control)">
+            <summary>
+            Registers the rollover JavaScript with the currently rendered page.
+            </summary>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.RollOverHandler.GetImageId(System.Web.UI.Control)">
+            <summary>
+            Gets the ID of a rendered image control.
+            </summary>
+            <returns>Returns the <c>ClientID</c> of the current
+            control.</returns>
+            <remarks>Can be overridden to return a composite control's
+            client ID instead.</remarks>
+        </member>
+        <member name="T:OW.Web.UI.Toolbar.ItemEventHandler">
+            <summary>
+            Event handler which submits a clicked toolbar item.
+            </summary>
+        </member>
+        <member name="T:OW.Web.UI.Toolbar.Toolbar">
+            <summary>
+            Renders a toolbar control which acts as a container
+            for <see cref="T:OW.Web.UI.Toolbar.ToolbarItem"/> objects.
+            </summary>
+        </member>
+        <member name="F:OW.Web.UI.Toolbar.Toolbar.m_items">
+            <summary>
+            Contains the items which were assigned to the toolbar.
+            </summary>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.Toolbar.#ctor">
+            <summary>
+            Inits the control.
+            </summary>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.Toolbar.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Adds table attributes to the rendered output.
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.Toolbar.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Creates the table content with all items of the toolbar.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.Toolbar.RenderHorizontally(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders a horizontally oriented toolbar which contains
+            all toolbar items in a single table row.
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.Toolbar.RenderVertically(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders a vertically oriented toolbar which contains
+            every toolbar item in a single table row.
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.Toolbar.RenderItemCell(OW.Web.UI.Toolbar.ToolbarItem,System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders a table cell of a given toolbar item.
+            </summary>
+            <param name="item">Item to be rendered.</param>
+            <param name="writer">Writer that streams output to the client.</param>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.Toolbar.items_ItemAdded(OW.Web.UI.Toolbar.ToolbarItem)">
+            <summary>
+            Adds a new item to the internal <c>Controls</c>
+            collection.
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.Toolbar.items_ItemRemoved(OW.Web.UI.Toolbar.ToolbarItem)">
+            <summary>
+            Removes an item from the internal <c>Controls</c>
+            collection.
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.Toolbar.items_ItemsCleared(System.Object,System.EventArgs)">
+            <summary>
+            Removes all controls from the internal control collection.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.Toolbar.Items_ItemSubmitted(OW.Web.UI.Toolbar.ToolbarItem)">
+            <summary>
+            Handles toolbar item events.
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.Toolbar.Items">
+            <summary>
+            Contains the items which were assigned to the toolbar.
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.Toolbar.Orientation">
+            <summary>
+            Orientation of the toolbar.
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.Toolbar.ItemCellDistance">
+            <summary>
+            The default width (horizontal toolbar) or height (vertical orientation)
+            of all toolbar item cells.
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.Toolbar.SeparatorCellDistance">
+            <summary>
+            The width of a cell that contains a <see cref="T:OW.Web.UI.Toolbar.ToolbarSeparator"/>.
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.Toolbar.SeparatorImageUrl">
+            <summary>
+            Image of a toolbar separator. If not defined, a separator just
+            renders as a space between toolbar items.
+            <seealso cref="P:OW.Web.UI.Toolbar.Toolbar.SeparatorCellDistance"/>
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.Toolbar.BackgroundImageUrl">
+            <summary>
+            Optional background image of the toolbar. Tiled horizontally
+            or vertically depending on toolbar orientation.
+            </summary>
+        </member>
+        <member name="E:OW.Web.UI.Toolbar.Toolbar.ItemPostBack">
+            <summary>
+            Raised if an item of the toolbar that posts back to
+            the server is being clicked.
+            </summary>
+        </member>
+        <member name="T:OW.Web.UI.Toolbar.ToolbarNavigation">
+            <summary>
+            Summary description for ToolbarFilter.
+            </summary>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarNavigation.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="F:OW.Web.UI.Toolbar.ToolbarNavigation.openHidden">
+            <summary>
+            Indica se o item Open está escondido
+            </summary>
+        </member>
+        <member name="F:OW.Web.UI.Toolbar.ToolbarNavigation.refreshHidden">
+            <summary>
+            Indica se o item Refresh está escondido
+            </summary>
+        </member>
+        <member name="F:OW.Web.UI.Toolbar.ToolbarNavigation.removeHidden">
+            <summary>
+            Indica se o item Remove está escondido
+            </summary>
+        </member>
+        <member name="F:OW.Web.UI.Toolbar.ToolbarNavigation.modifyHidden">
+            <summary>
+            Indica se o item Modify está escondido
+            </summary>
+        </member>
+        <member name="F:OW.Web.UI.Toolbar.ToolbarNavigation.addHidden">
+            <summary>
+            Indica se o item Add está escondido
+            </summary>
+        </member>
+        <member name="F:OW.Web.UI.Toolbar.ToolbarNavigation.lastHidden">
+            <summary>
+            Indica se o item Last está escondido
+            </summary>
+        </member>
+        <member name="F:OW.Web.UI.Toolbar.ToolbarNavigation.nextHidden">
+            <summary>
+            Indica se o item Next está escondido
+            </summary>
+        </member>
+        <member name="F:OW.Web.UI.Toolbar.ToolbarNavigation.previousHidden">
+            <summary>
+            Indica se o item Previous está escondido
+            </summary>
+        </member>
+        <member name="F:OW.Web.UI.Toolbar.ToolbarNavigation.firstHidden">
+            <summary>
+            Indica se o item First está escondido
+            </summary>
+        </member>
+        <member name="F:OW.Web.UI.Toolbar.ToolbarNavigation.addCauseValidation">
+            <summary>
+            Indica se o item Add causa validação
+            </summary>
+        </member>
+        <member name="F:OW.Web.UI.Toolbar.ToolbarNavigation.modifyCauseValidation">
+            <summary>
+            Indica se o item Modify causa validação
+            </summary>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarNavigation.OnInit(System.EventArgs)">
+            <summary>
+            Initialize
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarNavigation.AddDefaultItems">
+            <summary>
+            Adição dos Items na ToolBar
+            </summary>
+        </member>
+        <member name="M:OW.Web.UI.Toolbar.ToolbarNavigation.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Render do control
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.ToolbarNavigation.OpenHidden">
+            <summary>
+            Indica se o item Open está escondido
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.ToolbarNavigation.RefreshHidden">
+            <summary>
+            Indica se o item Refresh está escondido
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.ToolbarNavigation.RemoveHidden">
+            <summary>
+            Indica se o item Remove está escondido
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.ToolbarNavigation.ModifyHidden">
+            <summary>
+            Indica se o item Modify está escondido
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.ToolbarNavigation.AddHidden">
+            <summary>
+            Indica se o item Add está escondido
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.ToolbarNavigation.LastHidden">
+            <summary>
+            Indica se o item Last está escondido
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.ToolbarNavigation.NextHidden">
+            <summary>
+            Indica se o item Next está escondido
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.ToolbarNavigation.PreviousHidden">
+            <summary>
+            Indica se o item Previous está escondido
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.ToolbarNavigation.FirstHidden">
+            <summary>
+            Indica se o item First está escondido
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.ToolbarNavigation.AddCauseValidation">
+            <summary>
+            Indica se o item Add causa validação
+            </summary>
+        </member>
+        <member name="P:OW.Web.UI.Toolbar.ToolbarNavigation.ModifyCauseValidation">
+            <summary>
+            Indica se o item Modify causa validação
+            </summary>
+        </member>
+    </members>
+</doc>

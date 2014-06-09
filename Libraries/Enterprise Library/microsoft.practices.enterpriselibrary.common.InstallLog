@@ -1,0 +1,26 @@
+﻿Installing assembly 'c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.common.dll'.
+Affected parameters are:
+   assemblypath = c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.common.dll
+   logfile = c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.common.InstallLog
+Installing WMI Schema: Started
+Registering assembly: Microsoft.Practices.EnterpriseLibrary.Common_SN__Version_1.1
+Ensuring that namespace exists: root\MicrosoftWmiNet
+Ensuring that class exists: root\MicrosoftWmiNet:WMINET_Instrumentation
+Ensuring that class exists: root\MicrosoftWmiNet:WMINET_InstrumentedNamespaces
+Ensuring that class exists: root\MicrosoftWmiNet:WMINET_Naming
+Ensuring that namespace exists: root\default
+Ensuring that class exists: root\default:WMINET_Instrumentation
+Ensuring that class exists: CREATING  root\default:WMINET_Instrumentation
+Ensuring that class exists: root\default:WMINET_InstrumentedAssembly
+Ensuring that class exists: CREATING  root\default:WMINET_InstrumentedAssembly
+Ensuring that class exists: root\default:MSFT_DecoupledProvider
+Ensuring that class exists: CREATING  root\default:MSFT_DecoupledProvider
+Ensuring that class exists: root\default:WMINET_ManagedAssemblyProvider
+Ensuring that class exists: CREATING  root\default:WMINET_ManagedAssemblyProvider
+Installing WMI Schema: Finished
+Creating EventLog source Enterprise Library Cryptography in log Application...
+Creating EventLog source Enterprise Library Instrumentation in log Application...
+Committing assembly 'c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.common.dll'.
+Affected parameters are:
+   assemblypath = c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.common.dll
+   logfile = c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.common.InstallLog

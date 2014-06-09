@@ -1,0 +1,21 @@
+﻿Installing assembly 'c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.configuration.dll'.
+Affected parameters are:
+   assemblypath = c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.configuration.dll
+   logfile = c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.configuration.InstallLog
+Installing WMI Schema: Started
+Registering assembly: Microsoft.Practices.EnterpriseLibrary.Configuration_SN__Version_1.1
+Ensuring that namespace exists: root\MicrosoftWmiNet
+Ensuring that class exists: root\MicrosoftWmiNet:WMINET_Instrumentation
+Ensuring that class exists: root\MicrosoftWmiNet:WMINET_InstrumentedNamespaces
+Ensuring that class exists: root\MicrosoftWmiNet:WMINET_Naming
+Ensuring that namespace exists: root\default
+Ensuring that class exists: root\default:WMINET_Instrumentation
+Ensuring that class exists: root\default:WMINET_InstrumentedAssembly
+Ensuring that class exists: root\default:MSFT_DecoupledProvider
+Ensuring that class exists: root\default:WMINET_ManagedAssemblyProvider
+Installing WMI Schema: Finished
+Creating EventLog source Enterprise Library Configuration in log Application...
+Committing assembly 'c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.configuration.dll'.
+Affected parameters are:
+   assemblypath = c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.configuration.dll
+   logfile = c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.configuration.InstallLog

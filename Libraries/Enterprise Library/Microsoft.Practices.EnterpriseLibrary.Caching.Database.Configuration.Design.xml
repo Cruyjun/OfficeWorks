@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.CachingDatabaseConfigurationDesignManager">
+            <summary>
+            Manages registration of custom cache data nodes to their respective cache nodes.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.CachingDatabaseConfigurationDesignManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.CachingDatabaseConfigurationDesignManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.CachingDatabaseConfigurationDesignManager.Register(System.IServiceProvider)">
+            <summary>
+            <para>Registers the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.DataCacheStorageNode"/> in the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.CachingDatabaseConfigurationDesignManager.Open(System.IServiceProvider)">
+            <summary>
+            <para>Opens the configuration settings and registers them with the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.CachingDatabaseConfigurationDesignManager.Save(System.IServiceProvider)">
+            <summary>
+            <para>Saves the configuration settings created for the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.CachingDatabaseConfigurationDesignManager.BuildContext(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationDictionary)">
+            <summary>
+            <para>Adds to the dictionary configuration data for 
+            the enterpriselibrary.configurationSettings configuration section.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+            <param name="configurationDictionary">
+            <para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationDictionary"/> to add 
+            configuration data to.</para></param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.DataCacheStorageNode">
+            <summary>
+            Node representing a Data Cache Storage
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.DataCacheStorageNode.#ctor">
+            <summary>
+            Creates node with initial data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.DataCacheStorageNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.DataCacheStorageData)">
+            <summary>
+            Creates node with specified data.
+            </summary>
+            <param name="dataCacheStorageData">Configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.DataCacheStorageNode.ResolveNodeReferences">
+            <summary>
+            See <see cref="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode.ResolveNodeReferences"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.DataCacheStorageNode.AddDefaultChildNodes">
+            <summary>
+            Initializes the data configuration section of the configuration tree
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.DataCacheStorageNode.Type">
+            <summary>
+            Read only.  Returns the type name for a DataBackingStore.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.DataCacheStorageNode.DatabaseInstance">
+            <summary>
+            The configured database instance node reference.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.DataCacheStorageNode.PartitionName">
+            <summary>
+            The name of the segments in the caching store to use for this data.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.DataCacheStorageNode.CacheStorageData">
+            <summary>
+            Retrieves configuration data based on the current state of the node.
+            </summary>
+            <returns>Configuration data for this node.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.SRCategoryAttribute">
+            <devdoc>
+            Represents a localized vertion of a CategoryAttribute. It uses the local string resources for localization.
+            This class cannot be inherited from
+            </devdoc>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.SRDescriptionAttribute">
+            <devdoc>
+            Represents a localized vertion of a DescriptionAttribute. It uses the local strings resouce to get its description.
+            This class cannot be inherited from 
+            </devdoc>
+        </member>
+    </members>
+</doc>

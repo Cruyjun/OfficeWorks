@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MsmqDistributor</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.DistributorService">
+            <summary>
+            <para>This type supports the Data Access Instrumentation infrastructure and is not intended to be used directly from your code.</para>
+            </summary>    
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.DistributorService.#ctor">
+            <summary/>
+            <exclude/>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.DistributorService.Main">
+            <summary/>
+            <exclude/>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.DistributorService.InitializeComponent">
+            <summary/>
+            <exclude/>
+            <devdoc>
+            Initialization of the service.  Start the queue listener and write status to event log.
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.DistributorService.OnStart(System.String[])">
+            <summary/>
+            <exclude/>
+            <devdoc>
+            The windows service start event.
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.DistributorService.OnStop">
+            <summary/>
+            <exclude/>
+            <devdoc>
+            The windows service stop event.
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.DistributorService.OnPause">
+            <summary/>
+            <exclude/>
+            <devdoc>
+            The windows service pause event.
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.DistributorService.OnContinue">
+            <summary/>
+            <exclude/>
+            <devdoc>
+            The windows service resume event.
+            </devdoc>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.DistributorService.Status">
+            <summary/>
+            <exclude/>
+            <devdoc>
+            Gets or sets the current status of the service.  Values are defined in <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.ServiceStatus"/> enumeration.
+            </devdoc>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.DistributorService.ApplicationName">
+            <summary/>
+            <exclude/>
+            <devdoc>
+            Gets or sets the name of the windows service.
+            </devdoc>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.DistributorService.EventLogger">
+            <summary/>
+            <exclude/>
+            <devdoc>
+            Gets the logger used to log events for this service.
+            </devdoc>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqListener">
+            <summary>
+            Represents the message queue polling timer.  Uses an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqLogDistributor"/> 
+            to check for new log messages each timer interval.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqListener.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.DistributorService,System.Int32)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqListener"/>.
+            </summary>
+            <param name="distributorService">Distributor service inheriting from <see cref="T:System.ServiceProcess.ServiceBase"/>.</param>
+            <param name="timerInterval">Interval to check for new messages.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqListener.StartListener">
+            <summary>
+            Start the queue listener and begin polling the message queue.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqListener.StopListener">
+            <summary>
+            Attempt to stop the queue listener and discontinue polling the message queue.
+            </summary>
+            <returns>True if the listener stopped succesfully.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqListener.SetMsmqLogDistributor(Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqLogDistributor)">
+            <devdoc>
+            support unit tests - allows for a mock object
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqListener.OnQueueTimedEvent(System.Object,System.Timers.ElapsedEventArgs)">
+            <devdoc>
+            Event triggered by the queue timer event handler. 
+            This method runs regularly to check the queue for pending queue messages.
+            </devdoc>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqListener.QueueTimerInterval">
+            <summary>
+            Polling interval to check for new log messages.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqLogDistributor">
+            <summary>
+            Receive new log messages from MSMQ and distribute each log entry.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqLogDistributor.#ctor(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext)">
+            <summary>
+            Setup the queue and the formatter of the messages.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqLogDistributor.#ctor(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext,Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.DistributorEventLogger)">
+            <summary>
+            Set up the queue with the specified logger
+            </summary>
+            <param name="configurationContext"><see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext"></see> containing current configuration information</param>
+            <param name="eventLogger"><see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.DistributorEventLogger"></see> to use for distributing events from this object</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqLogDistributor.CheckForMessages">
+            <summary>
+            Start receiving the message(s) from the queue.
+            The messages will be taken from the queue until the queue is empty.
+            This method is triggered every x seconds. (x is defined in application configuration file)
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqLogDistributor.IsCompleted">
+            <summary>
+            Read-only property to check if the synchronous receive is completed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqLogDistributor.StopReceiving">
+            <summary>
+            Instructs the listener to stop receiving messages.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.ProjectInstaller">
+            <summary>
+            <para>This type supports the Data Access Instrumentation infrastructure and is not intended to be used directly from your code.</para>
+            </summary>    
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.ProjectInstaller.#ctor">
+            <summary/>
+            <exclude/>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.ProjectInstaller.InitializeComponent">
+            <summary/>
+            <exclude/>
+            <devdoc>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </devdoc>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.SanityCheck">
+            <summary>
+            Verifies that the distributor service is running as expected and force the service
+            to shutdown if a shutdown is pending.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.SanityCheck.StopService">
+            <summary>
+            Stop the current service from running. 
+            This method will only work if called from another application domain.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.SanityCheck.OnSanityTimedEvent(System.Object,System.Timers.ElapsedEventArgs)">
+            <devdoc>
+            Event triggered by sanity event handler. 
+            This method runs regularly to check sanity of the service.
+            </devdoc>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.ServiceStatus">
+            <summary>
+            The Service status enum (as byte)
+            This status is used to flag the service it should be shut down or not.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.ServiceStatus.OK">
+            <summary>
+            The service is running fine and should not be shut down.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.ServiceStatus.Shutdown">
+            <summary>
+            The service has encountered a problem or has been directed to shut down.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.ServiceStatus.PendingShutdown">
+            <summary>
+            The service has encountered a problem or has been directed to shut down and cannot shut down due to errors.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1226 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.CategoryFilters.CategoryFilterEditor">
+            <summary>
+            A rich editor for category filters.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.CategoryFilters.CategoryFilterEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+            <summary>
+            Initializes and draws the category filter editor dialog and returns the results to the calling object.
+            </summary>
+            <param name="context">See <see cref="M:System.Drawing.Design.UITypeEditor.EditValue(System.IServiceProvider,System.Object)"/>.</param>
+            <param name="provider">See <see cref="M:System.Drawing.Design.UITypeEditor.EditValue(System.IServiceProvider,System.Object)"/>.</param>
+            <param name="value">See <see cref="M:System.Drawing.Design.UITypeEditor.EditValue(System.IServiceProvider,System.Object)"/>.</param>
+            <returns>See <see cref="M:System.Drawing.Design.UITypeEditor.EditValue(System.IServiceProvider,System.Object)"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.CategoryFilters.CategoryFilterEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            See <see cref="M:System.Drawing.Design.UITypeEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)"/>.
+            </summary>
+            <param name="context">See <see cref="M:System.Drawing.Design.UITypeEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)"/>.</param>
+            <returns>See <see cref="M:System.Drawing.Design.UITypeEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)"/>.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.CategoryFilters.CategoryFilterEditorUI">
+            <summary>
+            UI for Category Filter Editor.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.CategoryFilters.CategoryFilterEditorUI.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.CategoryFilters.CategoryFilterEditorUI.#ctor">
+            <summary>
+            Initializes the component.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.CategoryFilters.CategoryFilterEditorUI.SetSelectedCategoryNames(System.Collections.ArrayList)">
+            <summary>
+            Sets the selected category names.
+            </summary>
+            <param name="names">The category names.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.CategoryFilters.CategoryFilterEditorUI.GetSelectedCategoryNames">
+            <summary>
+            Returns the currently selected category names.
+            </summary>
+            <returns>See summary.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.CategoryFilters.CategoryFilterEditorUI.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.CategoryFilters.CategoryFilterEditorUI.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.CategoryFilters.CategoryFilterEditorUI.AvailableCategoryNames">
+            <summary>
+            List of available category names.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.CategoryFilters.CategoryFilterEditorUI.FilterMode">
+            <summary>
+            Determines the filter mode.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.CategoryFilters.CategoryFilterSettings">
+            <summary>
+            Contains category filter settings.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.CategoryFilters.CategoryFilterSettings.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.CategoryFilterMode,Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterDataCollection)">
+            <summary>
+            Creates a new <c>CategoryFilterSettings</c> object with initial settings.
+            </summary>
+            <param name="categoryFilterMode">The mode in which to filter.</param>
+            <param name="categoryFilters">The collection of categories to filter.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.CategoryFilters.CategoryFilterSettings.ToString">
+            <summary>
+            Returns a user friendly formatted string which illustrates the filter settings.
+            </summary>
+            <returns>See summary.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.CategoryFilters.CategoryFilterSettings.CategoryFilterMode">
+            <summary>
+            Gets and sets the mode in which to filter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.CategoryFilters.CategoryFilterSettings.CategoryFilters">
+            <summary>
+            Gets and sets the collection of categories to filter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.CustomDistributionStrategyNode">
+            <summary>
+            Node representing a custom distribution strategy.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.DistributionStrategyNode">
+            <summary>
+            Base class for nodes which represent distribution strategies.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.DistributionStrategyNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.DistributionStrategyData)">
+            <summary>
+            Creates node with specified runtime configuration data.
+            </summary>
+            <param name="distributionStrategyData">Runtime configuration data in which to initialize this node.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.DistributionStrategyNode.OnSited">
+            <summary>
+            <para>After sited, sets the name of the node.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.DistributionStrategyNode.OnRenamed(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNodeChangedEventArgs)">
+            <summary>
+            <para>Raises the <see cref="E:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode.Renamed"/> event and sets the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.DistributionStrategyNode.DistributionStrategyData"/> name.</para>
+            </summary>
+            <param name="e"><para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNodeChangedEventArgs"/> that contains the event data.</para></param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.DistributionStrategyNode.DistributionStrategyData">
+            <summary>
+            Retrieves configuration data based on the current state of the node.
+            </summary>
+            <returns>Configuration data for this node.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.DistributionStrategyNode.TypeName">
+            <summary>
+            The fully qualified assembly name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.ILogDistributionStrategy"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.CustomDistributionStrategyNode.#ctor">
+            <summary>
+            Creates node with initial configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.CustomDistributionStrategyNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CustomDistributionStrategyData)">
+            <summary>
+            Creates node with specified configuration data.
+            </summary>
+            <param name="data">Configuration data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.CustomDistributionStrategyNode.Attributes">
+            <summary>
+            Custom configuration attributes.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.DistributionStrategyCollectionNode">
+            <summary>
+            Contains a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.DistributionStrategyNode"/>s.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.DistributionStrategyCollectionNode.#ctor">
+            <summary>
+            Creates node with initial configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.DistributionStrategyCollectionNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.DistributionStrategyDataCollection)">
+            <summary>
+            Creates node with specified configuration data.
+            </summary>
+            <param name="distributionStrategyDataCollection">Configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.DistributionStrategyCollectionNode.AddDefaultChildNodes">
+            <summary>
+            Adds a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.InProcDistributionStrategyNode"/> as the default node.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.DistributionStrategyCollectionNode.OnAddMenuItems">
+            <summary>
+            <para>Creates the default menus and the dynamic menus that were registerd for the type.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.DistributionStrategyCollectionNode.OnSited">
+            <summary>
+            <para>After sited, sets the name of the node and creates the dynamic menu items registerd for this type.</para>
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.DistributionStrategyCollectionNode.Name">
+            <summary>
+            The configured name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.DistributionStrategyCollectionNode.DistributionStrategyDataCollection">
+            <summary>
+            Retrieves configuration data based on the current state of the node.
+            </summary>
+            <returns>Configuration data for this node.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.InProcDistributionStrategyNode">
+            <summary>
+            Node representing an In Process Distribution Strategy.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.InProcDistributionStrategyNode.#ctor">
+            <summary>
+            Creates node with initial configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.InProcDistributionStrategyNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.InProcDistributionStrategyData)">
+            <summary>
+            Creates node with specified configuration data.
+            </summary>
+            <param name="inProcDistributionStrategyData">Configuration data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.InProcDistributionStrategyNode.Name">
+            <summary>
+            The configured name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.InProcDistributionStrategyNode.TypeName">
+            <summary>
+            Read only.  Returns the type name of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.InProcLogDistributionStrategy"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.InProcDistributionStrategyNode.Type">
+            <summary>
+            Returns the <c>TypeName</c> for visibility in the UI.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.MsmqDistributionStrategyNode">
+            <summary>
+            Node representing a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.MsmqLogDistributionStrategy"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.MsmqDistributionStrategyNode.#ctor">
+            <summary>
+            Creates node with initial configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.MsmqDistributionStrategyNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.MsmqDistributionStrategyData)">
+            <summary>
+            Creates node with specified configuration data.
+            </summary>
+            <param name="msmqDistributionStrategyData">Configuration data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.MsmqDistributionStrategyNode.QueuePath">
+            <summary>
+            Path for MSMQ.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.MsmqDistributionStrategyNode.Name">
+            <summary>
+            The configured name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.MsmqDistributionStrategyNode.TypeName">
+            <summary>
+            Read only.  Returns the type name of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.MsmqLogDistributionStrategy"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.MsmqDistributionStrategyNode.Type">
+            <summary>
+            Returns the <c>TypeName</c> for visibility in the UI.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.ClientLoggingConfigurationDesignManager">
+            <summary>
+            Configuration design manager for client logging settings.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingConfigurationDesignManager">
+            <summary>
+            Provides base functionality for Logging Configuraiton Design Manager
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingConfigurationDesignManager.#ctor">
+            <summary>
+            Creates a <c>LoggingConfigurationDesignManager</c>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingConfigurationDesignManager.Register(System.IServiceProvider)">
+            <summary>
+            <para>Registers the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings"/> in the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingConfigurationDesignManager.Open(System.IServiceProvider)">
+            <summary>
+            <para>Opens the configuration settings and registers them with the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingConfigurationDesignManager.Save(System.IServiceProvider)">
+            <summary>
+            <para>Saves the configuration settings created for the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingConfigurationDesignManager.BuildContext(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationDictionary)">
+            <summary>
+            <para>Adds to the dictionary configuration data for 
+            the enterpriselibrary.configurationSettings configuration section.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+            <param name="configurationDictionary">
+            <para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationDictionary"/> to add 
+            configuration data to.</para></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingConfigurationDesignManager.GetLoggingSettingsNode(System.IServiceProvider)">
+            <summary>
+            <para>Gets the current <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingSettingsNode"/>.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+            <returns><para>The current <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingSettingsNode"/>.</para></returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.ClientLoggingConfigurationDesignManager.Register(System.IServiceProvider)">
+            <summary>
+            <para>Registers the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings"/> in the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.ClientLoggingConfigurationDesignManager.Open(System.IServiceProvider)">
+            <summary>
+            <para>Opens the configuration settings and registers them with the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.ClientLoggingConfigurationDesignManager.Save(System.IServiceProvider)">
+            <summary>
+            <para>Saves the configuration settings created for the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.ClientLoggingConfigurationDesignManager.BuildContext(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationDictionary)">
+            <summary>
+            <para>Adds to the dictionary configuration data for 
+            the enterpriselibrary.configurationSettings configuration section.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+            <param name="configurationDictionary">
+            <para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationDictionary"/> to add 
+            configuration data to.</para></param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.ClientSettingsNode">
+            <summary>
+            Node for LoggingSettings
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.ClientSettingsNode.#ctor">
+            <summary>
+            Creates node with initial configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.ClientSettingsNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings)">
+            <summary>
+            Creates node with specified configuration data.
+            </summary>
+            <param name="loggingSettings">The specified configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.ClientSettingsNode.AddDefaultChildNodes">
+            <summary>
+            Adds a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.DistributionStrategies.DistributionStrategyCollectionNode"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.ClientSettingsNode.ResolveNodeReferences">
+            <summary>
+            See <see cref="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode.ResolveNodeReferences"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.ClientSettingsNode.OnSited">
+            <summary>
+            <para>After sited, sets the name of the node and add the distribution strategies if any exist.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.ClientSettingsNode.OnAddMenuItems">
+            <summary>
+            <para>Adds the default menus and a meun item to create distribution strategies.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.ClientSettingsNode.OnChildAdding(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNodeChangedEventArgs)">
+            <summary>
+            <para>Raises the <see cref="E:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode.ChildAdded"/> event and checks to make sure that the collection doesn't already exist.</para>
+            </summary>
+            <param name="e">
+            <para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNodeChangedEventArgs"/> that contains the event data.</para>
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.ClientSettingsNode.Name">
+            <summary>
+            The configured name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.ClientSettingsNode.LoggingSettings">
+            <summary>
+            Retrieves configuration data based on the current state of the node.
+            </summary>
+            <returns>Configuration data for this node.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.ClientSettingsNode.CategoryFilterSettings">
+            <summary>
+            Contains category filter settings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.ClientSettingsNode.TracingEnabled">
+            <summary>
+            Enables or disables trace logging.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.ClientSettingsNode.LoggingEnabled">
+            <summary>
+            Enables or disables all logging.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.ClientSettingsNode.DistributionStrategy">
+            <summary>
+            Defines the distribution strategy.
+            <seealso cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings.DistributionStrategy"/>
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Client.ClientSettingsNode.MinimumPriority">
+            <summary>
+            The minimum value for messages to be processed.  Messages with a priority
+            below the minimum are dropped immediately on the client.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Categories.CategoryCollectionNode">
+            <summary>
+            Node representing a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Categories.CategoryNode"/>s.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Categories.CategoryCollectionNode.#ctor">
+            <summary>
+            Creates node with initial configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Categories.CategoryCollectionNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryDataCollection)">
+            <summary>
+            Creates node with specified configuration data.
+            </summary>
+            <param name="categoryDataCollection">The specified configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Categories.CategoryCollectionNode.OnSited">
+            <summary>
+            <para>After sited, sets the nam of the node and adds any defined categories.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Categories.CategoryCollectionNode.AddDefaultChildNodes">
+            <summary>
+            Adds a default category node.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Categories.CategoryCollectionNode.OnAddMenuItems">
+            <summary>
+            <para>Adds the default menus and the menu to add new categories.</para>
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Categories.CategoryCollectionNode.Name">
+            <summary>
+            The configured name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Categories.CategoryCollectionNode.CategoryDataCollection">
+            <summary>
+            Retrieves configuration data based on the current state of the node.
+            </summary>
+            <returns>Configuration data for this node.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Categories.CategoryNode">
+            <summary>
+            Node representing a category.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Categories.CategoryNode.#ctor">
+            <summary>
+            Creates node with initial configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Categories.CategoryNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryData)">
+            <summary>
+            Creates node with specified configuration data.
+            </summary>
+            <param name="categoryData">The specified configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Categories.CategoryNode.OnAddMenuItems">
+            <summary>
+            <para>Adds the defalt menu items and the menu item for creating destination nodes.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Categories.CategoryNode.OnSited">
+            <summary>
+            <para>After sited, sets the node name and adds any distination nodes.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Categories.CategoryNode.OnRenamed(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNodeChangedEventArgs)">
+            <summary>
+            <para>Raises the <see cref="E:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode.Renamed"/> event and sets the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Categories.CategoryNode.CategoryData"/> name.</para>
+            </summary>
+            <param name="e"><para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNodeChangedEventArgs"/> that contains the event data.</para></param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Categories.CategoryNode.CategoryData">
+            <summary>
+            Retrieves configuration data based on the current state of the node.
+            </summary>
+            <returns>Configuration data for this node.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Categories.DestinationNode">
+            <summary>
+            Node representing a destination.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Categories.DestinationNode.#ctor">
+            <summary>
+            Creates node with initial configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Categories.DestinationNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DestinationData)">
+            <summary>
+            Creates node with specified configuraiton data.
+            </summary>
+            <param name="data">The specified configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Categories.DestinationNode.ResolveNodeReferences">
+            <summary>
+            See <see cref="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode.ResolveNodeReferences"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Categories.DestinationNode.OnSited">
+            <summary>
+            <para>After sited, sets the nam of the node.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Categories.DestinationNode.OnRenamed(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNodeChangedEventArgs)">
+            <summary>
+            <para>Raises the <see cref="E:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode.Renamed"/> event and sets the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Categories.DestinationNode.DestinationData"/> name.</para>
+            </summary>
+            <param name="e"><para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNodeChangedEventArgs"/> that contains the event data.</para></param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Categories.DestinationNode.Sink">
+            <summary>
+            The sink for this destination.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Categories.DestinationNode.Formatter">
+            <summary>
+            The formatter for this destination.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Categories.DestinationNode.DestinationData">
+            <summary>
+            Retrieves configuration data based on the current state of the node.
+            </summary>
+            <returns>Configuration data for this node.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.CustomFormatterNode">
+            <summary>
+            Node for a custom formatter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.FormatterNode">
+            <summary>
+            Base class for nodes which represent formatters.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.FormatterNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FormatterData)">
+            <summary>
+            Creates node with specified configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.FormatterNode.OnSited">
+            <summary>
+            <para>After sited, sets the nam of the node.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.FormatterNode.OnRenamed(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNodeChangedEventArgs)">
+            <summary>
+            <para>Raises the <see cref="E:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode.Renamed"/> event and sets the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.FormatterNode.FormatterData"/> name.</para>
+            </summary>
+            <param name="e"><para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNodeChangedEventArgs"/> that contains the event data.</para></param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.FormatterNode.FormatterData">
+            <summary>
+            Retrieves configuration data based on the current state of the node.
+            </summary>
+            <returns>Configuration data for this node.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.FormatterNode.TypeName">
+            <summary>
+            The fully qualified assembly name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.ILogFormatter"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.CustomFormatterNode.#ctor">
+            <summary>
+            Creates node with initial configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.CustomFormatterNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CustomFormatterData)">
+            <summary>
+            Creates node with specified configuration data.
+            </summary>
+            <param name="data">Configuration data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.CustomFormatterNode.Attributes">
+            <summary>
+            Custom configuration attributes.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.FormatterCollectionNode">
+            <summary>
+            Contains a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.FormatterNode"/>s.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.FormatterCollectionNode.#ctor">
+            <summary>
+            Creates node with initial configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.FormatterCollectionNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FormatterDataCollection)">
+            <summary>
+            Creates node with defined configuration data.
+            </summary>
+            <param name="formatters">The defined configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.FormatterCollectionNode.AddDefaultChildNodes">
+            <summary>
+            Adds a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.TextFormatterNode"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.FormatterCollectionNode.OnSited">
+            <summary>
+            <para>After sited, sets the name of the node and creates the dynamic nodes that are registered for this type.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.FormatterCollectionNode.OnAddMenuItems">
+            <summary>
+            <para>Adds the default menus and creates the dynamic nodes that are registered for this type.</para>
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.FormatterCollectionNode.Name">
+            <summary>
+            The configured name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.FormatterCollectionNode.FormatterDataCollection">
+            <summary>
+            Retrieves configuration data based on the current state of the node.
+            </summary>
+            <returns>Configuration data for this node.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.Template">
+            <summary>
+            Contains data for a Template.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.Template.#ctor(System.String)">
+            <summary>
+            Creates a template with initial text for the template.
+            </summary>
+            <param name="text">The text of the template.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.Template.ToString">
+            <summary>
+            Returns a placeholder for use in a single line environment.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.Template.Text">
+            <summary>
+            The text of the template.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.TemplateEditor">
+            <summary>
+            Editor for formatter templates.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.TemplateEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+            <summary>
+            Initializes and draws the template editor dialog and returns the results to the calling object.
+            </summary>
+            <param name="context">See <see cref="M:System.Drawing.Design.UITypeEditor.EditValue(System.IServiceProvider,System.Object)"/>.</param>
+            <param name="provider">See <see cref="M:System.Drawing.Design.UITypeEditor.EditValue(System.IServiceProvider,System.Object)"/>.</param>
+            <param name="value">See <see cref="M:System.Drawing.Design.UITypeEditor.EditValue(System.IServiceProvider,System.Object)"/>.</param>
+            <returns>See <see cref="M:System.Drawing.Design.UITypeEditor.EditValue(System.IServiceProvider,System.Object)"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.TemplateEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            See <see cref="M:System.Drawing.Design.UITypeEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)"/>.
+            </summary>
+            <param name="context">See <see cref="M:System.Drawing.Design.UITypeEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)"/>.</param>
+            <returns>See <see cref="M:System.Drawing.Design.UITypeEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)"/>.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.TemplateEditorUI">
+            <summary>
+            Summary description for MultilineTextboxEditorUI.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.TemplateEditorUI.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.TemplateEditorUI.#ctor">
+            <summary>
+            Initializes the components.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.TemplateEditorUI.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.TemplateEditorUI.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.TemplateEditorUI.UserText">
+            <summary>
+            The text of the template as defined by the user at designtime.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.TextFormatterNode">
+            <summary>
+            Node for a Text Formatter.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.TextFormatterNode.#ctor">
+            <summary>
+            Creates node with initial configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.TextFormatterNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.TextFormatterData)">
+            <summary>
+            Creates node with specified configuration data.
+            </summary>
+            <param name="textFormatterData">Configuration data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.TextFormatterNode.TypeName">
+            <summary>
+            Read only.  Returns the type name of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TextFormatter"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.TextFormatterNode.Template">
+            <summary>
+            The template for the formatter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.CustomSinkNode">
+            <summary>
+            Node representing a custom Sink.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.SinkNode">
+            <summary>
+            Base class for nodes which represent sinks.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.SinkNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.SinkData)">
+            <summary>
+            Creates node with specified configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.SinkNode.OnSited">
+            <summary>
+            <para>After sited, sets the nam of the node.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.SinkNode.OnRenamed(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNodeChangedEventArgs)">
+            <summary>
+            <para>Raises the <see cref="E:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode.Renamed"/> event and sets the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.SinkNode.SinkData"/> name.</para>
+            </summary>
+            <param name="e"><para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNodeChangedEventArgs"/> that contains the event data.</para></param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.SinkNode.SinkData">
+            <summary>
+            Retrieves configuration data based on the current state of the node.
+            </summary>
+            <returns>Configuration data for this node.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.SinkNode.TypeName">
+            <summary>
+            The fully qualified assembly name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.LogSink"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.CustomSinkNode.#ctor">
+            <summary>
+            Creates node with initial configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.CustomSinkNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CustomSinkData)">
+            <summary>
+            Creates node with specified configuration data.
+            </summary>
+            <param name="data">Configuration data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.CustomSinkNode.Attributes">
+            <summary>
+            Custom configuration attributes.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.EmailSinkNode">
+            <summary>
+            Node representing an Email Sink.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.EmailSinkNode.#ctor">
+            <summary>
+            Creates node with initial configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.EmailSinkNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.EmailSinkData)">
+            <summary>
+            Creates node with specified configuration data.
+            </summary>
+            <param name="emailSinkData">Configuration data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.EmailSinkNode.TypeName">
+            <summary>
+            Read only. Returns the type name of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.EmailSink"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.EmailSinkNode.ToAddress">
+            <summary>
+            The email address to send to.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.EmailSinkNode.FromAddress">
+            <summary>
+            Email address that messages will be sent from.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.EmailSinkNode.SubjectLineStarter">
+            <summary>
+            Subject prefix.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.EmailSinkNode.SubjectLineEnder">
+            <summary>
+            Subject suffix.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.EmailSinkNode.SmtpServer">
+            <summary>
+            SMTP server to send messages through.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.EventLogSinkNode">
+            <summary>
+            Node representing an Eventlog Sink.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.EventLogSinkNode.#ctor">
+            <summary>
+            Creates node with initial configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.EventLogSinkNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.EventLogSinkData)">
+            <summary>
+            Creates node with specified configuration data.
+            </summary>
+            <param name="eventLogSinkData">Configuration data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.EventLogSinkNode.TypeName">
+            <summary>
+            Read only. Returns the type name of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.EventLogSink"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.EventLogSinkNode.EventLogName">
+            <summary>
+            Event log name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.EventLogSinkNode.EventSourceName">
+            <summary>
+            Event source name.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.FlatFileSinkNode">
+            <summary>
+            Node representing a flat file sink.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.FlatFileSinkNode.#ctor">
+            <summary>
+            Creates node with initial configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.FlatFileSinkNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FlatFileSinkData)">
+            <summary>
+            Creates node with specified configuration data.
+            </summary>
+            <param name="flatFileSinkData">Configuration data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.FlatFileSinkNode.TypeName">
+            <summary>
+            Read only. Returns the type name of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.FlatFileSink"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.FlatFileSinkNode.Filename">
+            <summary>
+            Fully qualified file name to save the log output.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.FlatFileSinkNode.Header">
+            <summary>
+            Optional header to write before each log message.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.FlatFileSinkNode.Footer">
+            <summary>
+            Optional footer to write after each log message.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.MsmqSinkNode">
+            <summary>
+            Node representing an MSMQ Sink.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.MsmqSinkNode.#ctor">
+            <summary>
+            Creates node with initial configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.MsmqSinkNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.MsmqSinkData)">
+            <summary>
+            Creates node with specified configuration data.
+            </summary>
+            <param name="msmqSinkData">Configuration data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.MsmqSinkNode.TypeName">
+            <summary>
+            Read only. Returns the type name of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.MsmqSink"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.MsmqSinkNode.QueuePath">
+            <summary>
+            Path for MSMQ.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.MsmqSinkNode.MessagePriority">
+            <summary>
+            <para>Gets or sets the message priority.</para>
+            </summary>
+            <value>
+            <para>One of the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.MsmqSinkNode.MessagePriority"/> values.</para>
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.SinkCollectionNode">
+            <summary>
+            Represents a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.SinkNode"/>s.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.SinkCollectionNode.#ctor">
+            <summary>
+            Creates node with initial configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.SinkCollectionNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.SinkDataCollection)">
+            <summary>
+            Creates node with specified configuration data.
+            </summary>
+            <param name="data">The specified configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.SinkCollectionNode.AddDefaultChildNodes">
+            <summary>
+            Adds the default sink EventLogSink
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.SinkCollectionNode.OnSited">
+            <summary>
+            <para>After sited, sets the name of the node and creates the dynamic nodes that are registered for this type.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.SinkCollectionNode.OnAddMenuItems">
+            <summary>
+            <para>Adds the default menus and creates the dynamic nodes that are registered for this type.</para>
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.SinkCollectionNode.Name">
+            <summary>
+            The configured name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.SinkCollectionNode.SinkDataCollection">
+            <summary>
+            Retrieves configuration data based on the current state of the node.
+            </summary>
+            <returns>Configuration data for this node.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.WmiLogSinkNode">
+            <summary>
+            Node representing an WMI log sink.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.WmiLogSinkNode.#ctor">
+            <summary>
+            Creates node with initial configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.WmiLogSinkNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.WMILogSinkData)">
+            <summary>
+            Creates node with specified configuration data.
+            </summary>
+            <param name="wmiLogSinkData">Configuration data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.WmiLogSinkNode.TypeName">
+            <summary>
+            Read only. Returns the type name of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.WMILogSink"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.DistributorLoggingConfigurationDesignManager">
+            <summary>
+            Configuraiton design manager for distributor settings.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.DistributorLoggingConfigurationDesignManager.Register(System.IServiceProvider)">
+            <summary>
+            <para>Registers the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings"/> in the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.DistributorLoggingConfigurationDesignManager.Open(System.IServiceProvider)">
+            <summary>
+            <para>Opens the configuration settings and registers them with the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.DistributorLoggingConfigurationDesignManager.Save(System.IServiceProvider)">
+            <summary>
+            <para>Saves the configuration settings created for the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.DistributorLoggingConfigurationDesignManager.BuildContext(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationDictionary)">
+            <summary>
+            <para>Adds to the dictionary configuration data for 
+            the enterpriselibrary.configurationSettings configuration section.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+            <param name="configurationDictionary">
+            <para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationDictionary"/> to add 
+            configuration data to.</para></param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.DistributorSettingsNode">
+            <summary>
+            Node representing distributor settings.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.DistributorSettingsNode.#ctor">
+            <summary>
+            Creates node with initial configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.DistributorSettingsNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DistributorSettings)">
+            <summary>
+            Creates node with specified configuration data.
+            </summary>
+            <param name="distributorSettings">The specified configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.DistributorSettingsNode.AddDefaultChildNodes">
+            <summary>
+            Adds the following nodes: <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Sinks.SinkCollectionNode"/>, <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Formatters.FormatterCollectionNode"/>, and <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.Categories.CategoryCollectionNode"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.DistributorSettingsNode.ResolveNodeReferences">
+            <summary>
+            See <see cref="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode.ResolveNodeReferences"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.DistributorSettingsNode.OnSited">
+            <summary>
+            <para>After sited, sets the name of the node and adds any sinks, formatters, categories, and the distributor service.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.DistributorSettingsNode.OnAddMenuItems">
+            <summary>
+            <para>Adds the default menu items and the items for creating sinks, formaters, categories and the MSMQ distributor service.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.DistributorSettingsNode.OnChildAdding(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNodeChangedEventArgs)">
+            <summary>
+            <para>Raises the <see cref="E:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode.ChildAdded"/> event and validates the node does not exist already.</para>
+            </summary>
+            <param name="e">
+            <para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNodeChangedEventArgs"/> that contains the event data.</para>
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.DistributorSettingsNode.Name">
+            <summary>
+            The configured name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.DistributorSettingsNode.DefaultCategory">
+            <summary>
+            Default category to use if a category is not defined or is typed incorrectly.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.DistributorSettingsNode.DefaultFormatter">
+            <summary>
+            Default formatter to use if a formatter is not defined or misconfigured.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.DistributorSettingsNode.DistributorSettings">
+            <summary>
+            Retrieves configuration data based on the current state of the node.
+            </summary>
+            <returns>Configuration data for this node.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.MsmqDistributorServiceNode">
+            <summary>
+            Summary description for MsmqDistributorServiceNode.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.MsmqDistributorServiceNode.#ctor">
+            <summary>
+            Creates a node with default data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.MsmqDistributorServiceNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.MsmqDistributorServiceData)">
+            <summary>
+            Creates node with specified configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.MsmqDistributorServiceNode.OnSited">
+            <summary>
+            <para>After sited, sets the name of the node.</para>
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.MsmqDistributorServiceNode.ServiceName">
+            <summary>
+            Name of the MSMQ distributor windows service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.MsmqDistributorServiceNode.Name">
+            <summary>
+            The configured name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.MsmqDistributorServiceNode.QueueTimerInterval">
+            <summary>
+            Timer interval to poll the message queue in the MSMQ distributor windows service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.MsmqDistributorServiceNode.MsmqPath">
+            <summary>
+            Message queue path used by the MSMQ distributor windows service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Distributor.MsmqDistributorServiceNode.MsmqDistributorServiceData">
+            <summary>
+            Retrieves configuration data based on the current state of the node.
+            </summary>
+            <returns>Configuration data for this node.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.DefaultValues">
+            <summary>
+            Default values for design-time controls.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingSettingsNode">
+            <summary>
+            Root node for the Logging designtime configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingSettingsNode.#ctor">
+            <summary>
+            Creates node with specified configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingSettingsNode.AddDefaultChildNodes">
+            <summary>
+            Adds Client and Distributor settings nodes.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingSettingsNode.OnAddMenuItems">
+            <summary>
+            <para>Adds the default menu items and a menu item for creating the client settings.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingSettingsNode.OnSited">
+            <summary>
+            <para>After sited, sets the name of the node.</para>
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.SRCategoryAttribute">
+            <devdoc>
+            Represents a localized vertion of a CategoryAttribute. It uses the local string resources for localization.
+            This class cannot be inherited from
+            </devdoc>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.SRDescriptionAttribute">
+            <devdoc>
+            Represents a localized vertion of a DescriptionAttribute. It uses the local strings resouce to get its description.
+            This class cannot be inherited from 
+            </devdoc>
+        </member>
+    </members>
+</doc>

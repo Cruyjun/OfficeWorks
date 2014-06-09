@@ -1,0 +1,33 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "toolbar", "toolbar\toolbar.csproj", "{6B0E2D36-E48B-4067-9C75-82F615BC8471}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "toolbarsample", "http://localhost/toolbarsample/toolbarsample.csproj", "{642162CA-C645-466C-9198-D8F2AEDF2D13}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global	
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{6B0E2D36-E48B-4067-9C75-82F615BC8471}.Debug.ActiveCfg = Debug|.NET
+		{6B0E2D36-E48B-4067-9C75-82F615BC8471}.Debug.Build.0 = Debug|.NET
+		{6B0E2D36-E48B-4067-9C75-82F615BC8471}.Release.ActiveCfg = Release|.NET
+		{6B0E2D36-E48B-4067-9C75-82F615BC8471}.Release.Build.0 = Release|.NET
+		{642162CA-C645-466C-9198-D8F2AEDF2D13}.Debug.ActiveCfg = Debug|.NET
+		{642162CA-C645-466C-9198-D8F2AEDF2D13}.Debug.Build.0 = Debug|.NET
+		{642162CA-C645-466C-9198-D8F2AEDF2D13}.Release.ActiveCfg = Release|.NET
+		{642162CA-C645-466C-9198-D8F2AEDF2D13}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,2866 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Logging</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterData">
+            <summary>
+            Represents a single category filter configuration settings.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterData.#ctor">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterData"/> class.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterData.#ctor(System.String)">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterData"/> class with a name.</para>
+            </summary>
+            <param name="name">
+            <para>The name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterData"/>.</para>
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterData.Name">
+            <summary>
+            Name of the category.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterDataCollection">
+            <summary>
+            Represents a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterData"/> settings.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterDataCollection.Add(Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterData)">
+            <summary>
+            <para>Adds an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterData"/> into the collection.</para>
+            </summary>
+            <param name="exceptionTypeData">
+            <para>The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterData"/> to add. The value can not be a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </param>
+            <remarks>
+            <para>If a reference already exists in the collection by <seealso cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterData.Name"/>, it will be replaced with the new reference.</para>
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="exceptionTypeData"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            <para><seealso cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterData.Name"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </exception>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterDataCollection.Add(System.Object)">
+            <summary>
+            <para>Adds a value into the collection.</para>
+            </summary>
+            <param name="parameter">
+            <para>The value to add. The value can not be a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </param>
+            <remarks>
+            <para>This method exists to support Xml Serialization.</para>
+            </remarks>
+            <exception cref="T:System.InvalidCastException">
+            <para><paramref name="parameter"/> must be of type <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterData"/>.</para>
+            </exception>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterDataCollection.Item(System.Int32)">
+            <summary>
+            <para>Gets or sets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterData"/> at the specified <paramref name="index"/>.</para>
+            </summary>
+            <param name="index">
+            <para>The index of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterData"/> to get or set.</para>
+            </param>
+            <value>
+            <para>The value associated with the specified <paramref name="index"/>. If the specified <paramref name="index"/> is not found, attempting to get it returns a <see langword="null"/> reference (Nothing in Visual Basic), and attempting to set it creates a new entry using the specified <paramref name="index"/>.</para>
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterDataCollection.Item(System.String)">
+            <summary>
+            <para>Gets or sets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterData"/> associated with the specified <paramref name="name"/>.</para>
+            </summary>
+            <param name="name">
+            <para>The name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterData"/> to get or set.</para>
+            </param>
+            <value>
+            <para>The value associated with the specified <paramref name="name"/>. If the specified <paramref name="name"/> is not found, attempting to get it returns a <see langword="null"/> reference (Nothing in Visual Basic), and attempting to set it creates a new entry using the specified <paramref name="name"/>.</para>
+            </value>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="name"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </exception>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CustomDistributionStrategyData">
+            <summary>
+            Represents the configuration settings for a custom distribution strategy or for
+            a distribution strategy that does not have any additional settings.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.DistributionStrategyData">
+            <summary>
+            Represents the configuration settings for distribution strategies.  This class is abstract.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.DistributionStrategyData.#ctor">
+            <summary>
+            Create a new instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.DistributionStrategyData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.DistributionStrategyData.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.DistributionStrategyData"/> class with a name.
+            </summary>
+            <param name="name">
+            The name of the strategry.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CustomDistributionStrategyData.#ctor">
+            <summary>
+            Create a new instance of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CustomDistributionStrategyData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CustomDistributionStrategyData.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CustomDistributionStrategyData"/> class with a name.
+            </summary>
+            <param name="name">
+            The name of the strategy data.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CustomDistributionStrategyData.#ctor(System.String,System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CustomDistributionStrategyData"/> class with a name.
+            </summary>
+            <param name="name">
+            The name of the strategy data.
+            </param>
+            <param name="typeName">
+            The type name of the provider.
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CustomDistributionStrategyData.TypeName">
+            <summary>
+            <para>Gets or sets the <see cref="T:System.Type"/> name of the provider.</para>
+            </summary>
+            <value>
+            <para>The type name of the provider. The default is an empty string.</para>
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CustomDistributionStrategyData.Attributes">
+            <summary>
+            Retrieves custom configuration attributes.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.DistributionStrategyDataCollection">
+            <summary>
+            Represents a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.DistributionStrategyData"/> settings.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.DistributionStrategyDataCollection.Add(Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.DistributionStrategyData)">
+            <summary>
+            <para>Adds an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.DistributionStrategyData"/> into the collection.</para>
+            </summary>
+            <param name="providerData">
+            <para>The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.DistributionStrategyData"/> to add. The value can not be a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </param>
+            <remarks>
+            <para>If a reference already exists in the collection by <seealso cref="P:Microsoft.Practices.EnterpriseLibrary.Configuration.ProviderData.Name"/>, it will be replaced with the new reference.</para>
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="providerData"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            <para>- or -</para>
+            <para><seealso cref="P:Microsoft.Practices.EnterpriseLibrary.Configuration.ProviderData.Name"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </exception>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.DistributionStrategyDataCollection.Item(System.Int32)">
+            <summary>
+            Gets or sets a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.DistributionStrategyData"/> at a given index.
+            </summary>
+            <param name="index">
+            <para>The index of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.DistributionStrategyData"/> to get or set.</para>
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.DistributionStrategyDataCollection.Item(System.String)">
+            <summary>
+            <para>Gets or sets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.DistributionStrategyData"/> associated with the specified <paramref name="name"/>.</para>
+            </summary>
+            <param name="name">
+            <para>The name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.DistributionStrategyData"/> to get or set.</para>
+            </param>
+            <value>
+            <para>The value associated with the specified <paramref name="name"/>. If the specified <paramref name="name"/> is not found, attempting to get it returns a <see langword="null"/> reference (Nothing in Visual Basic), and attempting to set it creates a new entry using the specified <paramref name="name"/>.</para>
+            </value>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="name"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </exception>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.InProcDistributionStrategyData">
+            <summary>
+            Represents config data for a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.InProcLogDistributionStrategy"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.InProcDistributionStrategyData.#ctor">
+            <summary>
+            Create a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.InProcDistributionStrategyData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.InProcDistributionStrategyData.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.InProcDistributionStrategyData"/> with the given name.
+            </summary>
+            <param name="name">The name to use for this instance.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.InProcDistributionStrategyData.TypeName">
+            <summary>
+            Returns the fully qualified assmebly name for an <c>InProcDistributionStrategyData</c>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings">
+            <summary>
+            Configuration settings for client-side logging applications.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings.SectionName">
+            <summary>
+            Configuration section name for logging client settings.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings.ConfigurationNamespace">
+            <summary>
+            <para>Gets the Xml namespace for this root node.</para>
+            </summary>
+            <value>
+            <para>The Xml namespace for this root node.</para>
+            </value>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings"/> with default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings"/> using the given name.
+            </summary>
+            <param name="name">The name to use for this instance</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings.#ctor(System.String,System.Boolean,System.Boolean,System.String,System.Int32,Microsoft.Practices.EnterpriseLibrary.Logging.CategoryFilterMode)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings"/> using the given values
+            </summary>
+            <param name="name">The name to use for this instance</param>
+            <param name="tracingEnabled">Should tracing be enabled?</param>
+            <param name="loggingEnabled">Should logging be enabled?</param>
+            <param name="distributionStrategy">The distribution strategy to use.</param>
+            <param name="minimumPriority">The minimum value for messages to be processed.</param>
+            <param name="categoryFilterMode">The category filter mode to use.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings.LoggingEnabled">
+            <summary>
+            Enable or disable all logging.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings.TracingEnabled">
+            <summary>
+            Enable or disable trace logging.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings.CategoryFilterMode">
+            <summary>
+            One of <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings.CategoryFilterMode"/> enumeration.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings.DistributionStrategy">
+            <summary>
+            Distribution strategy determines how messages are processed.
+            Either synchronously with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.InProcLogDistributionStrategy"/>
+            or asychronously with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.MsmqLogDistributionStrategy"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings.MinimumPriority">
+            <summary>
+            The minimum value for messages to be processed.  Messages with a priority
+            below the minimum are dropped immediately on the client.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings.Name">
+            <summary>
+            Name of the configuration node.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings.CategoryFilters">
+            <summary>
+            Collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterData"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings.DistributionStrategies">
+            <summary>
+            Collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.DistributionStrategyData"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.MsmqDistributionStrategyData">
+            <summary>
+            Represents the configuration settings for a MSMQ distribution strategy.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.MsmqDistributionStrategyData.#ctor">
+            <summary>
+            Create a new instance of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.MsmqDistributionStrategyData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.MsmqDistributionStrategyData.#ctor(System.String,System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.MsmqDistributionStrategyData"/> class with a name and queue path.
+            </summary>
+            <param name="name">
+            The name of of the strategy.
+            </param>
+            <param name="queuePath">
+            The path to the queue.
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.MsmqDistributionStrategyData.QueuePath">
+            <summary>
+            Private or public non-transactional message queue path.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.MsmqDistributionStrategyData.TypeName">
+            <summary>
+            Returns the fully qualified assembly name of a <c>MsmqDistributionStrategyData</c>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryData">
+            <summary>
+            Represents the configuration settings for a logging category. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryData.#ctor">
+            <summary>
+            Initialize a new instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryData.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryData"/>.
+            </summary>
+            <param name="name">Name associated with this logging category</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryData.Name">
+            <summary>
+            Name of the category.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryData.DestinationDataCollection">
+            <summary>
+            Collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DestinationData"/> configuration settings. 
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryDataCollection">
+            <summary>
+            Represents a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryData"/> settings.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryDataCollection.Add(Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryData)">
+            <summary>
+            <para>Adds an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryData"/> into the collection.</para>
+            </summary>
+            <param name="categoryData">
+            <para>The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryData"/> to add. The value can not be a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </param>
+            <remarks>
+            <para>If a reference already exists in the collection by <seealso cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryData.Name"/>, it will be replaced with the new reference.</para>
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="categoryData"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            <para><seealso cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryData.Name"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </exception>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryDataCollection.Add(System.Object)">
+            <summary>
+            <para>Adds a value into the collection.</para>
+            </summary>
+            <param name="parameter">
+            <para>The value to add. The value can not be a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </param>
+            <remarks>
+            <para>This method exists to support Xml Serialization.</para>
+            </remarks>
+            <exception cref="T:System.InvalidCastException">
+            <para><paramref name="parameter"/> must be of type <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryData"/>.</para>
+            </exception>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryDataCollection.Item(System.Int32)">
+            <summary>
+            <para>Gets or sets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryData"/> at the specified <paramref name="index"/>.</para>
+            </summary>
+            <param name="index">
+            <para>The index of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryData"/> to get or set.</para>
+            </param>
+            <value>
+            <para>The value associated with the specified <paramref name="index"/>. If the specified <paramref name="index"/> is not found, attempting to get it returns a <see langword="null"/> reference (Nothing in Visual Basic), and attempting to set it creates a new entry using the specified <paramref name="index"/>.</para>
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryDataCollection.Item(System.String)">
+            <summary>
+            <para>Gets or sets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryData"/> associated with the specified <paramref name="name"/>.</para>
+            </summary>
+            <param name="name">
+            <para>The name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryData"/> to get or set.</para>
+            </param>
+            <value>
+            <para>The value associated with the specified <paramref name="name"/>. If the specified <paramref name="name"/> is not found, attempting to get it returns a <see langword="null"/> reference (Nothing in Visual Basic), and attempting to set it creates a new entry using the specified <paramref name="name"/>.</para>
+            </value>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="name"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </exception>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CustomFormatterData">
+            <summary>
+            Represents config for a custom formatter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FormatterData">
+            <summary>
+            Represents the configuration settings for a log formatter.  This class is abstract.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FormatterData.#ctor">
+            <summary>
+            Create a new instance of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FormatterData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FormatterData.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FormatterData"/> with a name.
+            </summary>
+            <param name="name">
+            The name of the formatter.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CustomFormatterData.#ctor">
+            <summary>
+            Create a new instance of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CustomFormatterData"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CustomFormatterData.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CustomFormatterData"/> class with a name.
+            </summary>
+            <param name="name">
+            The name of the formatter.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CustomFormatterData.#ctor(System.String,System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CustomFormatterData"/> class with a name and type.
+            </summary>
+            <param name="name">
+            The name of the formatter.
+            </param>
+            <param name="typeName">
+            The type name to use as the custom formatter.
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CustomFormatterData.TypeName">
+            <summary>
+            The type name to use as the custom formatter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CustomFormatterData.Attributes">
+            <summary>
+            Retrieves configuration extensions as a NameValueCollection
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CustomSinkData">
+            <summary>
+            Contains configuration data for a custom Sink.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.SinkData">
+            <summary>
+            Represents the configuration settings for logging sinks.  This class is abstract.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.SinkData.#ctor">
+            <summary>
+            Create a new instance of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.SinkData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.SinkData.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.SinkData"/> class.
+            </summary>
+            <param name="name">
+            The name of the sink.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CustomSinkData.#ctor">
+            <summary>
+            Create a new instance of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CustomSinkData"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CustomSinkData.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CustomSinkData"/> class with a name.
+            </summary>
+            <param name="name">
+            The name of the sink.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CustomSinkData.#ctor(System.String,System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CustomSinkData"/> class with a name and type name.
+            </summary>
+            <param name="name">
+            The name of the sink.
+            </param>
+            <param name="typeName">
+            The type name of the provider.
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CustomSinkData.Attributes">
+            <summary>
+            Retrieves custom configuration items
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CustomSinkData.TypeName">
+            <summary>
+            <para>Gets or sets the <see cref="T:System.Type"/> name of the provider.</para>
+            </summary>
+            <value>
+            <para>The type name of the provider. The default is an empty string.</para>
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DestinationData">
+            <summary>
+            Represents the configuration settings for a category destination.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DestinationData.#ctor">
+            <summary>
+            Create a new instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DestinationData"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DestinationData.#ctor(System.String,System.String)">
+            <summary>
+            Create a new instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DestinationData"/> class using the given values.
+            </summary>
+            <param name="name">The name for the destination.</param>
+            <param name="sink">The sink to use with this destination.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DestinationData.#ctor(System.String)">
+            <summary>
+            Create a new instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DestinationData"/> class using the given name.
+            </summary>
+            <param name="name">The name for the destination.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DestinationData.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Create a new instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DestinationData"/> class using the given values.
+            </summary>
+            <param name="name">The name for the destination.</param>
+            <param name="sink">The sink to use with this destination.</param>
+            <param name="format">The format for the destination.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DestinationData.Name">
+            <summary>
+            Name of the destination node in the designer.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DestinationData.Sink">
+            <summary>
+            Name of the sink.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DestinationData.Format">
+            <summary>
+            Formatter for the message.  Optional.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DestinationDataCollection">
+            <summary>
+            Represents a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DestinationData"/> settings.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DestinationDataCollection.Add(Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DestinationData)">
+            <summary>
+            <para>Adds an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DestinationData"/> into the collection.</para>
+            </summary>
+            <param name="destinationData">
+            <para>The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DestinationData"/> to add. The value can not be a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </param>
+            <remarks>
+            <para>If a reference already exists in the collection by <seealso cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DestinationData.Name"/>, it will be replaced with the new reference.</para>
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="destinationData"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            <para><seealso cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DestinationData.Name"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </exception>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DestinationDataCollection.Add(System.Object)">
+            <summary>
+            <para>Adds a value into the collection.</para>
+            </summary>
+            <param name="parameter">
+            <para>The value to add. The value can not be a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </param>
+            <remarks>
+            <para>This method exists to support Xml Serialization.</para>
+            </remarks>
+            <exception cref="T:System.InvalidCastException">
+            <para><paramref name="parameter"/> must be of type <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DestinationData"/>.</para>
+            </exception>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DestinationDataCollection.Item(System.Int32)">
+            <summary>
+            <para>Gets or sets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DestinationData"/> at the specified <paramref name="index"/>.</para>
+            </summary>
+            <param name="index">
+            <para>The index of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DestinationData"/> to get or set.</para>
+            </param>
+            <value>
+            <para>The value associated with the specified <paramref name="index"/>. If the specified <paramref name="index"/> is not found, attempting to get it returns a <see langword="null"/> reference (Nothing in Visual Basic), and attempting to set it creates a new entry using the specified <paramref name="index"/>.</para>
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DestinationDataCollection.Item(System.String)">
+            <summary>
+            <para>Gets or sets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DestinationData"/> associated with the specified <paramref name="name"/>.</para>
+            </summary>
+            <param name="name">
+            <para>The name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DestinationData"/> to get or set.</para>
+            </param>
+            <value>
+            <para>The value associated with the specified <paramref name="name"/>. If the specified <paramref name="name"/> is not found, attempting to get it returns a <see langword="null"/> reference (Nothing in Visual Basic), and attempting to set it creates a new entry using the specified <paramref name="name"/>.</para>
+            </value>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="name"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </exception>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DistributorSettings">
+            <summary>
+            Represents the configuration settings for the distributor and the 
+            MSMQ distributor windows service.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DistributorSettings.SectionName">
+            <summary>
+            Configuration section name for logging distributor settings.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DistributorSettings.ConfigurationNamespace">
+            <summary>
+            <para>Gets the Xml namespace for this root node.</para>
+            </summary>
+            <value>
+            <para>The Xml namespace for this root node.</para>
+            </value>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DistributorSettings.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DistributorSettings"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DistributorSettings.#ctor(System.String,System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DistributorSettings"/> using the given default category and formatter.
+            </summary>
+            <param name="defaultCategory">The name of the default category to use.</param>
+            <param name="defaultFormatter">The name of the default formatter to use.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DistributorSettings.DefaultCategory">
+            <summary>
+            Default category to use if a category is not defined or is typed incorrectly.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DistributorSettings.DefaultFormatter">
+            <summary>
+            Default formatter to use if a formatter is not defined or is typed incorrectly.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DistributorSettings.DistributorService">
+            <summary>
+            Timer interval to poll the message queue in the MSMQ distributor windows service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DistributorSettings.SinkDataCollection">
+            <summary>
+            Collection of sinks represented as <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.SinkData"/> configuration settings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DistributorSettings.CategoryDataCollection">
+            <summary>
+            Collection of categories represented as <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryData"/> configuration settings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DistributorSettings.Formatters">
+            <summary>
+            Collection of formatters represented as <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FormatterData"/> configuration settings.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.EmailSinkData">
+            <summary>
+            Represents the configuration settings for an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.EmailSink"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.EmailSinkData.#ctor">
+            <summary>
+            Create a new instance of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.EmailSinkData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.EmailSinkData.#ctor(System.String)">
+            <summary>
+            Initialzie a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.EmailSinkData"/> class with a name.
+            </summary>
+            <param name="name">
+            Tha name of the sink
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.EmailSinkData.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Initialzie a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.EmailSinkData"/> class.
+            </summary>
+            <param name="name">
+            Tha name of the sink
+            </param>
+            <param name="toAddress">
+            One or more email semicolon separated addresses.
+            </param>
+            <param name="fromAddress">
+            Email address that messages will be sent from.
+            </param>
+            <param name="subjectLineStarter">
+            Subject prefix.
+            </param>
+            <param name="subjectLineEnder">
+            Subject suffix.
+            </param>
+            <param name="smtpServer">
+            SMTP server to send messages through.
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.EmailSinkData.ToAddress">
+            <summary>
+            One or more email semicolon separated addresses.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.EmailSinkData.FromAddress">
+            <summary>
+            Email address that messages will be sent from.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.EmailSinkData.SubjectLineStarter">
+            <summary>
+            Subject prefix.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.EmailSinkData.SubjectLineEnder">
+            <summary>
+            Subject suffix.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.EmailSinkData.SmtpServer">
+            <summary>
+            SMTP server to send messages through.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.EmailSinkData.TypeName">
+            <summary>
+            Gets the fully qualified assembly name of the <c>EmailSink</c>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.EventLogSinkData">
+            <summary>
+            Represents the configuration settings for an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.EventLogSink"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.EventLogSinkData.#ctor">
+            <summary>
+            Create a new instance of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.EventLogSinkData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.EventLogSinkData.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.EventLogSinkData"/> class with a name.
+            </summary>
+            <param name="name">
+            The name of the sink.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.EventLogSinkData.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.EventLogSinkData"/> class with a name, event source name, and event log name.
+            </summary>
+            <param name="name">
+            The name of the sink.
+            </param>
+            <param name="eventSourceName">
+            Event source name.
+            </param>
+            <param name="eventLogName">
+            Event log name.
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.EventLogSinkData.EventLogName">
+            <summary>
+            Event log name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.EventLogSinkData.EventSourceName">
+            <summary>
+            Event source name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.EventLogSinkData.TypeName">
+            <summary>
+            Gets the fully qualified assembly name of an <c>EventLogSink</c>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FlatFileSinkData">
+            <summary>
+            Represents the configuration settings for an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.FlatFileSink"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FlatFileSinkData.#ctor">
+            <summary>
+            Create a new instance of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FlatFileSinkData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FlatFileSinkData.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.EventLogSinkData"/> class with a name.
+            </summary>
+            <param name="name">
+            The name of the sink.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FlatFileSinkData.#ctor(System.String,System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.EventLogSinkData"/> class with a name.
+            </summary>
+            <param name="name">
+            The name of the sink.
+            </param>
+            <param name="fileName">
+            File name to log.  File will be created if it does not exist.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FlatFileSinkData.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.EventLogSinkData"/> class with a name.
+            </summary>
+            <param name="name">
+            The name of the sink.
+            </param>
+            <param name="fileName">
+            File name to log.  File will be created if it does not exist.
+            </param>
+            <param name="header">
+            Optional header to write before each log message.
+            </param>
+            <param name="footer">
+            Optional footer to write after each log message.
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FlatFileSinkData.FileName">
+            <summary>
+            File name to log.  File will be created if it does not exist.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FlatFileSinkData.Header">
+            <summary>
+            Optional header to write before each log message.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FlatFileSinkData.Footer">
+            <summary>
+            Optional footer to write after each log message.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FlatFileSinkData.TypeName">
+            <summary>
+            Gets the fully qualified assembly name of a <c>FlatFileSink</c>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FormatterDataCollection">
+            <summary>
+            Represents a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FormatterData"/> settings.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FormatterDataCollection.Add(Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FormatterData)">
+            <summary>
+            <para>Adds an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FormatterData"/> into the collection.</para>
+            </summary>
+            <param name="providerData">
+            <para>The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FormatterData"/> to add. The value can not be a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </param>
+            <remarks>
+            <para>If a reference already exists in the collection by <seealso cref="P:Microsoft.Practices.EnterpriseLibrary.Configuration.ProviderData.Name"/>, it will be replaced with the new reference.</para>
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="providerData"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            <para>- or -</para>
+            <para><seealso cref="P:Microsoft.Practices.EnterpriseLibrary.Configuration.ProviderData.Name"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </exception>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FormatterDataCollection.Item(System.Int32)">
+            <summary>
+            Gets or sets a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FormatterData"/> at a given index.
+            </summary>
+            <param name="index">
+            <para>The index of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FormatterData"/> to get or set.</para>
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FormatterDataCollection.Item(System.String)">
+            <summary>
+            <para>Gets or sets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FormatterData"/> associated with the specified <paramref name="name"/>.</para>
+            </summary>
+            <param name="name">
+            <para>The name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FormatterData"/> to get or set.</para>
+            </param>
+            <value>
+            <para>The value associated with the specified <paramref name="name"/>. If the specified <paramref name="name"/> is not found, attempting to get it returns a <see langword="null"/> reference (Nothing in Visual Basic), and attempting to set it creates a new entry using the specified <paramref name="name"/>.</para>
+            </value>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="name"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </exception>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.MsmqDistributorServiceData">
+            <summary>
+            Configuration data for the Msmq Distributor Service
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.MsmqDistributorServiceData.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.MsmqDistributorServiceData"/> class using default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.MsmqDistributorServiceData.#ctor(System.String,System.String,System.Int32)">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.MsmqDistributorServiceData"/> class using 
+            the given service name, MSMQ Path and queue interval.
+            </summary>
+            <param name="serviceName">The name of the service.</param>
+            <param name="msmqPath">The MSMQ Path to use.</param>
+            <param name="queueTimerInterval">The queue timer interval.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.MsmqDistributorServiceData.ServiceName">
+            <summary>
+            Name of the MSMQ distributor windows service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.MsmqDistributorServiceData.MsmqPath">
+            <summary>
+            Message queue path used by the MSMQ distributor windows service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.MsmqDistributorServiceData.QueueTimerInterval">
+            <summary>
+            Timer interval to poll the message queue in the MSMQ distributor windows service.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.MsmqSinkData">
+            <summary>
+            Represents the configuration settings for an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.MsmqSink"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.MsmqSinkData.#ctor">
+            <summary>
+            Create a new instance of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.MsmqSinkData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.MsmqSinkData.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.MsmqSinkData"/> class with a name.
+            </summary>
+            <param name="name">
+            The name of the sink.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.MsmqSinkData.#ctor(System.String,System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.MsmqSinkData"/> class with a name.
+            </summary>
+            <param name="name">
+            The name of the sink.
+            </param>
+            <param name="queuePath">
+            The path to the message queue.
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.MsmqSinkData.QueuePath">
+            <summary>
+            Private or public message queue.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.MsmqSinkData.TypeName">
+            <summary>
+            Gets the fully qualified assemly name of an <c>MsmqSink</c>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.MsmqSinkData.MessagePriority">
+            <summary>
+            <para>Gets or sets the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.MsmqSinkData.MessagePriority"/> for each message send.</para>
+            </summary>
+            <value>
+            <para>One of the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.MsmqSinkData.MessagePriority"/> values.</para>
+            </value>
+            <seealso cref="P:System.Messaging.Message.Priority"/>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.MsmqSinkData.Recoverable">
+            <summary>
+            <para>Gets or sets if the message queue is recoverable.</para>
+            </summary>
+            <value>
+            <para><see langword="true"/> if the queue is recoverable; otherwise <see langword="false"/>.</para>
+            </value>
+            <seealso cref="P:System.Messaging.Message.Recoverable"/>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.MsmqSinkData.UseAuthentication">
+            <summary>
+            <para>Gets or sets a value indicating whether the message was (or must be) authenticated before being sent.</para>
+            </summary>
+            <value>
+            <para><see langword="true"/> if the sending application requested authentication for the message; otherwise, false. The default is <see langword="false"/>.</para>
+            </value>
+            <seealso cref="P:System.Messaging.Message.UseAuthentication"/>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.MsmqSinkData.UseDeadLetterQueue">
+            <summary>
+            <para>Gets or sets a value indicating whether a copy of the message that could not be delivered should be sent to a dead-letter queue.</para>
+            </summary>
+            <value>
+            <para><see langword="true"/> if message-delivery failure should result in a copy of the message being sent to a dead-letter queue; otherwise, <see langword="false"/>. The default is <see langword="false"/></para>
+            </value>
+            <seealso cref="P:System.Messaging.Message.UseDeadLetterQueue"/>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.MsmqSinkData.UseEncryption">
+            <summary>
+            <para>Gets or sets a value indicating whether to make the message private.</para>
+            </summary>
+            <value>
+            <para><see langword="true"/> to require Message Queuing to encrypt the message; otherwise, <see langword="false"/>. The default is <see langword="false"/>.</para>
+            </value>
+            <seealso cref="P:System.Messaging.Message.UseEncryption"/>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.SinkDataCollection">
+            <summary>
+            Represents a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.SinkDataCollection"/> settings.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.SinkDataCollection.Add(Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.SinkData)">
+            <summary>
+            <para>Adds an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.SinkData"/> into the collection.</para>
+            </summary>
+            <param name="providerData">
+            <para>The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.SinkData"/> to add. The value can not be a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </param>
+            <remarks>
+            <para>If a reference already exists in the collection by <seealso cref="P:Microsoft.Practices.EnterpriseLibrary.Configuration.ProviderData.Name"/>, it will be replaced with the new reference.</para>
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="providerData"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            <para>- or -</para>
+            <para><seealso cref="P:Microsoft.Practices.EnterpriseLibrary.Configuration.ProviderData.Name"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </exception>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.SinkDataCollection.Item(System.Int32)">
+            <summary>
+            Gets or sets a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.SinkData"/> at a given index.
+            </summary>
+            <param name="index">
+            <para>The index of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.SinkData"/> to get or set.</para>
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.SinkDataCollection.Item(System.String)">
+            <summary>
+            <para>Gets or sets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.SinkData"/> associated with the specified <paramref name="name"/>.</para>
+            </summary>
+            <param name="name">
+            <para>The name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.SinkData"/> to get or set.</para>
+            </param>
+            <value>
+            <para>The value associated with the specified <paramref name="name"/>. If the specified <paramref name="name"/> is not found, attempting to get it returns a <see langword="null"/> reference (Nothing in Visual Basic), and attempting to set it creates a new entry using the specified <paramref name="name"/>.</para>
+            </value>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="name"/> is a <see langword="null"/> reference (Nothing in Visual Basic).</para>
+            </exception>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.TextFormatterData">
+            <summary>
+            Represents the configuration settings for a log formatter.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.TextFormatterData.#ctor">
+            <summary>
+            Create a new instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.TextFormatterData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.TextFormatterData.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.TextFormatterData"/> class with a name.
+            </summary>
+            <param name="name">
+            The name of the sink.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.TextFormatterData.#ctor(System.String,System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.TextFormatterData"/> class with a name and template.
+            </summary>
+            <param name="name">
+            The name of the sink.
+            </param>
+            <param name="templateData">
+            Template containing tokens to replace.
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.TextFormatterData.Template">
+            <summary>
+            Template containing tokens to replace.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.TextFormatterData.TypeName">
+            <summary>
+            Gets the fully qualified type name of a <c>FormatterData</c>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.WMILogSinkData">
+            <summary>
+            Represents the configuration settings for an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.WMILogSink"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.WMILogSinkData.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.WMILogSinkData"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.WMILogSinkData.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.WMILogSinkData"/> class with a name.
+            </summary>
+            <param name="name">
+            The name of the sink.
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.WMILogSinkData.TypeName">
+            <summary>
+            Gets the fully qualified assembly name of a <c>WMILogSink</c>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.DistributorEventLogger">
+            <summary>
+            Event logger for distributor windows service.
+            This class writes event log entries 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.DistributorEventLogger.#ctor">
+            <summary>
+            The Event logger used to back up configured logging sinks in the event of problems.
+            Used to write diagnostic messages to the event log.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.DistributorEventLogger.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.DistributorEventLogger"/>.
+            </summary>
+            <param name="logName">The name of the Event Log</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.DistributorEventLogger.AddMessage(System.String,System.String)">
+            <summary>
+            Add a message to the additional information name value collection.
+            </summary>
+            <param name="message">The message key</param>
+            <param name="value">The actual message (this value will be shown in the event log)</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.DistributorEventLogger.WriteToLog(System.String,System.Exception,Microsoft.Practices.EnterpriseLibrary.Logging.Severity)">
+            <summary>
+            Method used to write an exception and additional information to the event log.
+            </summary>
+            <param name="value">The message value itself. This will be added to the existing additionalinfo</param>
+            <param name="exception">The exception (this is shown in the additional exception information in the event log)</param>
+            <param name="severity">The type of event log entry (warning, information, error,...)</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.DistributorEventLogger.WriteToLog(System.Exception,Microsoft.Practices.EnterpriseLibrary.Logging.Severity)">
+            <summary>
+            Method used to write exception and additional information to the event log, and clears the
+            messages collection.
+            </summary>
+            <param name="exception">The exception object whose information should be written to log file.</param>
+            <param name="severity">The type of event log entry (warning, information, error,...)</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.DistributorEventLogger.GetMessage(System.Exception)">
+            <summary>
+            Gets the message for the exception.
+            </summary>
+            <param name="exception">The <see cref="T:System.Exception"/> to get the message for.</param>
+            <returns>The message for the exception.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.DistributorEventLogger.ApplicationName">
+            <summary>
+            Name of the windows service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.DistributorEventLogger.EventLogName">
+            <summary>
+            The Event Log name (i.e. the name of the event log to write to; e.g. "Application").
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.DistributorEvents">
+            <summary>
+            Summary description for DistributorEvents.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.DistributorEvents.LogMissingCategoryInConfigurationWarning(System.String,System.String)">
+            <devdoc>
+            Write a entry to the event log indicating that the configuration file 
+            does not contain the desired category
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.DistributorEvents.LogMissingDefaultFormatterError">
+            <devdoc>
+            </devdoc>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.ILogDistributionStrategy">
+            <summary>
+            Represents the interface for distribution strategies.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.ILogDistributionStrategy.SendLog(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Send the log message for distribution based on the strategy implemented.
+            </summary>
+            <param name="log">Message to log.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.InProcLogDistributionStrategy">
+            <summary>
+            InProcLogDistributionStrategy will process the distribution of log messages synchronously
+            by sending the log entry directly to the corresponding log sinks.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.InProcLogDistributionStrategy.#ctor">
+            <summary>
+            <para>
+            Default constructor
+            </para>
+            </summary>        
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.InProcLogDistributionStrategy.Initialize(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationView)">
+            <summary>
+            Initializes the LogDistributor with its current configuration
+            </summary>
+            <param name="configurationView">View of configuration used by the LogDistributor</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.InProcLogDistributionStrategy.SendLog(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Distribute a log entry to the sinks using a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.LogDistributor"/>.
+            </summary>
+            <param name="logEntry">Message body</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.LogDistributionStrategyFactory">
+            <summary>
+            Represents a factory for creating instances of classes that implement the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.ILogDistributionStrategy"/> interface.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.LogDistributionStrategyFactory.#ctor">
+            <summary>
+            Default constructor for a LogDistributionStrategy
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.LogDistributionStrategyFactory.#ctor(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.LogDistributionStrategyFactory"/> class
+            with the specified <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext"/>.
+            </summary>
+            <param name="context"><see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext"></see> provided by caller. The context should contain
+            all configuration info needed to construct individual <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.ILogDistributionStrategy"></see> instances</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.LogDistributionStrategyFactory.CreateDistributionStrategy(System.String)">
+            <summary>
+            Creates the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.ILogDistributionStrategy"/> object from the configuration 
+            data associated with the specified name.
+            </summary>
+            <param name="distributionName">The name of the distribution strategy to create, as defined in configuration</param>
+            <returns>An <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.ILogDistributionStrategy"/> object.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.LogDistributionStrategyFactory.CreateConfigurationView">
+            <summary>
+            Factory method used to create the LoggingConfigurationView
+            </summary>
+            <returns>Specific LoggingConfigurationView used to configure the LogDistributor</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.LogDistributionStrategyFactory.GetConfigurationType(System.String)">
+            <summary>
+            Get the configuration type for the type of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.ILogDistributionStrategy"></see>
+            </summary>
+            <param name="distributionName">Name of distribution strategy as defined in configuration</param>
+            <returns>A <see cref="T:System.Type"></see> instance describing the type of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.ILogDistributionStrategy"></see> to be instantiated</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.LogDistributor">
+            <summary>
+            Distributes a log message to the corresponding sinks as defined in the configuration file.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.LogDistributor.#ctor(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext)">
+            <summary>
+            Initializes a new instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.LogDistributor"></see>
+            </summary>
+            <param name="configurationContext"><see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext"></see> used to initialize this instance</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.LogDistributor.ProcessLog(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary> 
+            Distribute a new log message to one or more destination sinks.  
+            Routing is based on the category.
+            </summary>
+            <param name="log">Log message.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.LogDistributor.DistributeLogEntry(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry,Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryData)">
+            <devdoc>
+            Send the log message to each destination sink for the selected category.
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.LogDistributor.CreateFormatter(System.String)">
+            <devdoc>
+            Get a cloned instance of the formatter.
+            </devdoc>
+            <returns>An instance of the ILogFormatter. 
+            May return null if no format is specified and the default format does not exist.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.LogDistributor.CreateSink(System.String)">
+            <summary>
+            Factory method used to create an instance of an object implementing the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.ILogSink"></see> interface. The specific 
+            kind of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.ILogSink"></see> created depends on the configuration information used by this factory.
+            </summary>
+            <param name="sinkName">Configuration name for <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.ILogSink"></see> instance to be created</param>
+            <returns>Instantiated <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.ILogSink"></see></returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.LogDistributor.LoggingConfigurationView">
+            <summary>
+             Gets the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.LogDistributor.LoggingConfigurationView"></see>
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.MsmqLogDistributionStrategy">
+            <summary>
+            MsmqLogDistributionStrategy will distribute log messages asynchronously, meaning
+            log messages will be sent to the MSMQ instead of log sinks.  The DistributorService 
+            will pick the messages from MSMQ and send them to corresponding log
+            sinks.
+            This strategy can also be used to send all log messages to the remote 
+            queue to centralize the log message processing.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.MsmqLogDistributionStrategy.#ctor">
+            <devdoc>
+            We don't create a default MsmqDistributionStrategyData since we really need a queue path.
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.MsmqLogDistributionStrategy.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.MsmqDistributionStrategyData)">
+            <summary>
+            Creates a new instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.MsmqLogDistributionStrategy"></see>
+            </summary>
+            <param name="msmqDistributionStrategyData">Configuration data for <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.MsmqLogDistributionStrategy"></see></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.MsmqLogDistributionStrategy.Initialize(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationView)">
+            <summary>
+            <para>
+            Initializes the provider with its name and any attributes associated with the provider. 
+            </para>
+            </summary>   
+            <param name="configurationView">Dynamic view into the configuration information needed by the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.MsmqLogDistributionStrategy"></see></param>     
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.MsmqLogDistributionStrategy.SendLog(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Send message to MSMQ for asynchronous message distribution.
+            </summary>
+            <param name="entry">Message to log.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.ComPlusInformationProvider">
+            <summary>
+            A helper facade class that provides easy access to commonly needed COM+ diagnostic information.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.IExtraInformationProvider">
+            <summary>
+            Defines a method to populate an <see cref="T:System.Collections.IDictionary"/> with helpful diagnostic information.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.IExtraInformationProvider.PopulateDictionary(System.Collections.IDictionary)">
+            <summary>
+            Populates an <see cref="T:System.Collections.IDictionary"/> with helpful diagnostic information.
+            </summary>
+            <param name="dict">Dictionary containing extra information used to initialize the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.IExtraInformationProvider"></see> instance</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.ComPlusInformationProvider.#ctor">
+            <summary>
+            Creates an instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.ComPlusInformationProvider"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.ComPlusInformationProvider.PopulateDictionary(System.Collections.IDictionary)">
+            <summary>
+            Populates an IDictionary with the COM+ properties provided by <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.ComPlusInformationProvider"/>.
+            </summary>
+            <param name="dict">Dictionary used to populate the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.ComPlusInformationProvider"></see></param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.ComPlusInformationProvider.OriginalCallerAccountName">
+            <summary>
+            Returns the COM+ Original Caller Account Name
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.ComPlusInformationProvider.DirectCallerAccountName">
+            <summary>
+            Returns the COM+ Direct Caller Name
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.ComPlusInformationProvider.TransactionId">
+            <summary>
+            Returns the COM+ Transaction ID
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.ComPlusInformationProvider.ApplicationId">
+            <summary>
+            Returns the COM+ Application ID
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.ComPlusInformationProvider.ActivityId">
+            <summary>
+            Returns the COM+ Activity ID
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.DebugInformationProvider">
+            <summary>
+            Provides useful diagostic information from the debug susbsystem.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.DebugInformationProvider.#ctor">
+            <summary>
+            Creates a new instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.DebugInformationProvider"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.DebugInformationProvider.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.Helpers.IDebugUtils)">
+            <summary>
+            Internal constructor used for testing.
+            </summary>
+            <param name="debugUtils">Alternative <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.Helpers.IDebugUtils"/> to use for testing.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.DebugInformationProvider.PopulateDictionary(System.Collections.IDictionary)">
+            <summary>
+            Populates an <see cref="T:System.Collections.IDictionary"/> with helpful diagnostic information.
+            </summary>
+            <param name="dict">Dictionary used to populate the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.DebugInformationProvider"></see></param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.ManagedSecurityContextInformationProvider">
+            <summary>
+            Provides useful diagostic information from the managed runtime.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.ManagedSecurityContextInformationProvider.PopulateDictionary(System.Collections.IDictionary)">
+            <summary>
+            Populates an <see cref="T:System.Collections.IDictionary"/> with helpful diagnostic information.
+            </summary>
+            <param name="dict">Dictionary used to populate the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.ManagedSecurityContextInformationProvider"></see></param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.ManagedSecurityContextInformationProvider.AuthenticationType">
+            <summary>
+            	Gets the AuthenticationType, calculating it if necessary. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.ManagedSecurityContextInformationProvider.IdentityName">
+            <summary>
+            	Gets the IdentityName, calculating it if necessary. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.ManagedSecurityContextInformationProvider.IsAuthenticated">
+            <summary>
+            	Gets the IsAuthenticated, calculating it if necessary. 
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.UnmanagedSecurityContextInformationProvider">
+            <summary>
+            Gets the security context information from the unmanaged world
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.UnmanagedSecurityContextInformationProvider.PopulateDictionary(System.Collections.IDictionary)">
+            <summary>
+            Populates an <see cref="T:System.Collections.IDictionary"/> with helpful diagnostic information.
+            </summary>
+            <param name="dict">Dictionary used to populate the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.UnmanagedSecurityContextInformationProvider"></see></param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.UnmanagedSecurityContextInformationProvider.CurrentUser">
+            <summary>
+            	Gets the CurrentUser, calculating it if necessary. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation.UnmanagedSecurityContextInformationProvider.ProcessAccountName">
+            <summary>
+            	Gets the ProcessAccountName, calculating it if necessary. 
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Filters.CategoryFilter">
+            <summary>
+            Represents a client-side log filter based on message category.  
+            Either specific categories can be explicitly allowed, or specific categories can be denied.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Filters.ILogFilter">
+            <summary>
+            Represents the interface for client-side message filters.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Filters.ILogFilter.Filter(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Test to see if a message meets the criteria to be processed. 
+            </summary>
+            <param name="log">Log entry to test.</param>
+            <returns>Returns true if the message passes through the filter and should be distributed.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Filters.CategoryFilter.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.LoggingConfigurationView)">
+            <summary>
+            Initializes a new instance with configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Filters.CategoryFilter.Filter(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Test a log entry against the category filters.
+            </summary>
+            <param name="log">Log entry to test.</param>
+            <returns>Returns true if the log entry passes through the category filter.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Filters.LogFilter">
+            <summary>
+            Provides client-side log filtering based on category and priority.  Each filter
+            implements the ILogFilter interface and is registered in this class.
+            Category filtering is done using a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Filters.CategoryFilter"/> and priority filtering
+            is done using a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Filters.PriorityFilter"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Filters.LogFilter.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.LoggingConfigurationView)">
+            <summary>
+            Initialize a new instance of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Filters.LogFilter"/> class.  Registers each ILogFilter.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Filters.LogFilter.CheckFilters(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Tests the log message against the registered filters.
+            </summary>
+            <param name="log">Log entry message.</param>
+            <returns>Return true if the message passes through all of the filters.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Filters.PriorityFilter">
+            <summary>
+            Represents a client-side log filter based on message priority.  Configuration file defines
+            the minimum priority a message needs to be processed, all other messages are dropped.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Filters.PriorityFilter.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.LoggingConfigurationView)">
+            <summary>
+            Create a new instance of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Filters.PriorityFilter"/>.  Reads the minimum priority
+            from the configuration settings.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Filters.PriorityFilter.Filter(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Test a log entry to see is greater than or equal to the minimum priority.
+            </summary>
+            <param name="log">Log entry to test.</param>
+            <returns>Returns true if the log entry passes through the category filter.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.DictionaryToken">
+            <summary>
+            Formats a dictionary token by iterating through the dictionary and displays 
+            the key and value for each entry.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TokenFunction">
+            <summary>
+            Abstract base for all <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TokenFunction"></see>-derived classes. 
+            Provides default algorithm for formatting a token.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TokenFunction.#ctor(System.String)">
+            <summary>
+            Initialize an instance of a TokenFunction with a start delimiter and the default end delimiter.
+            </summary>
+            <param name="tokenStartDelimiter">Start delimiter.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TokenFunction.#ctor(System.String,System.String)">
+            <summary>
+            Initialize an instance of a TokenFunction with a start and end delimiter.
+            </summary>
+            <param name="tokenStartDelimiter">Start delimiter.</param>
+            <param name="tokenEndDelimiter">End delimiter.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TokenFunction.Format(System.Text.StringBuilder,Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Search for token functions in the message and replace all with formatted values.
+            </summary>
+            <param name="messageBuilder">Message template containing tokens.</param>
+            <param name="log">Log entry containing properties to format.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TokenFunction.FormatToken(System.String,Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Abstract method to process the token value between the start and end delimiter.
+            </summary>
+            <param name="tokenTemplate">Token value between the start and end delimiters.</param>
+            <param name="log">Log entry to process.</param>
+            <returns>Formatted value to replace the token.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TokenFunction.GetInnerTemplate(System.Int32,System.String)">
+            <summary>
+            Returns the template in between the paratheses for a token function.
+            Expecting tokens in this format: {keyvalue(myKey1)}.
+            </summary>
+            <param name="startPos">Start index to search for the next token function.</param>
+            <param name="message">Message template containing tokens.</param>
+            <returns>Inner template of the function.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.DictionaryToken.#ctor">
+            <summary>
+            Initialize a new instance of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.DictionaryToken"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.DictionaryToken.FormatToken(System.String,Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Iterate through each entry in the dictionary and display the key and/or value.
+            </summary>
+            <param name="tokenTemplate">Template to repeat for each key/value pair.</param>
+            <param name="log">Log entry containing the extended properties dictionary.</param>
+            <returns>Repeated template for each key/value pair.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.ILogFormatter">
+            <summary>
+            Represents the interface for formatting log entry messsages.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.ILogFormatter.Format(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Format a log entry and return a string to be outputted.
+            </summary>
+            <param name="log">Log entry to format.</param>
+            <returns>String representing the log entry.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.KeyValueToken">
+            <summary>
+            Formats a keyvalue token and displays the dictionary entries value.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.KeyValueToken.#ctor">
+            <summary>
+            Initialize a new instance of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TimeStampToken"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.KeyValueToken.FormatToken(System.String,Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Format the timestamp property with the specified date time format string.
+            </summary>
+            <param name="tokenTemplate">Dictionary key name.</param>
+            <param name="log">Log entry containing with extended properties dictionary values.</param>
+            <returns>Value of the key from the extended properties dictionary.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.LogFormatterFactory">
+            <summary>
+            Represents a factory for creating <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.ILogFormatter"/> objects.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.LogFormatterFactory.#ctor(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.LogFormatterFactory"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.LogFormatterFactory.CreateFormatter(System.String)">
+            <summary>
+            Creates the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.ILogFormatter"/> from the configuration data associated with the specified name.
+            </summary>
+            <returns>An <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.ILogFormatter"/>.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TextFormatter">
+            <summary>
+            Represents a template based formatter for <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry"/> messages.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TextFormatter.templateBuilder">
+            <summary>
+            Message template containing tokens.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TextFormatter.tokenFunctions">
+            <summary>
+            Array of token formatters.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TextFormatter.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TextFormatter"></see>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TextFormatter.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.TextFormatterData)">
+            <summary>
+            Initializes a new instance of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TextFormatter"></see> with the given 
+            <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.TextFormatterData"></see> configuration data
+            </summary>
+            <param name="textFormatterData">
+            <para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.TextFormatterData"/> object.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TextFormatter.Initialize(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationView)">
+            <summary>
+            Initialize a new instance of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TextFormatter"/>.  Reads the template from
+            configuration parameters.
+            </summary>
+            <param name="configurationView">Dynamic view into the configuration information needed by the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TextFormatter"></see></param>     
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TextFormatter.Format(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Format the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry"/> object by replacing tokens with values.
+            </summary>
+            <param name="log">Log entry to format.</param>
+            <returns>Formatted string with tokens replaced with property values.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TextFormatter.TemplateBuilder">
+            <summary>
+            Internal only for testing purposes
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TextFormatter.FormatterData">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.TextFormatterData"/> from which
+            this object was initialized.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TimeStampToken">
+            <summary>
+            Formats a timestamp token with a custom date time format string.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TimeStampToken.#ctor">
+            <summary>
+            Initialize a new instance of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TimeStampToken"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TimeStampToken.FormatToken(System.String,Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Format the timestamp property with the specified date time format string.
+            </summary>
+            <param name="tokenTemplate">Date time format string.</param>
+            <param name="log">Log entry containing the timestamp.</param>
+            <returns>Returns the formatted time stamp.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingDistributorEvent">
+            <summary>
+            Represents the WMI event fired when a log message is distributed.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingServiceEvent">
+            <summary>
+            The base class for all the instrumented events fired
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingServiceEvent.internalEvent">
+            <summary>
+            The internal event object responsible for the Performance Counters and
+            the EventLog.  And, it constructed with a BaseEvent object, it also
+            ties the WMI event when fired.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingServiceEvent.eventMessage">
+            <summary>
+            The message for the event.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingServiceEvent.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingServiceEvent.#ctor(System.String[],Microsoft.Practices.EnterpriseLibrary.Common.Instrumentation.EventLogIdentifier[])">
+            <summary>
+            Constructor with performance counter names and event log Ids.
+            </summary>
+            <param name="counterNames">Array of names of performance counters defined for Logging</param>
+            <param name="eventLogIDs">Array of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Instrumentation.EventLogIdentifier"></see>s</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingServiceEvent.#ctor(System.String[])">
+            <summary>
+            Constructor with performance counter names only.
+            </summary>
+            <param name="counterNames">Array of names of performance counters defined for Logging</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingServiceEvent.FireAuxEvent(System.String)">
+            <summary>
+            Fire auxillary event.
+            </summary>
+            <param name="message">Message to include in the WMI event</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingServiceEvent.FireAuxEvent">
+            <summary>
+            Fire auxillary event.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingServiceEvent.FireAuxEvent(System.String,System.Diagnostics.EventLogEntryType)">
+            <summary>
+            Fire auxillary event.
+            </summary>
+            <param name="message">Message to include in the WMI event</param>
+            <param name="eventLogEntryType"><see cref="T:System.Diagnostics.EventLogEntryType"></see> for event</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingServiceEvent.Message">
+            <summary>
+            Exposes the message of the internalEvent. 
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingServiceEvent.CounterID">
+            <summary>
+            Index to the Counters array.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingServiceEvent.Log">
+            <summary>
+            Event Log Event IDs
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingDistributorEvent.Fire(System.String,System.Boolean)">
+            <summary>
+            Fire the WMI event.
+            </summary>
+            <param name="message">The message to include in the WMI event</param>
+            <param name="started">True if event is being started</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingDistributorEvent.Started">
+            <summary>
+            Started firing event.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingDistributorEvent.ApplicationBase">
+            <summary>
+            Application base.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingDistributorEvent.ApplicationName">
+            <summary>
+            Application or service name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingDistributorEvent.ConfigurationFile">
+            <summary>
+            Configuration file name.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingLogDeliveryFailureEvent">
+            <summary>
+            Represents the WMI event fired when a log message cannot be distributed.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingLogDeliveryFailureEvent.Fire(System.String)">
+            <summary>
+            Fire the WMI event
+            </summary>
+            <param name="message">Message included with WMI event</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingLogDeliveryFailureEvent.FireEvent(System.String)">
+            <summary>
+            Fire the WMI event
+            </summary>
+            <param name="message">Message included with WMI event</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingLogDistributedEvent">
+            <summary>
+            Represents the WMI event fired when a log message is sent by the client to a distribution strategy.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingLogDistributedEvent.Fire(System.String)">
+            <summary>
+            Fire the WMI event
+            </summary>
+            <param name="message">Message to include in the WMI event</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingLogDistributedEvent.FireEvent(System.String)">
+            <summary>
+            Fire the WMI event
+            </summary>
+            <param name="message">Message to include in the WMI event</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingLogDistributedEvent.FireEvent">
+            <summary>
+            Fire the event.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingLogWrittenEvent">
+            <summary>
+            Represents the WMI event fired when a log message is written to a sink..
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingLogWrittenEvent.Fire(System.String)">
+            <summary>
+            Fire the WMI event.
+            </summary>
+            <param name="message">Message to include in the WMI event</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingLogWrittenEvent.FireEvent(System.String)">
+            <summary>
+            Fire the WMI event.
+            </summary>
+            <param name="message">Message to include in the WMI event</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingLogWrittenEvent.FireEvent">
+            <summary>
+            Fire the event.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingServiceFailureEvent">
+            <summary>
+            Represents the WMI event fired when an error occurs.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingServiceFailureEvent.Fire(System.String,System.Exception)">
+            <summary>
+            Fire the WMI event.
+            </summary>
+            <param name="message">Message to include in the WMI event</param>
+            <param name="ex"><see cref="T:System.Exception"></see> to be included with WMI event</param>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingServiceFailureEvent.failureException">
+            <summary>
+            Failure exception.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingServiceFailureEvent.failureExceptionMessage">
+            <summary>
+            Failure messge.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingServiceFailureEvent.#ctor(Microsoft.Practices.EnterpriseLibrary.Common.Instrumentation.EventLogIdentifier[])">
+            <summary>
+            Create a new instance of the event.
+            </summary>
+            <param name="eventLogIDs">Array of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Instrumentation.EventLogIdentifier"></see>s used to initialize this base event</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingServiceFailureEvent.ExceptionStackTrace">
+            <summary>
+            Stack trace for the exception.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingServiceFailureEvent.ExceptionMessage">
+            <summary>
+            Exception message.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingWMISinkEvent">
+            <summary>
+            Represents a Windows Management Instrument event for that is fired by the WMILogSink.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingWMISinkEvent.Fire(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Fire a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingWMISinkEvent"/> event.
+            </summary>
+            <param name="log">Log message to record.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.ProjectInstaller">
+            <summary>
+            Represents the installer for the instrumentation events. Not intended for direct use.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.ProjectInstaller.#ctor">
+            <summary>
+            Project installer for instrumentation events.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.DefaultLogDestination">
+            <summary>
+            Represents a backup destination that is used if the configured logging destination fails.
+            Log messages are written to the event log.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.DefaultLogDestination.#ctor">
+            <summary>
+            Initialize a new instance of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.DefaultLogDestination"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.DefaultLogDestination.SendMessage(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Write the log entry to the configured event log.
+            </summary>
+            <param name="logEntry"><see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry"></see> to be written to the event log</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.DefaultLogDestination.FormatEntry(Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.ILogFormatter,Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Formats the given <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry"></see> through the given <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.ILogFormatter"></see>
+            </summary>
+            <param name="formatter">Instance of class implementing the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.ILogFormatter"></see> interface</param>
+            <param name="logEntry">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry"></see> to format</param>
+            <returns>The formatted <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry"></see></returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.DefaultLogDestination.GetCategoryId(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Reads the category ID from the extended properties dictionary.
+            </summary>
+            <param name="log">Log Entry.</param>
+            <returns>Category ID.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.EmailSink">
+            <summary>
+            Represents an email logging sink.  Sends logs messages via smtp.
+            Parameters, including To and From address, are retrieved from the configuration settings.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.LogSink">
+            <summary>
+            An abstract base class for LogSink implementations.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.ILogSink">
+            <summary>
+            Represents the interface for all logging sinks.  Defines a single method, SendMessage.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.ILogSink.SendMessage(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Send message to log sink handler.
+            </summary>
+            <param name="log">xmlMessage as string</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.ILogSink.Formatter">
+            <summary>
+            Sets the formatter to be used by this sink.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.LogSink.SendMessage(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Send message to log sink handler.
+            </summary>
+            <param name="entry">The log entry to send.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.LogSink.FormatEntry(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Format a log entry using the current formatter.
+            </summary>
+            <param name="entry"><see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry"></see> to be formatted</param>
+            <returns>Formatted message string.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.LogSink.PrepareMessage(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Prepares a message for sending to the sink.
+            </summary>
+            <param name="entry">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry"/> to prepare.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.LogSink.SendMessageCore(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Used by derived classes to implement their specific message sending mechanism.
+            </summary>
+            <param name="entry">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry"/> to send.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.LogSink.AddActivityIdToLogEntry(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Adds the current <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Tracing.Tracer.CurrentActivityId"/> to the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.ExtendedProperties"/>
+            of the given <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry"/>.
+            </summary>
+            <param name="entry">The entry to which the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Tracing.Tracer.CurrentActivityId"/> should be added.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.LogSink.Formatter">
+            <summary>
+            Gets and sets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.ILogFormatter"></see> associated with this <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.LogSink"></see>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.EmailSink.#ctor">
+            <summary>
+            Creates an instance of the sink.
+            </summary>        
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.EmailSink.Initialize(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationView)">
+            <summary>
+            Initializes the sink with its name and any additional attributes. 
+            </summary> 
+            <param name="configurationView">Dynamic view into the configuration information needed by the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.EmailSink"></see></param>     
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.EmailSink.SendMessageCore(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Send a log entry message via email.
+            </summary>
+            <param name="log"><see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry"></see> included in email message</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.EventLogSink">
+            <summary>
+            Represents an event log logging sink.  Writes the message to the 
+            Application Log of the local machine.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.EventLogSink.#ctor">
+            <summary>
+            Creates an instance of an EmailLogSink.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.EventLogSink.Initialize(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationView)">
+            <summary>
+            Initializes the sink with its name and any additional attributes. 
+            </summary>  
+            <param name="configurationView">Dynamic view into the configuration information needed by the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.EventLogSink"></see></param>     
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.EventLogSink.SendMessageCore(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Write the log entry to the configured event log.
+            </summary>
+            <param name="logEntry"><see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry"></see> to be logged to event log</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.FlatFileSink">
+            <summary>
+            Represents a flat file logging sink.  Writes the message in a text file format 
+            on the local machine.  Path and text file name are retrieved from the configuration settings.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.FlatFileSink.#ctor">
+            <summary>
+            Create an instance of a FlatFileSink.
+            </summary>        
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.FlatFileSink.Initialize(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationView)">
+            <summary>
+            Initializes the sink with its name and any additional attributes. 
+            </summary>  
+            <param name="configurationView">Dynamic view into the configuration information needed by the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.FlatFileSink"></see></param>     
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.FlatFileSink.SendMessageCore(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Append the log entry to the configured text file.
+            </summary>
+            <param name="logEntry"><see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry"></see> to be appended to logging file</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.LogSinkFactory">
+            <summary>
+            Represents a factory for creating <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.LogSink"/> objects.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.LogSinkFactory.#ctor(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.LogSinkFactory"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.LogSinkFactory.CreateSink(System.String)">
+            <summary>
+            Creates the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.ILogSink"/> from the configuration data associated with the specified name.
+            </summary>
+            <returns>An <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.ILogSink"/>.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.MsmqSink">
+            <summary>
+            Represents a message queue logging sink.  
+            Path is retrieved from the configuration settings.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.MsmqSink.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.MsmqSink.Initialize(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationView)">
+            <summary>
+            <para>
+            Initializes the sink with its name and any additional attributes. 
+            </para>
+            </summary>        
+            <param name="configurationView">Dynamic view into the configuration information needed by the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.MsmqSink"></see></param>     
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.MsmqSink.SendMessageCore(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Send the log entry to the configured message queue path.
+            </summary>
+            <param name="log">Log message to send.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.WMILogSink">
+            <summary>
+            Represents a WMI logging sink.  Fires a LoggingWMISinkEvent event class in the 
+            root\EnterpriseLibrary namespace in WMI.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.WMILogSink.#ctor">
+            <summary>
+            Creates an instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.WMILogSink"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.WMILogSink.Initialize(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationView)">
+            <summary>
+            Initializes the sink with its name and any additional attributes. 
+            </summary>  
+            <param name="configurationView">Dynamic view into the configuration information needed by the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.WMILogSink"></see></param>     
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.WMILogSink.SendMessageCore(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Fire a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.LoggingWMISinkEvent"/> with the properties of the log entry.
+            </summary>
+            <param name="log">Log message to send.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Tracing.Tracer">
+            <summary>
+            Represents a performance tracing class to log method entry/exit and duration.
+            </summary>
+            <remarks>
+            <para>Lifetime of the Tracer object will determine the beginning and the end of
+            the trace.  The trace message will include, method being traced, start time, end time 
+            and duration.</para>
+            <para>Since Tracer uses the logging block to log the trace message, you can include application
+            data as part of your trace message. Configured items from call context will be logged as
+            part of the message.</para>
+            <para>Trace message will be logged to the "Trace" category. You must configure the "Trace"
+            category with desire log sinks to log the trace messages.</para>
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Tracing.Tracer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Tracing.Tracer"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Tracing.Tracer.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Tracing.Tracer"/> class with the given category.
+            </summary>
+            <param name="category">The category for the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Tracing.Tracer"/></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Tracing.Tracer.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Tracing.Tracer"/> class with the given category and activityId.
+            </summary>
+            <param name="category">The category for the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Tracing.Tracer"/></param>
+            <param name="activityId">The activity ID for the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Tracing.Tracer"/></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Tracing.Tracer.Finalize">
+            <summary>
+            <para>Releases unmanaged resources and performs other cleanup operations before the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.ProviderFactory"/> is 
+            reclaimed by garbage collection</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Tracing.Tracer.Dispose">
+            <summary>
+            Causes the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Tracing.Tracer"/> to output its closing message.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Tracing.Tracer.Dispose(System.Boolean)">
+            <summary>
+            <para>Releases the unmanaged resources used by the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.ProviderFactory"/> and optionally releases 
+            the managed resources.</para>
+            </summary>
+            <param name="disposing">
+            <para><see langword="true"/> to release both managed and unmanaged resources; <see langword="false"/> 
+            to release only unmanaged resources.</para>
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Tracing.Tracer.CurrentActivityId">
+            <summary>
+            Gets the current activity Id.
+            </summary>
+            <remarks><para>This property is meant to contain a user-specified correlation ID to be used
+            for associating log and trace messages with a particular usage scenario.</para></remarks>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Tracing.Tracer.RootActivityId">
+            <summary>
+            Gets the topmost ActivityId in the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Tracing.Tracer"/>'s internal stack
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Tracing.Tracer.CurrentCategory">
+            <summary>
+            Gets the current category used by the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Tracing.Tracer"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Tracing.Tracer.RootCategory">
+            <summary>
+            Gets the topmost category in the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Tracing.Tracer"/>'s internal stack.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.InstrumentationCategoryAttribute">
+            <summary>
+            Indicates a category that this InstrumentationType belongs to. This attribute should only be used 
+            on classes/structures that have on one of their base classes/structures the InstrumentationType attribute. 
+            </summary>
+            <remarks>
+            This attribute is only used by the ProjectInstaller class to determine how to layout the eventCategories 
+            section when creating a default xml configuration file.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.InstrumentationCategoryAttribute.#ctor(System.String)">
+            <summary>
+            Indicates a category that this InstrumentationType belongs to.
+            </summary>
+            <param name="name">The category name.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.InstrumentationCategoryAttribute.Name">
+            <summary>
+            Gets or sets the name of this category.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.InstrumentationCategoryAttribute.Description">
+            <summary>
+            Gets or sets the description of this category.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.InternalAttribute">
+            <summary>
+            Indicates that the field or property should not exposed when the raised to an EventSource.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.ExposedNameAttribute">
+            <summary>
+            Indicates information about how the field or property should be exposed when the raised to an EventSource.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.ExposedNameAttribute.#ctor(System.String)">
+            <summary>
+            Constructs an instance with the specified name.
+            </summary>
+            <param name="name">Name</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.ExposedNameAttribute.ExposedName">
+            <summary>
+            Gets the exposed name.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.InstrumentationTypeAttribute">
+            <summary>
+            Indicates that this type can be raised to an EventSource.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.InstrumentationTypeAttribute.#ctor">
+            <summary>
+            Default constructor that marks the class as a type that can be raised.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.InstrumentationSchemaAttribute">
+            <summary>
+            Specifies that this assembly provides an EnterpriseInstrumentation schema. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.InstrumentationSchemaAttribute.#ctor">
+            <summary>
+            An attribute that marks this assembly as an EnterpriseInstrumentation schema. Any WMI events are raised to the root\default namespace.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.InstrumentationSchemaAttribute.#ctor(System.String)">
+            <summary>
+            An attribute that marks this assembly as an EnterpriseInstrumentation schema. Any WMI events are raised to the namespace passed.
+            </summary>
+            <param name="namespaceName">The namespace to raise WMI events to.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.InstrumentationSchemaAttribute.#ctor(System.String,System.String)">
+            <summary>
+            	An attribute that marks this assembly as an EnterpriseInstrumentation schema. Any WMI events are raised to the namespace passed with the security settings passed as a parameter.
+            </summary>
+            <param name="namespaceName">The namespace to raise WMI events to.</param>
+            <param name="securityDescriptor">String security descriptor that allows only the specified users or groups to run applications that provide the instrumentation supported by this assembly. </param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.CategoryFilterMode">
+            <summary>
+            Represents the possible modes for client-side category filtering.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.CategoryFilterMode.AllowAllExceptDenied">
+            <summary>
+            Allow all categories except those explicitly denied
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.CategoryFilterMode.DenyAllExceptAllowed">
+            <summary>
+            Deny all categories except those explicitly allowed
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.ContextItems">
+            <summary>
+            Provides methods to maintain a key/value dictionary that is stored in the <see cref="T:System.Runtime.Remoting.Messaging.CallContext"/>.
+            </summary>
+            <remarks>
+            A context item represents a key/value that needs to be logged with each message
+            on the same CallContext.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.ContextItems.#ctor">
+            <summary>
+            Create a new instance of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.ContextItems"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.ContextItems.SetContextItem(System.Object,System.Object)">
+            <summary>
+            Add a key/value pair to a dictionary in the <see cref="T:System.Runtime.Remoting.Messaging.CallContext"/>.  
+            Each context item will be recorded with every log entry.
+            </summary>
+            <param name="key">Hashtable key.</param>
+            <param name="value">Value of the context item.  Objects and byte arrays will be base64 encoded.</param>
+            <example>The following example demonstrates use of the AddContextItem method.
+            <code>Logger.SetContextItem("SessionID", myComponent.SessionId);</code></example>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.ContextItems.FlushContextItems">
+            <summary>
+            Empty the context items dictionary.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.ContextItems.ProcessContextItems(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Merges each key/value pair from the context items dictionary with the ExtendedProperties
+            dictionary of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry"/>.
+            </summary>
+            <param name="log"><see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry"/> object that is being logged.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry">
+            <summary>
+            Represents a log message.  Contains the common properties that are required for all log messages.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.#ctor">
+            <summary>
+            Initialize a new instance of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.#ctor(System.Object,System.String,System.Int32,System.Int32,Microsoft.Practices.EnterpriseLibrary.Logging.Severity,System.String,System.Collections.IDictionary)">
+            <summary>
+            Create a new instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry"/> with a full set of constructor parameters
+            </summary>
+            <param name="message">Message body to log.  Value from ToString() method from message object.</param>
+            <param name="category">Category name used to route the log entry to a one or more sinks.</param>
+            <param name="priority">Only messages must be above the minimum priority are processed.</param>
+            <param name="eventId">Event number or identifier.</param>
+            <param name="severity">Log entry severity as a <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.Severity"/> enumeration. (Unspecified, Information, Warning or Error).</param>
+            <param name="title">Additional description of the log entry message.</param>
+            <param name="properties">Dictionary of key/value pairs to record.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.Clone">
+            <summary>
+            Creates a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry"/> that is a copy of the current instance.
+            </summary>
+            <remarks>
+            If the dictionary contained in <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.ExtendedProperties"/> implements <see cref="T:System.ICloneable"/>, the resulting
+            <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry"/> will have its ExtendedProperties set by calling <c>Clone()</c>. Otherwise the resulting
+            <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry"/> will have its ExtendedProperties set to null.
+            </remarks>
+            <implements>ICloneable.Clone</implements>
+            <returns>A new <c>LogEntry</c> that is a copy of the current instance.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.AddErrorMessage(System.String)">
+            <summary>
+            Add an error or warning message to the start of the messages string builder.
+            Used by the distributor to record problems.
+            </summary>
+            <param name="message">Message to be added to this instance</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.CollectIntrinsticProperties">
+            <summary>
+            Set the intrinsic properties such as MachineName and UserIdentity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.Message">
+            <summary>
+            Message body to log.  Value from ToString() method from message object.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.Category">
+            <summary>
+            Category name used to route the log entry to a one or more sinks.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.Priority">
+            <summary>
+            Importance of the log message.  Only messages must be above the minimum priority are processed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.EventId">
+            <summary>
+            Event number or identifier.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.Severity">
+            <summary>
+            Log entry severity as a <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.Severity"/> enumeration. (Unspecified, Information, Warning or Error).
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.LoggedSeverity">
+            <summary>
+            <para>Gets or sets the <see cref="T:System.Int32"/> value of the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.Severity"/> enumeration.</para>
+            </summary>
+            <value>
+            <para>The <see cref="T:System.Int32"/> value of the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.Severity"/> enumeration.</para>
+            </value>
+            <summary>
+            <para>Gets or sets the <see cref="T:System.Int32"/> value of the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.Severity"/> enumeration.</para>
+            </summary>
+            <value>
+            <para>The <see cref="T:System.Int32"/> value of the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.Severity"/> enumeration.</para>
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.Title">
+            <summary>
+            Additional description of the log entry message.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.TimeStamp">
+            <summary>
+            Date and time of the log entry message.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.MachineName">
+            <summary>
+            Name of the computer.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.AppDomainName">
+            <summary>
+            The AppDomain in which we are running
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.ProcessId">
+            <summary>
+            The Win32 process ID for the current running process.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.ProcessName">
+            <summary>
+            The name of the current running process.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.ManagedThreadName">
+            <summary>
+            The name of the .NET thread. <seealso cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.Win32ThreadId"/>
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.Win32ThreadId">
+            <summary>
+            The Win32 Thread ID for the current thread.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.ExtendedProperties">
+            <summary>
+            Dictionary of key/value pairs to record.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.TimeStampString">
+            <summary>
+            Read-only property that returns the timeStamp formatted using the current culture.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry.ErrorMessages">
+            <summary>
+            Gets the error message with the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry"></see>
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Logger">
+            <summary>
+            Facade for writing a log entry to one or more log sinks.  This class is sealed.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Logger.#ctor">
+            <summary>
+            No instances allowed.  Use the static methods on this class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Logger.SetContextItem(System.Object,System.Object)">
+            <summary>
+            Add a key/value pair to the <see cref="T:System.Runtime.Remoting.Messaging.CallContext"/> dictionary.  
+            Context items will be recorded with every log entry.
+            </summary>
+            <param name="key">Hashtable key</param>
+            <param name="value">Value.  Objects will be serialized.</param>
+            <example>The following example demonstrates use of the AddContextItem method.
+            <code>Logger.SetContextItem("SessionID", myComponent.SessionId);</code></example>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Logger.FlushContextItems">
+            <summary>
+            Empty the context items dictionary.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Logger.Write(System.Object)">
+            <overloads>
+            Write a new log entry to the default category.
+            </overloads>
+            <summary>
+            Write a new log entry to the default category.
+            </summary>
+            <example>The following example demonstrates use of the Write method with
+            one required parameter, message.
+            <code>Logger.Write("My message body");</code></example>
+            <param name="message">Message body to log.  Value from ToString() method from message object.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Logger.Write(System.Object,System.String)">
+            <summary>
+            Write a new log entry to a specific category.
+            </summary>
+            <param name="message">Message body to log.  Value from ToString() method from message object.</param>
+            <param name="category">Category name used to route the log entry to a one or more sinks.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Logger.Write(System.Object,System.String,System.Int32)">
+            <summary>
+            Write a new log entry with a specific category and priority.
+            </summary>
+            <param name="message">Message body to log.  Value from ToString() method from message object.</param>
+            <param name="category">Category name used to route the log entry to a one or more sinks.</param>
+            <param name="priority">Only messages must be above the minimum priority are processed.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Logger.Write(System.Object,System.String,System.Int32,System.Int32)">
+            <summary>
+            Write a new log entry with a specific category, priority and event id.
+            </summary>
+            <param name="message">Message body to log.  Value from ToString() method from message object.</param>
+            <param name="category">Category name used to route the log entry to a one or more sinks.</param>
+            <param name="priority">Only messages must be above the minimum priority are processed.</param>
+            <param name="eventId">Event number or identifier.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Logger.Write(System.Object,System.String,System.Int32,System.Int32,Microsoft.Practices.EnterpriseLibrary.Logging.Severity)">
+            <summary>
+            Write a new log entry with a specific category, priority, event id and severity.
+            </summary>
+            <param name="message">Message body to log.  Value from ToString() method from message object.</param>
+            <param name="category">Category name used to route the log entry to a one or more sinks.</param>
+            <param name="priority">Only messages must be above the minimum priority are processed.</param>
+            <param name="eventId">Event number or identifier.</param>
+            <param name="severity">Log entry severity as a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Severity"/> enumeration. (Unspecified, Information, Warning or Error).</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Logger.Write(System.Object,System.String,System.Int32,System.Int32,Microsoft.Practices.EnterpriseLibrary.Logging.Severity,System.String)">
+            <summary>
+            Write a new log entry with a specific category, priority, event id, severity
+            and title.
+            </summary>
+            <param name="message">Message body to log.  Value from ToString() method from message object.</param>
+            <param name="category">Category name used to route the log entry to a one or more sinks.</param>
+            <param name="priority">Only messages must be above the minimum priority are processed.</param>
+            <param name="eventId">Event number or identifier.</param>
+            <param name="severity">Log message severity as a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Severity"/> enumeration. (Unspecified, Information, Warning or Error).</param>
+            <param name="title">Additional description of the log entry message</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Logger.Write(System.Object,System.Collections.IDictionary)">
+            <summary>
+            Write a new log entry and a dictionary of extended properties.
+            </summary>
+            <param name="message">Message body to log.  Value from ToString() method from message object.</param>
+            <param name="properties">Dictionary of key/value pairs to log.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Logger.Write(System.Object,System.String,System.Collections.IDictionary)">
+            <summary>
+            Write a new log entry to a specific category with a dictionary 
+            of extended properties.
+            </summary>
+            <param name="message">Message body to log.  Value from ToString() method from message object.</param>
+            <param name="category">Category name used to route the log entry to a one or more sinks.</param>
+            <param name="properties">Dictionary of key/value pairs to log.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Logger.Write(System.Object,System.String,System.Int32,System.Collections.IDictionary)">
+            <summary>
+            Write a new log entry to with a specific category, priority and a dictionary 
+            of extended properties.
+            </summary>
+            <param name="message">Message body to log.  Value from ToString() method from message object.</param>
+            <param name="category">Category name used to route the log entry to a one or more sinks.</param>
+            <param name="priority">Only messages must be above the minimum priority are processed.</param>
+            <param name="properties">Dictionary of key/value pairs to log.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Logger.Write(System.Object,System.String,System.Int32,System.Int32,Microsoft.Practices.EnterpriseLibrary.Logging.Severity,System.String,System.Collections.IDictionary)">
+            <summary>
+            Write a new log entry with a specific category, priority, event Id, severity
+            title and dictionary of extended properties.
+            </summary>
+            <example>The following example demonstrates use of the Write method with
+            a full set of parameters.
+            <code></code></example>
+            <param name="message">Message body to log.  Value from ToString() method from message object.</param>
+            <param name="category">Category name used to route the log entry to a one or more sinks.</param>
+            <param name="priority">Only messages must be above the minimum priority are processed.</param>
+            <param name="eventId">Event number or identifier.</param>
+            <param name="severity">Log message severity as a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Severity"/> enumeration. (Unspecified, Information, Warning or Error).</param>
+            <param name="title">Additional description of the log entry message.</param>
+            <param name="properties">Dictionary of key/value pairs to log.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Logger.Write(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Write a new log entry as defined in the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry"/> parameter.
+            </summary>
+            <example>The following examples demonstrates use of the Write method using
+            a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry"/> type.
+            <code>
+            LogEntry log = new LogEntry();
+            log.Category = "MyCategory1";
+            log.Message = "My message body";
+            log.Severity = Severity.Error;
+            log.Priority = 100;
+            Logger.Write(log);</code></example>
+            <param name="log">Log entry object to write.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.LoggingConfigurationView">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LoggingConfigurationView"></see>-typed view into configuration data
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.LoggingConfigurationView.#ctor(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext)">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LoggingConfigurationView"/> with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext"/>.</para>
+            </summary>
+            <param name="context">
+            <para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext"/> object.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.LoggingConfigurationView.GetDistributionStrategyData(System.String)">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.DistributionStrategyData"></see> for the given distribution strategy name
+            </summary>
+            <param name="distributionName">Name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.DistributionStrategyData"></see> found in configuration</param>
+            <returns><see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.DistributionStrategyData"></see> as read from configuration</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.LoggingConfigurationView.GetLoggingSettings">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings"></see> from configuration
+            </summary>
+            <returns><see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings"></see> object that contains the logging-specific configuration information</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.LoggingConfigurationView.GetDistributorSettings">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DistributorSettings"></see> from configuration
+            </summary>
+            <returns><see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.DistributorSettings"></see> read from configuration</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.LoggingConfigurationView.GetDefaultCategoryData">
+            <summary>
+            Gets the default <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryData"></see> defined for the logging category
+            </summary>
+            <returns><see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryData"></see> defined for the default logging category</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.LoggingConfigurationView.GetCategoryData(System.String)">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryData"></see> defined for the named logging category
+            </summary>
+            <param name="categoryName">Name of the logging category to retrieve</param>
+            <returns><see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.CategoryData"></see> defined for named logging category</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.LoggingConfigurationView.GetFormatterData(System.String)">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FormatterData"></see> defined for the named logging formatter
+            </summary>
+            <param name="formatterName">Name of the logging formatter to retrieve</param>
+            <returns><see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FormatterData"></see> defined for named logging formatter</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.LoggingConfigurationView.GetDefaultFormatterData">
+            <summary>
+            Gets the default <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FormatterData"></see>
+            </summary>
+            <returns><see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.FormatterData"></see> defined for default logging formatter</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.LoggingConfigurationView.GetSinkData(System.String)">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.SinkData"></see> associated with the named logging sink
+            </summary>
+            <param name="sinkName">Name of the sink as defined in configuration</param>
+            <returns><see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Distributor.Configuration.SinkData"></see> defined for named logging sink</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.LoggingException">
+            <summary>
+            Logging block exception.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.LoggingException.#ctor">
+            <summary>
+            Initializes a new instance of the LoggingException class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.LoggingException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the LoggingException class 
+            with a specified error message.
+            </summary>
+            <param name="message">A message that describes the error.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.LoggingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the LoggingException class with a 
+            specified error message and a reference to the inner exception that is 
+            the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for 
+            the exception.
+            </param>
+            <param name="exception">The exception that is the cause of the current 
+            exception.  If the innerException parameter is not a null reference, 
+            the current exception is raised in a catch block that handles the inner 
+            exception.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.LoggingException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the LoggingException class with 
+            serialized data.
+            </summary>
+            <param name="info">The object that holds the serialized object data.</param>
+            <param name="context">The contextual information about the source or 
+            destination.
+            </param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogWriter">
+            <summary>
+            Instance based class to write log messages to a specific configuration context.
+            Messages are routed based on category.  Logging can be configured  
+            synchronously or asynchronously using the Msmq Log Distribution Strategy.
+            </summary>
+            <remarks>
+            To write log messages to the current configuration context, use 
+            the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Logger"/> facade.  Only create an instance of a LogWriter
+            if you need to write log messages using a custom configuration context.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.LogWriter.#ctor(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogWriter"/> class.
+            </summary>
+            <param name="configurationContext"><see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext"></see> containing all information needed to write a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry"></see></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.LogWriter.SetContextItem(System.Object,System.Object)">
+            <summary>
+            Add a key/value pair to the <see cref="T:System.Runtime.Remoting.Messaging.CallContext"/> dictionary.  
+            Context items will be recorded with every log entry.
+            </summary>
+            <param name="key">Hashtable key</param>
+            <param name="value">Value.  Objects will be serialized.</param>
+            <example>The following example demonstrates use of the AddContextItem method.
+            <code>Logger.SetContextItem("SessionID", myComponent.SessionId);</code></example>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.LogWriter.FlushContextItems">
+            <summary>
+            Empty the context items dictionary.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.LogWriter.Write(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Write a new log entry as defined in the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry"/> parameter.
+            </summary>
+            <param name="log">Log entry object to write.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.NativeMethods">
+            <summary>
+            Platform Invocation methods used to support Tracer.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.NativeMethods.ExtendedNameFormat.NameDnsDomain">
+            <summary>
+            DNS domain name + SAM username 
+            eg: engineering.widget.com\JohnDoe
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Severity">
+            <summary>
+            Enumeration of log entry severities.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.Severity.Unspecified">
+            <summary>
+            Default severity.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.Severity.Information">
+            <summary>
+            Informational severity.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.Severity.Warning">
+            <summary>
+            Non-critical error severity.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.Severity.Error">
+            <summary>
+            Critical error severity.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.SeverityMap">
+            <devdoc>
+            Translate Enterprise Library severities to EventLogEntryType severities.
+            </devdoc>
+        </member>
+    </members>
+</doc>

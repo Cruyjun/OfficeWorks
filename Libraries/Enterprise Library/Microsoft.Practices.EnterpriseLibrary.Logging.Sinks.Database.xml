@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.DatabaseSinkData">
+            <summary>
+            Represents the configuration settings for an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.DatabaseSink"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.DatabaseSinkData.#ctor">
+            <summary>
+            Create a new instance of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.DatabaseSinkData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.DatabaseSinkData.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.DatabaseSinkData"/> class with a name.
+            </summary>
+            <param name="name">
+            The name of the sink.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.DatabaseSinkData.#ctor(System.String,System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.DatabaseSinkData"/> class with a name.
+            </summary>
+            <param name="name">
+            The name of the sink.
+            </param>
+            <param name="storedProcName">
+            Stored procedure to execute.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.DatabaseSinkData.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.DatabaseSinkData"/> class with a name.
+            </summary>
+            <param name="name">
+            The name of the sink.
+            </param>
+            <param name="databaseInstanceName">
+            Enterprise Library Data service key name.
+            </param>
+            <param name="storedProcName">
+            Stored procedure to execute.
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.DatabaseSinkData.DatabaseInstanceName">
+            <summary>
+            Enterprise Library Data service key name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.DatabaseSinkData.StoredProcName">
+            <summary>
+            Stored procedure to execute.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.DatabaseSinkData.TypeName">
+            <summary>
+            Returns the fully qualified name of the <c>DatabaseSink</c>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.DatabaseSink">
+            <summary>
+            Represents a database logging sink.  Executes a stored procedure for each log entry.
+            Database and stored procedure are retrieved from the configuration settings.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.DatabaseSink.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.DatabaseSink.Initialize(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationView)">
+            <summary>
+            <para>
+            Initializes the provider with its name and any attributes associated with the provider. 
+            </para>
+            </summary>  
+            <param name="configurationView">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LoggingConfigurationView"></see> object.</param>      
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.DatabaseSink.SendMessageCore(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Execute a stored procedure to record the log entry.
+            </summary>
+            <param name="logEntry"><see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry"></see> to send to database</param>
+        </member>
+    </members>
+</doc>

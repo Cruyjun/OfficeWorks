@@ -1,0 +1,8 @@
+// ricardo da Gerreiro em 2003-11-05
+// PROBLEMA:
+// Em quase todas as implementações de DataGrid que efectuamos, temos que
+// criar um DataTable associado à DataGrid para efectuar as operações de INSERT,
+// UPDATE, DELETE, UP e DOWN
+// IDEIA:
+// Fazer com que o Controlo guarde ViewState do DataSource de forma a que possamos
+// implemtar métodos directos de INS, UPD e DEL UP e DOWN sem ter que estar a fazer isso para cada datagrid em cada página

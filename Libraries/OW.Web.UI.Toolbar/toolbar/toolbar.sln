@@ -1,0 +1,47 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "toolbarsample", "http://localhost/toolbarsample/toolbarsample.csproj", "{642162CA-C645-466C-9198-D8F2AEDF2D13}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "toolbar", "toolbar.csproj", "{6B0E2D36-E48B-4067-9C75-82F615BC8471}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProjectName0 = \u0022$/Biblioteca\u0020de\u0020componentes/eVolve/toolbar/toolbar\u0022,\u0020AXWAAAAA
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+		SolutionUniqueID = {0235B1D0-C82A-4F59-B186-CB586AF34F94}
+		SccProjectUniqueName1 = toolbar.csproj
+		SccProjectName1 = \u0022$/Biblioteca_de_componentes/eVolve/toolbar/toolbar\u0022,\u0020AXWAAAAA
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{642162CA-C645-466C-9198-D8F2AEDF2D13}.Debug.ActiveCfg = Debug|.NET
+		{642162CA-C645-466C-9198-D8F2AEDF2D13}.Debug.Build.0 = Debug|.NET
+		{642162CA-C645-466C-9198-D8F2AEDF2D13}.Release.ActiveCfg = Release|.NET
+		{642162CA-C645-466C-9198-D8F2AEDF2D13}.Release.Build.0 = Release|.NET
+		{6B0E2D36-E48B-4067-9C75-82F615BC8471}.Debug.ActiveCfg = Debug|.NET
+		{6B0E2D36-E48B-4067-9C75-82F615BC8471}.Debug.Build.0 = Debug|.NET
+		{6B0E2D36-E48B-4067-9C75-82F615BC8471}.Release.ActiveCfg = Release|.NET
+		{6B0E2D36-E48B-4067-9C75-82F615BC8471}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

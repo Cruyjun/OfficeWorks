@@ -1,0 +1,24 @@
+﻿Installing assembly 'c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.logging.dll'.
+Affected parameters are:
+   assemblypath = c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.logging.dll
+   logfile = c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.logging.InstallLog
+Installing WMI Schema: Started
+Registering assembly: Microsoft.Practices.EnterpriseLibrary.Logging_SN__Version_1.1
+Ensuring that namespace exists: root\MicrosoftWmiNet
+Ensuring that class exists: root\MicrosoftWmiNet:WMINET_Instrumentation
+Ensuring that class exists: root\MicrosoftWmiNet:WMINET_InstrumentedNamespaces
+Ensuring that class exists: root\MicrosoftWmiNet:WMINET_Naming
+Ensuring that namespace exists: root\EnterpriseLibrary
+Ensuring that class exists: root\EnterpriseLibrary:WMINET_Instrumentation
+Ensuring that class exists: root\EnterpriseLibrary:WMINET_InstrumentedAssembly
+Ensuring that class exists: root\EnterpriseLibrary:MSFT_DecoupledProvider
+Ensuring that class exists: root\EnterpriseLibrary:WMINET_ManagedAssemblyProvider
+Installing WMI Schema: Finished
+Creating EventLog source Enterprise Library Logging Service in log Application...
+Creating EventLog source Enterprise Library Backup Sink in log Application...
+Creating EventLog source Enterprise Library Distributor Service in log Application...
+Creating performance counter category Enterprise Library Logging Service.
+Committing assembly 'c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.logging.dll'.
+Affected parameters are:
+   assemblypath = c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.logging.dll
+   logfile = c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.logging.InstallLog

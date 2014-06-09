@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.ExceptionHandlingLoggingConfigurationDesignManager">
+            <summary>
+            Represents the block manager for the Profile 
+            configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.ExceptionHandlingLoggingConfigurationDesignManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationDesignManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.ExceptionHandlingLoggingConfigurationDesignManager.Register(System.IServiceProvider)">
+            <summary>
+            <para>Registers the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.LoggingExceptionHandlerNode"/> in the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.ExceptionHandlingLoggingConfigurationDesignManager.Open(System.IServiceProvider)">
+            <summary>
+            <para>Opens the configuration settings and registers them with the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.ExceptionHandlingLoggingConfigurationDesignManager.Save(System.IServiceProvider)">
+            <summary>
+            <para>Saves the configuration settings created for the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.ExceptionHandlingLoggingConfigurationDesignManager.BuildContext(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationDictionary)">
+            <summary>
+            <para>Adds to the dictionary configuration data for 
+            the enterpriselibrary.configurationSettings configuration section.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+            <param name="configurationDictionary">
+            <para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationDictionary"/> to add 
+            configuration data to.</para></param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.LoggingExceptionHandlerNode">
+            <summary>
+            Represents a node for the specific ExceptionHandler "<see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.LoggingExceptionHandler"/>".
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.LoggingExceptionHandlerNode.#ctor">
+            <summary>
+            Constructs the node with default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.LoggingExceptionHandlerNode.#ctor(Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.LoggingExceptionHandlerData)">
+            <summary>
+            Constructs the node with config data.
+            </summary>
+            <param name="data">The config data to initialize this node.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.LoggingExceptionHandlerNode.AddDefaultChildNodes">
+            <summary>
+            Initializes the Logging block if applicable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.LoggingExceptionHandlerNode.ResolveNodeReferences">
+            <summary>
+            Resolves the node references.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.LoggingExceptionHandlerNode.TypeName">
+            <summary>
+            Gets the assembly qualified type name of the logging exception handler.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.LoggingExceptionHandlerNode.LogCategory">
+            <summary>
+            <seealso cref="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.LoggingExceptionHandlerData.DefaultLogCategory"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.LoggingExceptionHandlerNode.EventID">
+            <summary>
+            <seealso cref="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.LoggingExceptionHandlerData.DefaultEventID"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.LoggingExceptionHandlerNode.Severity">
+            <summary>
+            <seealso cref="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.LoggingExceptionHandlerData.DefaultSeverity"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.LoggingExceptionHandlerNode.Title">
+            <summary>
+            <seealso cref="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.LoggingExceptionHandlerData.DefaultTitle"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.LoggingExceptionHandlerNode.FormatterTypeName">
+            <summary>
+            <seealso cref="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.LoggingExceptionHandlerData.FormatterTypeName"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.LoggingExceptionHandlerNode.Priority">
+            <summary>
+            <seealso cref="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.LoggingExceptionHandlerData.MinimumPriority"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.SRCategoryAttribute">
+            <devdoc>
+            Represents a localized vertion of a CategoryAttribute. It uses the local string resources for localization.
+            This class cannot be inherited from
+            </devdoc>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.SRDescriptionAttribute">
+            <devdoc>
+            Represents a localized vertion of a DescriptionAttribute. It uses the local strings resouce to get its description.
+            This class cannot be inherited from 
+            </devdoc>
+        </member>
+    </members>
+</doc>

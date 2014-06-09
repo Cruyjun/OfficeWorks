@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Security.ActiveDirectory</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.ActiveDirectory.Configuration.AdRolesProviderData">
+            <summary>
+            Configuration data for the Active Directory Roles Provider.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.ActiveDirectory.Configuration.AdRolesProviderData.#ctor">
+            <summary>
+            Default Constructor.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.ActiveDirectory.Configuration.AdRolesProviderData.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the  <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.ActiveDirectory.Configuration.AdRolesProviderData"/> class with the specified name.
+            </summary>
+            <param name="name">The name of the provider</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.ActiveDirectory.Configuration.AdRolesProviderData.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the  <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.ActiveDirectory.Configuration.AdRolesProviderData"/> class with the specified name.
+            </summary>
+            <param name="name">The name of the provider</param>
+            <param name="providerType">
+            The Active Directory provider type name.
+            </param>
+            <param name="server">
+            The name of the server hosting the Active Directory Service.
+            </param>
+            <param name="userPartition">
+            The partition within the Active Directory that contains the user objects/data.
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.ActiveDirectory.Configuration.AdRolesProviderData.TypeName">
+            <summary>
+            <para>Gets or sets the <see cref="T:System.Type"/> name of the provider.</para>
+            </summary>
+            <value>
+            <para>The type name of the provider. The default is an empty string.</para>
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.ActiveDirectory.Configuration.AdRolesProviderData.ProviderType">
+            <summary>
+            Gets or sets the Active Directory provider type name.
+            </summary>
+            <value>Provider Type name.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.ActiveDirectory.Configuration.AdRolesProviderData.Server">
+            <summary>
+            Gets or sets the name of the server hosting the Active Directory Service.
+            </summary>
+            <value>Service Host Name.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.ActiveDirectory.Configuration.AdRolesProviderData.UserPartition">
+            <summary>
+            Gets or sets the partition within the Active Directory that contains the user objects/data.
+            </summary>
+            <value>Active Directory Partition.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.ActiveDirectory.Configuration.AdRolesProviderData.AccountName">
+            <summary>
+            Name of field in schema to use to find the current account name
+            </summary>
+            <value>Active Directory Account Name</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.ActiveDirectory.AdRolesProvider">
+            <summary>
+            Active Directory Roles Provider.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.ActiveDirectory.AdRolesProvider.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.ActiveDirectory.AdRolesProvider.Initialize(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationView)">
+            <summary>
+            <para>
+            Initializes the provider with its name and any attributes associated with the provider. 
+            </para>
+            </summary>  
+            <param name="configurationView">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.SecurityConfigurationView"></see> object</param>      
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.ActiveDirectory.AdRolesProvider.CollectAllUserRoles(System.Security.Principal.IIdentity)">
+            <summary>
+            Overridden from SecurityRolesProvider. Retrieves the list of user roles
+            from the underlying active directory services.
+            </summary>
+            <param name="userIdentity">Identity of user used for retrieval</param>
+            <returns>String array of roles for the given user identity</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.ActiveDirectory.UserNotFoundException">
+            <summary>
+            Exception thrown when Active Directory is unable to find the given user
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.ActiveDirectory.UserNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a newly created instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.ActiveDirectory.UserNotFoundException"></see>
+            </summary>
+            <param name="errorMessage">Error message from caller</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.ActiveDirectory.UserNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a newly created instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.ActiveDirectory.UserNotFoundException"></see>
+            </summary>
+            <param name="errorMessage">Error message from caller</param>
+            <param name="innerException">Any nested exception</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.ActiveDirectory.UserNotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Serialization constructor
+            </summary>
+            <param name="info">The object that holds the serialized object data</param>
+            <param name="context">The contextual information about the source or destination</param>
+        </member>
+    </members>
+</doc>

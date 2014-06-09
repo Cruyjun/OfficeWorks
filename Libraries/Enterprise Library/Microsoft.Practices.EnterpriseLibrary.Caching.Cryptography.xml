@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.SymmetricStorageEncryptionProviderData">
+            <summary>
+            Configuration data for Symmetric Storage Encryption
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.SymmetricStorageEncryptionProviderData.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.SymmetricStorageEncryptionProviderData.#ctor(System.String)">
+            <summary>
+            Create provider with a specified name.
+            </summary>
+            <param name="name">The configured name of the provider.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.SymmetricStorageEncryptionProviderData.#ctor(System.String,System.String)">
+            <summary>
+            Create provider with a specified name and symmetric instance.
+            </summary>
+            <param name="name">The configured name of the provider</param>
+            <param name="symmetricInstance">The full name of a <see cref="T:System.Security.Cryptography.SymmetricAlgorithm"/>.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.SymmetricStorageEncryptionProviderData.SymmetricInstance">
+            <summary>
+            Name of symmetric instance
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.SymmetricStorageEncryptionProviderData.TypeName">
+            <summary>
+            Gets the assembly qualified name of this provider.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.SymmetricStorageEncryptionProvider">
+            <summary>
+            Implementation of Symmetric Storage Encryption used by the Caching block
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.SymmetricStorageEncryptionProvider.#ctor">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.SymmetricAlgorithmProvider"/> class.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.SymmetricStorageEncryptionProvider.Initialize(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationView)">
+            <summary>
+            Initializes this provider with the correct Symmetric Cryptographic Provider Factory
+            to create the correct cryptographic provider to encrypt or decrypt the data stored
+            in the cache.
+            </summary>
+            <param name="configurationView">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.CachingConfigurationView"></see> object</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.SymmetricStorageEncryptionProvider.Encrypt(System.Byte[])">
+            <summary>
+            Encrypts the data passed to this method according to the correct symmetric cryptographic
+            algorithm as defined in configuration
+            </summary>
+            <param name="plaintext">Data to be encrypted</param>
+            <returns>Encrypted data</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.SymmetricStorageEncryptionProvider.Decrypt(System.Byte[])">
+            <summary>
+            Decrypts the data passed to this method according to the correct symmetric cryptographic
+            algoritm as defined in configuration
+            </summary>
+            <param name="ciphertext">Encrypted data to be decrypted</param>
+            <returns>Decrypted data</returns>
+        </member>
+    </members>
+</doc>

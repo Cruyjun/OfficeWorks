@@ -1,0 +1,45 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OWWebControls", "OWWebControls.csproj", "{BD35FAA5-3643-4AC0-8671-333905DFA100}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "OWWebControlsSetup", "OWWebControlsSetup\OWWebControlsSetup.vdproj", "{9A73ECD2-5ADE-40D4-80EE-D87387B08224}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "OWWebControlsMergeModule", "OWWebControlsMergeModule\OWWebControlsMergeModule.vdproj", "{983B3AED-D46E-4A20-BC2D-20AE553B62F8}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "http://localhost/Test/Test.csproj", "{BAC21797-5F65-476F-BBE1-F966337776AC}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global	
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{BD35FAA5-3643-4AC0-8671-333905DFA100}.Debug.ActiveCfg = Debug|.NET
+		{BD35FAA5-3643-4AC0-8671-333905DFA100}.Debug.Build.0 = Debug|.NET
+		{BD35FAA5-3643-4AC0-8671-333905DFA100}.Release.ActiveCfg = Release|.NET
+		{BD35FAA5-3643-4AC0-8671-333905DFA100}.Release.Build.0 = Release|.NET
+		{9A73ECD2-5ADE-40D4-80EE-D87387B08224}.Debug.ActiveCfg = Debug
+		{9A73ECD2-5ADE-40D4-80EE-D87387B08224}.Release.ActiveCfg = Release
+		{983B3AED-D46E-4A20-BC2D-20AE553B62F8}.Debug.ActiveCfg = Debug
+		{983B3AED-D46E-4A20-BC2D-20AE553B62F8}.Release.ActiveCfg = Release
+		{BAC21797-5F65-476F-BBE1-F966337776AC}.Debug.ActiveCfg = Debug|.NET
+		{BAC21797-5F65-476F-BBE1-F966337776AC}.Debug.Build.0 = Debug|.NET
+		{BAC21797-5F65-476F-BBE1-F966337776AC}.Release.ActiveCfg = Release|.NET
+		{BAC21797-5F65-476F-BBE1-F966337776AC}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

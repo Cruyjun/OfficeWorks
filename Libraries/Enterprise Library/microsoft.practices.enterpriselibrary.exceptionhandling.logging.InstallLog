@@ -1,0 +1,11 @@
+﻿Installing assembly 'c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.exceptionhandling.logging.dll'.
+Affected parameters are:
+   assemblypath = c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.exceptionhandling.logging.dll
+   logfile = c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.exceptionhandling.logging.InstallLog
+No public installers with the RunInstallerAttribute.Yes attribute could be found in the c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.exceptionhandling.logging.dll assembly.
+Committing assembly 'c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.exceptionhandling.logging.dll'.
+Affected parameters are:
+   assemblypath = c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.exceptionhandling.logging.dll
+   logfile = c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.exceptionhandling.logging.InstallLog
+No public installers with the RunInstallerAttribute.Yes attribute could be found in the c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.exceptionhandling.logging.dll assembly.
+Remove InstallState file because there are no installers.

@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="ResMimeType">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="Version">
+		<value>1.0.0.0</value>
+	</resheader>
+	<resheader name="Reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3102.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="Writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3102.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="LibraryScript"><![CDATA[ 
+<script language='JavaScript'> 
+<!-- 
+
+
+
+//get the image IDs as array
+function preloadImages(imgs) {  
+  
+  var d=document; 
+  if(d.images)
+  {
+    //declare array
+    if (!d.cachedRollOvers)
+      d.cachedRollOvers=new Array();
+      
+    var i , j=d.cachedRollOvers.length;
+    for(i=0; i<imgs.length; i++)
+    {
+      if (imgs[i].indexOf('#') !=0 )
+      {      
+        //create image object and store in document
+        d.cachedRollOvers[j] = new Image;
+        d.cachedRollOvers[j++].src = imgs[i];
+      }
+    }
+  } 
+} 
+
+
+function restoreImage() {
+  var i,x,a=document.rollOverCache;
+  for (i=0; a && i<a.length && (x=a[i]) && x.oSrc; i++)
+    x.src=x.oSrc; 
+} 
+
+
+function findRollOverControl(n, d)  {
+
+  var p;
+  if(!d) d=document; 
+    
+  //strip the image name (n) of any stuff
+  if( (p=n.indexOf('?'))>0 && parent.frames.length) { 
+    d=parent.frames[n.substring(p+1)].document;
+    n=n.substring(0,p);
+  }
+
+  return d.getElementById(n);
+}
+
+
+function swapImage() {
+  var i,j=0,x,a=swapImage.arguments;
+  
+  document.rollOverCache=new Array;
+  
+  for(i=0; i<(a.length-2); i+=3)
+  {
+    if ( (x=findRollOverControl(a[i])) != null)
+    {
+      document.rollOverCache[j++] = x;
+      if(!x.oSrc) x.oSrc=x.src;
+      x.src=a[i+2];
+    }
+  }
+} 
+//--> 
+</script> 	
+	]]></data>
+	<data name="InitScript">
+	<![CDATA[
+<script language='JavaScript'> 
+<!-- 
+preloadImages(Toolbar_RollOverImages) 
+//--> 
+</script> 	
+	]]>
+	</data>
+</root>

@@ -1,0 +1,217 @@
+﻿
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.common.dll assembly's progress.
+The file is located at c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.common.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.common.dll assembly's progress.
+The file is located at c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.common.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+
+The uninstall is beginning.
+See the contents of the log file for the c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.common.dll assembly's progress.
+The file is located at c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.common.InstallLog.
+
+The uninstall has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.common.dll assembly's progress.
+The file is located at c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.common.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.common.dll assembly's progress.
+The file is located at c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.common.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.caching.dll assembly's progress.
+The file is located at c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.caching.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.caching.dll assembly's progress.
+The file is located at c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.caching.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.configuration.dll assembly's progress.
+The file is located at c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.configuration.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.configuration.dll assembly's progress.
+The file is located at c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.configuration.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.security.cryptography.dll assembly's progress.
+The file is located at c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.security.cryptography.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.security.cryptography.dll assembly's progress.
+The file is located at c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.security.cryptography.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.data.dll assembly's progress.
+The file is located at c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.data.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.data.dll assembly's progress.
+The file is located at c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.data.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.exceptionhandling.dll assembly's progress.
+The file is located at c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.exceptionhandling.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.exceptionhandling.dll assembly's progress.
+The file is located at c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.exceptionhandling.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.logging.dll assembly's progress.
+The file is located at c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.logging.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.logging.dll assembly's progress.
+The file is located at c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.logging.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.security.dll assembly's progress.
+The file is located at c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.security.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.security.dll assembly's progress.
+The file is located at c:\inetpub\wwwroot\ownet5\bin\microsoft.practices.enterpriselibrary.security.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.common.dll assembly's progress.
+The file is located at c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.common.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.common.dll assembly's progress.
+The file is located at c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.common.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.configuration.dll assembly's progress.
+The file is located at c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.configuration.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.configuration.dll assembly's progress.
+The file is located at c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.configuration.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.data.dll assembly's progress.
+The file is located at c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.data.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.data.dll assembly's progress.
+The file is located at c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.data.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.exceptionhandling.dll assembly's progress.
+The file is located at c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.exceptionhandling.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.exceptionhandling.dll assembly's progress.
+The file is located at c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.exceptionhandling.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.exceptionhandling.logging.dll assembly's progress.
+The file is located at c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.exceptionhandling.logging.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.exceptionhandling.logging.dll assembly's progress.
+The file is located at c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.exceptionhandling.logging.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.logging.dll assembly's progress.
+The file is located at c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.logging.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.logging.dll assembly's progress.
+The file is located at c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.logging.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.

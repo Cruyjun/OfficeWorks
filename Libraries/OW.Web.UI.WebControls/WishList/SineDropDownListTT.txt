@@ -1,0 +1,176 @@
+using System;
+using System.Web.UI.WebControls;
+
+namespace SINE.Web.UI.WebControls
+{
+	
+	/// <summary>
+	/// Summary description for SINEDropDownListTT.
+	/// </summary>
+	public class SINEDropDownListTT: SINEDropDownList
+	{
+		private const string _topColor = "#FEDBB4"; //"#808080";
+		private const string _subColor = "#FEEDDA"; //"#FFFF99";
+		private const string _toolTipDivName = "ToolTip";
+		private const string _toolTipSize = "250";
+
+		#region Propriedades para atribuir à tooltip
+		private string _SINEToolTipTitle;
+		public string SINEToolTipTitle
+		{
+			set
+			{
+				_SINEToolTipTitle = value;
+			}
+		}
+
+		private string _SINEToolTipText;
+		public string SINEToolTipText
+		{
+			set
+			{
+				_SINEToolTipText = value;
+			}
+		}
+
+		private int _topPosition;
+		public int SINEtopPosition
+		{
+			set
+			{
+				_topPosition = value;
+			}
+		}
+
+		private int _leftPosition;
+		public int SINEleftPosition
+		{
+			set
+			{
+				_leftPosition = value;
+			}
+		}
+		#endregion 
+
+		public SINEDropDownListTT(){}
+
+		public SINEDropDownListTT(string toolTipTitle, string toolTipText) : this(toolTipTitle, toolTipText, 0, 0){}
+
+		public SINEDropDownListTT(string toolTipTitle, string toolTipText, int top, int left) 
+		{
+			_SINEToolTipTitle = toolTipTitle;
+			_SINEToolTipText = toolTipText;
+			_leftPosition = left;
+			_topPosition = top;
+		}
+
+		protected override void Render(System.Web.UI.HtmlTextWriter output)
+		{
+			// Formatação do control de acordo com a propriedade enabled
+			base.CssClass = "SINEDropDownList";
+
+			if (!base.Enabled)
+			{
+				string CTRLStyle = string.Format("WIDTH:{0}; HEIGHT:{1}", base.Width.ToString(), base.Height.ToString());
+				output.Write(string.Format("<SPAN style='{0}' class='{1}'>{2}</SPAN>", CTRLStyle, CssClass, base.SelectedItem.Text));
+			}			
+			else
+			{
+				this.Attributes.Add("onmouseover","EnterContent('" + _toolTipDivName + "','" + _SINEToolTipTitle + "','" + _SINEToolTipText + "'," + _topPosition + "," + _leftPosition + ")");
+				this.Attributes.Add("onmouseout", "hide('" + _toolTipDivName + "')");				
+
+				base.Render(output);
+			}
+		}
+
+		//Criação dos ChildControls
+		protected override void CreateChildControls()
+		{
+			this.writeJavaScript();
+			base.CreateChildControls ();
+		}
+
+		//Escreve o script Client Side
+		protected void writeJavaScript()
+		{
+			string jsScript = String.Empty;
+
+			//Tooltip Style
+			jsScript = "<style type=\"text/css\">.tooltiptitle { FONT-WEIGHT: bold; FONT-SIZE: 8pt; CURSOR: default; COLOR: #ffffff; FONT-FAMILY: arial; TEXT-DECORATION: none }\n";
+			jsScript += ".tooltipcontent { FONT-SIZE: 8pt; CURSOR: default; COLOR: #000000; FONT-FAMILY: arial; TEXT-DECORATION: none}\n";
+			jsScript += "#ToolTip { Z-INDEX: 4; LEFT: 0px; VISIBILITY: hidden; WIDTH: 100px; POSITION: absolute; TOP: 0px }\n";
+			jsScript +=	"</style>\n";
+			
+			//DIV
+			jsScript +=("<DIV id=\"" + _toolTipDivName + "\"></DIV>\n");
+
+			//Codigo Javascript
+			jsScript += ("<script language=\"javascript\">\n");
+
+			//IExplorer Vs Netscape (Verificação do Browser)
+			jsScript += ("var ie = document.all ? 1 : 0\n");
+			jsScript += ("var ns = document.layers ? 1 : 0\n");
+			jsScript += ("if(ns){doc = \"document.\"; sty = \"\"}\n");
+			jsScript += ("if(ie){doc = \"document.all.\"; sty = \".style\"}\n");
+
+			//IExplorer Vs Netscape (Escolha das cores)
+			jsScript += ("var topColor, subColor, ContentInfo\n");
+			jsScript += ("if(ie){topColor = \"" + _topColor + "\"\n");
+			jsScript += ("subColor = \"" + _subColor + "\"}\n");
+			jsScript += ("if(ns){window.captureEvents(Event.MOUSEMOVE)\n");
+			jsScript += ("window.onmousemove=overhere\n");
+			jsScript += ("topColor = \"" + _topColor + "\"\n");
+			jsScript += ("subColor = \"" + _subColor + "\"}\n");
+
+			//Modifica o conteudo a mostrar no DIV
+			jsScript += ("function ReplaceContent(layerName){\n");
+			jsScript += ("if(ie){document.all[layerName].innerHTML = ContentInfo}\n");
+			jsScript += ("if(ns){with(document.layers[layerName].document){\n");
+			jsScript += ("open(); write(ContentInfo); close();}}}\n");
+
+			//Modifica o conteudo a mostrar no DIV
+			jsScript += ("function EnterContent(layerName, TTitle, TContent, top, left){\n");
+			//jsScript += ("debugger;");
+			jsScript += ("ContentInfo = '<table border=\"0\" width=\"" + _toolTipSize + "\" cellspacing=\"0\" cellpadding=\"0\">'+ \n");
+			jsScript += ("'<tr><td width=\"100%\" bgcolor=\"#000000\">'+ \n");
+			jsScript += ("'<table border=\"0\" width=\"100%\" cellspacing=\"1\" cellpadding=\"0\">'+ \n");
+			jsScript += ("'<tr><td width=\"100%\" bgcolor='+topColor+'>'+ \n");
+			jsScript += ("'<table border=\"0\" width=\"90%\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\">'+ \n");
+			jsScript += ("'<tr><td width=\"100%\">'+ \n");
+			jsScript += ("'<font class=\"tooltiptitle\">&nbsp;'+TTitle+'</font>'+ \n");
+			jsScript += ("'</td></tr>'+ \n");
+			jsScript += ("'</table>'+ \n");
+			jsScript += ("'</td></tr>'+ \n");
+			jsScript += ("'<tr><td width=\"100%\" bgcolor='+subColor+'>'+ \n");
+			jsScript += ("'<table border=\"0\" width=\"90%\" cellpadding=\"0\" cellspacing=\"1\" align=\"center\">'+ \n");
+			jsScript += ("'<tr><td width=\"100%\">'+ \n");
+			jsScript += ("'<font class=\"tooltipcontent\">'+TContent+'</font>'+ \n");
+			jsScript += ("'</td></tr>'+ \n");
+			jsScript += ("'</table>'+ \n");
+			jsScript += ("'</td></tr>'+ \n");
+			jsScript += ("'</table>'+ \n");
+			jsScript += ("'</td></tr>'+ \n");
+			jsScript += ("'</table>'; \n");
+			jsScript += ("ReplaceContent(layerName) \n");
+			jsScript += ("show(layerName, top, left) \n");
+			jsScript += ("eval(doc + layerName + sty + \".visibility = 'visible'\")} \n");
+
+			//Mostra o DIV
+			jsScript += ("function show(layerName, FromTop, FromLeft){ \n");
+			jsScript += ("if(ie){eval(doc + layerName + sty + \".top = \"  + (eval(FromTop) + document.body.scrollTop))} \n");
+			jsScript += ("if(ns){eval(doc + layerName + sty + \".top = \"  +  eval(FromTop))} \n");
+			jsScript += ("eval(doc + layerName + sty + \".left = \" + (eval(FromLeft) + 15))} \n");
+
+			//Esconde o DIV
+			jsScript += ("function hide(layerName){ \n");
+			jsScript += ("eval(doc + layerName + sty + \".visibility = 'hidden'\")} \n");
+			jsScript += ("</script>");
+
+			//Regista o script de geração da tooltip
+			if (!this.Page.IsClientScriptBlockRegistered("SINEJsToolTip"))
+			{
+				base.Page.RegisterClientScriptBlock("SINEJsToolTip", jsScript);
+			}
+		}
+	}
+}

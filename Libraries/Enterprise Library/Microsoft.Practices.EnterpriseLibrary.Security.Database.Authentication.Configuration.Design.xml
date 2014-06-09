@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.Design</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.Design.DbAuthenticationProviderNode">
+            <summary>
+            The design time representation of the runtime DbAuthenticationProvider class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.Design.DbAuthenticationProviderNode.#ctor">
+            <summary>
+            Initializes a new instance of the 
+            <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.Design.DbAuthenticationProviderNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.Design.DbAuthenticationProviderNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.DbAuthenticationProviderData)">
+            <summary>
+            Initializes a new instance of the 
+            <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.Design.DbAuthenticationProviderNode"/> class with a
+            specified <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.DbAuthenticationProviderData"/> object.
+            </summary>
+            <param name="data">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.DbAuthenticationProviderData"/> object.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.Design.DbAuthenticationProviderNode.ResolveNodeReferences">
+            <summary>
+            Resolves the database node reference.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.Design.DbAuthenticationProviderNode.AddDefaultChildNodes">
+            <summary>
+            <para>Adds the default nodes, the database settings, and cryptography nodes.</para>
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.Design.DbAuthenticationProviderNode.Database">
+            <summary>
+            Gets or sets the database instance that will be used to authenticate credentials.
+            </summary>
+            <value>An <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.InstanceNode"/> object.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.Design.DbAuthenticationProviderNode.HashProvider">
+            <summary>
+            Gets or sets the database instance that will be used to authenticate credentials.
+            </summary>
+            <value>An <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.InstanceNode"/> object.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.Design.DbAuthenticationProviderNode.TypeName">
+            <summary>
+            See <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.RolesProviderNode.TypeName"/>.
+            </summary>
+            <value>A type name.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.Design.DbAuthenticationProviderNode.AuthenticationProviderData">
+            <summary>
+            <para>Gets the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.Design.DbAuthenticationProviderNode.AuthenticationProviderData"/> for this instance.</para>
+            </summary>
+            <value>
+            <para>The <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.Design.DbAuthenticationProviderNode.AuthenticationProviderData"/> for this instance.</para>
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.Design.SecurityDatabaseAuthenticationConfigurationDesignManager">
+            <summary>
+            Configuration Design Manager for security cache.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.Design.SecurityDatabaseAuthenticationConfigurationDesignManager.Register(System.IServiceProvider)">
+            <summary>
+            <para>Registers the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.Design.DbAuthenticationProviderNode"/> in the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.Design.SecurityDatabaseAuthenticationConfigurationDesignManager.Open(System.IServiceProvider)">
+            <summary>
+            <para>Opens the configuration settings and registers them with the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.Design.SecurityDatabaseAuthenticationConfigurationDesignManager.Save(System.IServiceProvider)">
+            <summary>
+            <para>Saves the configuration settings created for the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.Design.SecurityDatabaseAuthenticationConfigurationDesignManager.BuildContext(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationDictionary)">
+            <summary>
+            <para>Adds to the dictionary configuration data for 
+            the enterpriselibrary.configurationSettings configuration section.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+            <param name="configurationDictionary">
+            <para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationDictionary"/> to add 
+            configuration data to.</para></param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.Design.SRCategoryAttribute">
+            <devdoc>
+            Represents a localized vertion of a CategoryAttribute. It uses the local string resources for localization.
+            This class cannot be inherited from
+            </devdoc>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.Design.SRDescriptionAttribute">
+            <devdoc>
+            Represents a localized vertion of a DescriptionAttribute. It uses the local strings resouce to get its description.
+            This class cannot be inherited from 
+            </devdoc>
+        </member>
+    </members>
+</doc>

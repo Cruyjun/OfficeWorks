@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.Design</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.Design.DatabaseSinkNode">
+            <summary>
+             Represents a node for a "<see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.DatabaseSinkData"/>".
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.Design.DatabaseSinkNode.#ctor">
+            <summary>
+            Creates node with initial configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.Design.DatabaseSinkNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.DatabaseSinkData)">
+            <summary>
+            Creates node with specified configuration data.
+            </summary>
+            <param name="databaseSinkData">Configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.Design.DatabaseSinkNode.ResolveNodeReferences">
+            <summary>
+            See <see cref="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode.ResolveNodeReferences"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.Design.DatabaseSinkNode.AddDefaultChildNodes">
+            <summary>
+            Creates a Data configuration section if required.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.Design.DatabaseSinkNode.TypeName">
+            <summary>
+            Read only. Returns the type name of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.DatabaseSink"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.Design.DatabaseSinkNode.DatabaseInstance">
+            <summary>
+            The configured database instance to use for this sink.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.Design.DatabaseSinkNode.StoredProcName">
+            <summary>
+            See <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.DatabaseSinkData.StoredProcName"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.Design.LoggingSinksDatabaseConfigurationDesignManager">
+            <summary>
+            Represents the manager for the Profile 
+            configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.Design.LoggingSinksDatabaseConfigurationDesignManager.#ctor">
+            <summary>
+            Initializes the configuration design manager.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.Design.LoggingSinksDatabaseConfigurationDesignManager.Register(System.IServiceProvider)">
+            <summary>
+            <para>Registers the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.Design.DatabaseSinkNode"/> in the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.Design.LoggingSinksDatabaseConfigurationDesignManager.Open(System.IServiceProvider)">
+            <summary>
+            <para>Opens the configuration settings and registers them with the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.Design.LoggingSinksDatabaseConfigurationDesignManager.Save(System.IServiceProvider)">
+            <summary>
+            <para>Saves the configuration settings created for the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.Design.LoggingSinksDatabaseConfigurationDesignManager.BuildContext(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationDictionary)">
+            <summary>
+            <para>Adds to the dictionary configuration data for 
+            the enterpriselibrary.configurationSettings configuration section.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+            <param name="configurationDictionary">
+            <para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationDictionary"/> to add 
+            configuration data to.</para></param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.Design.SRCategoryAttribute">
+            <devdoc>
+            Represents a localized vertion of a CategoryAttribute. It uses the local string resources for localization.
+            This class cannot be inherited from
+            </devdoc>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Sinks.Database.Configuration.Design.SRDescriptionAttribute">
+            <devdoc>
+            Represents a localized vertion of a DescriptionAttribute. It uses the local strings resouce to get its description.
+            This class cannot be inherited from 
+            </devdoc>
+        </member>
+    </members>
+</doc>

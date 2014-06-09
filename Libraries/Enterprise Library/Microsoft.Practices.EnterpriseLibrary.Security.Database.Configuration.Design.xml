@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.Design</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.Design.DbProfileProviderNode">
+            <summary>
+            The design time representation for <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.DbProfileProviderData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.Design.DbProfileProviderNode.#ctor">
+            <summary>
+            Initializes the node with default configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.Design.DbProfileProviderNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.DbProfileProviderData)">
+            <summary>
+            Initializes the node with configuration data.
+            </summary>
+            <param name="dbProfileProviderData">The configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.Design.DbProfileProviderNode.ResolveNodeReferences">
+            <summary>
+            Resolves the database node reference.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.Design.DbProfileProviderNode.AddDefaultChildNodes">
+            <summary>
+            <para>Adds the default nodes that are needed for a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.DbProfileProvider"/>. It creates the a node for the Data Application Block (<see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.DatabaseSettingsNode"/>).</para>
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.Design.DbProfileProviderNode.Database">
+            <summary>
+            Gets or sets the database instance that will be used for the profile.
+            </summary>
+            <value>An <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.InstanceNode"/> object.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.Design.DbProfileProviderNode.TypeName">
+            <summary>
+            See <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.ProfileProviderNode.TypeName"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.Design.DbRolesProviderNode">
+            <summary>
+            The design time representation of the runtime 
+            <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.Design.DbRolesProviderNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.Design.DbRolesProviderNode.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.Design.DbRolesProviderNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.Design.DbRolesProviderNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.DbRolesProviderData)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.Design.DbRolesProviderNode"/>
+            class with the specified <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.DbRolesProviderData"/>.
+            </summary>
+            <param name="dbRolesProviderData">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.DbRolesProviderData"/> object.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.Design.DbRolesProviderNode.ResolveNodeReferences">
+            <summary>
+            Resolves the database node reference.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.Design.DbRolesProviderNode.AddDefaultChildNodes">
+            <summary>
+            <para>Adds the default nodes for this instance. It creates the nodes for the Data Application Block (<see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.DatabaseSettingsNode"/>)</para>
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.Design.DbRolesProviderNode.Database">
+            <summary>
+            Gets or sets the database instance that will be used to lookup
+            roles. 
+            </summary>
+            <value>An <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.InstanceNode"/> object.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.Design.DbRolesProviderNode.TypeName">
+            <summary>
+            See <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.RolesProviderNode.TypeName"/>.
+            </summary>
+            <value>A type name.</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.Design.SecurityDatabaseConfigurationDesignManager">
+            <summary>
+            Represents the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IConfigurationDesignManager"/> for 
+            the Security Database providers.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.Design.SecurityDatabaseConfigurationDesignManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.Design.SecurityDatabaseConfigurationDesignManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.Design.SecurityDatabaseConfigurationDesignManager.Register(System.IServiceProvider)">
+            <summary>
+            <para>Registers the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.Design.DbRolesProviderNode"/> and <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.Design.DbProfileProviderNode"/> in the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.Design.SecurityDatabaseConfigurationDesignManager.Open(System.IServiceProvider)">
+            <summary>
+            <para>Opens the configuration settings and registers them with the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.Design.SecurityDatabaseConfigurationDesignManager.Save(System.IServiceProvider)">
+            <summary>
+            <para>Saves the configuration settings created for the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.Design.SecurityDatabaseConfigurationDesignManager.BuildContext(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationDictionary)">
+            <summary>
+            <para>Adds to the dictionary configuration data for 
+            the enterpriselibrary.configurationSettings configuration section.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+            <param name="configurationDictionary">
+            <para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationDictionary"/> to add 
+            configuration data to.</para></param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.Design.SRCategoryAttribute">
+            <devdoc>
+            Represents a localized vertion of a CategoryAttribute. It uses the local string resources for localization.
+            This class cannot be inherited from
+            </devdoc>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.Design.SRDescriptionAttribute">
+            <devdoc>
+            Represents a localized vertion of a DescriptionAttribute. It uses the local strings resouce to get its description.
+            This class cannot be inherited from 
+            </devdoc>
+        </member>
+    </members>
+</doc>

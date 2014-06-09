@@ -1,0 +1,22 @@
+﻿Installing assembly 'c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.data.dll'.
+Affected parameters are:
+   assemblypath = c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.data.dll
+   logfile = c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.data.InstallLog
+Installing WMI Schema: Started
+Registering assembly: Microsoft.Practices.EnterpriseLibrary.Data_SN__Version_1.1
+Ensuring that namespace exists: root\MicrosoftWmiNet
+Ensuring that class exists: root\MicrosoftWmiNet:WMINET_Instrumentation
+Ensuring that class exists: root\MicrosoftWmiNet:WMINET_InstrumentedNamespaces
+Ensuring that class exists: root\MicrosoftWmiNet:WMINET_Naming
+Ensuring that namespace exists: root\EnterpriseLibrary
+Ensuring that class exists: root\EnterpriseLibrary:WMINET_Instrumentation
+Ensuring that class exists: root\EnterpriseLibrary:WMINET_InstrumentedAssembly
+Ensuring that class exists: root\EnterpriseLibrary:MSFT_DecoupledProvider
+Ensuring that class exists: root\EnterpriseLibrary:WMINET_ManagedAssemblyProvider
+Installing WMI Schema: Finished
+Creating EventLog source Enterprise Library Data Service in log Application...
+Creating performance counter category Enterprise Library Data Service.
+Committing assembly 'c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.data.dll'.
+Affected parameters are:
+   assemblypath = c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.data.dll
+   logfile = c:\desenvolvimento\officeworks\libraries\enterprise library\microsoft.practices.enterpriselibrary.data.InstallLog

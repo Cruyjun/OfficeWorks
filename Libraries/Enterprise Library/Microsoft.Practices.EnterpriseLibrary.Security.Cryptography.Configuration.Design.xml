@@ -1,0 +1,652 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.AddDpapiSymmetricProviderNodeCommand">
+            <summary>
+            Command interceptor for a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.DpapiSymmetricCryptoProviderNode"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.AddDpapiSymmetricProviderNodeCommand.#ctor(System.IServiceProvider,System.Type)">
+            <summary>
+            <para>Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.AddChildNodeCommand"/> class with a name, the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode"/> the node is for, and the <see cref="T:System.Type"/> to create.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The service provider to get service objects.</para>
+            </param>
+            <param name="childType">
+            <para>
+            The <see cref="T:System.Type"/> object for the configuration node to create and add to the node.
+            </para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.AddDpapiSymmetricProviderNodeCommand.ExecuteCore(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode)">
+            <summary>
+            <para>Creates an instance of the child node class and adds it as a child of the parent node. The node will be a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.DpapiSymmetricCryptoProviderNode"/>.</para>
+            </summary>
+            <param name="node">
+            <para>The parent node to add the newly created <see cref="P:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.AddChildNodeCommand.ChildNode"/>.</para>
+            </param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.AddHashAlgorithmProviderNodeCommand">
+            <summary>
+            Command interceptor for a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashAlgorithmProviderNode"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.AddHashAlgorithmProviderNodeCommand.#ctor(System.IServiceProvider,System.Type)">
+            <summary>
+            <para>Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.AddChildNodeCommand"/> class with a name, the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode"/> the node is for, and the <see cref="T:System.Type"/> to create.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The service provider to get service objects.</para>
+            </param>
+            <param name="childType">
+            <para>
+            The <see cref="T:System.Type"/> object for the configuration node to create and add to the node.
+            </para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.AddHashAlgorithmProviderNodeCommand.ExecuteCore(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode)">
+            <summary>
+            <para>Creates an instance of the child node class and adds it as a child of the parent node. The node will be a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashAlgorithmProviderNode"/>.</para>
+            </summary>
+            <param name="node">
+            <para>The parent node to add the newly created <see cref="P:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.AddChildNodeCommand.ChildNode"/>.</para>
+            </param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.AddSymmetricAlgorithmProviderNodeCommand">
+            <summary>
+            Command interceptor for a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricAlgorithmProviderNode"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.AddSymmetricAlgorithmProviderNodeCommand.#ctor(System.IServiceProvider,System.Type)">
+            <summary>
+            <para>Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.AddChildNodeCommand"/> class with a name, the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode"/> the node is for, and the <see cref="T:System.Type"/> to create.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The service provider to get service objects.</para>
+            </param>
+            <param name="childType">
+            <para>
+            The <see cref="T:System.Type"/> object for the configuration node to create and add to the node.
+            </para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.AddSymmetricAlgorithmProviderNodeCommand.ExecuteCore(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode)">
+            <summary>
+            <para>Creates an instance of the child node class and adds it as a child of the parent node. The node will be a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricAlgorithmProviderNode"/>.</para>
+            </summary>
+            <param name="node">
+            <para>The parent node to add the newly created <see cref="P:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.AddChildNodeCommand.ChildNode"/>.</para>
+            </param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographySettingsNode">
+            <summary>
+            Provides designtime configuration for <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographySettingsNode.CryptographySettings"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographySettingsNode.#ctor">
+            <summary>
+            Initializes with default configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographySettingsNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CryptographySettings)">
+            <summary>
+            Constructs a new instance 
+            with the corresponding runtime configuration data.
+            </summary>
+            <param name="data">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographySettingsNode.OnSited">
+            <summary>
+            <para>Creates the default nodes and sets the name for this instance.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographySettingsNode.OnAddMenuItems">
+            <summary>
+            <para>Adds menu items to create hash providers and symmetric crypto providers.</para>
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographySettingsNode.Name">
+            <summary>
+            <para>Gets or sets the name for the node.</para>
+            </summary>
+            <value>
+            <para>The display name for the node.</para>
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographySettingsNode.CryptographySettings">
+            <summary>
+            Returns runtime configuration data.
+            </summary>
+            <returns>Runtime configuration data.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CustomHashProviderNode">
+            <summary>
+            Provides designtime configuration for <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CustomHashProviderData"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashProviderNode">
+            <summary>
+            Abstract class for nodes which provide designtime configuration for classes which derive from
+            <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashProviderNode.HashProviderData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashProviderNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashProviderData)">
+            <summary>
+            Initializes with a defined display name and with defined configuration.
+            </summary>
+            <param name="hashProviderData"></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashProviderNode.OnSited">
+            <summary>
+            <para>Sets the name for this instance.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashProviderNode.OnRenamed(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNodeChangedEventArgs)">
+            <summary>
+            <para>Raises the <see cref="E:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode.Renamed"/> event and renames the underlying <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashProviderNode.HashProviderData"/> name to match the node name.</para>
+            </summary>
+            <param name="e"><para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNodeChangedEventArgs"/> that contains the event data.</para></param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashProviderNode.HashProviderData">
+            <summary>
+            Returns runtime configuration data.
+            </summary>
+            <returns>Runtime configuration data.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CustomHashProviderNode.#ctor">
+            <summary>
+            Initializes with default configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CustomHashProviderNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CustomHashProviderData)">
+            <summary>
+            Constructs a new instance 
+            with the corresponding runtime configuration data.
+            </summary>
+            <param name="customHashProviderData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CustomHashProviderNode.TypeName">
+            <summary>
+            Gets or sets fully qualified assembly name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.IHashProvider"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CustomHashProviderNode.Extensions">
+            <summary>
+            See <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CustomHashProviderData.Extensions"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CustomSymmetricCryptoProviderNode">
+            <summary>
+            Provides designtime configuration for <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CustomSymmetricCryptoProviderData"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricCryptoProviderNode">
+            <summary>
+            Provides designtime configuration for <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricCryptoProviderNode.SymmetricCryptoProviderData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricCryptoProviderNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricCryptoProviderData)">
+            <summary>
+            Constructs a new instance 
+            with the corresponding runtime configuration data.
+            </summary>
+            <param name="symmetricCryptoProviderData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricCryptoProviderNode.OnSited">
+            <summary>
+            <para>Sets the name of the node.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricCryptoProviderNode.OnRenamed(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNodeChangedEventArgs)">
+            <summary>
+            <para>Raises the <see cref="E:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode.Renamed"/> event and sets the underlying <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricCryptoProviderNode.SymmetricCryptoProviderData"/> name to match the node.</para>
+            </summary>
+            <param name="e"><para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNodeChangedEventArgs"/> that contains the event data.</para></param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricCryptoProviderNode.SymmetricCryptoProviderData">
+            <summary>
+            Returns runtime configuration data.
+            </summary>
+            <returns>Runtime configuration data.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CustomSymmetricCryptoProviderNode.#ctor">
+            <summary>
+            Initializes with default configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CustomSymmetricCryptoProviderNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CustomSymmetricCryptoProviderData)">
+            <summary>
+            Constructs a new instance 
+            with the corresponding runtime configuration data.
+            </summary>
+            <param name="customSymmetricCryptoProviderData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CustomSymmetricCryptoProviderNode.Extensions">
+            <summary>
+            See <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CustomSymmetricCryptoProviderData"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CustomSymmetricCryptoProviderNode.TypeName">
+            <summary>
+            Gets or sets fully qualified assembly name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.ISymmetricCryptoProvider"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.DpapiSymmetricCryptoProviderNode">
+            <summary>
+            Provides designtime configuration for <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.DpapiSymmetricCryptoProviderData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.DpapiSymmetricCryptoProviderNode.#ctor">
+            <summary>
+            Initializes with default configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.DpapiSymmetricCryptoProviderNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.DpapiSymmetricCryptoProviderData)">
+            <summary>
+            Constructs a new instance 
+            with the corresponding runtime configuration data.
+            </summary>
+            <param name="data">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.DpapiSymmetricCryptoProviderNode.DataProtectionMode">
+            <summary>
+            The key protector settings, mode and entropy.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ExportKey">
+            <summary>
+            Export key dialog.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ExportKey.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ExportKey.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ExportKey.#ctor(System.Byte[])">
+            <summary>
+            Initializes with the key to export.
+            </summary>
+            <param name="key">The key to export.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashAlgorithmProviderNode">
+            <summary>
+            Provides designtime configuration for <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashAlgorithmProviderData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashAlgorithmProviderNode.#ctor">
+            <summary>
+            Initializes with default configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashAlgorithmProviderNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashAlgorithmProviderData)">
+            <summary>
+            Constructs a new instance 
+            with the corresponding runtime configuration data.
+            </summary>
+            <param name="hashAlgorithmProviderData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashAlgorithmProviderNode.HashProviderData">
+            <summary>
+            <para>Gets the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashAlgorithmProviderNode.HashProviderData"/> for this instance.</para>
+            </summary>
+            <value>
+            <para>The <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashAlgorithmProviderNode.HashProviderData"/> for this instance.</para>
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashAlgorithmProviderNode.AlgorithmType">
+            <summary>
+            Gets or sets the assembly qualified name of the <see cref="T:System.Security.Cryptography.HashAlgorithm"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashAlgorithmProviderNode.SaltEnabled">
+            <summary>
+            Gets or sets the salt enabled flag.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashProviderCollectionNode">
+            <summary>
+            Provides designtime configuration for <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashProviderCollectionNode.HashProviderDataCollection"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashProviderCollectionNode.#ctor">
+            <summary>
+            Initializes with default configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashProviderCollectionNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashProviderDataCollection)">
+            <summary>
+            Constructs a new instance 
+            with the corresponding runtime configuration data.
+            </summary>
+            <param name="hashProviderDataCollection">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashProviderCollectionNode.OnSited">
+            <summary>
+            <para>Sets the name of node when sited to match the underlying storage name.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashProviderCollectionNode.OnAddMenuItems">
+            <summary>
+            <para>Adds the default menu items.</para>
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashProviderCollectionNode.HashProviderDataCollection">
+            <summary>
+            Returns runtime configuration data.
+            </summary>
+            <returns>Runtime configuration data.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashProviderCollectionNode.Name">
+            <summary>
+            <para>Gets or sets the name for the node.</para>
+            </summary>
+            <value>
+            <para>The display name for the node.</para>
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ImportExportUtility">
+            <summary>
+            A utility for the importing and exporting of keys.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ImportExportUtility.PasswordProtectedFlag">
+            <summary>
+            Gets the flag which indicates that the exported key is protected by a password.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ImportExportUtility.PlaintextFlag">
+            <summary>
+            Gets the flag which indicates that the exported key is not protected by a password.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ImportExportUtility.Export(System.Byte[],System.String,System.String)">
+            <summary>
+            Exports a key to a file with a password.
+            </summary>
+            <param name="key">The key to export.</param>
+            <param name="destination">The destination path of the file in which to save the key.</param>
+            <param name="passphrase">The password which protects the key.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ImportExportUtility.Import(System.String,System.String)">
+            <summary>
+            Imports a key from a file with a password.
+            </summary>
+            <param name="destination">The destination path of the file in which to read the key.</param>
+            <param name="passphrase">The password which protects the key.</param>
+            <returns>The key.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ImportExportUtility.IsPasswordProtected(System.String)">
+            <summary>
+            Determines if a key is protected with a password or not.
+            </summary>
+            <param name="exportedKeyFile">The path of the file in which to read the key.</param>
+            <returns><c>true</c> if the key is protected with a password. Otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ImportKey">
+            <summary>
+            Import key dialog.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ImportKey.#ctor">
+            <summary>
+            Initializes the dialog.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ImportKey.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ImportKey.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ImportKey.ImportedKey">
+            <summary>
+            Gets the imported key.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ImportPassword">
+            <summary>
+            Import password dialog.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ImportPassword.#ctor">
+            <summary>
+            Initializes the dialog.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ImportPassword.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ImportPassword.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ImportPassword.Password">
+            <summary>
+            Gets the password used for importing.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.KeyedHashAlgorithmProviderNode">
+            <summary>
+            Provides designtime configuration for <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.KeyedHashAlgorithmProviderData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.KeyedHashAlgorithmProviderNode.#ctor">
+            <summary>
+            Initializes with default configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.KeyedHashAlgorithmProviderNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.KeyedHashAlgorithmProviderData)">
+            <summary>
+            Constructs a new instance 
+            with the corresponding runtime configuration data.
+            </summary>
+            <param name="hashAlgorithmProviderData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.KeyedHashAlgorithmProviderNode.Key">
+            <summary>
+            Gets or sets the hash key.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.KeyManagerEditor">
+            <summary>
+            Editor for a <c>KeyInfo</c>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.KeyManagerEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+            <summary>
+            See <see cref="M:System.Drawing.Design.UITypeEditor.EditValue(System.IServiceProvider,System.Object)"/>.
+            </summary>
+            <param name="context">See <see cref="M:System.Drawing.Design.UITypeEditor.EditValue(System.IServiceProvider,System.Object)"/>.</param>
+            <param name="provider">See <see cref="M:System.Drawing.Design.UITypeEditor.EditValue(System.IServiceProvider,System.Object)"/>.</param>
+            <param name="value">See <see cref="M:System.Drawing.Design.UITypeEditor.EditValue(System.IServiceProvider,System.Object)"/>.</param>
+            <returns>See <see cref="M:System.Drawing.Design.UITypeEditor.EditValue(System.IServiceProvider,System.Object)"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.KeyManagerEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            See <see cref="M:System.Drawing.Design.UITypeEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)"/>.
+            </summary>
+            <param name="context">See <see cref="M:System.Drawing.Design.UITypeEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)"/>.</param>
+            <returns>See <see cref="M:System.Drawing.Design.UITypeEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)"/>.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.KeyManagerEditorUI">
+            <summary>
+            The form for the <c>KeyManagerEditor</c>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.KeyManagerEditorUI.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.KeyManagerEditorUI.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.KeyManagerEditorUI.#ctor(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.Protection.KeySettings)">
+            <summary>
+            Initializes with a <c>KeyInfo</c>.
+            </summary>
+            <param name="keySettings">The key to manage.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.KeyManagerEditorUI.KeySettings">
+            <summary>
+            Gets a <c>KeyInfo</c> based on the current settings in the dialog.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SecurityCryptographyConfigurationDesignManager">
+            <summary>
+            Represents the block manager for the Authentication 
+            configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SecurityCryptographyConfigurationDesignManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SecurityCryptographyConfigurationDesignManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SecurityCryptographyConfigurationDesignManager.Register(System.IServiceProvider)">
+            <summary>
+            <para>Registers the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CryptographySettings"/> in the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SecurityCryptographyConfigurationDesignManager.Open(System.IServiceProvider)">
+            <summary>
+            <para>Opens the configuration settings and registers them with the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SecurityCryptographyConfigurationDesignManager.Save(System.IServiceProvider)">
+            <summary>
+            <para>Saves the configuration settings created for the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SecurityCryptographyConfigurationDesignManager.BuildContext(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationDictionary)">
+            <summary>
+            <para>Adds to the dictionary configuration data for 
+            the enterpriselibrary.configurationSettings configuration section.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+            <param name="configurationDictionary">
+            <para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationDictionary"/> to add 
+            configuration data to.</para></param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SRCategoryAttribute">
+            <devdoc>
+            Represents a localized vertion of a CategoryAttribute. It uses the local string resources for localization.
+            This class cannot be inherited from
+            </devdoc>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SRDescriptionAttribute">
+            <devdoc>
+            Represents a localized vertion of a DescriptionAttribute. It uses the local strings resouce to get its description.
+            This class cannot be inherited from 
+            </devdoc>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricAlgorithmProviderNode">
+            <summary>
+            Provides designtime configuration for <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricAlgorithmProviderData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricAlgorithmProviderNode.#ctor">
+            <summary>
+            Initializes with default configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricAlgorithmProviderNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricAlgorithmProviderData)">
+            <summary>
+            Constructs a new instance 
+            with the corresponding runtime configuration data.
+            </summary>
+            <param name="symmetricAlgorithmProviderData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricAlgorithmProviderNode.SymmetricCryptoProviderData">
+            <summary>
+            Returns runtime configuration data.
+            </summary>
+            <returns>Runtime configuration data.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricAlgorithmProviderNode.Key">
+            <summary>
+            Gets or sets the key for the <see cref="T:System.Security.Cryptography.SymmetricAlgorithm"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricAlgorithmProviderNode.AlgorithmType">
+            <summary>
+            Gets or sets the assembly qualified name of the <see cref="T:System.Security.Cryptography.SymmetricAlgorithm"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricCryptoProviderCollectionNode">
+            <summary>
+            Represents a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricCryptoProviderNode"/> objects.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricCryptoProviderCollectionNode.#ctor">
+            <summary>
+            Initializes with default configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricCryptoProviderCollectionNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricCryptoProviderDataCollection)">
+            <summary>
+            Constructs a new instance 
+            with the corresponding runtime configuration data.
+            </summary>
+            <param name="symmetricCryptoProviderDataCollection">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricCryptoProviderCollectionNode.OnSited">
+            <summary>
+            <para>Sets the name of node when sited to match the underlying storage name.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricCryptoProviderCollectionNode.OnAddMenuItems">
+            <summary>
+            <para>Adds the default menu items.</para>
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricCryptoProviderCollectionNode.SymmetricCryptoProviderDataCollection">
+            <summary>
+            Returns runtime configuration data.
+            </summary>
+            <returns>Runtime configuration data.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricCryptoProviderCollectionNode.Name">
+            <summary>
+            <para>Gets or sets the name for the node.</para>
+            </summary>
+            <value>
+            <para>The display name for the node.</para>
+            </value>
+        </member>
+    </members>
+</doc>

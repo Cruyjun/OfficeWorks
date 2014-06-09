@@ -1,0 +1,274 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Security.Database</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.DbProfileProviderData">
+            <summary>
+            Configuration data for the Database Roles Provider.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.DbProfileProviderData.#ctor">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.DbProfileProviderData"/> class.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.DbProfileProviderData.#ctor(System.String,System.String)">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.DbProfileProviderData"/> class with a name and the name of a database instance.</para>
+            </summary>
+            <param name="name">
+            <para>The name of the provider.</para>
+            </param>
+            <param name="database">
+            <para>A database instance where the profile is stored.</para>
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.DbProfileProviderData.Database">
+            <summary>
+            Gets or sets the configured Database instance name.
+            </summary>
+            <value>The configured database instance.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.DbProfileProviderData.TypeName">
+            <summary>
+            Gets the assembly qualified name of this provider.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.DbRolesProviderData">
+            <summary>
+            Configuration data for the Database Roles Provider.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.DbRolesProviderData.#ctor">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.DbRolesProviderData"/> class.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.DbRolesProviderData.#ctor(System.String,System.String)">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.DbRolesProviderData"/> class with a name and a database instance name.</para>
+            </summary>
+            <param name="name">
+            <para>The name of the provider.</para>
+            </param>
+            <param name="database">
+            <para>The name of the database instance where the roles are persisted.</para>
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.DbRolesProviderData.Database">
+            <summary>
+            Gets or sets the configured Database instance name.
+            </summary>
+            <value>The configured database instance.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Database.Configuration.DbRolesProviderData.TypeName">
+            <summary>
+            Gets the assembly qualified name of this provider.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.DbProfileProvider">
+            <summary>
+            Represents a database-based profile provider.
+            </summary>
+            <remarks>
+            A profile can contain primitives, serializable objects, or a dictionary of 
+            primitives and serializable objects.  Primitives are saved and retrieved as strings,
+            objects are serialized using XmlSerialization.  Each dictionary entry is processed
+            and saved as a row in the Profile table.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.DbProfileProvider.#ctor">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.DbProfileProvider"/> class.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.DbProfileProvider.Initialize(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationView)">
+            <summary>
+            <para>Initializes the provider with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.SecurityConfigurationView"/>.</para>
+            </summary>
+            <param name="configurationView">
+            <para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.SecurityConfigurationView"/> object.</para>
+            </param>        
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.DbProfileProvider.SetProfile(System.Security.Principal.IIdentity,System.Object)">
+            <summary>
+            Persist a user's profile to the database.
+            </summary>
+            <param name="identity">An authenticated user's identity with a username that 
+            matches a user in the Identity table.</param>
+            <param name="profile">Object that represents the user's profile.  
+            A single primitive, serializable object, or a dictionary of primitives and objects.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.DbProfileProvider.GetProfile(System.Security.Principal.IIdentity)">
+            <summary>
+            Retreive a user's profile from the database.
+            </summary>
+            <param name="identity">An authenticated user's identity with a username that 
+            matches a user in the Users table.</param>
+            <returns>An object representing the profile of the user.  Return value can be a string,
+            deserialized object, or a Hashtable of values.</returns>
+            <remarks>
+            <strong>Null</strong> is returned if the user or profile does not exist.</remarks>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.DbRolesProvider">
+            <summary>
+            Defines the functionality for a Database-based Roles Provider.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.DbRolesProvider.#ctor">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.DbRolesProvider"/> class.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.DbRolesProvider.Initialize(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationView)">
+            <summary>
+            <para>Initializes the provider with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.SecurityConfigurationView"/>.</para>
+            </summary>
+            <param name="configurationView">
+            <para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.SecurityConfigurationView"/> object.</para>
+            </param>        
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.DbRolesProvider.CollectAllUserRoles(System.Security.Principal.IIdentity)">
+            <summary>
+            Overridden from SecurityRolesProvider. Retrieves the list of user roles
+            from the underlying database.
+            </summary>
+            <param name="userIdentity">Identity of user used for retrieval</param>
+            <returns>String array of roles for the given user identity</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.UserRoleManager">
+            <summary>
+            Provides utility functions for managing the Security database.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.UserRoleManager.#ctor(System.String,Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationContext)">
+            <summary>
+            Creates an instance of the utility class with a specified configuration context.
+            </summary>
+            <param name="databaseService">Database service instance name.</param>
+            <param name="context">The configuration context to use.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.UserRoleManager.CreateUser(System.String,System.Byte[])">
+            <summary>
+            Create a new user record.
+            </summary>
+            <param name="userName">User name.</param>
+            <param name="password">Password bytes.  Be sure to hash or encrypt.</param>
+            <returns><c>true</c> if the user was created. <c>false</c> if the user already exists.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.UserRoleManager.ChangeUserPassword(System.String,System.Byte[])">
+            <summary>
+            Change the password for a user.
+            </summary>
+            <param name="userName">User name.</param>
+            <param name="newEncryptedPassword">New password. Should be encrypted before being passed to this method.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.UserRoleManager.GetUserIdFromUserName(System.String)">
+            <summary>
+            Get a user's ID from the user name.
+            </summary>
+            <param name="userName">User name.</param>
+            <returns>User ID</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.UserRoleManager.DeleteUser(System.String)">
+            <summary>
+            Delete a user.
+            </summary>
+            <param name="userName">User name.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.UserRoleManager.CreateRole(System.String)">
+            <summary>
+            Create a role.
+            </summary>
+            <param name="role">Role name.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.UserRoleManager.GetRoleIdFromRoleName(System.String)">
+            <summary>
+            Get the role ID from a role's name.
+            </summary>
+            <param name="role">Role name.</param>
+            <returns>The RoleID if exists. <value>-1</value> if it doesn't exist.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.UserRoleManager.RenameRole(System.String,System.String)">
+            <summary>
+            Rename a role.
+            </summary>
+            <param name="originalName">Original role name.</param>
+            <param name="newName">New role name.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.UserRoleManager.DeleteRole(System.String)">
+            <summary>
+            Delete a role.
+            </summary>
+            <param name="role">Role name.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.UserRoleManager.CreateUserRole(System.String,System.String)">
+            <summary>
+            Associate a user to a role.
+            </summary>
+            <param name="userName">User name.</param>
+            <param name="role">Role name.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.UserRoleManager.DeleteUserRole(System.String,System.String)">
+            <summary>
+            Delete an association of a user to a role.
+            </summary>
+            <param name="userName">User name.</param>
+            <param name="role">Role name.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.UserRoleManager.CreateUserRoleBatch(System.Data.DataTable)">
+            <summary>
+            Create a batch of user roles.
+            </summary>
+            <param name="batch">Table containing user role assignments.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.UserRoleManager.DeleteUserRoleBatch(System.Data.DataTable)">
+            <summary>
+            Delete a batch of user roles.
+            </summary>
+            <param name="batch">Table containing user role assignments to delete.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.UserRoleManager.GetRoleUsers(System.String)">
+            <summary>
+            Get the users associated with a role.
+            </summary>
+            <param name="role">Role name.</param>
+            <returns>DataSet of users associated to a role.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.UserRoleManager.GetPassword(System.String)">
+            <summary>
+            Get the password for a user.
+            </summary>
+            <param name="userName">User name</param>
+            <returns>Password.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.UserRoleManager.UserExists(System.String)">
+            <summary>
+            Check to see if a user exists.
+            </summary>
+            <param name="userName">User name to test for.</param>
+            <returns><b>True</b> if the user exists.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.UserRoleManager.GetAllRoles">
+            <summary>
+            Get all roles.
+            </summary>
+            <returns>A DataSet containing a row for each role.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.UserRoleManager.GetAllUsers">
+            <summary>
+            Get a list of users.
+            </summary>
+            <returns>DataSet containing a row for each user.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.UserRoleManager.GetUserRoles(System.String)">
+            <summary>
+            Get all roles.
+            </summary>
+            <param name="userName">User name for which to retrieve all roles</param>
+            <returns>A DataSet containing a row for each role.</returns>
+        </member>
+    </members>
+</doc>

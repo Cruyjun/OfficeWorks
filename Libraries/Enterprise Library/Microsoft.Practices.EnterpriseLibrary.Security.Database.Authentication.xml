@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.DbAuthenticationProviderData">
+            <summary>
+            Configuration data for the Database Authentication Provider.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.DbAuthenticationProviderData.#ctor">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.DbAuthenticationProviderData"/> class.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.DbAuthenticationProviderData.#ctor(System.String)">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.DbAuthenticationProviderData"/> class with a name.</para>
+            </summary>
+            <param name="name">
+            <para>The name of the provider.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.DbAuthenticationProviderData.#ctor(System.String,System.String,System.String)">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.DbAuthenticationProviderData"/> class with a name.</para>
+            </summary>
+            <param name="name">
+            <para>The name of the provider.</para>
+            </param>
+            <param name="database">
+            <para>The named database to use for the provider.</para>
+            </param>
+            <param name="hashProvider">
+            <para>The named hash provider to use for this provider.</para>
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.DbAuthenticationProviderData.Database">
+            <summary>
+            Gets or sets the configured Database instance name.
+            </summary>
+            <value>The configured database instance.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.DbAuthenticationProviderData.HashProvider">
+            <summary>
+            Gets or sets the configured cryptography hash instance name.
+            </summary>
+            <value>The configured cryptography hash instance.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.Configuration.DbAuthenticationProviderData.TypeName">
+            <summary>
+            Gets the assembly qualified name of this provider.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.DbAuthenticationProvider">
+            <summary>
+            Defines the functionality for a Database-based Authentication Provider.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.DbAuthenticationProvider.#ctor">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.DbAuthenticationProvider"/> class.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.DbAuthenticationProvider.Initialize(Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationView)">
+            <summary>
+            <para>Initializes the provider with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.SecurityConfigurationView"/>.</para>
+            </summary>
+            <param name="configurationView">
+            <para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.SecurityConfigurationView"/> object.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.DbAuthenticationProvider.Authenticate(System.Object,System.Security.Principal.IIdentity@)">
+            <summary>
+            Authenticate the credentials against the configuration database.
+            </summary>
+            <param name="credentials">A credential object such as a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.NamePasswordCredential"/>.</param>
+            <param name="userIdentity">An <see cref="T:System.Security.Principal.IIdentity"/> object representing 
+            authenticated credentials returned if successfull.</param>
+            <returns><strong>True</strong> if authentication was
+            successful, otherwise false.</returns>
+            <remarks>
+            This method call is intended to be overloaded to support additional 
+            credential objects if/when they are brought online.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Database.Authentication.DbAuthenticationProvider.PasswordsMatch(System.Byte[],System.String)">
+            <devdoc>
+            Compares the password passed in against the password stored in the database.
+            </devdoc>
+        </member>
+    </members>
+</doc>

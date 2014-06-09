@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Design</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Design.CachingStoreProviderNode">
+            <summary>
+            Node representing configuration from <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Design.CachingStoreProviderNode.#ctor">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Design.CachingStoreProviderNode"/> class.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Design.CachingStoreProviderNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData)">
+            <summary>
+            <para>Initialzie a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Design.CachingStoreProviderNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData"/> instance.</para>
+            </summary>
+            <param name="data">
+            <para>The <see cref="F:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Design.CachingStoreProviderNode.cachingStoreProviderData"/> instance to initialize the instance.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Design.CachingStoreProviderNode.ResolveNodeReferences">
+            <summary>
+            See <see cref="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode.ResolveNodeReferences"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Design.CachingStoreProviderNode.AddDefaultChildNodes">
+            <summary>
+            Initializes the Caching defaults.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Design.CachingStoreProviderNode.AbsoluteExpiration">
+            <summary>
+            See <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData.AbsoluteExpiration"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Design.CachingStoreProviderNode.SlidingExpiration">
+            <summary>
+            See <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData.SlidingExpiration"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Design.CachingStoreProviderNode.CacheManager">
+            <summary>
+            See <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData.CacheManager"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Design.CachingStoreProviderNode.TypeName">
+            <summary>
+            Returns the fully qualified assembly name of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.CachingStoreProvider"/>
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Design.SecurityCacheCachingStoreConfigurationDesignManager">
+            <summary>
+            Configuration Design Manager for security cache.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Design.SecurityCacheCachingStoreConfigurationDesignManager.Register(System.IServiceProvider)">
+            <summary>
+            <para>Registers the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Design.CachingStoreProviderNode"/> in the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Design.SecurityCacheCachingStoreConfigurationDesignManager.Open(System.IServiceProvider)">
+            <summary>
+            <para>Opens the configuration settings and registers them with the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Design.SecurityCacheCachingStoreConfigurationDesignManager.Save(System.IServiceProvider)">
+            <summary>
+            <para>Saves the configuration settings created for the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Design.SecurityCacheCachingStoreConfigurationDesignManager.BuildContext(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationDictionary)">
+            <summary>
+            <para>Adds to the dictionary configuration data for 
+            the enterpriselibrary.configurationSettings configuration section.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+            <param name="configurationDictionary">
+            <para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationDictionary"/> to add 
+            configuration data to.</para></param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Design.SRCategoryAttribute">
+            <devdoc>
+            Represents a localized vertion of a CategoryAttribute. It uses the local string resources for localization.
+            This class cannot be inherited from
+            </devdoc>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Design.SRDescriptionAttribute">
+            <devdoc>
+            Represents a localized vertion of a DescriptionAttribute. It uses the local strings resouce to get its description.
+            This class cannot be inherited from 
+            </devdoc>
+        </member>
+    </members>
+</doc>

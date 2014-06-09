@@ -1,0 +1,12 @@
+V 1.02
+
+fix:  Made library CLS compliant by prefixing protected members of items
+      and toolbar with 'm_'. Enforced CLS compliance with attribute in
+      AssemblyInfo.cs
+      
+
+V 1.01
+******
+
+add:  Added Localizable attribute to various properties.
+fix:  Removed license file which prevented the solution from compiling
